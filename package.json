@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "generate": "tsx scripts/generateDailyReport.ts",
-    "practice-real": "tsx scripts/generatePracticeRealReport.ts"
+    "practice-real": "tsx scripts/generatePracticeRealReport.ts",
+    "automation:once": "tsx scripts/runOneTimeResearchAutomation.ts"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.4",

@@ -1,0 +1,471 @@
+import { mkdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import type { DailyDashboard } from '../src/types/research';
+
+const root = process.cwd();
+const dataDir = path.join(root, 'data');
+const reportsDir = path.join(dataDir, 'reports');
+
+const report: DailyDashboard = {
+  date: '2026-06-01',
+  generatedAt: '2026-06-01T22:35:00+08:00',
+  marketOverview:
+    '今日一次性自動化研究使用新抓取的公開新聞整理。AI 題材仍主導市場：NVIDIA 與 Microsoft 的新 AI PC 晶片推動美股期貨，Dell 財報顯示 AI server 需求強，TSMC 與 NVIDIA 將 AI 導入半導體製造，市場同時擔心半導體交易過熱。整體情緒偏多，但追價風險上升。',
+  marketSentiment: 'Bullish',
+  topThemes: ['AI 股票動能延續', 'AI 伺服器與資料中心需求', '半導體製造 AI 化與供應鏈擴散'],
+  stocksToWatch: ['NVDA', 'MSFT', 'DELL', 'TSM', 'MU', 'AVGO', 'VRT', '3017.TW'],
+  biggestRisk:
+    'AI 相關股票短線漲幅過快，半導體指數與部分基礎設施標的可能已反映太多樂觀預期；若本週宏觀數據、地緣政治或大型科技 capex 指引轉弱，波動可能放大。',
+  watchlistAlerts: [
+    'NVDA / MSFT：今日焦點是 AI PC 晶片與端側 AI，但這不等於資料中心需求立即加速。',
+    'DELL：AI server 需求強是供應鏈正面訊號，需拆分是一次性訂單還是持續 backlog。',
+    'TSM：NVIDIA 與 TSMC 在 fabs 使用 AI 是長期效率題材，短線股價仍受 AI capex 與估值影響。',
+    'MU / memory：AI boom 擴散到記憶體與儲存，但週期股需要嚴格追蹤報價與庫存。',
+    'VRT / 3017.TW：資料中心功耗提升支持液冷與電源，但高估值標的應等待回檔與財報確認。'
+  ],
+  emotionalWarning:
+    '今天的資料偏正面，但不是追高理由。把新聞分成今日催化、供應鏈延伸、估值風險三層處理；先找證據，再找價格，不要反過來。',
+  news: [
+    {
+      id: 'news-2026-06-01-reuters-ai-futures',
+      title: 'AI 進展帶動美股期貨上漲，NVIDIA 與 Microsoft 成焦點',
+      source: 'Reuters via Investing.com, 2026-06-01',
+      date: '2026-06-01',
+      summary:
+        'Reuters 報導，美股期貨在 6 月開局走高，NVIDIA 與 Microsoft 的新 AI 推進抵消部分中東地緣政治擔憂。NVIDIA 盤前上漲，市場關注其與 Microsoft 合作的 AI PC 晶片。',
+      relatedTickers: ['NVDA', 'MSFT', 'AMD', 'INTC', 'MU'],
+      impact: 'Positive',
+      confidence: 'High'
+    },
+    {
+      id: 'news-2026-06-01-axios-ai-boom',
+      title: 'AI 股票動能升溫，但過熱與泡沫比較開始出現',
+      source: 'Axios, 2026-06-01',
+      date: '2026-06-01',
+      summary:
+        'Axios 指出，AI 相關科技股在 5 月大幅推動市場，資訊科技與半導體表現強勢；同時引用 JPMorgan 技術分析師對半導體交易過熱、類似 2000 年泡沫前期的警示。',
+      relatedTickers: ['MU', 'CSCO', 'DELL', 'HPE', 'NVDA'],
+      impact: 'Neutral',
+      confidence: 'High'
+    },
+    {
+      id: 'news-2026-06-01-nvidia-tsmc-fabs',
+      title: 'NVIDIA 與 TSMC 將 AI 導入半導體設計與製造流程',
+      source: 'Taiwan News / GlobeNewswire, 2026-06-01',
+      date: '2026-06-01',
+      summary:
+        'NVIDIA 宣布 TSMC 使用 NVIDIA accelerated computing 與 AI 推進半導體設計與製造。這代表 AI 不只拉動資料中心需求，也可能提升晶圓製造、EDA、良率與 fab automation 效率。',
+      relatedTickers: ['NVDA', 'TSM', 'CDNS', 'SNPS', 'AMAT', 'ASML'],
+      impact: 'Positive',
+      confidence: 'High'
+    },
+    {
+      id: 'news-2026-06-01-dell-ai-demand',
+      title: 'Dell 財報與指引顯示 AI server 需求仍強',
+      source: 'Zacks, 2026-06-01',
+      date: '2026-06-01',
+      summary:
+        'Zacks 市場回顧指出，Dell 在財報後大漲，原因包括獲利優於預期、AI demand 強勁並上調全年指引。這是 AI server、storage、networking 與資料中心零組件供應鏈的正面 read-through。',
+      relatedTickers: ['DELL', 'NVDA', 'SMCI', 'HPE', 'MU', 'WDC'],
+      impact: 'Positive',
+      confidence: 'Medium'
+    },
+    {
+      id: 'news-2026-06-01-tsm-rally',
+      title: 'TSMC 受 AI 題材與台股資金動能支撐',
+      source: 'Benzinga, 2026-06-01',
+      date: '2026-06-01',
+      summary:
+        'Benzinga 報導 TSMC 受台灣市場 AI 熱度、資金流與半導體樂觀情緒支撐。這是市場資金面訊號，但需要和基本面需求、capex 與估值分開判斷。',
+      relatedTickers: ['TSM', '2330.TW', 'NVDA', 'AVGO'],
+      impact: 'Positive',
+      confidence: 'Medium'
+    },
+    {
+      id: 'news-2026-05-06-trendforce-capex-context',
+      title: 'TrendForce 上修 2026 CSP capex，作為今日 AI 需求背景',
+      source: 'TrendForce, 2026-05-06',
+      date: '2026-06-01',
+      summary:
+        'TrendForce 近期上修前九大雲端服務商 2026 年 capex 預估，AI demand 是主因。這不是今日新聞，但可作為理解今日 AI 股票動能與資料中心供應鏈的背景證據。',
+      relatedTickers: ['NVDA', 'AVGO', 'TSM', 'MSFT', 'AMZN', 'GOOGL', 'META'],
+      impact: 'Positive',
+      confidence: 'High'
+    }
+  ],
+  themes: [
+    {
+      id: 'theme-ai-momentum',
+      name: 'AI 股票動能延續',
+      whyItMatters:
+        'Reuters 與 Axios 都指向 AI 仍是短線市場主軸，但 Axios 同時提醒半導體交易已接近過熱區。這表示機會與風險同時升高。',
+      relatedIndustries: ['半導體', '大型科技', 'AI PC', '雲端服務', '記憶體'],
+      relatedCompanies: ['NVDA', 'MSFT', 'MU', 'DELL', 'TSM'],
+      shortTermImpact: '市場可能繼續獎勵 AI 相關營收可見度高的公司，但高 beta 標的震盪會加大。',
+      longTermImpact: '若 AI 從資料中心擴散到 PC、edge 與 enterprise workflow，需求層次會更廣。',
+      evidenceQuality: 'High'
+    },
+    {
+      id: 'theme-ai-server-demand',
+      name: 'AI 伺服器與資料中心需求',
+      whyItMatters:
+        'Dell 財報與 hyperscaler capex 背景顯示 AI server demand 仍強，供應鏈受惠會從 GPU 擴散到記憶體、儲存、網通、電源與散熱。',
+      relatedIndustries: ['AI server', 'GPU', 'memory', 'storage', 'networking', 'cooling', 'power'],
+      relatedCompanies: ['DELL', 'NVDA', 'MU', 'VRT', 'AVGO', '3017.TW', '2308.TW'],
+      shortTermImpact: 'Dell read-through 有利 AI server 供應鏈情緒。',
+      longTermImpact: 'AI inference 與 agent workloads 若持續成長，資料中心升級週期會延續。',
+      evidenceQuality: 'Medium'
+    },
+    {
+      id: 'theme-ai-fabs',
+      name: '半導體製造 AI 化與供應鏈擴散',
+      whyItMatters:
+        'NVIDIA 與 TSMC 將 AI 用於 fabs，讓 AI 影響從晶片需求端延伸到製造效率、良率、EDA、設備與 fab automation。',
+      relatedIndustries: ['晶圓代工', 'EDA', '半導體設備', '良率管理', '先進製程'],
+      relatedCompanies: ['TSM', 'NVDA', 'CDNS', 'SNPS', 'AMAT', 'ASML'],
+      shortTermImpact: 'TSM 與半導體設備/EDA 題材有正面敘事。',
+      longTermImpact: '若 AI 能提升 fab productivity，先進製程與設備軟體價值可能上升。',
+      evidenceQuality: 'High'
+    }
+  ],
+  supplyChain: [
+    {
+      id: 'node-nvda-automation',
+      companyName: 'NVIDIA',
+      ticker: 'NVDA',
+      marketCountry: '美國',
+      layer: 1,
+      linkedThemeId: 'theme-ai-momentum',
+      whyItMayBenefit: '今日 AI PC 晶片新聞與資料中心 AI demand 都把 NVIDIA 放在直接催化位置。',
+      evidenceStrength: 'High',
+      visibility: 'Obvious',
+      keyRisk: '估值過高、AI 交易過熱、客戶自研 ASIC 與出口限制。'
+    },
+    {
+      id: 'node-msft-automation',
+      companyName: 'Microsoft',
+      ticker: 'MSFT',
+      marketCountry: '美國',
+      layer: 1,
+      linkedThemeId: 'theme-ai-momentum',
+      whyItMayBenefit: '與 NVIDIA 的 AI PC 合作強化端側 AI 敘事，Azure AI capex 也持續牽動供應鏈。',
+      evidenceStrength: 'Medium',
+      visibility: 'Obvious',
+      keyRisk: 'AI capex 回報率、雲端毛利與監管風險。'
+    },
+    {
+      id: 'node-dell-automation',
+      companyName: 'Dell Technologies',
+      ticker: 'DELL',
+      marketCountry: '美國',
+      layer: 1,
+      linkedThemeId: 'theme-ai-server-demand',
+      whyItMayBenefit: '財報與指引顯示 AI server demand 強，是資料中心硬體需求的直接受惠者。',
+      evidenceStrength: 'Medium',
+      visibility: 'Obvious',
+      keyRisk: 'AI server 毛利率、訂單集中、競爭與庫存。'
+    },
+    {
+      id: 'node-tsm-automation',
+      companyName: '台積電',
+      ticker: 'TSM',
+      marketCountry: '台灣 / 美國 ADR',
+      layer: 1,
+      linkedThemeId: 'theme-ai-fabs',
+      whyItMayBenefit: 'TSMC 是 AI accelerator 製造核心，且今日新聞顯示其 fab operation 也導入 NVIDIA AI。',
+      evidenceStrength: 'High',
+      visibility: 'Obvious',
+      keyRisk: 'AI capex 放緩、地緣政治、先進封裝瓶頸與估值。'
+    },
+    {
+      id: 'node-mu-automation',
+      companyName: 'Micron',
+      ticker: 'MU',
+      marketCountry: '美國',
+      layer: 2,
+      linkedThemeId: 'theme-ai-server-demand',
+      whyItMayBenefit: 'AI server 需求與 Dell read-through 支持 HBM、DRAM、storage 需求延伸。',
+      evidenceStrength: 'Medium',
+      visibility: 'Obvious',
+      keyRisk: '記憶體週期反轉、報價過熱與庫存修正。'
+    },
+    {
+      id: 'node-avgo-automation',
+      companyName: 'Broadcom',
+      ticker: 'AVGO',
+      marketCountry: '美國',
+      layer: 2,
+      linkedThemeId: 'theme-ai-server-demand',
+      whyItMayBenefit: 'AI data center scale-out 需要 ASIC、switching 與 connectivity，Broadcom 是關鍵供應商。',
+      evidenceStrength: 'Medium',
+      visibility: 'Obvious',
+      keyRisk: '客製 ASIC 客戶集中與估值。'
+    },
+    {
+      id: 'node-vrt-automation',
+      companyName: 'Vertiv',
+      ticker: 'VRT',
+      marketCountry: '美國',
+      layer: 3,
+      linkedThemeId: 'theme-ai-server-demand',
+      whyItMayBenefit: 'AI server demand 最終會推升 power、thermal、rack infrastructure 需求。',
+      evidenceStrength: 'Medium',
+      visibility: 'Hidden',
+      keyRisk: 'AI infrastructure 題材過熱與資料中心建設遞延。'
+    },
+    {
+      id: 'node-auras-automation',
+      companyName: '奇鋐',
+      ticker: '3017.TW',
+      marketCountry: '台灣',
+      layer: 4,
+      linkedThemeId: 'theme-ai-server-demand',
+      whyItMayBenefit: 'AI server 功耗提高後，液冷與高階散熱供應商可能成為台灣隱藏受惠者。',
+      evidenceStrength: 'Low',
+      visibility: 'Hidden',
+      keyRisk: '需確認客戶認證、液冷出貨與毛利率。'
+    },
+    {
+      id: 'node-cdns-automation',
+      companyName: 'Cadence Design Systems',
+      ticker: 'CDNS',
+      marketCountry: '美國',
+      layer: 3,
+      linkedThemeId: 'theme-ai-fabs',
+      whyItMayBenefit: '半導體設計與製造 AI 化可能增加 EDA 與 design automation 工具價值。',
+      evidenceStrength: 'Medium',
+      visibility: 'Hidden',
+      keyRisk: '估值、半導體設計週期與大型客戶支出節奏。'
+    }
+  ],
+  beneficiaries: [
+    {
+      id: 'benefit-ai-momentum-automation',
+      themeId: 'theme-ai-momentum',
+      directBeneficiaries: ['NVDA', 'MSFT', 'TSM', 'MU'],
+      indirectBeneficiaries: ['DELL', 'HPE', 'AVGO', 'CDNS'],
+      hiddenBeneficiaries: ['EDA tools', 'AI PC component suppliers', 'memory/storage suppliers'],
+      companiesMayBeHurt: ['缺乏 AI exposure 的傳統硬體供應商', '估值過高但沒有財報驗證的 AI 概念股'],
+      reasoning: '今日新聞同時支持 AI 催化與過熱警示，因此優先研究有財報或真實供應鏈證據的公司。',
+      evidenceQuality: 'High',
+      researchPriorityScore: 92
+    },
+    {
+      id: 'benefit-ai-server-automation',
+      themeId: 'theme-ai-server-demand',
+      directBeneficiaries: ['DELL', 'NVDA', 'MU'],
+      indirectBeneficiaries: ['AVGO', 'VRT', '2308.TW', '3017.TW'],
+      hiddenBeneficiaries: ['liquid cooling', 'power distribution', 'storage controllers', 'high-speed networking'],
+      companiesMayBeHurt: ['低毛利 server assembler', '舊型 enterprise storage vendor'],
+      reasoning: 'Dell 的 AI server read-through 支持整個資料中心硬體 stack，但越往下游越需要確認毛利與出貨。',
+      evidenceQuality: 'Medium',
+      researchPriorityScore: 88
+    },
+    {
+      id: 'benefit-ai-fab-automation',
+      themeId: 'theme-ai-fabs',
+      directBeneficiaries: ['TSM', 'NVDA'],
+      indirectBeneficiaries: ['CDNS', 'SNPS', 'AMAT', 'ASML'],
+      hiddenBeneficiaries: ['yield management software', 'fab automation', 'inspection/metrology tools'],
+      companiesMayBeHurt: ['缺乏 AI-driven productivity tools 的傳統設備/軟體供應商'],
+      reasoning: 'NVIDIA + TSMC fab AI 新聞把 AI 影響從 demand side 延伸到 manufacturing side，是新的研究分支。',
+      evidenceQuality: 'High',
+      researchPriorityScore: 86
+    }
+  ],
+  companyResearch: [
+    {
+      id: 'company-nvda-automation',
+      companyName: 'NVIDIA',
+      ticker: 'NVDA',
+      marketCountry: '美國',
+      overview: 'AI GPU、networking、accelerated computing 與 AI PC 平台核心公司。',
+      businessModel: '銷售 data center GPU、networking、software stack、PC/edge AI chips 與相關平台。',
+      revenueDrivers: ['Data center GPU', 'Networking', 'AI PC', 'Software ecosystem', 'Hyperscaler capex'],
+      latestFinancialReportSummary: '今日新聞焦點是 NVIDIA 與 Microsoft AI PC 推進，以及 TSMC fab AI 合作。',
+      revenueGrowth: '高成長預期仍由 data center 與 AI platform 支撐。',
+      grossMargin: '高階加速器與平台議價力強，但競爭與產品轉換需追蹤。',
+      eps: '受 data center 出貨、ASP 與供應限制影響。',
+      freeCashFlow: '高毛利與高需求支撐現金流，但市場預期很高。',
+      valuationRisk: '市場已充分定價 AI 領導地位，任何需求放緩都可能壓縮倍數。',
+      technicalTrend: '動能強但過熱風險升高。',
+      competitors: ['AMD', 'Broadcom ASIC customers', 'Hyperscaler custom silicon'],
+      bullCase: 'AI training、inference、networking 與 edge AI 同時擴張。',
+      baseCase: '需求強但估值需要靠逐季財報消化。',
+      bearCase: '客戶自研晶片、出口限制或 AI capex 放緩。',
+      keyRisks: ['估值', '出口限制', '客戶集中', 'ASIC 替代'],
+      finalView: 'Positive',
+      suggestedAction: 'Watch',
+      whatWouldChangeView: '若 hyperscaler capex 或 data center backlog 明確轉弱，需下修。'
+    },
+    {
+      id: 'company-dell-automation',
+      companyName: 'Dell Technologies',
+      ticker: 'DELL',
+      marketCountry: '美國',
+      overview: '伺服器、storage 與 enterprise hardware 供應商，AI server demand 是主要催化。',
+      businessModel: '銷售 enterprise server、storage、PC 與服務，AI server 帶動高階硬體訂單。',
+      revenueDrivers: ['AI server backlog', 'Enterprise refresh', 'Storage demand', 'GPU server integration'],
+      latestFinancialReportSummary: 'Zacks 今日市場回顧指出 Dell 財報優於預期，AI demand 強並上調全年指引。',
+      revenueGrowth: 'AI server 可支撐成長，但需觀察傳統 PC/server 週期。',
+      grossMargin: 'AI server 出貨可能拉高收入但不一定拉高毛利。',
+      eps: '受產品組合與成本控制影響。',
+      freeCashFlow: '大型 AI server 訂單可能增加營運資金需求。',
+      valuationRisk: '股價已快速反映 AI demand，若毛利不佳會修正。',
+      technicalTrend: '財報後強勢，追價風險高。',
+      competitors: ['HPE', 'Supermicro', 'Lenovo', 'ODM suppliers'],
+      bullCase: 'AI server backlog 持續擴大且毛利改善。',
+      baseCase: '需求強但需要用出貨、毛利與現金流確認品質。',
+      bearCase: 'AI server 毛利偏低或客戶訂單延後。',
+      keyRisks: ['毛利率', '客戶集中', '庫存', '競爭'],
+      finalView: 'Neutral',
+      suggestedAction: 'Wait',
+      whatWouldChangeView: '若 AI server 毛利與 backlog 品質持續改善，可轉正向。'
+    },
+    {
+      id: 'company-tsm-automation',
+      companyName: '台積電',
+      ticker: 'TSM',
+      marketCountry: '台灣 / 美國 ADR',
+      overview: '全球領先晶圓代工公司，AI accelerator 製造與先進封裝核心供應商。',
+      businessModel: '提供先進製程、成熟製程與先進封裝服務。',
+      revenueDrivers: ['AI/HPC', 'N3/N2 advanced nodes', 'CoWoS/advanced packaging', 'Major customer ramps'],
+      latestFinancialReportSummary: '今日 NVIDIA 宣布 TSMC 使用其 accelerated computing 與 AI 推進設計與製造。',
+      revenueGrowth: 'AI/HPC 是主要成長引擎。',
+      grossMargin: '先進製程定價力強，但海外擴廠與折舊會影響短期毛利。',
+      eps: '受先進製程稼動率、匯率、折舊與 capex 影響。',
+      freeCashFlow: '高 capex 階段需觀察投資回收。',
+      valuationRisk: '核心 AI 資產溢價已高。',
+      technicalTrend: '正向但受 AI trade 熱度影響。',
+      competitors: ['Samsung Foundry', 'Intel Foundry'],
+      bullCase: 'AI/HPC 與先進封裝需求多年延續。',
+      baseCase: '需求強但需要逐季驗證 capex 效率。',
+      bearCase: 'AI capex 放緩、地緣政治或封裝瓶頸。',
+      keyRisks: ['地緣政治', 'capex', '封裝產能', '海外廠成本'],
+      finalView: 'Positive',
+      suggestedAction: 'Watch',
+      whatWouldChangeView: '若 AI demand 或 CoWoS 需求明顯鬆動，需下修。'
+    },
+    {
+      id: 'company-vrt-automation',
+      companyName: 'Vertiv',
+      ticker: 'VRT',
+      marketCountry: '美國',
+      overview: '資料中心 power、thermal、rack infrastructure 供應商，受惠 AI server 功耗上升。',
+      businessModel: '提供 UPS、配電、熱管理、液冷與資料中心服務。',
+      revenueDrivers: ['AI rack power density', 'Liquid cooling', 'Data center construction', 'Retrofit demand'],
+      latestFinancialReportSummary: '今日 AI server demand read-through 對資料中心基礎設施有間接正面含義。',
+      revenueGrowth: '受資料中心 capex 與電力/散熱升級支撐。',
+      grossMargin: '產品組合改善可支撐毛利，但專案成本需追蹤。',
+      eps: '受 backlog 轉營收與營運槓桿影響。',
+      freeCashFlow: '大型專案交付後有改善空間。',
+      valuationRisk: 'AI infrastructure 概念已熱門，估值容易波動。',
+      technicalTrend: '題材強但適合等回檔。',
+      competitors: ['Eaton', 'Schneider Electric', 'nVent'],
+      bullCase: '液冷與電源升級成為 AI rack 標配。',
+      baseCase: '需求強但估值需要財報消化。',
+      bearCase: '資料中心建設遞延或供給過剩。',
+      keyRisks: ['估值', '專案遞延', '供給過剩', '毛利率'],
+      finalView: 'Neutral',
+      suggestedAction: 'Wait',
+      whatWouldChangeView: '若回檔且 backlog、毛利、現金流同步改善，可轉正向。'
+    }
+  ],
+  watchlist: [
+    {
+      id: 'watch-nvda-automation',
+      ticker: 'NVDA',
+      companyName: 'NVIDIA',
+      currentView: 'Positive',
+      keyNews: 'Reuters 報導 NVIDIA / Microsoft AI 推進支持市場情緒；TSMC fab AI 合作增加長期敘事。',
+      keyPriceLevels: '未接即時報價；先觀察財報後支撐與半導體指數是否過熱。',
+      riskNotes: '估值、ASIC 替代、出口限制、AI bubble risk。',
+      lastUpdatedTime: '2026-06-01 22:35',
+      status: 'Watching'
+    },
+    {
+      id: 'watch-dell-automation',
+      ticker: 'DELL',
+      companyName: 'Dell Technologies',
+      currentView: 'Neutral',
+      keyNews: 'AI demand 強、上調全年指引，財報後大漲。',
+      keyPriceLevels: '未接即時報價；等待回檔與毛利品質確認。',
+      riskNotes: 'AI server 毛利與訂單品質。',
+      lastUpdatedTime: '2026-06-01 22:35',
+      status: 'Researching'
+    },
+    {
+      id: 'watch-tsm-automation',
+      ticker: 'TSM',
+      companyName: '台積電',
+      currentView: 'Positive',
+      keyNews: 'NVIDIA 宣布 TSMC 使用 accelerated computing 與 AI 推進製造。',
+      keyPriceLevels: '未接即時報價；觀察 AI capex 與台股資金動能。',
+      riskNotes: '地緣政治、capex、封裝產能與估值。',
+      lastUpdatedTime: '2026-06-01 22:35',
+      status: 'Watching'
+    },
+    {
+      id: 'watch-vrt-automation',
+      ticker: 'VRT',
+      companyName: 'Vertiv',
+      currentView: 'Neutral',
+      keyNews: 'AI server demand 間接支持 power/thermal infrastructure。',
+      keyPriceLevels: '未接即時報價；等待估值消化。',
+      riskNotes: '資料中心建設遞延與高估值。',
+      lastUpdatedTime: '2026-06-01 22:35',
+      status: 'Waiting'
+    }
+  ],
+  ideaPipeline: [
+    {
+      id: 'idea-nvda-automation',
+      newsId: 'news-2026-06-01-reuters-ai-futures',
+      themeId: 'theme-ai-momentum',
+      supplyChainNodeId: 'node-nvda-automation',
+      companyResearchId: 'company-nvda-automation',
+      finalView: 'Positive',
+      explanation: '今日 Reuters 催化直接指向 NVIDIA / Microsoft AI 推進，再延伸到 AI momentum 主題與 NVIDIA 核心受惠。'
+    },
+    {
+      id: 'idea-dell-automation',
+      newsId: 'news-2026-06-01-dell-ai-demand',
+      themeId: 'theme-ai-server-demand',
+      supplyChainNodeId: 'node-dell-automation',
+      companyResearchId: 'company-dell-automation',
+      finalView: 'Neutral',
+      explanation: 'Dell 財報是 AI server demand 的實際財報證據，但毛利與訂單品質仍需驗證，因此列為研究中。'
+    },
+    {
+      id: 'idea-tsm-automation',
+      newsId: 'news-2026-06-01-nvidia-tsmc-fabs',
+      themeId: 'theme-ai-fabs',
+      supplyChainNodeId: 'node-tsm-automation',
+      companyResearchId: 'company-tsm-automation',
+      finalView: 'Positive',
+      explanation: 'NVIDIA + TSMC fab AI 新聞把 TSMC 從 AI 製造受惠者延伸為 AI 生產效率題材，研究價值提高。'
+    },
+    {
+      id: 'idea-vrt-automation',
+      newsId: 'news-2026-06-01-dell-ai-demand',
+      themeId: 'theme-ai-server-demand',
+      supplyChainNodeId: 'node-vrt-automation',
+      companyResearchId: 'company-vrt-automation',
+      finalView: 'Neutral',
+      explanation: 'AI server demand 最終會推動 power/thermal infrastructure，但 Vertiv 估值和題材熱度需要等待確認。'
+    }
+  ]
+};
+
+async function main() {
+  const json = `${JSON.stringify(report, null, 2)}\n`;
+  await mkdir(reportsDir, { recursive: true });
+  await writeFile(path.join(dataDir, 'latest.json'), json, 'utf8');
+  await writeFile(path.join(reportsDir, `${report.date}.json`), json, 'utf8');
+  console.log(`One-time research automation updated ${report.date}`);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
