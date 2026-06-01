@@ -1,0 +1,360 @@
+{
+  "date": "2026-06-01",
+  "generatedAt": "2026-06-01T07:30:00+08:00",
+  "marketOverview": "AI 資料中心資本支出仍是科技股主軸，但市場開始從 GPU 龍頭擴散到先進封裝、電源、散熱與高速網通。短線情緒偏正向，估值與交期風險需要同步追蹤。",
+  "marketSentiment": "Bullish",
+  "topThemes": ["AI 資料中心擴建", "先進封裝產能", "液冷與電源升級"],
+  "stocksToWatch": ["NVDA", "TSM", "AVGO", "VRT", "2382.TW", "3017.TW"],
+  "biggestRisk": "AI 伺服器訂單若從急單轉為正常化，市場可能重新檢視高估值與供應鏈庫存。",
+  "watchlistAlerts": [
+    "TSM 若 CoWoS 月產能擴張節奏延後，台系設備與材料股需要降溫。",
+    "VRT 與 3017.TW 對液冷敘事敏感，追高前需確認毛利與交期。",
+    "AVGO 若客製 ASIC 訂單能見度提高，二線載板與測試供應商可能受惠。"
+  ],
+  "emotionalWarning": "今天適合做功課，不適合被熱門標題推著追價。先確認受惠邏輯、估值與風險，再決定觀察、等待或避開。",
+  "news": [
+    {
+      "id": "news-ai-capex",
+      "title": "大型雲端業者維持 AI 資料中心資本支出高檔",
+      "source": "Mock Market Brief",
+      "date": "2026-06-01",
+      "summary": "市場預期雲端服務商今年仍會把資本支出集中在 AI 叢集、網路交換、電力與散熱。投資焦點從 GPU 供應轉向整座資料中心的瓶頸。",
+      "relatedTickers": ["NVDA", "MSFT", "AMZN", "GOOGL", "AVGO"],
+      "impact": "Positive",
+      "confidence": "High"
+    },
+    {
+      "id": "news-packaging",
+      "title": "先進封裝產能仍是 AI 晶片出貨關鍵限制",
+      "source": "Mock Semiconductor Wire",
+      "date": "2026-06-01",
+      "summary": "CoWoS、載板、測試與封裝設備的交期仍偏緊，讓市場繼續關注台灣半導體供應鏈的第二層與第三層受惠者。",
+      "relatedTickers": ["TSM", "ASX", "3711.TW", "3037.TW", "2449.TW"],
+      "impact": "Positive",
+      "confidence": "Medium"
+    },
+    {
+      "id": "news-cooling",
+      "title": "高功耗 AI 伺服器推升液冷與電源設計需求",
+      "source": "Mock Datacenter Daily",
+      "date": "2026-06-01",
+      "summary": "GPU 機櫃功耗上升，使資料中心業者更積極評估液冷、電源模組與機櫃整合。短線受惠股可能包含散熱、電源與伺服器機殼供應商。",
+      "relatedTickers": ["VRT", "ETN", "3017.TW", "2382.TW", "2356.TW"],
+      "impact": "Positive",
+      "confidence": "Medium"
+    },
+    {
+      "id": "news-risk",
+      "title": "高估值 AI 概念股面臨財報驗證壓力",
+      "source": "Mock Risk Desk",
+      "date": "2026-06-01",
+      "summary": "市場對 AI 供應鏈成長預期很高，若營收、毛利或自由現金流未跟上股價，波動可能放大。低證據強度的隱藏受惠股尤其需要小心。",
+      "relatedTickers": ["NVDA", "TSM", "VRT", "2382.TW"],
+      "impact": "Negative",
+      "confidence": "High"
+    }
+  ],
+  "themes": [
+    {
+      "id": "theme-ai-dc",
+      "name": "AI 資料中心擴建",
+      "whyItMatters": "雲端業者的 AI 資本支出是半導體、伺服器、網通、電源與散熱需求的源頭。",
+      "relatedIndustries": ["雲端服務", "GPU", "伺服器", "高速網通", "資料中心基礎設施"],
+      "relatedCompanies": ["NVDA", "AVGO", "MSFT", "AMZN", "2382.TW"],
+      "shortTermImpact": "訂單能見度佳，但股價容易受財報語氣與資本支出指引影響。",
+      "longTermImpact": "AI 推論流量若持續成長，資料中心升級週期可能延伸多年。",
+      "evidenceQuality": "High"
+    },
+    {
+      "id": "theme-advanced-packaging",
+      "name": "先進封裝產能",
+      "whyItMatters": "高階 AI 晶片需要先進封裝與高階載板，產能瓶頸會決定出貨上限。",
+      "relatedIndustries": ["晶圓代工", "封裝測試", "ABF 載板", "半導體設備", "材料"],
+      "relatedCompanies": ["TSM", "ASX", "3037.TW", "3711.TW", "2449.TW"],
+      "shortTermImpact": "市場會追蹤產能擴張、良率與主要客戶拉貨。",
+      "longTermImpact": "異質整合與 chiplet 架構提高封裝價值量。",
+      "evidenceQuality": "Medium"
+    },
+    {
+      "id": "theme-cooling-power",
+      "name": "液冷與電源升級",
+      "whyItMatters": "AI 叢集功耗上升後，散熱、電源與機櫃整合從配角變成關鍵瓶頸。",
+      "relatedIndustries": ["液冷", "電源管理", "機櫃", "UPS", "伺服器零組件"],
+      "relatedCompanies": ["VRT", "ETN", "3017.TW", "2356.TW", "2308.TW"],
+      "shortTermImpact": "訂單消息與新產品驗證會快速改變市場預期。",
+      "longTermImpact": "資料中心功率密度上升可能形成多年升級需求。",
+      "evidenceQuality": "Medium"
+    }
+  ],
+  "supplyChain": [
+    {
+      "id": "node-nvda",
+      "companyName": "NVIDIA",
+      "ticker": "NVDA",
+      "marketCountry": "美國",
+      "layer": 1,
+      "linkedThemeId": "theme-ai-dc",
+      "whyItMayBenefit": "AI GPU 與網路平台是資料中心擴建的直接採購項目。",
+      "evidenceStrength": "High",
+      "visibility": "Obvious",
+      "keyRisk": "高基期、競爭 ASIC、客戶自研晶片。"
+    },
+    {
+      "id": "node-wiwynn",
+      "companyName": "緯穎",
+      "ticker": "6669.TW",
+      "marketCountry": "台灣",
+      "layer": 2,
+      "linkedThemeId": "theme-ai-dc",
+      "whyItMayBenefit": "雲端資料中心伺服器 ODM 可受惠 AI 伺服器整機需求。",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "客戶集中與產品轉換期毛利壓力。"
+    },
+    {
+      "id": "node-ibiden",
+      "companyName": "Ibiden",
+      "ticker": "4062.T",
+      "marketCountry": "日本",
+      "layer": 3,
+      "linkedThemeId": "theme-advanced-packaging",
+      "whyItMayBenefit": "高階 ABF 載板需求跟隨 AI 加速器與高階 CPU 成長。",
+      "evidenceStrength": "Medium",
+      "visibility": "Hidden",
+      "keyRisk": "載板供需反轉與資本支出折舊。"
+    },
+    {
+      "id": "node-accton",
+      "companyName": "智邦",
+      "ticker": "2345.TW",
+      "marketCountry": "台灣",
+      "layer": 3,
+      "linkedThemeId": "theme-ai-dc",
+      "whyItMayBenefit": "AI 叢集需要高速交換器與網通設備，網路升級可能推升交換器需求。",
+      "evidenceStrength": "Medium",
+      "visibility": "Hidden",
+      "keyRisk": "白牌交換器競爭與客戶拉貨波動。"
+    },
+    {
+      "id": "node-vertiv",
+      "companyName": "Vertiv",
+      "ticker": "VRT",
+      "marketCountry": "美國",
+      "layer": 2,
+      "linkedThemeId": "theme-cooling-power",
+      "whyItMayBenefit": "提供資料中心電源、散熱與基礎設施方案，直接對應高功耗機櫃需求。",
+      "evidenceStrength": "High",
+      "visibility": "Obvious",
+      "keyRisk": "估值已反映高成長，執行不如預期會放大修正。"
+    },
+    {
+      "id": "node-auras",
+      "companyName": "奇鋐",
+      "ticker": "3017.TW",
+      "marketCountry": "台灣",
+      "layer": 3,
+      "linkedThemeId": "theme-cooling-power",
+      "whyItMayBenefit": "散熱模組與液冷零組件需求提升，可能成為高功耗伺服器升級受惠者。",
+      "evidenceStrength": "Medium",
+      "visibility": "Hidden",
+      "keyRisk": "液冷滲透速度與客戶認證不確定。"
+    },
+    {
+      "id": "node-testing",
+      "companyName": "京元電子",
+      "ticker": "2449.TW",
+      "marketCountry": "台灣",
+      "layer": 4,
+      "linkedThemeId": "theme-advanced-packaging",
+      "whyItMayBenefit": "高階 AI 晶片測試時間拉長，若測試產能緊張，測試服務價值量可能提升。",
+      "evidenceStrength": "Low",
+      "visibility": "Hidden",
+      "keyRisk": "客戶與產品組合變化不透明，證據需持續補強。"
+    },
+    {
+      "id": "node-delta",
+      "companyName": "台達電",
+      "ticker": "2308.TW",
+      "marketCountry": "台灣",
+      "layer": 4,
+      "linkedThemeId": "theme-cooling-power",
+      "whyItMayBenefit": "電源管理、風扇與資料中心能源效率方案可能受惠功率密度上升。",
+      "evidenceStrength": "Medium",
+      "visibility": "Hidden",
+      "keyRisk": "AI 相關收入占比與估值拆分不易。"
+    }
+  ],
+  "beneficiaries": [
+    {
+      "id": "benefit-ai-dc",
+      "themeId": "theme-ai-dc",
+      "directBeneficiaries": ["NVDA", "AVGO", "大型雲端服務商"],
+      "indirectBeneficiaries": ["6669.TW", "2382.TW", "2345.TW"],
+      "hiddenBeneficiaries": ["高速連接器", "光模組", "電源線束", "資料中心施工供應鏈"],
+      "companiesMayBeHurt": ["傳統企業伺服器供應商", "低速網通零組件"],
+      "reasoning": "AI 叢集擴建先拉動加速器與網路，再擴散到伺服器整機、交換器、連接與基礎設施。",
+      "evidenceQuality": "High",
+      "researchPriorityScore": 94
+    },
+    {
+      "id": "benefit-packaging",
+      "themeId": "theme-advanced-packaging",
+      "directBeneficiaries": ["TSM", "ASX"],
+      "indirectBeneficiaries": ["3037.TW", "3711.TW", "2449.TW"],
+      "hiddenBeneficiaries": ["ABF 載板材料", "封裝設備", "測試介面", "清洗與檢測"],
+      "companiesMayBeHurt": ["成熟封裝產能", "低階載板廠"],
+      "reasoning": "先進封裝產能若不足，價值會向設備、材料、載板與測試瓶頸外溢。",
+      "evidenceQuality": "Medium",
+      "researchPriorityScore": 88
+    },
+    {
+      "id": "benefit-cooling",
+      "themeId": "theme-cooling-power",
+      "directBeneficiaries": ["VRT", "ETN"],
+      "indirectBeneficiaries": ["3017.TW", "2308.TW", "2356.TW"],
+      "hiddenBeneficiaries": ["液冷接頭", "冷板", "CDU", "高效率電源模組"],
+      "companiesMayBeHurt": ["只做傳統低功率散熱的供應商"],
+      "reasoning": "GPU 機櫃功率提升會迫使資料中心升級冷卻與供電架構，零組件價值量提高。",
+      "evidenceQuality": "Medium",
+      "researchPriorityScore": 86
+    }
+  ],
+  "companyResearch": [
+    {
+      "id": "company-tsm",
+      "companyName": "台積電",
+      "ticker": "TSM",
+      "marketCountry": "台灣 / 美國 ADR",
+      "overview": "全球領先晶圓代工公司，是高階 AI 晶片製造與先進封裝的核心供應商。",
+      "businessModel": "向無晶圓廠設計公司與 IDM 提供製程、晶圓製造與先進封裝服務。",
+      "revenueDrivers": ["先進製程", "HPC / AI", "先進封裝", "主要客戶新晶片週期"],
+      "latestFinancialReportSummary": "Mock：HPC 需求強，資本支出維持高檔，毛利受海外擴廠與製程轉換影響。",
+      "revenueGrowth": "高個位數至雙位數成長情境",
+      "grossMargin": "高於同業，但需觀察折舊與海外廠稼動率",
+      "eps": "受先進製程稼動率與匯率影響",
+      "freeCashFlow": "資本支出大，長期自由現金流仍取決於先進製程定價力",
+      "valuationRisk": "市場已給予 AI 核心供應商溢價，若成長放緩可能壓縮本益比。",
+      "technicalTrend": "中期趨勢偏多，短線若跌破重要均線需重新確認動能。",
+      "competitors": ["Samsung Foundry", "Intel Foundry"],
+      "bullCase": "AI 晶片與先進封裝需求持續超預期，定價力維持。",
+      "baseCase": "AI 需求支撐成長，但估值需靠財報逐季驗證。",
+      "bearCase": "客戶砍單、封裝擴產延後或地緣政治風險升高。",
+      "keyRisks": ["地緣政治", "資本支出效率", "客戶集中", "製程良率"],
+      "finalView": "Positive",
+      "suggestedAction": "Consider buying only if conditions are met",
+      "whatWouldChangeView": "若 AI 客戶資本支出下修、CoWoS 需求鬆動或毛利率明顯低於預期，需下修觀點。"
+    },
+    {
+      "id": "company-vrt",
+      "companyName": "Vertiv",
+      "ticker": "VRT",
+      "marketCountry": "美國",
+      "overview": "資料中心電源與熱管理基礎設施供應商，AI 機櫃升級受惠明確。",
+      "businessModel": "銷售 UPS、配電、散熱與資料中心服務，受資料中心建置週期影響。",
+      "revenueDrivers": ["資料中心新建", "液冷方案", "電力基礎設施", "服務收入"],
+      "latestFinancialReportSummary": "Mock：訂單與 backlog 強，但市場已高度期待 AI 相關成長。",
+      "revenueGrowth": "雙位數成長情境",
+      "grossMargin": "產品組合改善可支撐毛利，但供應鏈成本需追蹤",
+      "eps": "營運槓桿帶動 EPS 彈性",
+      "freeCashFlow": "若營收轉現能力提升，估值支撐度增加",
+      "valuationRisk": "AI 基礎設施敘事已反映在估值，失望風險高。",
+      "technicalTrend": "強勢股型態，追價風險高於分批觀察。",
+      "competitors": ["Eaton", "Schneider Electric", "nVent"],
+      "bullCase": "液冷與電力升級需求形成多年訂單循環。",
+      "baseCase": "需求強但估值偏滿，需要靠毛利與自由現金流消化。",
+      "bearCase": "資料中心資本支出遞延或競爭壓低毛利。",
+      "keyRisks": ["估值過高", "專案遞延", "液冷滲透率不及預期"],
+      "finalView": "Neutral",
+      "suggestedAction": "Wait",
+      "whatWouldChangeView": "若回檔後估值合理且訂單轉營收順利，可轉為正向；若 backlog 品質變差則轉負向。"
+    },
+    {
+      "id": "company-auras",
+      "companyName": "奇鋐",
+      "ticker": "3017.TW",
+      "marketCountry": "台灣",
+      "overview": "散熱模組供應商，AI 伺服器液冷與高階散熱需求是主要觀察點。",
+      "businessModel": "提供散熱模組、風扇、熱管與液冷相關零組件給伺服器與電子客戶。",
+      "revenueDrivers": ["AI 伺服器散熱", "液冷滲透率", "客戶認證", "產品組合升級"],
+      "latestFinancialReportSummary": "Mock：市場期待 AI 散熱占比提升，但需確認毛利率與出貨節奏。",
+      "revenueGrowth": "取決於液冷產品放量速度",
+      "grossMargin": "高階產品可改善毛利，但初期良率與價格競爭是風險",
+      "eps": "營收規模與產品組合變化影響大",
+      "freeCashFlow": "擴產與庫存可能壓力短期現金流",
+      "valuationRisk": "題材熱度高，證據若不足易波動。",
+      "technicalTrend": "動能偏強但震盪大，適合等待確認點。",
+      "competitors": ["雙鴻", "建準", "台達電"],
+      "bullCase": "液冷滲透率快速提升且主要客戶訂單放大。",
+      "baseCase": "受惠趨勢成立，但出貨與毛利逐季驗證。",
+      "bearCase": "液冷導入慢於預期或競爭壓縮毛利。",
+      "keyRisks": ["認證進度", "客戶集中", "毛利波動", "追高風險"],
+      "finalView": "Neutral",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若看到液冷營收占比、毛利與客戶擴散同步改善，可提高研究優先級。"
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "watch-tsm",
+      "ticker": "TSM",
+      "companyName": "台積電",
+      "currentView": "Positive",
+      "keyNews": "先進製程與 CoWoS 需求仍強。",
+      "keyPriceLevels": "觀察長期均線支撐與前高壓力。",
+      "riskNotes": "地緣政治與毛利率低於預期。",
+      "lastUpdatedTime": "2026-06-01 07:30",
+      "status": "Watching"
+    },
+    {
+      "id": "watch-vrt",
+      "ticker": "VRT",
+      "companyName": "Vertiv",
+      "currentView": "Neutral",
+      "keyNews": "資料中心電源與液冷需求高，但估值偏滿。",
+      "keyPriceLevels": "等待回檔至風險報酬較合理區間。",
+      "riskNotes": "訂單轉營收不如預期會觸發估值修正。",
+      "lastUpdatedTime": "2026-06-01 07:30",
+      "status": "Waiting"
+    },
+    {
+      "id": "watch-auras",
+      "ticker": "3017.TW",
+      "companyName": "奇鋐",
+      "currentView": "Neutral",
+      "keyNews": "AI 散熱題材強，需確認液冷出貨。",
+      "keyPriceLevels": "不追高，等待量價與財報確認。",
+      "riskNotes": "液冷導入慢與毛利波動。",
+      "lastUpdatedTime": "2026-06-01 07:30",
+      "status": "Researching"
+    }
+  ],
+  "ideaPipeline": [
+    {
+      "id": "idea-tsm",
+      "newsId": "news-packaging",
+      "themeId": "theme-advanced-packaging",
+      "supplyChainNodeId": "node-testing",
+      "companyResearchId": "company-tsm",
+      "finalView": "Positive",
+      "explanation": "封裝瓶頸先指向台積電，再外溢到測試、載板與設備。台積電是核心受惠者，但真正的超額研究價值在第二層與第三層。"
+    },
+    {
+      "id": "idea-vrt",
+      "newsId": "news-cooling",
+      "themeId": "theme-cooling-power",
+      "supplyChainNodeId": "node-vertiv",
+      "companyResearchId": "company-vrt",
+      "finalView": "Neutral",
+      "explanation": "高功耗機櫃直接增加電力與散熱需求，Vertiv 受惠明確，但目前更適合等待估值消化。"
+    },
+    {
+      "id": "idea-auras",
+      "newsId": "news-cooling",
+      "themeId": "theme-cooling-power",
+      "supplyChainNodeId": "node-auraS",
+      "companyResearchId": "company-auras",
+      "finalView": "Neutral",
+      "explanation": "液冷從主題延伸到台灣散熱模組供應商，奇鋐是可研究標的，但證據仍需財報與客戶認證補強。"
+    }
+  ]
+}
