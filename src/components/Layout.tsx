@@ -15,7 +15,7 @@ const navItems = [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen pb-24 lg:pb-0">
+    <div className="min-h-screen pb-[calc(6rem+env(safe-area-inset-bottom))] lg:pb-0">
       <aside className="fixed left-0 top-0 hidden h-full w-64 border-r border-white/10 bg-[#0a0f18]/90 p-5 lg:block">
         <Brand />
         <nav className="mt-8 space-y-1">
@@ -25,14 +25,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </nav>
       </aside>
 
-      <main className="mx-auto w-full max-w-6xl px-4 py-5 lg:ml-64 lg:px-8">
+      <main className="mx-auto w-full max-w-6xl px-4 pb-5 pt-[calc(1.25rem+env(safe-area-inset-top))] lg:ml-64 lg:px-8 lg:pt-5">
         <div className="mb-5 lg:hidden">
           <Brand />
         </div>
         {children}
       </main>
 
-      <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#080b12]/95 px-2 py-2 backdrop-blur lg:hidden">
+      <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#080b12]/95 px-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] pt-2 backdrop-blur lg:hidden">
         <div className="grid grid-cols-8 gap-1">
           {navItems.map((item) => (
             <BottomNavLink key={item.to} {...item} />
