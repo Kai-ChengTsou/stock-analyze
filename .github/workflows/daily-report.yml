@@ -2,8 +2,8 @@ name: Daily AI Stock Research Report
 
 on:
   schedule:
-    # 7:30 AM Asia/Taipei is 23:30 UTC on the previous calendar day.
-    - cron: '30 23 * * *'
+    # 7:00 AM Asia/Taipei is 23:00 UTC on the previous calendar day.
+    - cron: '0 23 * * *'
   workflow_dispatch:
 
 permissions:
@@ -26,8 +26,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate daily report
-        run: npm run generate
+      - name: Generate daily research report
+        run: npm run automation:once
+        env:
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          FINANCIAL_DATA_API_KEY: ${{ secrets.FINANCIAL_DATA_API_KEY }}
 
       - name: Commit generated report
         run: |
