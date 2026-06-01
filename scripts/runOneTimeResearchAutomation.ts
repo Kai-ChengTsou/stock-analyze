@@ -6,9 +6,31 @@ const root = process.cwd();
 const dataDir = path.join(root, 'data');
 const reportsDir = path.join(dataDir, 'reports');
 
+function taiwanRunTime(now = new Date()) {
+  const formatter = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Taipei',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false,
+  });
+  const parts = Object.fromEntries(formatter.formatToParts(now).map((part) => [part.type, part.value]));
+
+  return {
+    date: `${parts.year}-${parts.month}-${parts.day}`,
+    generatedAt: `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}:${parts.second}+08:00`,
+    displayTime: `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}`,
+  };
+}
+
+const runTime = taiwanRunTime();
+
 const report: DailyDashboard = {
-  date: '2026-06-01',
-  generatedAt: '2026-06-01T22:35:00+08:00',
+  date: runTime.date,
+  generatedAt: runTime.generatedAt,
   marketOverview:
     '今日一次性自動化研究使用新抓取的公開新聞整理。AI 題材仍主導市場：NVIDIA 與 Microsoft 的新 AI PC 晶片推動美股期貨，Dell 財報顯示 AI server 需求強，TSMC 與 NVIDIA 將 AI 導入半導體製造，市場同時擔心半導體交易過熱。整體情緒偏多，但追價風險上升。',
   marketSentiment: 'Bullish',
@@ -380,7 +402,7 @@ const report: DailyDashboard = {
       keyNews: 'Reuters 報導 NVIDIA / Microsoft AI 推進支持市場情緒；TSMC fab AI 合作增加長期敘事。',
       keyPriceLevels: '未接即時報價；先觀察財報後支撐與半導體指數是否過熱。',
       riskNotes: '估值、ASIC 替代、出口限制、AI bubble risk。',
-      lastUpdatedTime: '2026-06-01 22:35',
+      lastUpdatedTime: runTime.displayTime,
       status: 'Watching'
     },
     {
@@ -391,7 +413,7 @@ const report: DailyDashboard = {
       keyNews: 'AI demand 強、上調全年指引，財報後大漲。',
       keyPriceLevels: '未接即時報價；等待回檔與毛利品質確認。',
       riskNotes: 'AI server 毛利與訂單品質。',
-      lastUpdatedTime: '2026-06-01 22:35',
+      lastUpdatedTime: runTime.displayTime,
       status: 'Researching'
     },
     {
@@ -402,7 +424,7 @@ const report: DailyDashboard = {
       keyNews: 'NVIDIA 宣布 TSMC 使用 accelerated computing 與 AI 推進製造。',
       keyPriceLevels: '未接即時報價；觀察 AI capex 與台股資金動能。',
       riskNotes: '地緣政治、capex、封裝產能與估值。',
-      lastUpdatedTime: '2026-06-01 22:35',
+      lastUpdatedTime: runTime.displayTime,
       status: 'Watching'
     },
     {
@@ -413,7 +435,7 @@ const report: DailyDashboard = {
       keyNews: 'AI server demand 間接支持 power/thermal infrastructure。',
       keyPriceLevels: '未接即時報價；等待估值消化。',
       riskNotes: '資料中心建設遞延與高估值。',
-      lastUpdatedTime: '2026-06-01 22:35',
+      lastUpdatedTime: runTime.displayTime,
       status: 'Waiting'
     }
   ],
