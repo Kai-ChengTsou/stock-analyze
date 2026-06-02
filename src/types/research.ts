@@ -13,7 +13,7 @@ export type WatchlistStatus = 'Watching' | 'Waiting' | 'Avoiding' | 'Researching
 export type MarketRegion = 'US' | 'Taiwan' | 'CrossMarket';
 export type CatalystType = 'Fresh catalyst' | 'Recent context' | 'Background thesis' | 'Momentum only' | 'No signal';
 export type EvidenceGrade = 'A' | 'B' | 'C' | 'D';
-export type OpportunityStage = 'Early' | 'Confirming' | 'Crowded' | 'Late' | 'Avoid/Wait' | 'Avoid-Wait';
+export type OpportunityStage = 'Early' | 'Confirming' | 'Crowded' | 'Late' | 'Avoid/Wait';
 export type CatalystDriver = 'Fundamental' | 'Technical' | 'Macro' | 'Policy' | 'Sentiment' | 'Supply-chain' | 'Mixed';
 export type BeneficiaryType = 'Direct' | 'Indirect' | 'Hidden' | 'Hurt' | 'Radar only';
 

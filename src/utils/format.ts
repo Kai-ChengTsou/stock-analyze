@@ -52,12 +52,11 @@ export const opportunityStageLabel: Record<OpportunityStage, string> = {
   Crowded: '擁擠',
   Late: '偏晚',
   'Avoid/Wait': '避開/等待',
-  'Avoid-Wait': '避開/等待',
 };
 
 export const toneClass = (value: string) => {
   if (['Bullish', 'Positive', 'High', 'A', 'B', 'Early', 'Confirming'].includes(value)) return 'border-emerald-400/25 bg-emerald-400/10 text-emerald-200';
-  if (['Bearish', 'Negative', 'Low', 'C', 'D', 'Late', 'Avoid/Wait', 'Avoid-Wait'].includes(value)) return 'border-rose-400/25 bg-rose-400/10 text-rose-200';
+  if (['Bearish', 'Negative', 'Low', 'C', 'D', 'Late', 'Avoid/Wait'].includes(value)) return 'border-rose-400/25 bg-rose-400/10 text-rose-200';
   if (['Crowded'].includes(value)) return 'border-amber-400/25 bg-amber-400/10 text-amber-200';
   return 'border-sky-400/25 bg-sky-400/10 text-sky-200';
 };
