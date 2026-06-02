@@ -16,6 +16,21 @@ const root = process.cwd();
 const dataDir = path.join(root, 'data');
 const reportsDir = path.join(dataDir, 'reports');
 
+type ReportMode = 'morning' | 'evening';
+
+const modeArg = process.argv.find((arg) => arg.startsWith('--mode='));
+const envMode = process.env.REPORT_MODE;
+const requestedMode = (modeArg?.split('=')[1] ?? envMode ?? 'morning') as ReportMode;
+
+if (!['morning', 'evening'].includes(requestedMode)) {
+  throw new Error(`Unsupported report mode: ${requestedMode}. Expected morning or evening.`);
+}
+
+const reportMode = requestedMode;
+const reportModeLabel = reportMode === 'morning' ? '台股今日作戰版' : '美股今晚觀察版';
+const latestModeFile = reportMode === 'morning' ? 'latest-morning.json' : 'latest-evening.json';
+const reportFileSuffix = reportMode === 'morning' ? 'morning' : 'evening';
+
 function taiwanRunTime(now = new Date()) {
   const formatter = new Intl.DateTimeFormat('en-CA', {
     timeZone: 'Asia/Taipei',
@@ -341,24 +356,60 @@ const marketSections: MarketSections = {
   ],
 };
 
+if (reportMode === 'evening') {
+  marketSections.us.title = '美股今晚觀察';
+  marketSections.us.overview = '台北晚上版本聚焦美股盤前/開盤設定：大盤、SOX、利率、美元、AI capex、AI 軟體 monetization、財報與今晚需要追蹤的催化。';
+  marketSections.us.topThemes = ['今晚美股盤前情緒', 'AI 軟體與半導體 watchlist', '雲端 capex / monetization', '利率美元與估值風險', '明日台股 read-through'];
+  marketSections.us.risks = ['晚間版本是美股事件前設定，不應直接等同已發生結果。', '若美股開盤後走勢反轉，隔日台股 read-through 需在早報重新驗證。'];
+
+  marketSections.taiwan.title = '明日台股預判';
+  marketSections.taiwan.overview = '台北晚上版本不把台股當成當下可交易市場，而是整理美股今晚若發生特定催化，隔日可能影響的台股族群與驗證點。';
+  marketSections.taiwan.topThemes = ['美股今晚對台股的可能傳導', 'AI server / 半導體隔日觀察', '記憶體與功率元件延伸', '題材股隔日風險控管'];
+  marketSections.taiwan.risks = ['隔日預判必須等美股收盤、台股開盤量價與本地新聞驗證。', '晚上不應用台股預判取代隔天早上的台股作戰版。'];
+}
+
+const modeOverview =
+  reportMode === 'morning'
+    ? '早上版本以台股今日作戰為主：先讀昨夜美股收盤與盤後訊號，再映射到今天台股可能受影響的族群、個股與驗證點。'
+    : '晚上版本以美股今晚觀察為主：整理盤前/開盤需要追蹤的 AI、半導體、雲端、軟體與總經訊號，並產生明日台股 read-through 預判。';
+
+const modeTopThemes =
+  reportMode === 'morning'
+    ? ['台股今日作戰與驗證點', '昨夜美股 read-through', '台股 AI 基建與功率元件供應鏈擴散', '台股記憶體與面板轉型題材', '全市場雷達避免漏掉非 AI 主流']
+    : ['美股今晚盤前/開盤設定', 'AI 軟體 monetization 與 PLTR watchlist', '美股半導體 / SOX / AI capex', '明日台股 read-through 預判', '利率美元與估值風險'];
+
+const modeWatchlistAlerts =
+  reportMode === 'morning'
+    ? [
+        '早上主軸：先看昨夜美股收盤訊號，再判斷今天台股哪些族群有可交易 read-through。',
+        '台股記憶體：華邦電、南亞科、旺宏、群聯要用報價、毛利、庫存與月營收交叉驗證。',
+        '台股面板：群創、彩晶可以進雷達，但 FOPLP / SpaceX 題材要和面板本業分開標註。',
+        '台股 ODM：仁寶、英業達、神達屬低基期轉型候選，不能直接套用廣達、緯穎的估值邏輯。',
+        '台股功率元件：強茂、台半、德微、大中、富鼎要用 AI server 電源、MOSFET / SiC、車用與交期/漲價驗證。',
+        '全市場：金融、航運、原物料、生技若當天有新催化，會升級主報，不再被 AI 固定名單排擠。',
+      ]
+    : [
+        '晚上主軸：美股還沒完整收盤，所以重點是今晚 watchlist、財報/數據事件與隔日台股預判。',
+        '美股 AI 軟體：PLTR、SNOW、ORCL、CRM、NOW 要看 AI monetization 是否能支撐硬體 capex thesis。',
+        '美股半導體：NVDA、AVGO、MU、SOX 若強弱分化，隔日台股半導體、記憶體與光通訊要分開處理。',
+        '資料中心基建：VRT、ETN、GEV、CEG 等電力/散熱/能源訊號，隔日可能映射台達電、奇鋐、功率元件。',
+        '隔日台股預判只列假設，不當成結論；隔天早報需用美股收盤、台股開盤量價與本地新聞重新驗證。',
+      ];
+
 const report: DailyDashboard = {
   date,
   generatedAt: runTime.generatedAt,
+  reportMode,
+  reportTitle: reportModeLabel,
+  reportFocus: modeOverview,
   marketOverview:
-    '本版晨報改為全市場掃描框架：先分開掃美股與台股，再用跨市場連動推導供應鏈。今天保留 12 則重要訊號與 16 家公司研究，涵蓋美股 AI capex、AI 應用層、雲端與半導體，以及台股記憶體、面板/FOPLP、AI server ODM、散熱電源、功率元件、PCB、光通訊與非科技雷達。',
+    `${modeOverview} 本版報告採全市場掃描框架：先分開掃美股與台股，再用跨市場連動推導供應鏈。保留 12 則重要訊號與 16 家公司研究，涵蓋美股 AI capex、AI 應用層、雲端與半導體，以及台股記憶體、面板/FOPLP、AI server ODM、散熱電源、功率元件、PCB、光通訊與非科技雷達。`,
   marketSentiment: 'Bullish',
-  topThemes: ['美股 AI capex 與估值驗證', '美股 AI 應用層 monetization', '台股記憶體與面板轉型題材', '台股 AI 基建與功率元件供應鏈擴散', '全市場雷達避免漏掉非 AI 主流'],
+  topThemes: modeTopThemes,
   stocksToWatch: ['NVDA', 'MSFT', 'AVGO', 'MU', 'PLTR', 'DELL', '2330.TW', '2344.TW', '3481.TW', '6116.TW', '2324.TW', '2308.TW', '2345.TW', '2481.TW', '5425.TW'],
   biggestRisk:
     '最大風險是把市場熱度誤判成基本面。美股要防 AI capex ROI 與高估值壓縮；台股要防處置股、低價題材股、面板與記憶體循環反轉，以及 AI server 轉型公司毛利沒有跟上營收。',
-  watchlistAlerts: [
-    '美股：NVDA / AVGO / MU / DELL 是 AI 硬體鏈核心，但要同步看 MSFT / GOOGL / AMZN 的 AI monetization。',
-    '台股記憶體：華邦電、南亞科、旺宏、群聯要用報價、毛利、庫存與月營收交叉驗證。',
-    '台股面板：群創、彩晶可以進雷達，但 FOPLP / SpaceX 題材要和面板本業分開標註。',
-    '台股 ODM：仁寶、英業達、神達屬低基期轉型候選，不能直接套用廣達、緯穎的估值邏輯。',
-    '台股功率元件：強茂、台半、德微、大中、富鼎要用 AI server 電源、MOSFET / SiC、車用與交期/漲價驗證。',
-    '全市場：金融、航運、原物料、生技若當天有新催化，會升級主報，不再被 AI 固定名單排擠。',
-  ],
+  watchlistAlerts: modeWatchlistAlerts,
   emotionalWarning:
     '每天先問：這是新催化、近期脈絡、背景論點，還是純動能？不要因為某檔很紅就直接當成基本面轉強，也不要因為它不是 AI 龍頭就漏掉市場主流。',
   news,
@@ -377,8 +428,12 @@ async function main() {
   const json = `${JSON.stringify(report, null, 2)}\n`;
   await mkdir(reportsDir, { recursive: true });
   await writeFile(path.join(dataDir, 'latest.json'), json, 'utf8');
-  await writeFile(path.join(reportsDir, `${report.date}.json`), json, 'utf8');
-  console.log(`Full-market research automation updated ${report.date}`);
+  await writeFile(path.join(dataDir, latestModeFile), json, 'utf8');
+  await writeFile(path.join(reportsDir, `${report.date}-${reportFileSuffix}.json`), json, 'utf8');
+  if (reportMode === 'morning') {
+    await writeFile(path.join(reportsDir, `${report.date}.json`), json, 'utf8');
+  }
+  console.log(`Full-market research automation updated ${report.date} (${reportMode})`);
   console.log(`Company research entries: ${report.companyResearch.length}`);
   console.log(`Scan coverage categories: ${report.marketSections?.scanCoverage.length ?? 0}`);
 }

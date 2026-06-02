@@ -149,6 +149,9 @@ export interface MarketSections {
 export interface DailyDashboard {
   date: string;
   generatedAt: string;
+  reportMode?: 'morning' | 'evening';
+  reportTitle?: string;
+  reportFocus?: string;
   marketOverview: string;
   marketSentiment: Sentiment;
   topThemes: string[];
