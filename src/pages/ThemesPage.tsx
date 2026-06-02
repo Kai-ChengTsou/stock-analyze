@@ -6,8 +6,6 @@ import { dailyReport } from '../data/report';
 import { confidenceLabel } from '../utils/format';
 
 export function ThemesPage() {
-  const pageTickers = uniqueTickers(dailyReport.themes.flatMap((theme) => theme.relatedCompanies));
-
   return (
     <div>
       <SectionHeader title="市場主題分析" description="從新聞摘要萃取主題，再追蹤產業、公司與長短期影響。" />
@@ -19,8 +17,8 @@ export function ThemesPage() {
               <Info label="短期影響" value={theme.shortTermImpact} />
               <Info label="長期影響" value={theme.longTermImpact} />
             </div>
-            <TagGroup label="相關產業" values={theme.relatedIndustries} groupValues={pageTickers} />
-            <TagGroup label="相關公司" values={theme.relatedCompanies} groupValues={pageTickers} />
+            <TagGroup label="相關產業" values={theme.relatedIndustries} groupValues={theme.relatedCompanies} />
+            <TagGroup label="相關公司" values={theme.relatedCompanies} groupValues={theme.relatedCompanies} />
           </Card>
         ))}
       </div>
@@ -48,8 +46,4 @@ function TagGroup({ label, values, groupValues }: { label: string; values: strin
       </div>
     </div>
   );
-}
-
-function uniqueTickers(values: string[]) {
-  return Array.from(new Set(values));
 }

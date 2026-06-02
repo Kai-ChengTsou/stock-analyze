@@ -7,10 +7,6 @@ import { marketSections } from '../data/report';
 import { confidenceLabel } from '../utils/format';
 
 export function CrossMarketPage() {
-  const pageTickers = uniqueTickers(
-    marketSections.crossMarket.flatMap((link) => [...link.relatedUSTickers, ...link.relatedTaiwanTickers]),
-  );
-
   return (
     <div>
       <SectionHeader
@@ -21,8 +17,22 @@ export function CrossMarketPage() {
 
       <div className="space-y-4">
         {marketSections.crossMarket.length > 0 ? marketSections.crossMarket.map((link) => (
+          <CrossMarketCard key={link.id} link={link} />
+        )) : (
+          <Card title="等待下一次掃描" eyebrow="Empty" right={<Link2 className="h-5 w-5 text-cyan-200" />}>
+            <p className="text-sm leading-6 text-slate-300">下一版晨報會把美股新聞如何影響台股供應鏈獨立列出。</p>
+          </Card>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function CrossMarketCard({ link }: { link: typeof marketSections.crossMarket[number] }) {
+  const blockTickers = uniqueTickers([...link.relatedUSTickers, ...link.relatedTaiwanTickers]);
+
+  return (
           <Card
-            key={link.id}
             title={link.title}
             eyebrow="US -> Taiwan"
             right={<Badge tone={link.evidenceStrength}>證據 {confidenceLabel[link.evidenceStrength]}</Badge>}
@@ -33,17 +43,10 @@ export function CrossMarketPage() {
             </div>
 
             <div className="mt-4 grid gap-3 md:grid-cols-2">
-              <TagGroup label="美股關聯" values={link.relatedUSTickers} groupValues={pageTickers} />
-              <TagGroup label="台股關聯" values={link.relatedTaiwanTickers} groupValues={pageTickers} />
+              <TagGroup label="美股關聯" values={link.relatedUSTickers} groupValues={blockTickers} />
+              <TagGroup label="台股關聯" values={link.relatedTaiwanTickers} groupValues={blockTickers} />
             </div>
           </Card>
-        )) : (
-          <Card title="等待下一次掃描" eyebrow="Empty" right={<Link2 className="h-5 w-5 text-cyan-200" />}>
-            <p className="text-sm leading-6 text-slate-300">下一版晨報會把美股新聞如何影響台股供應鏈獨立列出。</p>
-          </Card>
-        )}
-      </div>
-    </div>
   );
 }
 

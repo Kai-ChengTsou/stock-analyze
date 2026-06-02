@@ -6,13 +6,14 @@ import { dailyReport } from '../data/report';
 import { actionLabel, finalViewLabel } from '../utils/format';
 
 export function CompanyResearchPage() {
-  const pageTickers = dailyReport.companyResearch.map((company) => company.ticker);
-
   return (
     <div>
       <SectionHeader title="公司研究" description="每家公司都呈現商業模式、財務摘要、三情境、風險與行動建議。" />
       <div className="space-y-4">
-        {dailyReport.companyResearch.map((company) => (
+        {dailyReport.companyResearch.map((company) => {
+          const blockTickers = uniqueTickers([company.ticker, ...company.competitors]);
+
+          return (
           <Card
             key={company.id}
             title={`${company.companyName} · ${company.ticker}`}
@@ -38,12 +39,12 @@ export function CompanyResearchPage() {
             </div>
 
             <TagGroup label="營收驅動" values={company.revenueDrivers} />
-            <TagGroup label="競爭者" values={company.competitors} groupValues={pageTickers} />
+            <TagGroup label="競爭者" values={company.competitors} groupValues={blockTickers} />
             <TagGroup label="關鍵風險" values={company.keyRisks} />
 
             <div className="mt-4">
               <p className="mb-2 text-xs text-slate-400">公司研究清單</p>
-              <TickerChip value={company.ticker} groupValues={pageTickers} />
+              <TickerChip value={company.ticker} groupValues={blockTickers} />
             </div>
 
             <div className="mt-4 rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-3">
@@ -51,7 +52,7 @@ export function CompanyResearchPage() {
               <p className="mt-2 text-sm leading-6 text-slate-300">改變觀點的新資訊：{company.whatWouldChangeView}</p>
             </div>
           </Card>
-        ))}
+        )})}
       </div>
     </div>
   );
@@ -86,4 +87,8 @@ function TagGroup({ label, values, groupValues = values }: { label: string; valu
       </div>
     </div>
   );
+}
+
+function uniqueTickers(values: string[]) {
+  return Array.from(new Set(values));
 }
