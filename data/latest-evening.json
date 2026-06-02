@@ -1,15 +1,15 @@
 {
   "date": "2026-06-02",
-  "generatedAt": "2026-06-02T13:45:37+08:00",
+  "generatedAt": "2026-06-02T20:04:26+08:00",
   "reportMode": "evening",
   "reportTitle": "美股今晚觀察版",
-  "reportFocus": "晚上版本以美股今晚觀察為主：整理盤前/開盤需要追蹤的 AI、半導體、雲端、軟體與總經訊號，並產生明日台股 read-through 預判。",
-  "marketOverview": "晚上版本以美股今晚觀察為主：整理盤前/開盤需要追蹤的 AI、半導體、雲端、軟體與總經訊號，並產生明日台股 read-through 預判。 本版報告採全市場掃描框架：先分開掃美股與台股，再用跨市場連動推導供應鏈。保留 12 則重要訊號與 16 家公司研究，涵蓋美股 AI capex、AI 應用層、雲端與半導體，以及台股記憶體、面板/FOPLP、AI server ODM、散熱電源、功率元件、PCB、光通訊與非科技雷達。",
+  "reportFocus": "晚上版本以美股今晚觀察為主：先掃全市場新聞、價格、財報、總經與產業鏈訊號，再挑出真正重要的公司與明日台股 read-through 預判。",
+  "marketOverview": "晚上版本以美股今晚觀察為主：先掃全市場新聞、價格、財報、總經與產業鏈訊號，再挑出真正重要的公司與明日台股 read-through 預判。 本版報告採全市場掃描框架：先分開掃美股與台股，再用跨市場連動推導供應鏈。保留 12 則重要訊號與 16 家公司研究，涵蓋美股 AI capex、AI 應用層、雲端與半導體，以及台股記憶體、面板/FOPLP、AI server ODM、散熱電源、功率元件、PCB、光通訊與非科技雷達。",
   "marketSentiment": "Bullish",
   "topThemes": [
     "美股今晚盤前/開盤設定",
-    "AI 軟體 monetization 與 PLTR watchlist",
-    "美股半導體 / SOX / AI capex",
+    "全市場新催化與資金流向",
+    "AI / 半導體 / 雲端 capex 驗證",
     "明日台股 read-through 預判",
     "利率美元與估值風險"
   ],
@@ -32,10 +32,10 @@
   ],
   "biggestRisk": "最大風險是把市場熱度誤判成基本面。美股要防 AI capex ROI 與高估值壓縮；台股要防處置股、低價題材股、面板與記憶體循環反轉，以及 AI server 轉型公司毛利沒有跟上營收。",
   "watchlistAlerts": [
-    "晚上主軸：美股還沒完整收盤，所以重點是今晚 watchlist、財報/數據事件與隔日台股預判。",
-    "美股 AI 軟體：PLTR、SNOW、ORCL、CRM、NOW 要看 AI monetization 是否能支撐硬體 capex thesis。",
-    "美股半導體：NVDA、AVGO、MU、SOX 若強弱分化，隔日台股半導體、記憶體與光通訊要分開處理。",
-    "資料中心基建：VRT、ETN、GEV、CEG 等電力/散熱/能源訊號，隔日可能映射台達電、奇鋐、功率元件。",
+    "晚上主軸：美股還沒完整收盤，所以先掃全市場新聞、盤前價格、財報/數據事件、產業鏈訊號與隔日台股預判。",
+    "公司研究不是固定名單：只有當新聞、價格、財報、產業鏈或資金流讓公司今天變重要，才升級成主報。",
+    "AI 軟體、半導體、雲端、電力、能源、金融、消費與防禦股都要先掃；主題權重由當晚催化決定。",
+    "資料中心基建若成為主流，要把電力、散熱、能源、功率元件與台股供應鏈 read-through 分開標註。",
     "隔日台股預判只列假設，不當成結論；隔天早報需用美股收盤、台股開盤量價與本地新聞重新驗證。"
   ],
   "emotionalWarning": "每天先問：這是新催化、近期脈絡、背景論點，還是純動能？不要因為某檔很紅就直接當成基本面轉強，也不要因為它不是 AI 龍頭就漏掉市場主流。",
@@ -1210,7 +1210,7 @@
       "keyNews": "追蹤新產品、財報、供應鏈與出口限制。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "估值、出口限制、ASIC 替代",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Watching"
     },
     {
@@ -1221,7 +1221,7 @@
       "keyNews": "追蹤 Azure 成長、AI monetization 與 capex 效率。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "capex ROI、雲端毛利、監管",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Watching"
     },
     {
@@ -1232,7 +1232,7 @@
       "keyNews": "追蹤 AI revenue 指引與大客戶專案。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "客戶集中、估值、專案延遲",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Watching"
     },
     {
@@ -1243,7 +1243,7 @@
       "keyNews": "追蹤 HBM 供需、報價與庫存。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "循環、供給、庫存",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Watching"
     },
     {
@@ -1254,7 +1254,7 @@
       "keyNews": "追蹤營收成長、RPO、政府合約、商業客戶擴張與 AIP 使用案例。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "估值、政府合約集中、AI 軟體競爭",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Watching"
     },
     {
@@ -1265,7 +1265,7 @@
       "keyNews": "追蹤 AI server backlog、毛利與現金流。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "毛利、客戶集中、庫存",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Researching"
     },
     {
@@ -1276,7 +1276,7 @@
       "keyNews": "追蹤 backlog、液冷滲透與估值。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "估值、專案延遲、競爭",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Researching"
     },
     {
@@ -1287,7 +1287,7 @@
       "keyNews": "追蹤月營收、capex、CoWoS 與大客戶需求。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "地緣政治、CoWoS、capex",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Watching"
     },
     {
@@ -1298,7 +1298,7 @@
       "keyNews": "追蹤報價、毛利、庫存與 CUBE 進度。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "循環、庫存、題材過熱",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Watching"
     },
     {
@@ -1309,7 +1309,7 @@
       "keyNews": "追蹤面板報價、本業虧損改善與 FOPLP 訂單。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "面板報價、題材落地、處置風險",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Researching"
     },
     {
@@ -1320,7 +1320,7 @@
       "keyNews": "追蹤成交量、處置、面板報價與是否有實際訂單。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "證據不足、處置、波動",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Researching"
     },
     {
@@ -1331,7 +1331,7 @@
       "keyNews": "追蹤 AI server 營收占比、毛利與月營收。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "毛利、轉型速度、客戶集中",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Researching"
     },
     {
@@ -1342,7 +1342,7 @@
       "keyNews": "追蹤 MOSFET 營收占比、B/B 值、CSP 客戶、AI server 電源與車用訂單。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "缺貨循環、產品 mix、客戶認證",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Watching"
     },
     {
@@ -1353,7 +1353,7 @@
       "keyNews": "追蹤漲價、交期、電源大廠採用、Rubin/AI server read-through 與月營收。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "訂單能見度、毛利驗證、題材波動",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Researching"
     },
     {
@@ -1364,7 +1364,7 @@
       "keyNews": "追蹤 AI 電源/散熱營收占比、毛利與新專案。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "接單透明度、競爭、資本支出",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Watching"
     },
     {
@@ -1375,7 +1375,7 @@
       "keyNews": "追蹤雲端客戶拉貨、高速網通需求與毛利。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "客戶集中、拉貨波動、競爭",
-      "lastUpdatedTime": "2026-06-02 13:45",
+      "lastUpdatedTime": "2026-06-02 20:04",
       "status": "Watching"
     }
   ],
@@ -1484,7 +1484,7 @@
     "us": {
       "region": "US",
       "title": "美股今晚觀察",
-      "overview": "台北晚上版本聚焦美股盤前/開盤設定：大盤、SOX、利率、美元、AI capex、AI 軟體 monetization、財報與今晚需要追蹤的催化。",
+      "overview": "台北晚上版本先做美股全市場掃描：大盤、SOX、利率、美元、AI capex、軟體 monetization、資料中心基建、財報、指引、分析師調整與政策訊號，再由當晚證據決定哪些公司進入主報。",
       "sentiment": "Bullish",
       "keyIndexes": [
         "S&P 500",
@@ -1496,7 +1496,7 @@
       ],
       "topThemes": [
         "今晚美股盤前情緒",
-        "AI 軟體與半導體 watchlist",
+        "全市場新催化掃描",
         "雲端 capex / monetization",
         "利率美元與估值風險",
         "明日台股 read-through"

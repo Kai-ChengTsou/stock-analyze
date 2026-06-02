@@ -358,8 +358,8 @@ const marketSections: MarketSections = {
 
 if (reportMode === 'evening') {
   marketSections.us.title = '美股今晚觀察';
-  marketSections.us.overview = '台北晚上版本聚焦美股盤前/開盤設定：大盤、SOX、利率、美元、AI capex、AI 軟體 monetization、財報與今晚需要追蹤的催化。';
-  marketSections.us.topThemes = ['今晚美股盤前情緒', 'AI 軟體與半導體 watchlist', '雲端 capex / monetization', '利率美元與估值風險', '明日台股 read-through'];
+  marketSections.us.overview = '台北晚上版本先做美股全市場掃描：大盤、SOX、利率、美元、AI capex、軟體 monetization、資料中心基建、財報、指引、分析師調整與政策訊號，再由當晚證據決定哪些公司進入主報。';
+  marketSections.us.topThemes = ['今晚美股盤前情緒', '全市場新催化掃描', '雲端 capex / monetization', '利率美元與估值風險', '明日台股 read-through'];
   marketSections.us.risks = ['晚間版本是美股事件前設定，不應直接等同已發生結果。', '若美股開盤後走勢反轉，隔日台股 read-through 需在早報重新驗證。'];
 
   marketSections.taiwan.title = '明日台股預判';
@@ -371,12 +371,12 @@ if (reportMode === 'evening') {
 const modeOverview =
   reportMode === 'morning'
     ? '早上版本以台股今日作戰為主：先讀昨夜美股收盤與盤後訊號，再映射到今天台股可能受影響的族群、個股與驗證點。'
-    : '晚上版本以美股今晚觀察為主：整理盤前/開盤需要追蹤的 AI、半導體、雲端、軟體與總經訊號，並產生明日台股 read-through 預判。';
+    : '晚上版本以美股今晚觀察為主：先掃全市場新聞、價格、財報、總經與產業鏈訊號，再挑出真正重要的公司與明日台股 read-through 預判。';
 
 const modeTopThemes =
   reportMode === 'morning'
     ? ['台股今日作戰與驗證點', '昨夜美股 read-through', '台股 AI 基建與功率元件供應鏈擴散', '台股記憶體與面板轉型題材', '全市場雷達避免漏掉非 AI 主流']
-    : ['美股今晚盤前/開盤設定', 'AI 軟體 monetization 與 PLTR watchlist', '美股半導體 / SOX / AI capex', '明日台股 read-through 預判', '利率美元與估值風險'];
+    : ['美股今晚盤前/開盤設定', '全市場新催化與資金流向', 'AI / 半導體 / 雲端 capex 驗證', '明日台股 read-through 預判', '利率美元與估值風險'];
 
 const modeWatchlistAlerts =
   reportMode === 'morning'
@@ -389,10 +389,10 @@ const modeWatchlistAlerts =
         '全市場：金融、航運、原物料、生技若當天有新催化，會升級主報，不再被 AI 固定名單排擠。',
       ]
     : [
-        '晚上主軸：美股還沒完整收盤，所以重點是今晚 watchlist、財報/數據事件與隔日台股預判。',
-        '美股 AI 軟體：PLTR、SNOW、ORCL、CRM、NOW 要看 AI monetization 是否能支撐硬體 capex thesis。',
-        '美股半導體：NVDA、AVGO、MU、SOX 若強弱分化，隔日台股半導體、記憶體與光通訊要分開處理。',
-        '資料中心基建：VRT、ETN、GEV、CEG 等電力/散熱/能源訊號，隔日可能映射台達電、奇鋐、功率元件。',
+        '晚上主軸：美股還沒完整收盤，所以先掃全市場新聞、盤前價格、財報/數據事件、產業鏈訊號與隔日台股預判。',
+        '公司研究不是固定名單：只有當新聞、價格、財報、產業鏈或資金流讓公司今天變重要，才升級成主報。',
+        'AI 軟體、半導體、雲端、電力、能源、金融、消費與防禦股都要先掃；主題權重由當晚催化決定。',
+        '資料中心基建若成為主流，要把電力、散熱、能源、功率元件與台股供應鏈 read-through 分開標註。',
         '隔日台股預判只列假設，不當成結論；隔天早報需用美股收盤、台股開盤量價與本地新聞重新驗證。',
       ];
 
