@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Building2, ExternalLink, X } from 'lucide-react';
 import { dailyReport } from '../data/report';
 
@@ -82,7 +83,7 @@ export function TickerChip({ value, groupValues }: { value: string; groupValues?
         <ExternalLink className="h-3 w-3 opacity-70" />
       </button>
 
-      {isOpen ? <TickerModal info={info} groupInfos={groupInfos} onClose={() => setIsOpen(false)} /> : null}
+      {isOpen ? createPortal(<TickerModal info={info} groupInfos={groupInfos} onClose={() => setIsOpen(false)} />, document.body) : null}
     </>
   );
 }
