@@ -7,12 +7,50 @@ import { dailyReport } from '../data/report';
 import type { NewsItem } from '../types/research';
 import { confidenceLabel, impactLabel } from '../utils/format';
 
-const freshNewsKeywords = ['新催化', '資料節點'];
-const contextNewsKeywords = ['近期脈絡', '全市場掃描', '跨市場連動', '風控', '風險'];
+const freshNewsKeywords = [
+  'fresh',
+  'fresh catalyst',
+  'fresh catalysts',
+  'fresh signal',
+  'new catalyst',
+  'today',
+  'tonight',
+  'premarket',
+  'after-hours',
+  '新催化',
+  '資料節點',
+  '今晚',
+  '今日',
+  '昨夜',
+  '盤前',
+];
 
-const isFreshNews = (item: NewsItem) =>
-  freshNewsKeywords.some((keyword) => item.title.includes(keyword)) &&
-  !contextNewsKeywords.some((keyword) => item.title.includes(keyword));
+const contextNewsKeywords = [
+  'recent context',
+  'background thesis',
+  'stale',
+  'low signal',
+  'low-signal',
+  'risk',
+  '全市場掃描',
+  '近期脈絡',
+  '背景',
+  '風控',
+  '風險',
+  '低訊號',
+  '低信號',
+];
+
+const newsSearchText = (item: NewsItem) =>
+  `${item.id} ${item.title} ${item.source} ${item.summary}`.toLowerCase();
+
+const isFreshNews = (item: NewsItem) => {
+  const text = newsSearchText(item);
+  const hasFreshSignal = freshNewsKeywords.some((keyword) => text.includes(keyword.toLowerCase()));
+  const hasContextSignal = contextNewsKeywords.some((keyword) => text.includes(keyword.toLowerCase()));
+
+  return hasFreshSignal && (!hasContextSignal || item.id.toLowerCase().includes('fresh'));
+};
 
 type NewsFilter = 'fresh' | 'context';
 
