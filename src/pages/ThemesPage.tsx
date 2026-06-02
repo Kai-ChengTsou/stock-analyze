@@ -41,7 +41,7 @@ function TagGroup({ label, values }: { label: string; values: string[] }) {
       <p className="mb-2 text-xs text-slate-400">{label}</p>
       <div className="flex flex-wrap gap-2">
         {values.map((value) => (
-          <TickerChip key={value} value={value} />
+          <TickerChip key={value} value={value} groupValues={values} />
         ))}
       </div>
     </div>

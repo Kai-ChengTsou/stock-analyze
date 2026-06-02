@@ -30,7 +30,7 @@ export function MarketSectionView({ section, description }: MarketSectionViewPro
         <Card title="關注標的" eyebrow="Watch">
           <div className="flex flex-wrap gap-2">
             {section.stocksToWatch.length > 0 ? section.stocksToWatch.map((ticker) => (
-              <TickerChip key={ticker} value={ticker} />
+              <TickerChip key={ticker} value={ticker} groupValues={section.stocksToWatch} />
             )) : <p className="text-sm text-slate-400">等待下一次完整市場掃描補上。</p>}
           </div>
         </Card>

@@ -59,9 +59,13 @@ const tickerReference: Record<string, Omit<TickerInfo, 'ticker' | 'source'>> = {
   '6446.TW': { companyName: '藥華藥', market: 'Taiwan', description: '新藥、生技與海外銷售題材。' },
 };
 
-export function TickerChip({ value }: { value: string }) {
+export function TickerChip({ value, groupValues }: { value: string; groupValues?: string[] }) {
   const [isOpen, setIsOpen] = useState(false);
   const info = useTickerInfo(value);
+  const groupInfos = useMemo(
+    () => (groupValues ?? [value]).filter((item) => tickerPattern.test(item)).map((ticker) => resolveTickerInfo(ticker)),
+    [groupValues, value],
+  );
 
   if (!tickerPattern.test(value)) {
     return <span className="chip">{value}</span>;
@@ -78,26 +82,32 @@ export function TickerChip({ value }: { value: string }) {
         <ExternalLink className="h-3 w-3 opacity-70" />
       </button>
 
-      {isOpen ? <TickerModal info={info} onClose={() => setIsOpen(false)} /> : null}
+      {isOpen ? <TickerModal info={info} groupInfos={groupInfos} onClose={() => setIsOpen(false)} /> : null}
     </>
   );
 }
 
-function TickerModal({ info, onClose }: { info: TickerInfo; onClose: () => void }) {
+function TickerModal({ info, groupInfos, onClose }: { info: TickerInfo; groupInfos: TickerInfo[]; onClose: () => void }) {
+  const isGroup = groupInfos.length > 1;
+
   return (
     <div className="fixed inset-0 z-[70] grid place-items-end bg-slate-950/70 p-3 backdrop-blur-sm sm:place-items-center" onClick={onClose}>
       <section
-        className="w-full max-w-xl rounded-2xl border border-white/10 bg-[#0b111d] p-4 shadow-2xl shadow-black/60"
+        className="max-h-[82vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-white/10 bg-[#0b111d] p-4 shadow-2xl shadow-black/60"
         onClick={(event) => event.stopPropagation()}
       >
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">{info.market} · {info.source}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+              {isGroup ? `${groupInfos.length} tickers` : `${info.market} · ${info.source}`}
+            </p>
             <h2 className="mt-1 flex items-center gap-2 text-xl font-semibold text-white">
               <Building2 className="h-5 w-5 text-cyan-200" />
-              {info.companyName}
+              {isGroup ? '完整相關公司清單' : info.companyName}
             </h2>
-            <p className="mt-1 text-sm text-cyan-200">{info.ticker}</p>
+            <p className="mt-1 text-sm text-cyan-200">
+              {isGroup ? `由 ${info.ticker} 開啟` : info.ticker}
+            </p>
           </div>
           <button
             type="button"
@@ -109,7 +119,24 @@ function TickerModal({ info, onClose }: { info: TickerInfo; onClose: () => void 
           </button>
         </div>
 
-        <p className="mt-4 text-sm leading-6 text-slate-300">{info.description}</p>
+        {isGroup ? (
+          <div className="mt-4 space-y-3">
+            {groupInfos.map((company) => (
+              <article key={company.ticker} className="rounded-xl border border-white/10 bg-white/[0.045] p-3">
+                <div className="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <h3 className="text-base font-semibold text-white">{company.companyName}</h3>
+                    <p className="mt-1 text-xs text-cyan-200">{company.ticker} · {company.market}</p>
+                  </div>
+                  <span className="rounded-full border border-white/10 bg-white/[0.05] px-2.5 py-1 text-[11px] text-slate-300">{company.source}</span>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{company.description}</p>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p className="mt-4 text-sm leading-6 text-slate-300">{info.description}</p>
+        )}
       </section>
     </div>
   );

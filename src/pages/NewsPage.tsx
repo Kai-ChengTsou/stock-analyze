@@ -136,7 +136,7 @@ function NewsCard({ item }: { item: NewsItem }) {
       <p className="text-sm leading-6 text-slate-300">{item.summary}</p>
       <div className="mt-4 flex flex-wrap gap-2">
         {item.relatedTickers.map((ticker) => (
-          <TickerChip key={ticker} value={ticker} />
+          <TickerChip key={ticker} value={ticker} groupValues={item.relatedTickers} />
         ))}
       </div>
       <p className="mt-3 text-xs text-slate-400">信心程度：{confidenceLabel[item.confidence]}</p>

@@ -33,7 +33,7 @@ function Group({ title, values, danger = false }: { title: string; values: strin
       <p className={`mb-2 text-xs font-semibold ${danger ? 'text-rose-200' : 'text-cyan-200'}`}>{title}</p>
       <div className="flex flex-wrap gap-2">
         {values.map((value) => (
-          <TickerChip key={value} value={value} />
+          <TickerChip key={value} value={value} groupValues={values} />
         ))}
       </div>
     </div>
