@@ -6,6 +6,8 @@ import { dailyReport } from '../data/report';
 import { actionLabel, finalViewLabel } from '../utils/format';
 
 export function CompanyResearchPage() {
+  const pageTickers = dailyReport.companyResearch.map((company) => company.ticker);
+
   return (
     <div>
       <SectionHeader title="公司研究" description="每家公司都呈現商業模式、財務摘要、三情境、風險與行動建議。" />
@@ -36,8 +38,13 @@ export function CompanyResearchPage() {
             </div>
 
             <TagGroup label="營收驅動" values={company.revenueDrivers} />
-            <TagGroup label="競爭者" values={company.competitors} />
+            <TagGroup label="競爭者" values={company.competitors} groupValues={pageTickers} />
             <TagGroup label="關鍵風險" values={company.keyRisks} />
+
+            <div className="mt-4">
+              <p className="mb-2 text-xs text-slate-400">公司研究清單</p>
+              <TickerChip value={company.ticker} groupValues={pageTickers} />
+            </div>
 
             <div className="mt-4 rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-3">
               <p className="text-sm font-semibold text-cyan-100">建議動作：{actionLabel[company.suggestedAction]}</p>
@@ -68,13 +75,13 @@ function Case({ title, value, tone }: { title: string; value: string; tone: stri
   );
 }
 
-function TagGroup({ label, values }: { label: string; values: string[] }) {
+function TagGroup({ label, values, groupValues = values }: { label: string; values: string[]; groupValues?: string[] }) {
   return (
     <div className="mt-4">
       <p className="mb-2 text-xs text-slate-400">{label}</p>
       <div className="flex flex-wrap gap-2">
         {values.map((value) => (
-          <TickerChip key={value} value={value} groupValues={values} />
+          <TickerChip key={value} value={value} groupValues={groupValues} />
         ))}
       </div>
     </div>

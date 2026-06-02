@@ -6,6 +6,8 @@ import { dailyReport } from '../data/report';
 import { confidenceLabel } from '../utils/format';
 
 export function ThemesPage() {
+  const pageTickers = uniqueTickers(dailyReport.themes.flatMap((theme) => theme.relatedCompanies));
+
   return (
     <div>
       <SectionHeader title="市場主題分析" description="從新聞摘要萃取主題，再追蹤產業、公司與長短期影響。" />
@@ -17,8 +19,8 @@ export function ThemesPage() {
               <Info label="短期影響" value={theme.shortTermImpact} />
               <Info label="長期影響" value={theme.longTermImpact} />
             </div>
-            <TagGroup label="相關產業" values={theme.relatedIndustries} />
-            <TagGroup label="相關公司" values={theme.relatedCompanies} />
+            <TagGroup label="相關產業" values={theme.relatedIndustries} groupValues={pageTickers} />
+            <TagGroup label="相關公司" values={theme.relatedCompanies} groupValues={pageTickers} />
           </Card>
         ))}
       </div>
@@ -35,15 +37,19 @@ function Info({ label, value }: { label: string; value: string }) {
   );
 }
 
-function TagGroup({ label, values }: { label: string; values: string[] }) {
+function TagGroup({ label, values, groupValues }: { label: string; values: string[]; groupValues: string[] }) {
   return (
     <div className="mt-4">
       <p className="mb-2 text-xs text-slate-400">{label}</p>
       <div className="flex flex-wrap gap-2">
         {values.map((value) => (
-          <TickerChip key={value} value={value} groupValues={values} />
+          <TickerChip key={value} value={value} groupValues={groupValues} />
         ))}
       </div>
     </div>
   );
+}
+
+function uniqueTickers(values: string[]) {
+  return Array.from(new Set(values));
 }

@@ -21,6 +21,7 @@ export function NewsPage() {
   const freshNews = dailyReport.news.filter(isFreshNews);
   const recentContextNews = dailyReport.news.filter((item) => !isFreshNews(item));
   const visibleNews = activeFilter === 'fresh' ? freshNews : recentContextNews;
+  const visibleTickers = uniqueTickers(visibleNews.flatMap((item) => item.relatedTickers));
   const activeCopy =
     activeFilter === 'fresh'
       ? {
@@ -61,6 +62,7 @@ export function NewsPage() {
         eyebrow={activeCopy.eyebrow}
         description={activeCopy.description}
         items={visibleNews}
+        groupValues={visibleTickers}
       />
     </div>
   );
@@ -98,11 +100,13 @@ function NewsSection({
   eyebrow,
   description,
   items,
+  groupValues,
 }: {
   title: string;
   eyebrow: string;
   description: string;
   items: NewsItem[];
+  groupValues: string[];
 }) {
   return (
     <section className="mb-6">
@@ -116,7 +120,7 @@ function NewsSection({
       </div>
 
       <div className="space-y-4">
-        {items.length > 0 ? items.map((item) => <NewsCard key={item.id} item={item} />) : (
+        {items.length > 0 ? items.map((item) => <NewsCard key={item.id} item={item} groupValues={groupValues} />) : (
           <Card title="目前沒有符合分類的新聞" eyebrow={eyebrow}>
             <p className="text-sm leading-6 text-slate-300">下一次 automation 產生報告後，這裡會依新聞標籤自動分類。</p>
           </Card>
@@ -126,7 +130,7 @@ function NewsSection({
   );
 }
 
-function NewsCard({ item }: { item: NewsItem }) {
+function NewsCard({ item, groupValues }: { item: NewsItem; groupValues: string[] }) {
   return (
     <Card
       title={item.title}
@@ -136,10 +140,14 @@ function NewsCard({ item }: { item: NewsItem }) {
       <p className="text-sm leading-6 text-slate-300">{item.summary}</p>
       <div className="mt-4 flex flex-wrap gap-2">
         {item.relatedTickers.map((ticker) => (
-          <TickerChip key={ticker} value={ticker} groupValues={item.relatedTickers} />
+          <TickerChip key={ticker} value={ticker} groupValues={groupValues} />
         ))}
       </div>
       <p className="mt-3 text-xs text-slate-400">信心程度：{confidenceLabel[item.confidence]}</p>
     </Card>
   );
+}
+
+function uniqueTickers(values: string[]) {
+  return Array.from(new Set(values));
 }

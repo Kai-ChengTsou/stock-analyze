@@ -7,6 +7,10 @@ import { marketSections } from '../data/report';
 import { confidenceLabel } from '../utils/format';
 
 export function CrossMarketPage() {
+  const pageTickers = uniqueTickers(
+    marketSections.crossMarket.flatMap((link) => [...link.relatedUSTickers, ...link.relatedTaiwanTickers]),
+  );
+
   return (
     <div>
       <SectionHeader
@@ -29,8 +33,8 @@ export function CrossMarketPage() {
             </div>
 
             <div className="mt-4 grid gap-3 md:grid-cols-2">
-              <TagGroup label="美股關聯" values={link.relatedUSTickers} />
-              <TagGroup label="台股關聯" values={link.relatedTaiwanTickers} />
+              <TagGroup label="美股關聯" values={link.relatedUSTickers} groupValues={pageTickers} />
+              <TagGroup label="台股關聯" values={link.relatedTaiwanTickers} groupValues={pageTickers} />
             </div>
           </Card>
         )) : (
@@ -52,15 +56,19 @@ function Info({ label, value }: { label: string; value: string }) {
   );
 }
 
-function TagGroup({ label, values }: { label: string; values: string[] }) {
+function TagGroup({ label, values, groupValues }: { label: string; values: string[]; groupValues: string[] }) {
   return (
     <div>
       <p className="mb-2 text-xs text-slate-400">{label}</p>
       <div className="flex flex-wrap gap-2">
         {values.length > 0 ? values.map((value) => (
-          <TickerChip key={value} value={value} groupValues={values} />
+          <TickerChip key={value} value={value} groupValues={groupValues} />
         )) : <span className="text-sm text-slate-500">無</span>}
       </div>
     </div>
   );
+}
+
+function uniqueTickers(values: string[]) {
+  return Array.from(new Set(values));
 }
