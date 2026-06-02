@@ -40,10 +40,10 @@ export const statusLabel: Record<WatchlistStatus, string> = {
 };
 
 export const evidenceGradeLabel: Record<EvidenceGrade, string> = {
-  A: 'A 官方/高可信',
-  B: 'B 可靠媒體/數據',
-  C: 'C 弱來源/傳聞',
-  D: 'D 僅量價',
+  A: 'A 官方',
+  B: 'B 可靠',
+  C: 'C 弱訊號',
+  D: 'D 量價',
 };
 
 export const opportunityStageLabel: Record<OpportunityStage, string> = {

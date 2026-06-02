@@ -28,7 +28,18 @@ export function CompanyResearchPage() {
       <div className="mb-4 grid gap-2 rounded-2xl border border-white/10 bg-white/[0.045] p-3 md:grid-cols-3">
         <SelectFilter label="市場" value={marketFilter} options={['All', 'US', 'Taiwan']} onChange={setMarketFilter} />
         <SelectFilter label="階段" value={stageFilter} options={['All', 'Early', 'Confirming', 'Crowded', 'Late', 'Avoid/Wait']} onChange={setStageFilter} />
-        <SelectFilter label="證據" value={evidenceFilter} options={['All', 'A', 'B', 'C', 'D']} onChange={setEvidenceFilter} />
+        <SelectFilter
+          label="證據"
+          value={evidenceFilter}
+          options={[
+            { value: 'All', label: 'All' },
+            { value: 'A', label: evidenceGradeLabel.A },
+            { value: 'B', label: evidenceGradeLabel.B },
+            { value: 'C', label: evidenceGradeLabel.C },
+            { value: 'D', label: evidenceGradeLabel.D },
+          ]}
+          onChange={setEvidenceFilter}
+        />
       </div>
 
       <div className="space-y-4">
@@ -98,7 +109,17 @@ export function CompanyResearchPage() {
   );
 }
 
-function SelectFilter({ label, value, options, onChange }: { label: string; value: string; options: string[]; onChange: (value: string) => void }) {
+function SelectFilter({
+  label,
+  value,
+  options,
+  onChange,
+}: {
+  label: string;
+  value: string;
+  options: Array<string | { value: string; label: string }>;
+  onChange: (value: string) => void;
+}) {
   return (
     <label className="text-xs text-slate-400">
       {label}
@@ -107,7 +128,11 @@ function SelectFilter({ label, value, options, onChange }: { label: string; valu
         value={value}
         onChange={(event) => onChange(event.target.value)}
       >
-        {options.map((option) => <option key={option} value={option}>{option}</option>)}
+        {options.map((option) => {
+          const optionValue = typeof option === 'string' ? option : option.value;
+          const optionLabel = typeof option === 'string' ? option : option.label;
+          return <option key={optionValue} value={optionValue}>{optionLabel}</option>;
+        })}
       </select>
     </label>
   );
