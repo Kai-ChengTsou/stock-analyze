@@ -1,5 +1,6 @@
-import { Bell, Blocks, BriefcaseBusiness, Factory, Globe2, Home, Link2, Newspaper, Radar, Route, Search, Target } from 'lucide-react';
-import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { Bell, Blocks, BriefcaseBusiness, Factory, Globe2, Home, Link2, MoreHorizontal, Newspaper, Radar, Route, Search, Target } from 'lucide-react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { dailyReport } from '../data/report';
 
 const navItems = [
@@ -17,9 +18,17 @@ const navItems = [
   { to: '/idea-pipeline', label: '脈絡', icon: Route },
 ];
 
+const primaryMobileItems = navItems.filter((item) =>
+  ['/dashboard', '/taiwan-market', '/us-market'].includes(item.to),
+);
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const location = useLocation();
+  const isPrimaryRoute = primaryMobileItems.some((item) => item.to === location.pathname);
+
   return (
-    <div className="min-h-screen pb-[calc(8.5rem+env(safe-area-inset-bottom))] lg:pb-0">
+    <div className="min-h-screen pb-[calc(5rem+env(safe-area-inset-bottom))] lg:pb-0">
       <aside className="fixed left-0 top-0 hidden h-full w-64 border-r border-white/10 bg-[#0a0f18]/90 p-5 lg:block">
         <Brand />
         <nav className="mt-8 space-y-1">
@@ -36,11 +45,40 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
 
+      {isMobileNavOpen ? (
+        <button
+          aria-label="收合手機選單"
+          className="fixed inset-0 z-40 bg-slate-950/55 backdrop-blur-[2px] lg:hidden"
+          type="button"
+          onClick={() => setIsMobileNavOpen(false)}
+        />
+      ) : null}
+
       <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#080b12]/95 px-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] pt-2 backdrop-blur lg:hidden">
-        <div className="grid grid-cols-4 gap-1 sm:grid-cols-6">
-          {navItems.map((item) => (
-            <BottomNavLink key={item.to} {...item} />
+        {isMobileNavOpen ? (
+          <div className="mb-2 rounded-2xl border border-white/10 bg-[#0c1220]/95 p-2 shadow-2xl shadow-black/40">
+            <div className="grid grid-cols-4 gap-1">
+              {navItems.map((item) => (
+                <BottomNavLink key={item.to} {...item} onNavigate={() => setIsMobileNavOpen(false)} />
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        <div className="grid grid-cols-4 gap-1">
+          {primaryMobileItems.map((item) => (
+            <BottomNavLink key={item.to} {...item} compact onNavigate={() => setIsMobileNavOpen(false)} />
           ))}
+          <button
+            type="button"
+            className={`flex h-14 flex-col items-center justify-center rounded-lg text-[10px] transition ${
+              isMobileNavOpen || !isPrimaryRoute ? 'bg-gradient-to-br from-cyan-300/16 to-violet-300/12 text-cyan-50' : 'text-slate-500'
+            }`}
+            onClick={() => setIsMobileNavOpen((open) => !open)}
+          >
+            <MoreHorizontal className="mb-1 h-4 w-4" />
+            <span>更多</span>
+          </button>
         </div>
       </nav>
     </div>
@@ -79,10 +117,16 @@ function SideNavLink({ to, label, icon: Icon }: (typeof navItems)[number]) {
   );
 }
 
-function BottomNavLink({ to, label, icon: Icon }: (typeof navItems)[number]) {
+function BottomNavLink({
+  to,
+  label,
+  icon: Icon,
+  onNavigate,
+}: (typeof navItems)[number] & { compact?: boolean; onNavigate?: () => void }) {
   return (
     <NavLink
       to={to}
+      onClick={onNavigate}
       className={({ isActive }) =>
         `flex h-14 flex-col items-center justify-center rounded-lg text-[10px] transition ${
           isActive ? 'bg-gradient-to-br from-cyan-300/16 to-violet-300/12 text-cyan-50' : 'text-slate-500'
