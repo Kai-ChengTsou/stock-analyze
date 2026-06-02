@@ -10,6 +10,8 @@ export type SuggestedAction =
   | 'Consider buying only if conditions are met'
   | 'Consider selling if thesis breaks';
 export type WatchlistStatus = 'Watching' | 'Waiting' | 'Avoiding' | 'Researching';
+export type MarketRegion = 'US' | 'Taiwan' | 'CrossMarket';
+export type CatalystType = 'Fresh catalyst' | 'Recent context' | 'Background thesis' | 'Momentum only' | 'No signal';
 
 export interface NewsItem {
   id: string;
@@ -105,6 +107,45 @@ export interface IdeaPipelineItem {
   explanation: string;
 }
 
+export interface MarketSection {
+  region: MarketRegion;
+  title: string;
+  overview: string;
+  sentiment: Sentiment;
+  keyIndexes: string[];
+  topThemes: string[];
+  importantNewsIds: string[];
+  stocksToWatch: string[];
+  risks: string[];
+}
+
+export interface CrossMarketLink {
+  id: string;
+  title: string;
+  usCatalyst: string;
+  taiwanReadThrough: string;
+  relatedUSTickers: string[];
+  relatedTaiwanTickers: string[];
+  evidenceStrength: EvidenceStrength;
+}
+
+export interface ScanCoverageItem {
+  id: string;
+  market: MarketRegion;
+  category: string;
+  status: CatalystType;
+  tickersChecked: string[];
+  reason: string;
+  priority: 'Low' | 'Medium' | 'High';
+}
+
+export interface MarketSections {
+  us: MarketSection;
+  taiwan: MarketSection;
+  crossMarket: CrossMarketLink[];
+  scanCoverage: ScanCoverageItem[];
+}
+
 export interface DailyDashboard {
   date: string;
   generatedAt: string;
@@ -122,4 +163,5 @@ export interface DailyDashboard {
   companyResearch: CompanyResearch[];
   watchlist: WatchlistItem[];
   ideaPipeline: IdeaPipelineItem[];
+  marketSections?: MarketSections;
 }

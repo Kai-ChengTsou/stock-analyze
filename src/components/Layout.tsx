@@ -1,9 +1,13 @@
-import { Bell, Blocks, BriefcaseBusiness, Factory, Home, Newspaper, Route, Search, Target } from 'lucide-react';
+import { Bell, Blocks, BriefcaseBusiness, Factory, Globe2, Home, Link2, Newspaper, Radar, Route, Search, Target } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import { dailyReport } from '../data/report';
 
 const navItems = [
   { to: '/dashboard', label: '總覽', icon: Home },
+  { to: '/us-market', label: '美股', icon: Globe2 },
+  { to: '/taiwan-market', label: '台股', icon: BriefcaseBusiness },
+  { to: '/cross-market', label: '連動', icon: Link2 },
+  { to: '/market-radar', label: '雷達', icon: Radar },
   { to: '/news', label: '新聞', icon: Newspaper },
   { to: '/themes', label: '主題', icon: Blocks },
   { to: '/supply-chain', label: '供應鏈', icon: Factory },
@@ -15,7 +19,7 @@ const navItems = [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen pb-[calc(6rem+env(safe-area-inset-bottom))] lg:pb-0">
+    <div className="min-h-screen pb-[calc(8.5rem+env(safe-area-inset-bottom))] lg:pb-0">
       <aside className="fixed left-0 top-0 hidden h-full w-64 border-r border-white/10 bg-[#0a0f18]/90 p-5 lg:block">
         <Brand />
         <nav className="mt-8 space-y-1">
@@ -33,7 +37,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#080b12]/95 px-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] pt-2 backdrop-blur lg:hidden">
-        <div className="grid grid-cols-8 gap-1">
+        <div className="grid grid-cols-4 gap-1 sm:grid-cols-6">
           {navItems.map((item) => (
             <BottomNavLink key={item.to} {...item} />
           ))}
@@ -50,7 +54,7 @@ function Brand() {
         <BriefcaseBusiness className="h-5 w-5 text-cyan-100" />
       </div>
       <div>
-        <p className="text-sm font-semibold text-white">AI 股票研究儀表板</p>
+        <p className="text-sm font-semibold text-white">全市場研究儀表板</p>
         <p className="text-xs text-slate-400">更新 {dailyReport.date}</p>
       </div>
     </div>
