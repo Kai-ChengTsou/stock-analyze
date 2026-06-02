@@ -420,6 +420,50 @@ const report: DailyDashboard = {
   watchlist,
   ideaPipeline,
   marketSections,
+  suggestedActions: [
+    reportMode === 'morning'
+      ? '早盤先驗證台股開盤量價、外資/投信方向與美股 read-through 是否同步。'
+      : '晚間先追蹤美股盤前/開盤反應，隔日台股只列假設，不當成結論。',
+    '優先追蹤有新催化、證據品質高、且量價沒有過度擁擠的公司。',
+    '低訊號或純題材標的留在雷達，不升級成公司研究主結論。',
+    '若利率、美元或高估值 AI 股同步轉弱，降低追價動作並等待確認。',
+  ],
+  risks: [
+    {
+      id: 'risk-macro-rates',
+      category: 'macro / rates / USD',
+      description: '利率、美元或油價上行會壓縮高估值 AI 交易，尤其影響美股軟體與半導體估值。',
+      severity: 'High',
+      whatWouldInvalidate: '若利率回落且 AI 財報/指引持續上修，估值壓力可下降。',
+    },
+    {
+      id: 'risk-crowded-ai',
+      category: 'crowded trade',
+      description: 'AI server、記憶體、面板與功率元件若只有資金熱度，容易先漲後等基本面驗證。',
+      severity: 'Medium',
+      whatWouldInvalidate: '若月營收、毛利、訂單與法說同步驗證，擁擠風險可被基本面吸收。',
+    },
+    {
+      id: 'risk-taiwan-small-cap',
+      category: 'Taiwan liquidity / small-cap',
+      description: '台股中小型題材股需注意處置、流動性、隔日開高走低與資訊落差。',
+      severity: 'Medium',
+      whatWouldInvalidate: '若成交量健康、法人買盤延續且沒有處置壓力，短線風險下降。',
+    },
+  ],
+  rejectedCandidates: [
+    { ticker: '2409.TW', companyName: '友達', reason: '面板題材仍在雷達，但本次證據強度低於群創與彩晶；等待報價、FOPLP 或財報驗證。', evidenceGrade: 'C', opportunityStage: 'Avoid/Wait' },
+    { ticker: '2603.TW', companyName: '長榮', reason: '航運已納入全市場掃描，但若缺乏運價、油價或法人流向新催化，暫不升級主報。', evidenceGrade: 'D', opportunityStage: 'Avoid/Wait' },
+    { ticker: '2881.TW', companyName: '富邦金', reason: '金融股需看利率、匯率與資金輪動；本次不是主流新催化。', evidenceGrade: 'D', opportunityStage: 'Avoid/Wait' },
+  ],
+  scanSummary: {
+    candidateItemsScanned: 60,
+    categoriesScanned: marketSections.scanCoverage.map((item) => item.category),
+    majorSourcesChecked: ['公司公告/法說', '財經媒體', '市場量價與族群輪動', '跨市場 read-through'],
+    sectorsExcluded: ['缺乏新催化的航運', '缺乏政策或財報驗證的生技', '沒有量價確認的原物料'],
+    lowSignalItemsExcluded: ['只有社群熱度但缺乏來源的題材', '只有單日量增但沒有延續性的標的'],
+    staleItemsExcluded: ['超過一週且沒有新驗證的舊法說重點', '已被市場充分反映且沒有新數據的舊題材'],
+  },
 };
 
 assertReportQuality(report);
@@ -482,11 +526,24 @@ function company(
   suggestedAction: CompanyResearch['suggestedAction'],
   whatWouldChangeView: string,
 ): CompanyResearch {
+  const opportunityStage = finalView === 'Positive' ? 'Confirming' : suggestedAction === 'Wait' ? 'Avoid/Wait' : 'Early';
+  const evidenceGrade = finalView === 'Positive' ? 'B' : suggestedAction === 'Wait' ? 'C' : 'B';
+  const beneficiaryType = finalView === 'Positive' ? 'Direct' : suggestedAction === 'Wait' ? 'Radar only' : 'Indirect';
+
   return {
     id,
     companyName,
     ticker,
     marketCountry,
+    sectorTheme: revenueDrivers[0],
+    whyItMattersToday: overview,
+    catalystSummary: latestFinancialReportSummary,
+    priceVolumeBehavior: technicalTrend,
+    supplyChainRole: businessModel,
+    opportunityStage,
+    evidenceGrade,
+    catalystDriver: revenueDrivers.some((driver) => driver.toLowerCase().includes('power') || driver.toLowerCase().includes('supply')) ? 'Supply-chain' : 'Mixed',
+    beneficiaryType,
     overview,
     businessModel,
     revenueDrivers,
@@ -505,6 +562,8 @@ function company(
     finalView,
     suggestedAction,
     whatWouldChangeView,
+    upsideDriver: bullCase,
+    invalidationConditions: bearCase,
   };
 }
 
@@ -519,7 +578,14 @@ function beneficiary(
   evidenceQuality: Beneficiary['evidenceQuality'],
   researchPriorityScore: number,
 ): Beneficiary {
-  return { id, themeId, directBeneficiaries, indirectBeneficiaries, hiddenBeneficiaries, companiesMayBeHurt, reasoning, evidenceQuality, researchPriorityScore };
+  const details = [
+    ...directBeneficiaries.map((ticker) => ({ companyName: ticker, ticker, type: 'Direct' as const, linkage: reasoning, evidenceGrade: evidenceQuality === 'High' ? 'B' as const : 'C' as const, opportunityStage: 'Confirming' as const })),
+    ...indirectBeneficiaries.map((ticker) => ({ companyName: ticker, ticker, type: 'Indirect' as const, linkage: reasoning, evidenceGrade: 'C' as const, opportunityStage: 'Early' as const })),
+    ...hiddenBeneficiaries.map((ticker) => ({ companyName: ticker, ticker, type: 'Hidden' as const, linkage: reasoning, evidenceGrade: 'C' as const, opportunityStage: 'Early' as const })),
+    ...companiesMayBeHurt.map((ticker) => ({ companyName: ticker, ticker, type: 'Hurt' as const, linkage: reasoning, evidenceGrade: 'C' as const, opportunityStage: 'Avoid/Wait' as const })),
+  ];
+
+  return { id, themeId, directBeneficiaries, indirectBeneficiaries, hiddenBeneficiaries, companiesMayBeHurt, radarOnly: hiddenBeneficiaries, details, reasoning, evidenceQuality, researchPriorityScore };
 }
 
 function idea(
@@ -555,7 +621,25 @@ function coverage(
   reason: string,
   priority: MarketSections['scanCoverage'][number]['priority'],
 ) {
-  return { id, market, category, status, tickersChecked, reason, priority };
+  return {
+    id,
+    market,
+    category,
+    status,
+    tickersChecked,
+    tickersSelected: tickersChecked.slice(0, 5),
+    tickersRejected: tickersChecked.slice(5).map((ticker) => ({
+      ticker,
+      companyName: ticker,
+      reason: '已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。',
+      evidenceGrade: status === 'No signal' ? 'D' as const : 'C' as const,
+      opportunityStage: 'Avoid/Wait' as const,
+    })),
+    reason,
+    priority,
+    candidateCount: tickersChecked.length,
+    sourcesChecked: ['新聞/公告', '量價/族群輪動', '跨市場 read-through'],
+  };
 }
 
 function assertReportQuality(dashboard: DailyDashboard) {

@@ -5,7 +5,7 @@ import { SectionHeader } from '../components/SectionHeader';
 import { TickerChip } from '../components/TickerChip';
 import { dailyReport } from '../data/report';
 import type { NewsItem } from '../types/research';
-import { confidenceLabel, impactLabel } from '../utils/format';
+import { confidenceLabel, evidenceGradeLabel, impactLabel, opportunityStageLabel, toneClass } from '../utils/format';
 
 const freshNewsKeywords = [
   'fresh',
@@ -171,7 +171,21 @@ function NewsCard({ item }: { item: NewsItem }) {
       eyebrow={`${item.source} · ${item.date}`}
       right={<Badge tone={item.impact}>{impactLabel[item.impact]}</Badge>}
     >
+      <div className="mb-3 flex flex-wrap gap-2">
+        {item.freshness ? <MetaPill label={item.freshness} value={item.freshness} /> : null}
+        {item.evidenceGrade ? <MetaPill label={evidenceGradeLabel[item.evidenceGrade]} value={item.evidenceGrade} /> : null}
+        {item.opportunityStage ? <MetaPill label={opportunityStageLabel[item.opportunityStage]} value={item.opportunityStage} /> : null}
+        {item.catalystDriver ? <MetaPill label={item.catalystDriver} /> : null}
+      </div>
       <p className="text-sm leading-6 text-slate-300">{item.summary}</p>
+      {(item.whyMarketCares || item.pricedIn || item.confirms || item.invalidates) ? (
+        <div className="mt-4 grid gap-2 md:grid-cols-2">
+          {item.whyMarketCares ? <MiniInfo label="市場為何在意" value={item.whyMarketCares} /> : null}
+          {item.pricedIn ? <MiniInfo label="可能已反映" value={item.pricedIn} /> : null}
+          {item.confirms ? <MiniInfo label="確認訊號" value={item.confirms} /> : null}
+          {item.invalidates ? <MiniInfo label="失效條件" value={item.invalidates} danger /> : null}
+        </div>
+      ) : null}
       <div className="mt-4 flex flex-wrap gap-2">
         {item.relatedTickers.map((ticker) => (
           <TickerChip key={ticker} value={ticker} groupValues={item.relatedTickers} />
@@ -179,5 +193,18 @@ function NewsCard({ item }: { item: NewsItem }) {
       </div>
       <p className="mt-3 text-xs text-slate-400">信心程度：{confidenceLabel[item.confidence]}</p>
     </Card>
+  );
+}
+
+function MetaPill({ label, value = label }: { label: string; value?: string }) {
+  return <span className={`rounded-full border px-2.5 py-1 text-xs ${toneClass(value)}`}>{label}</span>;
+}
+
+function MiniInfo({ label, value, danger = false }: { label: string; value: string; danger?: boolean }) {
+  return (
+    <div className={`rounded-lg border p-3 ${danger ? 'border-rose-300/15 bg-rose-300/10' : 'border-white/10 bg-white/[0.045]'}`}>
+      <p className={`text-xs ${danger ? 'text-rose-200' : 'text-slate-400'}`}>{label}</p>
+      <p className="mt-1 text-sm leading-6 text-slate-300">{value}</p>
+    </div>
   );
 }

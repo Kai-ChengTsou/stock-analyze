@@ -69,6 +69,17 @@ export function DashboardPage() {
         </div>
       </Card>
 
+      {dailyReport.suggestedActions?.length ? (
+        <Card title="今日行動摘要" eyebrow="Action Plan" right={<TrendingUp className="h-5 w-5 text-emerald-200" />}>
+          <div className="space-y-3">
+            {dailyReport.suggestedActions.slice(0, 4).map((action) => (
+              <p key={action} className="rounded-lg border border-emerald-300/15 bg-emerald-300/10 p-3 text-sm leading-6 text-emerald-50">{action}</p>
+            ))}
+          </div>
+          <Link className="mt-4 inline-flex text-sm font-semibold text-cyan-200 hover:text-cyan-100" to="/action-plan">查看完整行動與風險</Link>
+        </Card>
+      ) : null}
+
       <Card title="情緒提醒" eyebrow="Behavior" right={<Brain className="h-5 w-5 text-cyan-200" />}>
         <p className="text-sm leading-6 text-slate-300">{dailyReport.emotionalWarning}</p>
       </Card>

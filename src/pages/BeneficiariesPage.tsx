@@ -3,7 +3,7 @@ import { Card } from '../components/Card';
 import { SectionHeader } from '../components/SectionHeader';
 import { TickerChip } from '../components/TickerChip';
 import { dailyReport, themeName } from '../data/report';
-import { confidenceLabel } from '../utils/format';
+import { confidenceLabel, evidenceGradeLabel, opportunityStageLabel } from '../utils/format';
 
 export function BeneficiariesPage() {
   return (
@@ -16,6 +16,8 @@ export function BeneficiariesPage() {
             ...item.indirectBeneficiaries,
             ...item.hiddenBeneficiaries,
             ...item.companiesMayBeHurt,
+            ...(item.radarOnly ?? []),
+            ...(item.details?.map((detail) => detail.ticker) ?? []),
           ]);
 
           return (
@@ -26,7 +28,28 @@ export function BeneficiariesPage() {
               <Group title="間接受惠" values={item.indirectBeneficiaries} groupValues={blockTickers} />
               <Group title="隱藏受惠" values={item.hiddenBeneficiaries} groupValues={blockTickers} />
               <Group title="可能受傷" values={item.companiesMayBeHurt} groupValues={blockTickers} danger />
+              {item.radarOnly?.length ? <Group title="雷達觀察" values={item.radarOnly} groupValues={blockTickers} /> : null}
             </div>
+            {item.details?.length ? (
+              <div className="mt-4 space-y-3">
+                {item.details.map((detail) => (
+                  <article key={`${detail.type}-${detail.ticker}`} className="rounded-lg border border-white/10 bg-white/[0.045] p-3">
+                    <div className="flex flex-wrap items-start justify-between gap-2">
+                      <div>
+                        <p className="text-sm font-semibold text-white">{detail.companyName} · {detail.ticker}</p>
+                        <p className="mt-1 text-xs text-cyan-200">{detail.type}</p>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {detail.evidenceGrade ? <span className="chip">{evidenceGradeLabel[detail.evidenceGrade]}</span> : null}
+                        {detail.opportunityStage ? <span className="chip">{opportunityStageLabel[detail.opportunityStage]}</span> : null}
+                      </div>
+                    </div>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">{detail.linkage}</p>
+                    {detail.nextVerification ? <p className="mt-2 text-xs leading-5 text-slate-400">下一步驗證：{detail.nextVerification}</p> : null}
+                  </article>
+                ))}
+              </div>
+            ) : null}
             <p className="mt-3 text-xs text-slate-400">證據品質：{confidenceLabel[item.evidenceQuality]}</p>
           </Card>
         )})}

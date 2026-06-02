@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { BeneficiariesPage } from './pages/BeneficiariesPage';
+import { ActionPlanPage } from './pages/ActionPlanPage';
 import { CompanyResearchPage } from './pages/CompanyResearchPage';
 import { CrossMarketPage } from './pages/CrossMarketPage';
 import { DashboardPage } from './pages/DashboardPage';
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/company-research" element={<CompanyResearchPage />} />
         <Route path="/watchlist" element={<WatchlistPage />} />
         <Route path="/idea-pipeline" element={<IdeaPipelinePage />} />
+        <Route path="/action-plan" element={<ActionPlanPage />} />
       </Routes>
     </Layout>
   );

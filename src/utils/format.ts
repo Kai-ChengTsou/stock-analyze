@@ -1,4 +1,4 @@
-import type { Confidence, EvidenceStrength, FinalView, Impact, Sentiment, SuggestedAction, WatchlistStatus } from '../types/research';
+import type { Confidence, EvidenceGrade, EvidenceStrength, FinalView, Impact, OpportunityStage, Sentiment, SuggestedAction, WatchlistStatus } from '../types/research';
 
 export const sentimentLabel: Record<Sentiment, string> = {
   Bullish: '偏多',
@@ -39,8 +39,25 @@ export const statusLabel: Record<WatchlistStatus, string> = {
   Researching: '研究中',
 };
 
+export const evidenceGradeLabel: Record<EvidenceGrade, string> = {
+  A: 'A 官方/高可信',
+  B: 'B 可靠媒體/數據',
+  C: 'C 弱來源/傳聞',
+  D: 'D 僅量價',
+};
+
+export const opportunityStageLabel: Record<OpportunityStage, string> = {
+  Early: '早期',
+  Confirming: '確認中',
+  Crowded: '擁擠',
+  Late: '偏晚',
+  'Avoid/Wait': '避開/等待',
+  'Avoid-Wait': '避開/等待',
+};
+
 export const toneClass = (value: string) => {
-  if (['Bullish', 'Positive', 'High'].includes(value)) return 'border-emerald-400/25 bg-emerald-400/10 text-emerald-200';
-  if (['Bearish', 'Negative', 'Low'].includes(value)) return 'border-rose-400/25 bg-rose-400/10 text-rose-200';
+  if (['Bullish', 'Positive', 'High', 'A', 'B', 'Early', 'Confirming'].includes(value)) return 'border-emerald-400/25 bg-emerald-400/10 text-emerald-200';
+  if (['Bearish', 'Negative', 'Low', 'C', 'D', 'Late', 'Avoid/Wait', 'Avoid-Wait'].includes(value)) return 'border-rose-400/25 bg-rose-400/10 text-rose-200';
+  if (['Crowded'].includes(value)) return 'border-amber-400/25 bg-amber-400/10 text-amber-200';
   return 'border-sky-400/25 bg-sky-400/10 text-sky-200';
 };

@@ -131,6 +131,14 @@ export function MarketRadarPage() {
         description="每天先掃完整市場，再把真正重要的訊號升級到晨報主文；這頁保留掃描覆蓋度與略過原因。"
       />
 
+      {dailyReport.scanSummary ? (
+        <div className="mb-4 grid gap-3 md:grid-cols-3">
+          <RadarMetric label="候選項目" value={`${dailyReport.scanSummary.candidateItemsScanned}`} detail="新聞、量價、題材與資料節點" />
+          <RadarMetric label="掃描分類" value={`${dailyReport.scanSummary.categoriesScanned.length}`} detail={dailyReport.scanSummary.categoriesScanned.slice(0, 3).join(' / ')} />
+          <RadarMetric label="資料來源" value={`${dailyReport.scanSummary.majorSourcesChecked.length}`} detail={dailyReport.scanSummary.majorSourcesChecked.slice(0, 3).join(' / ')} />
+        </div>
+      ) : null}
+
       <div className="grid gap-4 md:grid-cols-2">
         {marketSections.scanCoverage.length > 0 ? marketSections.scanCoverage.map((item) => (
           <Card
@@ -140,6 +148,10 @@ export function MarketRadarPage() {
             right={<Badge tone={statusTone[item.status]}>{statusLabel[item.status]}</Badge>}
           >
             <p className="text-sm leading-6 text-slate-300">{item.reason}</p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs text-slate-400">
+              {item.candidateCount ? <span className="chip">{item.candidateCount} candidates</span> : null}
+              {item.sourcesChecked?.slice(0, 3).map((source) => <span key={source} className="chip">{source}</span>)}
+            </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {item.tickersChecked.length > 0 ? item.tickersChecked.map((ticker) => (
                 <button
@@ -153,6 +165,12 @@ export function MarketRadarPage() {
                 </button>
               )) : <span className="text-sm text-slate-500">下一次掃描補上候選標的</span>}
             </div>
+            {item.tickersRejected?.length ? (
+              <p className="mt-3 text-xs leading-5 text-slate-400">
+                排除候選：{item.tickersRejected.map((ticker) => `${ticker.companyName} ${ticker.ticker}`).join(' / ')}
+              </p>
+            ) : null}
+            {item.excludedReason ? <p className="mt-2 text-xs leading-5 text-rose-100">排除原因：{item.excludedReason}</p> : null}
             <p className="mt-3 text-xs text-slate-400">優先級：{item.priority}</p>
           </Card>
         )) : (
@@ -215,6 +233,16 @@ export function MarketRadarPage() {
           </section>
         </div>
       ) : null}
+    </div>
+  );
+}
+
+function RadarMetric({ label, value, detail }: { label: string; value: string; detail: string }) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+      <p className="text-xs text-slate-400">{label}</p>
+      <p className="mt-2 text-2xl font-semibold text-white">{value}</p>
+      <p className="mt-1 line-clamp-2 text-xs text-slate-400">{detail || '等待掃描資料'}</p>
     </div>
   );
 }

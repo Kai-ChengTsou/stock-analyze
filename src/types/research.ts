@@ -12,6 +12,10 @@ export type SuggestedAction =
 export type WatchlistStatus = 'Watching' | 'Waiting' | 'Avoiding' | 'Researching';
 export type MarketRegion = 'US' | 'Taiwan' | 'CrossMarket';
 export type CatalystType = 'Fresh catalyst' | 'Recent context' | 'Background thesis' | 'Momentum only' | 'No signal';
+export type EvidenceGrade = 'A' | 'B' | 'C' | 'D';
+export type OpportunityStage = 'Early' | 'Confirming' | 'Crowded' | 'Late' | 'Avoid/Wait' | 'Avoid-Wait';
+export type CatalystDriver = 'Fundamental' | 'Technical' | 'Macro' | 'Policy' | 'Sentiment' | 'Supply-chain' | 'Mixed';
+export type BeneficiaryType = 'Direct' | 'Indirect' | 'Hidden' | 'Hurt' | 'Radar only';
 
 export interface NewsItem {
   id: string;
@@ -22,6 +26,14 @@ export interface NewsItem {
   relatedTickers: string[];
   impact: Impact;
   confidence: Confidence;
+  freshness?: CatalystType;
+  evidenceGrade?: EvidenceGrade;
+  opportunityStage?: OpportunityStage;
+  catalystDriver?: CatalystDriver;
+  whyMarketCares?: string;
+  pricedIn?: string;
+  confirms?: string;
+  invalidates?: string;
 }
 
 export interface Theme {
@@ -55,9 +67,21 @@ export interface Beneficiary {
   indirectBeneficiaries: string[];
   hiddenBeneficiaries: string[];
   companiesMayBeHurt: string[];
+  radarOnly?: string[];
+  details?: BeneficiaryDetail[];
   reasoning: string;
   evidenceQuality: EvidenceStrength;
   researchPriorityScore: number;
+}
+
+export interface BeneficiaryDetail {
+  companyName: string;
+  ticker: string;
+  type: BeneficiaryType;
+  linkage: string;
+  evidenceGrade?: EvidenceGrade;
+  opportunityStage?: OpportunityStage;
+  nextVerification?: string;
 }
 
 export interface CompanyResearch {
@@ -65,6 +89,15 @@ export interface CompanyResearch {
   companyName: string;
   ticker: string;
   marketCountry: string;
+  sectorTheme?: string;
+  whyItMattersToday?: string;
+  catalystSummary?: string;
+  priceVolumeBehavior?: string;
+  supplyChainRole?: string;
+  opportunityStage?: OpportunityStage;
+  evidenceGrade?: EvidenceGrade;
+  catalystDriver?: CatalystDriver;
+  beneficiaryType?: BeneficiaryType;
   overview: string;
   businessModel: string;
   revenueDrivers: string[];
@@ -83,6 +116,8 @@ export interface CompanyResearch {
   finalView: FinalView;
   suggestedAction: SuggestedAction;
   whatWouldChangeView: string;
+  upsideDriver?: string;
+  invalidationConditions?: string;
 }
 
 export interface WatchlistItem {
@@ -135,8 +170,38 @@ export interface ScanCoverageItem {
   category: string;
   status: CatalystType;
   tickersChecked: string[];
+  tickersSelected?: string[];
+  tickersRejected?: ScannedTicker[];
   reason: string;
   priority: 'Low' | 'Medium' | 'High';
+  sourcesChecked?: string[];
+  candidateCount?: number;
+  excludedReason?: string;
+}
+
+export interface ScannedTicker {
+  ticker: string;
+  companyName: string;
+  reason: string;
+  evidenceGrade?: EvidenceGrade;
+  opportunityStage?: OpportunityStage;
+}
+
+export interface RiskItem {
+  id: string;
+  category: string;
+  description: string;
+  severity?: 'Low' | 'Medium' | 'High';
+  whatWouldInvalidate?: string;
+}
+
+export interface ScanSummary {
+  candidateItemsScanned: number;
+  categoriesScanned: string[];
+  majorSourcesChecked: string[];
+  sectorsExcluded: string[];
+  lowSignalItemsExcluded: string[];
+  staleItemsExcluded: string[];
 }
 
 export interface MarketSections {
@@ -167,4 +232,8 @@ export interface DailyDashboard {
   watchlist: WatchlistItem[];
   ideaPipeline: IdeaPipelineItem[];
   marketSections?: MarketSections;
+  suggestedActions?: string[];
+  risks?: RiskItem[];
+  rejectedCandidates?: ScannedTicker[];
+  scanSummary?: ScanSummary;
 }
