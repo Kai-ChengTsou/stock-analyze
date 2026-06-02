@@ -1,6 +1,7 @@
 import { Badge } from '../components/Badge';
 import { Card } from '../components/Card';
 import { SectionHeader } from '../components/SectionHeader';
+import { TickerChip } from '../components/TickerChip';
 import { dailyReport, themeName } from '../data/report';
 import { confidenceLabel } from '../utils/format';
 
@@ -32,7 +33,7 @@ function Group({ title, values, danger = false }: { title: string; values: strin
       <p className={`mb-2 text-xs font-semibold ${danger ? 'text-rose-200' : 'text-cyan-200'}`}>{title}</p>
       <div className="flex flex-wrap gap-2">
         {values.map((value) => (
-          <span key={value} className="chip">{value}</span>
+          <TickerChip key={value} value={value} />
         ))}
       </div>
     </div>

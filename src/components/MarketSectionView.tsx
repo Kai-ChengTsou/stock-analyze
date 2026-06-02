@@ -1,6 +1,7 @@
 import { Badge } from './Badge';
 import { Card } from './Card';
 import { SectionHeader } from './SectionHeader';
+import { TickerChip } from './TickerChip';
 import { marketSections, newsById } from '../data/report';
 import type { MarketSection } from '../types/research';
 import { impactLabel, sentimentLabel } from '../utils/format';
@@ -29,7 +30,7 @@ export function MarketSectionView({ section, description }: MarketSectionViewPro
         <Card title="關注標的" eyebrow="Watch">
           <div className="flex flex-wrap gap-2">
             {section.stocksToWatch.length > 0 ? section.stocksToWatch.map((ticker) => (
-              <span key={ticker} className="chip">{ticker}</span>
+              <TickerChip key={ticker} value={ticker} />
             )) : <p className="text-sm text-slate-400">等待下一次完整市場掃描補上。</p>}
           </div>
         </Card>

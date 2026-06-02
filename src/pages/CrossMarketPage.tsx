@@ -2,6 +2,7 @@ import { Link2 } from 'lucide-react';
 import { Badge } from '../components/Badge';
 import { Card } from '../components/Card';
 import { SectionHeader } from '../components/SectionHeader';
+import { TickerChip } from '../components/TickerChip';
 import { marketSections } from '../data/report';
 import { confidenceLabel } from '../utils/format';
 
@@ -57,7 +58,7 @@ function TagGroup({ label, values }: { label: string; values: string[] }) {
       <p className="mb-2 text-xs text-slate-400">{label}</p>
       <div className="flex flex-wrap gap-2">
         {values.length > 0 ? values.map((value) => (
-          <span key={value} className="chip">{value}</span>
+          <TickerChip key={value} value={value} />
         )) : <span className="text-sm text-slate-500">無</span>}
       </div>
     </div>
