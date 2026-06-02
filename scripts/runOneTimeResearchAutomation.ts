@@ -231,6 +231,9 @@ const supplyChain: SupplyChainNode[] = [
   node('node-delta', '台達電', '2308.TW', '台灣', 2, 'theme-tw-ai-infra', 'AI 資料中心電源、散熱、HVDC 與基建方案。', 'High', 'Obvious', '題材轉營收時間差。'),
   node('node-auras', '奇鋐', '3017.TW', '台灣', 3, 'theme-tw-ai-infra', '液冷與高階散熱對應 AI rack 功率密度提升。', 'High', 'Obvious', '認證與毛利率驗證。'),
   node('node-accton', '智邦', '2345.TW', '台灣', 3, 'theme-tw-ai-infra', 'AI cluster 高速網路、switch 與光通訊需求受惠。', 'Medium', 'Hidden', '網通需求波動與客戶拉貨。'),
+  node('node-pltr', 'Palantir', 'PLTR', '美國', 2, 'theme-us-ai-capex', 'AI 應用層與企業/政府 workflow monetization 代表，用來驗證 AI 不只停在硬體 capex。', 'High', 'Obvious', '估值過高與政府合約集中。'),
+  node('node-panjit', '強茂', '2481.TW', '台灣', 3, 'theme-tw-ai-infra', 'AI server 電源效率、MOSFET、車用與機器人需求帶動功率元件升級。', 'Medium', 'Hidden', '缺貨題材降溫與產品 mix 驗證。'),
+  node('node-tsc', '台半', '5425.TW', '台灣', 4, 'theme-tw-ai-infra', 'Super Junction / SiC MOSFET 若切入 AI server 與車用供應鏈，具題材擴散彈性。', 'Medium', 'Hidden', '訂單能見度與毛利改善仍需驗證。'),
 ];
 
 const companyResearch: CompanyResearch[] = [
@@ -238,6 +241,7 @@ const companyResearch: CompanyResearch[] = [
   company('company-msft', 'Microsoft', 'MSFT', '美國', 'AI 軟體與 Azure capex 的核心觀察公司。', '雲端、企業軟體、AI assistant、開發工具與平台服務。', ['Azure', 'Copilot', 'AI infra', 'Enterprise software'], '追蹤 Azure 成長、AI monetization 與 capex 效率。', 'AI 需求支撐雲端，但投資回報是市場焦點。', '雲端毛利與 AI 成本攤提需追蹤。', '軟體訂閱支撐 EPS。', '現金流極強。', '高品質但估值不低。', '穩健偏多。', ['GOOGL', 'AMZN', 'ORCL'], 'Copilot 與 Azure AI 形成長期 monetization。', 'AI 支出大但可被雲端成長吸收。', 'AI capex 壓縮毛利或增速放緩。', ['capex ROI', '雲端毛利', '監管'], 'Positive', 'Watch', '若 Azure 或 AI monetization 明顯失速則下修。'),
   company('company-avgo', 'Broadcom', 'AVGO', '美國', 'Custom ASIC 與 AI networking 主線。', '提供 ASIC、switch、connectivity 與基礎軟體。', ['ASIC', 'AI networking', 'Ethernet fabric', 'Cloud customers'], '追蹤 AI revenue 指引與大客戶專案。', 'AI networking 和 ASIC 提供高成長。', '產品 mix 佳但客戶集中。', '高附加價值產品支撐 EPS。', '現金流穩健。', 'AI 題材升溫後估值也有壓力。', '偏多但需財報確認。', ['MRVL', 'NVDA networking'], 'ASIC 與網通雙線加速。', 'AI 強、其他業務提供底盤。', '客戶專案延後。', ['客戶集中', '估值', '專案延遲'], 'Positive', 'Watch', '若 AI networking 指引轉弱則下修。'),
   company('company-mu', 'Micron', 'MU', '美國', 'HBM / DRAM / SSD 週期受惠者。', '銷售 DRAM、HBM、NAND 與資料中心 SSD。', ['HBM', 'Server DRAM', 'SSD', 'AI server'], '追蹤 HBM 供需、報價與庫存。', 'AI memory 受惠明確，但仍是循環股。', '報價上行時毛利彈性大。', 'ASP 與供需主導 EPS。', '景氣上行改善，capex 仍高。', '高 beta 記憶體股。', '偏多但波動大。', ['SK Hynix', 'Samsung'], 'HBM 供不應求延續。', 'AI 需求強但需週期框架管理。', '供給擴張快於需求。', ['循環', '供給', '庫存'], 'Positive', 'Watch', '若報價與 HBM 能見度轉弱則下修。'),
+  company('company-pltr', 'Palantir', 'PLTR', '美國', 'AI 應用層與政府/企業資料平台代表。', '提供 Gotham、Foundry、AIP 等資料整合、決策支援與 AI workflow 平台。', ['AIP adoption', 'US government contracts', 'US commercial expansion', 'AI monetization'], '追蹤營收成長、RPO、政府合約、商業客戶擴張與 AIP 使用案例。', 'AI 軟體開始從題材走向實際收入驗證，是硬體 capex 之外的重要對照。', '軟體毛利結構佳，但銷售投入與大型合約節奏需追蹤。', '高成長可放大 EPS，但市場要求持續 beat。', '現金流品質佳，是優於多數 AI 概念軟體股的地方。', '估值極敏感，任何成長降速都可能造成壓縮。', '強勢但擁擠。', ['SNOW', 'DDOG', 'MDB', 'C3.ai'], 'AIP 成為企業 AI workflow 標準層，政府與商業雙引擎延續。', '基本面強，但估值容錯低，適合列入美股 AI 應用層雷達。', '成長率放緩或政府合約政治風險升高。', ['估值', '政府合約集中', 'AI 軟體競爭'], 'Positive', 'Watch', '若營收成長、RPO 或商業客戶擴張明顯降速則下修。'),
   company('company-dell', 'Dell Technologies', 'DELL', '美國', 'AI server 出貨與企業硬體 read-through。', '銷售 server、storage、PC 與服務。', ['AI server', 'Storage', 'Enterprise refresh'], '追蹤 AI server backlog、毛利與現金流。', '營收動能強，但毛利品質是關鍵。', 'AI server 未必帶來同步毛利提升。', '規模擴張支撐 EPS。', '大單可能增加營運資金壓力。', '財報後追高風險。', '事件驅動強。', ['SMCI', 'HPE', 'Lenovo'], 'AI server 需求延續且毛利改善。', '營收強、毛利普通。', '客戶延遲或成本吃掉利潤。', ['毛利', '客戶集中', '庫存'], 'Neutral', 'Wait', '若毛利與現金流同步改善則轉正面。'),
   company('company-vrt', 'Vertiv', 'VRT', '美國', '資料中心 power / thermal 基建代表。', '提供 UPS、配電、機櫃、液冷與服務。', ['Liquid cooling', 'Power density', 'Data center buildout'], '追蹤 backlog、液冷滲透與估值。', 'AI capex 往電力散熱下沉。', '方案化產品可支撐毛利。', '高成長可放大 EPS。', '專案交付影響現金流。', '估值已反映不少成長。', '等待回檔與財報驗證。', ['ETN', 'Schneider'], '液冷與電力升級成標配。', '需求強但估值高。', '資料中心建置延遲。', ['估值', '專案延遲', '競爭'], 'Neutral', 'Wait', '若估值修正且訂單品質改善則轉正面。'),
   company('company-tsmc', '台積電', '2330.TW', '台灣', '台股核心權值與 AI 製造樞紐。', '提供先進製程、成熟製程與先進封裝。', ['AI/HPC', '3nm', 'CoWoS', 'Advanced packaging'], '追蹤月營收、capex、CoWoS 與大客戶需求。', 'AI/HPC 支撐成長。', '海外廠成本與折舊需追蹤。', '先進製程稼動率支撐 EPS。', '高 capex 下仍需看回收。', '核心資產溢價高。', '長線強，短線受台股權值資金影響。', ['Samsung Foundry', 'Intel Foundry'], 'AI/HPC 多年需求延續。', '需求強但需消化 capex。', '地緣或封裝瓶頸。', ['地緣政治', 'CoWoS', 'capex'], 'Positive', 'Watch', '若 AI demand 或封裝需求鬆動則下修。'),
@@ -245,6 +249,8 @@ const companyResearch: CompanyResearch[] = [
   company('company-innolux', '群創', '3481.TW', '台灣', '面板本業加 FOPLP / 玻璃基板轉型題材。', '生產面板並推動先進封裝、玻璃基板與新應用。', ['Panel pricing', 'FOPLP', 'Glass substrate', 'SpaceX theme'], '追蹤面板報價、本業虧損改善與 FOPLP 訂單。', '題材強，但需基本面驗證。', '本業毛利仍受面板循環影響。', '轉盈速度是關鍵。', '資本支出與本業現金流需看。', '題材容易先行。', '動能強但證據品質中等。', ['友達', '彩晶'], 'FOPLP / 玻璃基板成功商轉。', '題材與低基期支撐估值。', '本業虧損或題材落空。', ['面板報價', '題材落地', '處置風險'], 'Neutral', 'Watch', '若 FOPLP 收入與毛利能見度提高則轉正面。'),
   company('company-hannstar', '彩晶', '6116.TW', '台灣', '面板低價題材與低軌衛星動能股。', '中小尺寸面板與相關應用。', ['Panel pricing', 'SpaceX theme', 'Momentum'], '追蹤成交量、處置、面板報價與是否有實際訂單。', '短線熱度高，但基本面證據較薄。', '本業改善仍需確認。', 'EPS 可見度低於華邦電等基本面股。', '現金流需看本業循環。', '追高風險高。', '列雷達，不直接當核心推薦。', ['群創', '友達'], '若低軌衛星或面板訂單被證實，估值可重估。', '目前偏資金行情。', '題材降溫或處置壓力。', ['證據不足', '處置', '波動'], 'Neutral', 'Wait', '若有明確訂單或財報改善再升級。'),
   company('company-compal', '仁寶', '2324.TW', '台灣', 'PC ODM 轉 AI server 的低基期候選。', '提供筆電、PC、server 與電子代工服務。', ['AI server', 'AI PC', 'ODM scale', 'Enterprise hardware'], '追蹤 AI server 營收占比、毛利與月營收。', '轉型故事成立但仍需數字證明。', 'ODM 毛利薄，產品 mix 是關鍵。', 'EPS 需要靠 AI server mix 改善。', '營運資金與庫存需管理。', '市場會等待證據。', '研究中。', ['廣達', '緯創', '英業達'], 'AI server 成為第三成長支柱。', '低基期轉型但驗證期較長。', 'PC 本業拖累或 AI server 毛利不足。', ['毛利', '轉型速度', '客戶集中'], 'Neutral', 'Watch', '若 AI server 營收占比與毛利同步改善則轉正面。'),
+  company('company-panjit', '強茂', '2481.TW', '台灣', '台灣功率半導體與 AI 電源效率受惠候選。', '提供二極體、MOSFET、保護元件與功率解決方案，應用於 AI server、車用、IPC 與機器人。', ['Power MOSFET', 'AI server power', 'Automotive electronics', 'Supply tightness'], '追蹤 MOSFET 營收占比、B/B 值、CSP 客戶、AI server 電源與車用訂單。', 'AI server 電源架構升級與功率元件缺貨/轉單提供近期催化。', '產品升級有助毛利，但仍需看實際 mix。', '若 MOSFET 與車用占比提升，EPS 彈性會優於傳統二極體週期。', '擴產與庫存週期需管理。', '題材升溫後要防估值先跑。', '偏多但需月營收驗證。', ['台半', '德微', '大中', '富鼎'], 'AI server、車用與機器人把功率元件從傳統零件拉到 AI 基建效率鏈。', '受惠邏輯成立，列為台股功率元件優先研究。', '缺貨緩解、轉單不持續或 MOSFET 毛利不如預期。', ['缺貨循環', '產品 mix', '客戶認證'], 'Positive', 'Watch', '若月營收與毛利無法驗證 AI/車用占比提升則下修。'),
+  company('company-tsc', '台半', '5425.TW', '台灣', '二極體與 MOSFET / SiC 升級候選。', '提供整流二極體、保護元件、MOSFET、Super Junction 與 SiC 相關產品。', ['Super Junction MOSFET', 'SiC MOSFET', 'Power supply customers', 'Automotive'], '追蹤漲價、交期、電源大廠採用、Rubin/AI server read-through 與月營收。', '功率元件供需偏緊與 AI server 電源升級使台半進入固定雷達。', '毛利改善需要產品組合升級，而不只是漲價。', 'EPS 彈性取決於高階 MOSFET / SiC 放量速度。', '庫存週期與擴產節奏需追蹤。', '小型題材股波動較大。', '研究中偏多。', ['強茂', '德微', '朋程', '大中'], '若高階功率產品打入 AI server 與車用鏈，估值可重估。', '催化存在，但證據品質低於強茂，需等訂單與毛利驗證。', '漲價題材降溫或高階產品導入慢。', ['訂單能見度', '毛利驗證', '題材波動'], 'Neutral', 'Watch', '若高階產品營收占比與毛利改善明確則轉正面。'),
   company('company-delta', '台達電', '2308.TW', '台灣', 'AI 電源、散熱與資料中心基建方案商。', '提供電源、散熱、工業自動化、資料中心與能源方案。', ['AI data center power', 'Liquid cooling', 'HVDC', 'Microgrid'], '追蹤 AI 電源/散熱營收占比、毛利與新專案。', 'AI 基建支出下沉支撐成長。', '方案化有助毛利。', 'EPS 穩健但催化傳導較慢。', '現金流相對穩。', '題材轉營收需要時間。', '長線正向。', ['Vertiv', 'Eaton', '光寶科'], '電源與液冷成 AI 建設標配。', '基本面穩但需更多拆分。', '營收貢獻慢於股價期待。', ['接單透明度', '競爭', '資本支出'], 'Positive', 'Watch', '若 AI 基建貢獻不如預期則下修。'),
   company('company-accton', '智邦', '2345.TW', '台灣', 'AI cluster 高速網路與交換器受惠股。', '提供網通設備、switch 與雲端資料中心網路產品。', ['AI networking', 'Switch', 'Cloud data center', '800G/1.6T'], '追蹤雲端客戶拉貨、高速網通需求與毛利。', 'AI cluster scale-out 支撐網通需求。', '高階產品 mix 可改善毛利。', 'EPS 受大客戶出貨節奏影響。', '專案交付影響現金流。', '估值受美股網通 read-through 影響。', '偏多但需看訂單。', ['Broadcom', 'Arista', '眾達'], 'AI networking 成長持續。', '受惠成立但客戶拉貨節奏重要。', '雲端資本支出放緩。', ['客戶集中', '拉貨波動', '競爭'], 'Positive', 'Watch', '若 AI networking 訂單轉弱則下修。'),
 ];
@@ -277,6 +283,9 @@ const ideaPipeline: IdeaPipelineItem[] = [
   idea('idea-compal', 'news-tw-odm', 'theme-tw-ai-infra', 'node-compal', 'company-compal', 'Neutral', '仁寶是 AI server 轉型低基期候選，重點看月營收與毛利。'),
   idea('idea-delta', 'news-tw-cooling-power', 'theme-tw-ai-infra', 'node-delta', 'company-delta', 'Positive', '台達電連到 AI data center 電源與散熱，是台股基建層核心。'),
   idea('idea-accton', 'news-tw-pcb-optics', 'theme-tw-ai-infra', 'node-accton', 'company-accton', 'Positive', '智邦對應 AI networking 與高速交換器，是美股網通 read-through 的台股受惠者。'),
+  idea('idea-pltr', 'news-us-software-cloud', 'theme-us-ai-capex', 'node-pltr', 'company-pltr', 'Positive', 'PLTR 代表 AI 應用層 monetization，可檢查 AI 硬體投資是否轉成實際 workflow 收入。'),
+  idea('idea-panjit', 'news-tw-cooling-power', 'theme-tw-ai-infra', 'node-panjit', 'company-panjit', 'Positive', '強茂把 AI server 電源、MOSFET、車用與機器人串成台股功率元件主線。'),
+  idea('idea-tsc', 'news-tw-cooling-power', 'theme-tw-ai-infra', 'node-tsc', 'company-tsc', 'Neutral', '台半進入功率元件固定雷達，但需要訂單、毛利與高階產品占比驗證。'),
 ];
 
 const marketSections: MarketSections = {
@@ -286,9 +295,9 @@ const marketSections: MarketSections = {
     overview: '美股每天獨立掃描大盤、SOX、利率、美元、油價、AI capex、雲端 monetization、半導體與資料中心基建。',
     sentiment: 'Bullish',
     keyIndexes: ['S&P 500', 'Nasdaq', 'SOX', 'US 10Y', 'DXY', 'WTI'],
-    topThemes: ['AI capex 與投資回報', '半導體與 AI networking', '雲端 AI monetization', '利率與估值風險'],
+    topThemes: ['AI capex 與投資回報', '半導體與 AI networking', '雲端 AI monetization', 'AI 應用層 / 軟體', '利率與估值風險'],
     importantNewsIds: ['news-us-ai-capex', 'news-us-rates-risk', 'news-us-software-cloud'],
-    stocksToWatch: ['NVDA', 'MSFT', 'AVGO', 'MU', 'DELL', 'VRT', 'GOOGL', 'AMZN'],
+    stocksToWatch: ['NVDA', 'MSFT', 'AVGO', 'MU', 'DELL', 'VRT', 'PLTR', 'GOOGL', 'AMZN', 'ORCL', 'SNOW'],
     risks: ['若利率、美元或油價上行，高估值 AI 交易可能先修正。', '若雲端 AI monetization 不如預期，硬體 capex 會被市場質疑。'],
   },
   taiwan: {
@@ -297,9 +306,9 @@ const marketSections: MarketSections = {
     overview: '台股每天獨立掃描加權、櫃買、外資、匯率、成交量、月營收、法說、處置股與題材輪動。',
     sentiment: 'Bullish',
     keyIndexes: ['TAIEX', 'TPEx', 'TWD', '外資', '成交量', '處置股'],
-    topThemes: ['記憶體報價與低基期', '面板 / FOPLP / SpaceX', 'AI server ODM', '散熱電源 PCB 光通訊'],
+    topThemes: ['記憶體報價與低基期', '面板 / FOPLP / SpaceX', 'AI server ODM', '散熱電源 PCB 光通訊', '功率元件 / SiC / 車用'],
     importantNewsIds: ['news-tw-memory', 'news-tw-panel-foplp', 'news-tw-odm', 'news-tw-cooling-power', 'news-tw-pcb-optics', 'news-tw-monthly-sales'],
-    stocksToWatch: ['2330.TW', '2344.TW', '3481.TW', '6116.TW', '2324.TW', '2382.TW', '6669.TW', '2308.TW', '3017.TW', '2345.TW'],
+    stocksToWatch: ['2330.TW', '2344.TW', '3481.TW', '6116.TW', '2324.TW', '2382.TW', '6669.TW', '2308.TW', '3017.TW', '2345.TW', '2481.TW', '5425.TW'],
     risks: ['台股題材股容易先漲後等證據，需標註 fresh catalyst、recent context、background thesis 或 momentum-only。', '處置股與高週轉熱門股不應直接等同基本面改善。'],
   },
   crossMarket: [
@@ -310,12 +319,24 @@ const marketSections: MarketSections = {
   ],
   scanCoverage: [
     coverage('scan-us-index', 'US', '美股大盤 / 利率 / 美元 / 油價', 'Recent context', ['SPY', 'QQQ', 'SOXX'], '每天先確認市場風險偏好與估值壓力。', 'High'),
-    coverage('scan-us-ai', 'US', '美股 AI 半導體 / 雲端 / 軟體', 'Fresh catalyst', ['NVDA', 'MSFT', 'AVGO', 'MU', 'DELL', 'VRT'], 'AI capex 是美股主軸，但要同步追 monetization。', 'High'),
+    coverage('scan-us-ai', 'US', '美股 AI 半導體 / 雲端 / 硬體基建', 'Fresh catalyst', ['NVDA', 'MSFT', 'AVGO', 'MU', 'DELL', 'VRT'], 'AI capex 是美股主軸，但要同步追 monetization。', 'High'),
+    coverage('scan-us-ai-software', 'US', '美股 AI 應用層 / 軟體 monetization', 'Fresh catalyst', ['PLTR', 'SNOW', 'DDOG', 'MDB', 'CRM', 'NOW', 'ORCL'], '用軟體收入與企業 adoption 驗證 AI capex 是否能回收。', 'High'),
+    coverage('scan-us-megacap', 'US', '美股 Magnificent 7 / hyperscaler', 'Recent context', ['MSFT', 'GOOGL', 'AMZN', 'META', 'AAPL', 'TSLA'], '大客戶 capex、雲端毛利與自研 ASIC 會傳導到半導體與台股供應鏈。', 'High'),
+    coverage('scan-us-energy-power', 'US', '美股電力 / 公用事業 / 資料中心能源', 'Recent context', ['ETN', 'GEV', 'CEG', 'NEE', 'VST', 'PWR'], 'AI data center 的限制常在電力、變壓器、配電與能源供給。', 'Medium'),
+    coverage('scan-us-cyber-defense', 'US', '美股資安 / 國防科技 / 政府 AI', 'Background thesis', ['CRWD', 'PANW', 'NET', 'PLTR', 'LMT', 'RTX'], '政府 AI、國防科技與資安預算是 AI 應用層的另一條線。', 'Medium'),
     coverage('scan-tw-memory', 'Taiwan', '台股記憶體 / 儲存', 'Fresh catalyst', ['2344.TW', '2408.TW', '2337.TW', '8299.TW'], '記憶體報價與財報改善使此族群升級到主報候選。', 'High'),
     coverage('scan-tw-panel', 'Taiwan', '面板 / FOPLP / SpaceX', 'Momentum only', ['3481.TW', '2409.TW', '6116.TW'], '題材熱度高，但需區分本業改善與純動能。', 'High'),
     coverage('scan-tw-odm', 'Taiwan', 'AI server ODM', 'Fresh catalyst', ['2382.TW', '6669.TW', '2317.TW', '2324.TW', '2356.TW', '3706.TW'], '從龍頭擴散到低基期轉型股，需看月營收與毛利。', 'High'),
     coverage('scan-tw-cooling', 'Taiwan', '散熱 / 液冷 / 電源', 'Recent context', ['3017.TW', '3324.TW', '3653.TW', '2308.TW', '2301.TW', '6282.TW'], 'AI 建置瓶頸下沉，是台股二三層核心掃描區。', 'High'),
+    coverage('scan-tw-power-components', 'Taiwan', '功率元件 / MOSFET / SiC / 車用', 'Fresh catalyst', ['2481.TW', '5425.TW', '3675.TW', '6435.TW', '6693.TW', '8261.TW', '5285.TW', '6548.TW'], 'AI server 電源效率、車用與供給吃緊讓功率元件成為固定掃描分類。', 'High'),
     coverage('scan-tw-pcb-optics', 'Taiwan', 'PCB / CCL / 光通訊', 'Recent context', ['2383.TW', '2368.TW', '3037.TW', '3189.TW', '2345.TW', '4977.TW'], 'AI cluster 擴建會傳導到高速網路與材料。', 'Medium'),
+    coverage('scan-tw-ic-design', 'Taiwan', 'IC 設計 / ASIC / IP / 車用 IC', 'Recent context', ['2454.TW', '3034.TW', '3661.TW', '3443.TW', '5274.TW', '4966.TW'], 'AI edge、ASIC、車用與高速傳輸會帶動 IC 設計輪動。', 'Medium'),
+    coverage('scan-tw-passives', 'Taiwan', '被動元件 / MLCC / 電感 / 石英元件', 'Background thesis', ['2327.TW', '2492.TW', '3026.TW', '6173.TW', '3042.TW'], 'AI server、車用與電源升級會增加被動元件規格與用量。', 'Medium'),
+    coverage('scan-tw-robotics-auto', 'Taiwan', '機器人 / 自動化 / 車電', 'Background thesis', ['2359.TW', '2049.TW', '1590.TW', '2231.TW', '1536.TW'], 'AI 從資料中心擴散到機器人與智慧製造時，台股零組件可能輪動。', 'Medium'),
+    coverage('scan-tw-aerospace-defense', 'Taiwan', '航太 / 軍工 / 低軌衛星', 'Momentum only', ['2634.TW', '8033.TW', '2314.TW', '6285.TW', '3491.TW'], '政策、衛星與國防題材容易形成資金行情，但證據要分層。', 'Medium'),
+    coverage('scan-tw-financials', 'Taiwan', '金融 / 壽險 / 高股息', 'Recent context', ['2881.TW', '2882.TW', '2884.TW', '2885.TW', '2886.TW'], '利率、匯率、股債市與殖利率資金會影響台股非科技主流。', 'Medium'),
+    coverage('scan-tw-cyclical', 'Taiwan', '航運 / 鋼鐵 / 原物料 / 能源', 'Background thesis', ['2603.TW', '2609.TW', '2002.TW', '1301.TW', '1303.TW', '6505.TW'], '若油價、運價或政策催化轉強，非科技循環股要升級主報。', 'Medium'),
+    coverage('scan-tw-biotech-policy', 'Taiwan', '生技 / 醫材 / 政策受惠', 'Background thesis', ['6446.TW', '4743.TW', '4162.TW', '1598.TW', '4128.TW'], '新藥、醫材、政策補助與法說催化常和科技股不同步。', 'Medium'),
     coverage('scan-tw-non-tech', 'Taiwan', '金融 / 航運 / 原物料 / 生技', 'Background thesis', ['2881.TW', '2603.TW', '2002.TW', '6446.TW'], '每天掃描但只有出現新催化或資金主流時升級主報。', 'Medium'),
   ],
 };
@@ -324,10 +345,10 @@ const report: DailyDashboard = {
   date,
   generatedAt: runTime.generatedAt,
   marketOverview:
-    '本版晨報改為全市場掃描框架：先分開掃美股與台股，再用跨市場連動推導供應鏈。今天保留 12 則重要訊號與 12 家公司研究，涵蓋美股 AI capex、雲端與半導體，以及台股記憶體、面板/FOPLP、AI server ODM、散熱電源、PCB、光通訊與非科技雷達。',
+    '本版晨報改為全市場掃描框架：先分開掃美股與台股，再用跨市場連動推導供應鏈。今天保留 12 則重要訊號與 16 家公司研究，涵蓋美股 AI capex、AI 應用層、雲端與半導體，以及台股記憶體、面板/FOPLP、AI server ODM、散熱電源、功率元件、PCB、光通訊與非科技雷達。',
   marketSentiment: 'Bullish',
-  topThemes: ['美股 AI capex 與估值驗證', '台股記憶體與面板轉型題材', '台股 AI 基建供應鏈擴散', '全市場雷達避免漏掉非 AI 主流'],
-  stocksToWatch: ['NVDA', 'MSFT', 'AVGO', 'MU', 'DELL', '2330.TW', '2344.TW', '3481.TW', '6116.TW', '2324.TW', '2308.TW', '2345.TW'],
+  topThemes: ['美股 AI capex 與估值驗證', '美股 AI 應用層 monetization', '台股記憶體與面板轉型題材', '台股 AI 基建與功率元件供應鏈擴散', '全市場雷達避免漏掉非 AI 主流'],
+  stocksToWatch: ['NVDA', 'MSFT', 'AVGO', 'MU', 'PLTR', 'DELL', '2330.TW', '2344.TW', '3481.TW', '6116.TW', '2324.TW', '2308.TW', '2345.TW', '2481.TW', '5425.TW'],
   biggestRisk:
     '最大風險是把市場熱度誤判成基本面。美股要防 AI capex ROI 與高估值壓縮；台股要防處置股、低價題材股、面板與記憶體循環反轉，以及 AI server 轉型公司毛利沒有跟上營收。',
   watchlistAlerts: [
@@ -335,6 +356,7 @@ const report: DailyDashboard = {
     '台股記憶體：華邦電、南亞科、旺宏、群聯要用報價、毛利、庫存與月營收交叉驗證。',
     '台股面板：群創、彩晶可以進雷達，但 FOPLP / SpaceX 題材要和面板本業分開標註。',
     '台股 ODM：仁寶、英業達、神達屬低基期轉型候選，不能直接套用廣達、緯穎的估值邏輯。',
+    '台股功率元件：強茂、台半、德微、大中、富鼎要用 AI server 電源、MOSFET / SiC、車用與交期/漲價驗證。',
     '全市場：金融、航運、原物料、生技若當天有新催化，會升級主報，不再被 AI 固定名單排擠。',
   ],
   emotionalWarning:
@@ -490,7 +512,7 @@ function assertReportQuality(dashboard: DailyDashboard) {
     throw new Error('Expected marketSections for US/Taiwan split and full-market radar coverage');
   }
 
-  if (dashboard.marketSections.scanCoverage.length < 8) {
-    throw new Error(`Expected at least 8 scan coverage categories, got ${dashboard.marketSections.scanCoverage.length}`);
+  if (dashboard.marketSections.scanCoverage.length < 18) {
+    throw new Error(`Expected at least 18 scan coverage categories, got ${dashboard.marketSections.scanCoverage.length}`);
   }
 }

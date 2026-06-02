@@ -1,12 +1,13 @@
 {
   "date": "2026-06-02",
-  "generatedAt": "2026-06-02T10:54:44+08:00",
-  "marketOverview": "本版晨報改為全市場掃描框架：先分開掃美股與台股，再用跨市場連動推導供應鏈。今天保留 12 則重要訊號與 12 家公司研究，涵蓋美股 AI capex、雲端與半導體，以及台股記憶體、面板/FOPLP、AI server ODM、散熱電源、PCB、光通訊與非科技雷達。",
+  "generatedAt": "2026-06-02T11:23:37+08:00",
+  "marketOverview": "本版晨報改為全市場掃描框架：先分開掃美股與台股，再用跨市場連動推導供應鏈。今天保留 12 則重要訊號與 16 家公司研究，涵蓋美股 AI capex、AI 應用層、雲端與半導體，以及台股記憶體、面板/FOPLP、AI server ODM、散熱電源、功率元件、PCB、光通訊與非科技雷達。",
   "marketSentiment": "Bullish",
   "topThemes": [
     "美股 AI capex 與估值驗證",
+    "美股 AI 應用層 monetization",
     "台股記憶體與面板轉型題材",
-    "台股 AI 基建供應鏈擴散",
+    "台股 AI 基建與功率元件供應鏈擴散",
     "全市場雷達避免漏掉非 AI 主流"
   ],
   "stocksToWatch": [
@@ -14,6 +15,7 @@
     "MSFT",
     "AVGO",
     "MU",
+    "PLTR",
     "DELL",
     "2330.TW",
     "2344.TW",
@@ -21,7 +23,9 @@
     "6116.TW",
     "2324.TW",
     "2308.TW",
-    "2345.TW"
+    "2345.TW",
+    "2481.TW",
+    "5425.TW"
   ],
   "biggestRisk": "最大風險是把市場熱度誤判成基本面。美股要防 AI capex ROI 與高估值壓縮；台股要防處置股、低價題材股、面板與記憶體循環反轉，以及 AI server 轉型公司毛利沒有跟上營收。",
   "watchlistAlerts": [
@@ -29,6 +33,7 @@
     "台股記憶體：華邦電、南亞科、旺宏、群聯要用報價、毛利、庫存與月營收交叉驗證。",
     "台股面板：群創、彩晶可以進雷達，但 FOPLP / SpaceX 題材要和面板本業分開標註。",
     "台股 ODM：仁寶、英業達、神達屬低基期轉型候選，不能直接套用廣達、緯穎的估值邏輯。",
+    "台股功率元件：強茂、台半、德微、大中、富鼎要用 AI server 電源、MOSFET / SiC、車用與交期/漲價驗證。",
     "全市場：金融、航運、原物料、生技若當天有新催化，會升級主報，不再被 AI 固定名單排擠。"
   ],
   "emotionalWarning": "每天先問：這是新催化、近期脈絡、背景論點，還是純動能？不要因為某檔很紅就直接當成基本面轉強，也不要因為它不是 AI 龍頭就漏掉市場主流。",
@@ -471,6 +476,42 @@
       "evidenceStrength": "Medium",
       "visibility": "Hidden",
       "keyRisk": "網通需求波動與客戶拉貨。"
+    },
+    {
+      "id": "node-pltr",
+      "companyName": "Palantir",
+      "ticker": "PLTR",
+      "marketCountry": "美國",
+      "layer": 2,
+      "linkedThemeId": "theme-us-ai-capex",
+      "whyItMayBenefit": "AI 應用層與企業/政府 workflow monetization 代表，用來驗證 AI 不只停在硬體 capex。",
+      "evidenceStrength": "High",
+      "visibility": "Obvious",
+      "keyRisk": "估值過高與政府合約集中。"
+    },
+    {
+      "id": "node-panjit",
+      "companyName": "強茂",
+      "ticker": "2481.TW",
+      "marketCountry": "台灣",
+      "layer": 3,
+      "linkedThemeId": "theme-tw-ai-infra",
+      "whyItMayBenefit": "AI server 電源效率、MOSFET、車用與機器人需求帶動功率元件升級。",
+      "evidenceStrength": "Medium",
+      "visibility": "Hidden",
+      "keyRisk": "缺貨題材降溫與產品 mix 驗證。"
+    },
+    {
+      "id": "node-tsc",
+      "companyName": "台半",
+      "ticker": "5425.TW",
+      "marketCountry": "台灣",
+      "layer": 4,
+      "linkedThemeId": "theme-tw-ai-infra",
+      "whyItMayBenefit": "Super Junction / SiC MOSFET 若切入 AI server 與車用供應鏈，具題材擴散彈性。",
+      "evidenceStrength": "Medium",
+      "visibility": "Hidden",
+      "keyRisk": "訂單能見度與毛利改善仍需驗證。"
     }
   ],
   "beneficiaries": [
@@ -716,6 +757,44 @@
       "finalView": "Positive",
       "suggestedAction": "Watch",
       "whatWouldChangeView": "若報價與 HBM 能見度轉弱則下修。"
+    },
+    {
+      "id": "company-pltr",
+      "companyName": "Palantir",
+      "ticker": "PLTR",
+      "marketCountry": "美國",
+      "overview": "AI 應用層與政府/企業資料平台代表。",
+      "businessModel": "提供 Gotham、Foundry、AIP 等資料整合、決策支援與 AI workflow 平台。",
+      "revenueDrivers": [
+        "AIP adoption",
+        "US government contracts",
+        "US commercial expansion",
+        "AI monetization"
+      ],
+      "latestFinancialReportSummary": "追蹤營收成長、RPO、政府合約、商業客戶擴張與 AIP 使用案例。",
+      "revenueGrowth": "AI 軟體開始從題材走向實際收入驗證，是硬體 capex 之外的重要對照。",
+      "grossMargin": "軟體毛利結構佳，但銷售投入與大型合約節奏需追蹤。",
+      "eps": "高成長可放大 EPS，但市場要求持續 beat。",
+      "freeCashFlow": "現金流品質佳，是優於多數 AI 概念軟體股的地方。",
+      "valuationRisk": "估值極敏感，任何成長降速都可能造成壓縮。",
+      "technicalTrend": "強勢但擁擠。",
+      "competitors": [
+        "SNOW",
+        "DDOG",
+        "MDB",
+        "C3.ai"
+      ],
+      "bullCase": "AIP 成為企業 AI workflow 標準層，政府與商業雙引擎延續。",
+      "baseCase": "基本面強，但估值容錯低，適合列入美股 AI 應用層雷達。",
+      "bearCase": "成長率放緩或政府合約政治風險升高。",
+      "keyRisks": [
+        "估值",
+        "政府合約集中",
+        "AI 軟體競爭"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若營收成長、RPO 或商業客戶擴張明顯降速則下修。"
     },
     {
       "id": "company-dell",
@@ -970,6 +1049,82 @@
       "whatWouldChangeView": "若 AI server 營收占比與毛利同步改善則轉正面。"
     },
     {
+      "id": "company-panjit",
+      "companyName": "強茂",
+      "ticker": "2481.TW",
+      "marketCountry": "台灣",
+      "overview": "台灣功率半導體與 AI 電源效率受惠候選。",
+      "businessModel": "提供二極體、MOSFET、保護元件與功率解決方案，應用於 AI server、車用、IPC 與機器人。",
+      "revenueDrivers": [
+        "Power MOSFET",
+        "AI server power",
+        "Automotive electronics",
+        "Supply tightness"
+      ],
+      "latestFinancialReportSummary": "追蹤 MOSFET 營收占比、B/B 值、CSP 客戶、AI server 電源與車用訂單。",
+      "revenueGrowth": "AI server 電源架構升級與功率元件缺貨/轉單提供近期催化。",
+      "grossMargin": "產品升級有助毛利，但仍需看實際 mix。",
+      "eps": "若 MOSFET 與車用占比提升，EPS 彈性會優於傳統二極體週期。",
+      "freeCashFlow": "擴產與庫存週期需管理。",
+      "valuationRisk": "題材升溫後要防估值先跑。",
+      "technicalTrend": "偏多但需月營收驗證。",
+      "competitors": [
+        "台半",
+        "德微",
+        "大中",
+        "富鼎"
+      ],
+      "bullCase": "AI server、車用與機器人把功率元件從傳統零件拉到 AI 基建效率鏈。",
+      "baseCase": "受惠邏輯成立，列為台股功率元件優先研究。",
+      "bearCase": "缺貨緩解、轉單不持續或 MOSFET 毛利不如預期。",
+      "keyRisks": [
+        "缺貨循環",
+        "產品 mix",
+        "客戶認證"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若月營收與毛利無法驗證 AI/車用占比提升則下修。"
+    },
+    {
+      "id": "company-tsc",
+      "companyName": "台半",
+      "ticker": "5425.TW",
+      "marketCountry": "台灣",
+      "overview": "二極體與 MOSFET / SiC 升級候選。",
+      "businessModel": "提供整流二極體、保護元件、MOSFET、Super Junction 與 SiC 相關產品。",
+      "revenueDrivers": [
+        "Super Junction MOSFET",
+        "SiC MOSFET",
+        "Power supply customers",
+        "Automotive"
+      ],
+      "latestFinancialReportSummary": "追蹤漲價、交期、電源大廠採用、Rubin/AI server read-through 與月營收。",
+      "revenueGrowth": "功率元件供需偏緊與 AI server 電源升級使台半進入固定雷達。",
+      "grossMargin": "毛利改善需要產品組合升級，而不只是漲價。",
+      "eps": "EPS 彈性取決於高階 MOSFET / SiC 放量速度。",
+      "freeCashFlow": "庫存週期與擴產節奏需追蹤。",
+      "valuationRisk": "小型題材股波動較大。",
+      "technicalTrend": "研究中偏多。",
+      "competitors": [
+        "強茂",
+        "德微",
+        "朋程",
+        "大中"
+      ],
+      "bullCase": "若高階功率產品打入 AI server 與車用鏈，估值可重估。",
+      "baseCase": "催化存在，但證據品質低於強茂，需等訂單與毛利驗證。",
+      "bearCase": "漲價題材降溫或高階產品導入慢。",
+      "keyRisks": [
+        "訂單能見度",
+        "毛利驗證",
+        "題材波動"
+      ],
+      "finalView": "Neutral",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若高階產品營收占比與毛利改善明確則轉正面。"
+    },
+    {
       "id": "company-delta",
       "companyName": "台達電",
       "ticker": "2308.TW",
@@ -1053,7 +1208,7 @@
       "keyNews": "追蹤新產品、財報、供應鏈與出口限制。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "估值、出口限制、ASIC 替代",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Watching"
     },
     {
@@ -1064,7 +1219,7 @@
       "keyNews": "追蹤 Azure 成長、AI monetization 與 capex 效率。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "capex ROI、雲端毛利、監管",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Watching"
     },
     {
@@ -1075,7 +1230,7 @@
       "keyNews": "追蹤 AI revenue 指引與大客戶專案。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "客戶集中、估值、專案延遲",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Watching"
     },
     {
@@ -1086,7 +1241,18 @@
       "keyNews": "追蹤 HBM 供需、報價與庫存。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "循環、供給、庫存",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
+      "status": "Watching"
+    },
+    {
+      "id": "watch-pltr",
+      "ticker": "PLTR",
+      "companyName": "Palantir",
+      "currentView": "Positive",
+      "keyNews": "追蹤營收成長、RPO、政府合約、商業客戶擴張與 AIP 使用案例。",
+      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
+      "riskNotes": "估值、政府合約集中、AI 軟體競爭",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Watching"
     },
     {
@@ -1097,7 +1263,7 @@
       "keyNews": "追蹤 AI server backlog、毛利與現金流。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "毛利、客戶集中、庫存",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Researching"
     },
     {
@@ -1108,7 +1274,7 @@
       "keyNews": "追蹤 backlog、液冷滲透與估值。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "估值、專案延遲、競爭",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Researching"
     },
     {
@@ -1119,7 +1285,7 @@
       "keyNews": "追蹤月營收、capex、CoWoS 與大客戶需求。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "地緣政治、CoWoS、capex",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Watching"
     },
     {
@@ -1130,7 +1296,7 @@
       "keyNews": "追蹤報價、毛利、庫存與 CUBE 進度。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "循環、庫存、題材過熱",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Watching"
     },
     {
@@ -1141,7 +1307,7 @@
       "keyNews": "追蹤面板報價、本業虧損改善與 FOPLP 訂單。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "面板報價、題材落地、處置風險",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Researching"
     },
     {
@@ -1152,7 +1318,7 @@
       "keyNews": "追蹤成交量、處置、面板報價與是否有實際訂單。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "證據不足、處置、波動",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Researching"
     },
     {
@@ -1163,7 +1329,29 @@
       "keyNews": "追蹤 AI server 營收占比、毛利與月營收。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "毛利、轉型速度、客戶集中",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
+      "status": "Researching"
+    },
+    {
+      "id": "watch-panjit",
+      "ticker": "2481.TW",
+      "companyName": "強茂",
+      "currentView": "Positive",
+      "keyNews": "追蹤 MOSFET 營收占比、B/B 值、CSP 客戶、AI server 電源與車用訂單。",
+      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
+      "riskNotes": "缺貨循環、產品 mix、客戶認證",
+      "lastUpdatedTime": "2026-06-02 11:23",
+      "status": "Watching"
+    },
+    {
+      "id": "watch-tsc",
+      "ticker": "5425.TW",
+      "companyName": "台半",
+      "currentView": "Neutral",
+      "keyNews": "追蹤漲價、交期、電源大廠採用、Rubin/AI server read-through 與月營收。",
+      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
+      "riskNotes": "訂單能見度、毛利驗證、題材波動",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Researching"
     },
     {
@@ -1174,7 +1362,7 @@
       "keyNews": "追蹤 AI 電源/散熱營收占比、毛利與新專案。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "接單透明度、競爭、資本支出",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Watching"
     },
     {
@@ -1185,7 +1373,7 @@
       "keyNews": "追蹤雲端客戶拉貨、高速網通需求與毛利。",
       "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
       "riskNotes": "客戶集中、拉貨波動、競爭",
-      "lastUpdatedTime": "2026-06-02 10:54",
+      "lastUpdatedTime": "2026-06-02 11:23",
       "status": "Watching"
     }
   ],
@@ -1261,6 +1449,33 @@
       "companyResearchId": "company-accton",
       "finalView": "Positive",
       "explanation": "智邦對應 AI networking 與高速交換器，是美股網通 read-through 的台股受惠者。"
+    },
+    {
+      "id": "idea-pltr",
+      "newsId": "news-us-software-cloud",
+      "themeId": "theme-us-ai-capex",
+      "supplyChainNodeId": "node-pltr",
+      "companyResearchId": "company-pltr",
+      "finalView": "Positive",
+      "explanation": "PLTR 代表 AI 應用層 monetization，可檢查 AI 硬體投資是否轉成實際 workflow 收入。"
+    },
+    {
+      "id": "idea-panjit",
+      "newsId": "news-tw-cooling-power",
+      "themeId": "theme-tw-ai-infra",
+      "supplyChainNodeId": "node-panjit",
+      "companyResearchId": "company-panjit",
+      "finalView": "Positive",
+      "explanation": "強茂把 AI server 電源、MOSFET、車用與機器人串成台股功率元件主線。"
+    },
+    {
+      "id": "idea-tsc",
+      "newsId": "news-tw-cooling-power",
+      "themeId": "theme-tw-ai-infra",
+      "supplyChainNodeId": "node-tsc",
+      "companyResearchId": "company-tsc",
+      "finalView": "Neutral",
+      "explanation": "台半進入功率元件固定雷達，但需要訂單、毛利與高階產品占比驗證。"
     }
   ],
   "marketSections": {
@@ -1281,6 +1496,7 @@
         "AI capex 與投資回報",
         "半導體與 AI networking",
         "雲端 AI monetization",
+        "AI 應用層 / 軟體",
         "利率與估值風險"
       ],
       "importantNewsIds": [
@@ -1295,8 +1511,11 @@
         "MU",
         "DELL",
         "VRT",
+        "PLTR",
         "GOOGL",
-        "AMZN"
+        "AMZN",
+        "ORCL",
+        "SNOW"
       ],
       "risks": [
         "若利率、美元或油價上行，高估值 AI 交易可能先修正。",
@@ -1320,7 +1539,8 @@
         "記憶體報價與低基期",
         "面板 / FOPLP / SpaceX",
         "AI server ODM",
-        "散熱電源 PCB 光通訊"
+        "散熱電源 PCB 光通訊",
+        "功率元件 / SiC / 車用"
       ],
       "importantNewsIds": [
         "news-tw-memory",
@@ -1340,7 +1560,9 @@
         "6669.TW",
         "2308.TW",
         "3017.TW",
-        "2345.TW"
+        "2345.TW",
+        "2481.TW",
+        "5425.TW"
       ],
       "risks": [
         "台股題材股容易先漲後等證據，需標註 fresh catalyst、recent context、background thesis 或 momentum-only。",
@@ -1432,7 +1654,7 @@
       {
         "id": "scan-us-ai",
         "market": "US",
-        "category": "美股 AI 半導體 / 雲端 / 軟體",
+        "category": "美股 AI 半導體 / 雲端 / 硬體基建",
         "status": "Fresh catalyst",
         "tickersChecked": [
           "NVDA",
@@ -1444,6 +1666,71 @@
         ],
         "reason": "AI capex 是美股主軸，但要同步追 monetization。",
         "priority": "High"
+      },
+      {
+        "id": "scan-us-ai-software",
+        "market": "US",
+        "category": "美股 AI 應用層 / 軟體 monetization",
+        "status": "Fresh catalyst",
+        "tickersChecked": [
+          "PLTR",
+          "SNOW",
+          "DDOG",
+          "MDB",
+          "CRM",
+          "NOW",
+          "ORCL"
+        ],
+        "reason": "用軟體收入與企業 adoption 驗證 AI capex 是否能回收。",
+        "priority": "High"
+      },
+      {
+        "id": "scan-us-megacap",
+        "market": "US",
+        "category": "美股 Magnificent 7 / hyperscaler",
+        "status": "Recent context",
+        "tickersChecked": [
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "META",
+          "AAPL",
+          "TSLA"
+        ],
+        "reason": "大客戶 capex、雲端毛利與自研 ASIC 會傳導到半導體與台股供應鏈。",
+        "priority": "High"
+      },
+      {
+        "id": "scan-us-energy-power",
+        "market": "US",
+        "category": "美股電力 / 公用事業 / 資料中心能源",
+        "status": "Recent context",
+        "tickersChecked": [
+          "ETN",
+          "GEV",
+          "CEG",
+          "NEE",
+          "VST",
+          "PWR"
+        ],
+        "reason": "AI data center 的限制常在電力、變壓器、配電與能源供給。",
+        "priority": "Medium"
+      },
+      {
+        "id": "scan-us-cyber-defense",
+        "market": "US",
+        "category": "美股資安 / 國防科技 / 政府 AI",
+        "status": "Background thesis",
+        "tickersChecked": [
+          "CRWD",
+          "PANW",
+          "NET",
+          "PLTR",
+          "LMT",
+          "RTX"
+        ],
+        "reason": "政府 AI、國防科技與資安預算是 AI 應用層的另一條線。",
+        "priority": "Medium"
       },
       {
         "id": "scan-tw-memory",
@@ -1505,6 +1792,24 @@
         "priority": "High"
       },
       {
+        "id": "scan-tw-power-components",
+        "market": "Taiwan",
+        "category": "功率元件 / MOSFET / SiC / 車用",
+        "status": "Fresh catalyst",
+        "tickersChecked": [
+          "2481.TW",
+          "5425.TW",
+          "3675.TW",
+          "6435.TW",
+          "6693.TW",
+          "8261.TW",
+          "5285.TW",
+          "6548.TW"
+        ],
+        "reason": "AI server 電源效率、車用與供給吃緊讓功率元件成為固定掃描分類。",
+        "priority": "High"
+      },
+      {
         "id": "scan-tw-pcb-optics",
         "market": "Taiwan",
         "category": "PCB / CCL / 光通訊",
@@ -1518,6 +1823,113 @@
           "4977.TW"
         ],
         "reason": "AI cluster 擴建會傳導到高速網路與材料。",
+        "priority": "Medium"
+      },
+      {
+        "id": "scan-tw-ic-design",
+        "market": "Taiwan",
+        "category": "IC 設計 / ASIC / IP / 車用 IC",
+        "status": "Recent context",
+        "tickersChecked": [
+          "2454.TW",
+          "3034.TW",
+          "3661.TW",
+          "3443.TW",
+          "5274.TW",
+          "4966.TW"
+        ],
+        "reason": "AI edge、ASIC、車用與高速傳輸會帶動 IC 設計輪動。",
+        "priority": "Medium"
+      },
+      {
+        "id": "scan-tw-passives",
+        "market": "Taiwan",
+        "category": "被動元件 / MLCC / 電感 / 石英元件",
+        "status": "Background thesis",
+        "tickersChecked": [
+          "2327.TW",
+          "2492.TW",
+          "3026.TW",
+          "6173.TW",
+          "3042.TW"
+        ],
+        "reason": "AI server、車用與電源升級會增加被動元件規格與用量。",
+        "priority": "Medium"
+      },
+      {
+        "id": "scan-tw-robotics-auto",
+        "market": "Taiwan",
+        "category": "機器人 / 自動化 / 車電",
+        "status": "Background thesis",
+        "tickersChecked": [
+          "2359.TW",
+          "2049.TW",
+          "1590.TW",
+          "2231.TW",
+          "1536.TW"
+        ],
+        "reason": "AI 從資料中心擴散到機器人與智慧製造時，台股零組件可能輪動。",
+        "priority": "Medium"
+      },
+      {
+        "id": "scan-tw-aerospace-defense",
+        "market": "Taiwan",
+        "category": "航太 / 軍工 / 低軌衛星",
+        "status": "Momentum only",
+        "tickersChecked": [
+          "2634.TW",
+          "8033.TW",
+          "2314.TW",
+          "6285.TW",
+          "3491.TW"
+        ],
+        "reason": "政策、衛星與國防題材容易形成資金行情，但證據要分層。",
+        "priority": "Medium"
+      },
+      {
+        "id": "scan-tw-financials",
+        "market": "Taiwan",
+        "category": "金融 / 壽險 / 高股息",
+        "status": "Recent context",
+        "tickersChecked": [
+          "2881.TW",
+          "2882.TW",
+          "2884.TW",
+          "2885.TW",
+          "2886.TW"
+        ],
+        "reason": "利率、匯率、股債市與殖利率資金會影響台股非科技主流。",
+        "priority": "Medium"
+      },
+      {
+        "id": "scan-tw-cyclical",
+        "market": "Taiwan",
+        "category": "航運 / 鋼鐵 / 原物料 / 能源",
+        "status": "Background thesis",
+        "tickersChecked": [
+          "2603.TW",
+          "2609.TW",
+          "2002.TW",
+          "1301.TW",
+          "1303.TW",
+          "6505.TW"
+        ],
+        "reason": "若油價、運價或政策催化轉強，非科技循環股要升級主報。",
+        "priority": "Medium"
+      },
+      {
+        "id": "scan-tw-biotech-policy",
+        "market": "Taiwan",
+        "category": "生技 / 醫材 / 政策受惠",
+        "status": "Background thesis",
+        "tickersChecked": [
+          "6446.TW",
+          "4743.TW",
+          "4162.TW",
+          "1598.TW",
+          "4128.TW"
+        ],
+        "reason": "新藥、醫材、政策補助與法說催化常和科技股不同步。",
         "priority": "Medium"
       },
       {
