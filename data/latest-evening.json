@@ -1,336 +1,424 @@
 {
   "date": "2026-06-02",
-  "generatedAt": "2026-06-02T20:04:26+08:00",
+  "generatedAt": "2026-06-02T20:16:16+08:00",
   "reportMode": "evening",
-  "reportTitle": "美股今晚觀察版",
-  "reportFocus": "晚上版本以美股今晚觀察為主：先掃全市場新聞、價格、財報、總經與產業鏈訊號，再挑出真正重要的公司與明日台股 read-through 預判。",
-  "marketOverview": "晚上版本以美股今晚觀察為主：先掃全市場新聞、價格、財報、總經與產業鏈訊號，再挑出真正重要的公司與明日台股 read-through 預判。 本版報告採全市場掃描框架：先分開掃美股與台股，再用跨市場連動推導供應鏈。保留 12 則重要訊號與 16 家公司研究，涵蓋美股 AI capex、AI 應用層、雲端與半導體，以及台股記憶體、面板/FOPLP、AI server ODM、散熱電源、功率元件、PCB、光通訊與非科技雷達。",
-  "marketSentiment": "Bullish",
+  "reportTitle": "US Setup / Taiwan Read-Through",
+  "reportFocus": "Evening mode for Taiwan time. Focus is the US setup for tonight and the provisional read-through into the next Taiwan session.",
+  "marketOverview": "This evening report starts from a broad market scan rather than a fixed watchlist. Roughly 20 scan buckets and more than 60 tickers were checked across US indexes, rates, dollar, oil, AI semis, cloud, software, AI servers, power, memory, Taiwan foundry, ODMs, networking, cooling, memory, panels, power semis, robotics, financials, shipping, steel and biotech. Fresh signal is concentrated in US AI leaders, Taiwan AI-server ODM scale-up, memory pricing and Taiwan macro strength; shipping, steel, financials and biotech remain secondary tonight unless new Taiwan-local flow appears tomorrow morning.",
+  "marketSentiment": "Neutral",
   "topThemes": [
-    "美股今晚盤前/開盤設定",
-    "全市場新催化與資金流向",
-    "AI / 半導體 / 雲端 capex 驗證",
-    "明日台股 read-through 預判",
-    "利率美元與估值風險"
+    "US AI leaders re-accelerate but valuation is rate-sensitive",
+    "Taiwan AI-server ODM scale remains the clearest next-day read-through",
+    "HBM and memory pricing stay firm enough to keep memory names relevant",
+    "Power, cooling and networking remain second-order AI winners",
+    "Taiwan macro stays strong, but FX and tariff uncertainty cap upside certainty"
   ],
   "stocksToWatch": [
     "NVDA",
-    "MSFT",
     "AVGO",
-    "MU",
-    "PLTR",
+    "ORCL",
     "DELL",
+    "MU",
+    "VRT",
     "2330.TW",
-    "2344.TW",
-    "3481.TW",
-    "6116.TW",
+    "2317.TW",
+    "2382.TW",
+    "3231.TW",
+    "6669.TW",
     "2324.TW",
     "2308.TW",
     "2345.TW",
-    "2481.TW",
-    "5425.TW"
+    "2344.TW",
+    "2408.TW"
   ],
-  "biggestRisk": "最大風險是把市場熱度誤判成基本面。美股要防 AI capex ROI 與高估值壓縮；台股要防處置股、低價題材股、面板與記憶體循環反轉，以及 AI server 轉型公司毛利沒有跟上營收。",
+  "biggestRisk": "The main risk is chasing AI enthusiasm after strong headlines while ignoring rates, FX and margin pressure. A second risk is over-reading tonight's Taiwan hypotheses before US trading and tomorrow's Taiwan cash session validate them.",
   "watchlistAlerts": [
-    "晚上主軸：美股還沒完整收盤，所以先掃全市場新聞、盤前價格、財報/數據事件、產業鏈訊號與隔日台股預判。",
-    "公司研究不是固定名單：只有當新聞、價格、財報、產業鏈或資金流讓公司今天變重要，才升級成主報。",
-    "AI 軟體、半導體、雲端、電力、能源、金融、消費與防禦股都要先掃；主題權重由當晚催化決定。",
-    "資料中心基建若成為主流，要把電力、散熱、能源、功率元件與台股供應鏈 read-through 分開標註。",
-    "隔日台股預判只列假設，不當成結論；隔天早報需用美股收盤、台股開盤量價與本地新聞重新驗證。"
+    "Fresh catalyst: Nvidia, Micron, Dell, Wistron and Computex-linked Taiwan infrastructure names carry the strongest incremental signal tonight.",
+    "Recent context: Oracle, Broadcom, Foxconn, TSMC and Taiwan macro data support the trend but are not all same-day catalysts.",
+    "Background thesis: power, cooling, networking and custom silicon remain valid second-order AI trades.",
+    "Low signal: Taiwan panels, shipping, steel, financials and biotech were scanned but do not have enough fresh evidence to dominate tonight's report.",
+    "Next Taiwan open: verify whether TSMC/ODM strength broadens into Delta, Accton, memory and power semis, or whether gains stay concentrated in the largest names."
   ],
-  "emotionalWarning": "每天先問：這是新催化、近期脈絡、背景論點，還是純動能？不要因為某檔很紅就直接當成基本面轉強，也不要因為它不是 AI 龍頭就漏掉市場主流。",
+  "emotionalWarning": "Separate fresh catalyst from recent context. Do not promote a name just because it is popular, and do not downgrade a name just because it is not a first-tier AI leader if new evidence made it important tonight.",
   "news": [
     {
-      "id": "news-us-ai-capex",
-      "title": "【美股新催化】AI capex 仍是美股科技股主軸，但市場開始要求投資回報證據",
-      "source": "Morning market scan / Reuters-style synthesis",
+      "id": "news-nvda-fresh",
+      "title": "Fresh catalyst | Nvidia Q1 FY27 extended the AI spending cycle",
+      "source": "Nvidia investor relations, May 20 2026",
       "date": "2026-06-02",
-      "summary": "美股大型科技、AI 半導體與資料中心基礎設施仍是晨報第一層掃描重點。判斷不只看 NVIDIA 或單一 GPU 新聞，也要看 hyperscaler capex、雲端毛利、AI server backlog、電力與散熱瓶頸是否同時支撐。",
+      "summary": "Nvidia reported revenue up 85 percent year over year to 81.6 billion dollars and data center revenue up 92 percent to 75.2 billion dollars. That remains the strongest single proof point that hyperscaler and sovereign AI spending is still expanding.",
       "relatedTickers": [
         "NVDA",
-        "MSFT",
-        "AVGO",
-        "MU",
-        "DELL",
-        "VRT"
+        "TSM",
+        "2330.TW",
+        "2382.TW",
+        "6669.TW"
       ],
       "impact": "Positive",
       "confidence": "High"
     },
     {
-      "id": "news-us-rates-risk",
-      "title": "【美股風險】利率、美元與油價仍會影響高估值 AI 交易",
-      "source": "Morning macro scan",
+      "id": "news-micron-fresh",
+      "title": "Fresh catalyst | Micron raised outlook on HBM and DRAM pricing strength",
+      "source": "Reuters via TradingView, latest Micron coverage",
       "date": "2026-06-02",
-      "summary": "美股晨報會每天先掃 S&P 500、Nasdaq、SOX、10 年期美債、美元與油價。若利率或美元走強，AI 高估值股即使基本面沒壞，也可能先被估值壓縮。",
+      "summary": "Micron raised revenue and margin expectations, citing HBM demand and stronger DRAM pricing. That keeps the memory chain relevant for both US names and Taiwan memory-related read-through.",
       "relatedTickers": [
-        "SPY",
-        "QQQ",
-        "SOXX",
-        "NVDA",
-        "AVGO"
-      ],
-      "impact": "Neutral",
-      "confidence": "Medium"
-    },
-    {
-      "id": "news-tw-memory",
-      "title": "【台股新催化】記憶體報價與財報改善使華邦電、南亞科重新進入主流雷達",
-      "source": "Taiwan market scan / company filings synthesis",
-      "date": "2026-06-02",
-      "summary": "台股晨報會把 DRAM、NAND、NOR Flash、HBM、模組與控制 IC 分開看。華邦電、南亞科、旺宏、群聯等不應只被視為 AI 附屬題材，而是完整的記憶體循環與庫存週期。",
-      "relatedTickers": [
+        "MU",
         "2344.TW",
         "2408.TW",
         "2337.TW",
-        "8299.TW",
-        "MU"
+        "8299.TW"
       ],
       "impact": "Positive",
       "confidence": "High"
     },
     {
-      "id": "news-tw-panel-foplp",
-      "title": "【台股新催化】面板不只看報價，還要追 FOPLP、玻璃基板與低軌衛星題材",
-      "source": "Taiwan market scan / industry synthesis",
+      "id": "news-dell-fresh",
+      "title": "Fresh catalyst | Dell lifted long-term growth targets but margins remain the trade-off",
+      "source": "Reuters via TradingView, latest Dell coverage",
       "date": "2026-06-02",
-      "summary": "群創、友達、彩晶的分析要拆成三層：傳統面板報價、本業虧損改善、以及 FOPLP / SpaceX / 低軌衛星等轉型題材。題材可以進雷達，但必須標清楚是基本面、近期脈絡還是純動能。",
+      "summary": "Dell raised long-term revenue and EPS growth targets on AI-server demand, but repeated that AI systems pressure margin because of component cost and aggressive pricing. That is a useful read-through for Taiwan ODMs: scale is real, but margin quality still matters.",
+      "relatedTickers": [
+        "DELL",
+        "SMCI",
+        "2317.TW",
+        "2382.TW",
+        "3231.TW",
+        "6669.TW",
+        "2324.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "High"
+    },
+    {
+      "id": "news-wistron-fresh",
+      "title": "Fresh catalyst | Wistron kept adding AI networking and factory-AI signal",
+      "source": "Wistron newsroom, May 8 2026 and June 2 2026",
+      "date": "2026-06-02",
+      "summary": "Wistron reported Q1 2026 revenue of NT$846.3 billion and announced more AI-networking and smart-factory cooperation with Nvidia on June 2. That makes it one of the strongest fresh Taiwan AI infrastructure names tonight.",
+      "relatedTickers": [
+        "3231.TW",
+        "NVDA",
+        "2345.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "High"
+    },
+    {
+      "id": "news-wiwynn-fresh",
+      "title": "Fresh catalyst | Wiwynn remains one of the clearest pure-play AI rack winners",
+      "source": "Wiwynn investor update and Computex press release, May 2026",
+      "date": "2026-06-02",
+      "summary": "Wiwynn posted Q1 2026 revenue up 62 percent year over year and highlighted optical interconnect, liquid cooling and HVDC power at Computex. It is a direct beneficiary if AI-rack demand stays strong.",
+      "relatedTickers": [
+        "6669.TW",
+        "3017.TW",
+        "2308.TW",
+        "2345.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "High"
+    },
+    {
+      "id": "news-compal-fresh",
+      "title": "Fresh catalyst | Compal showed non-PC mix improvement and rack-level AI ambition",
+      "source": "Compal Q1 2026 results and Computex 2026 release",
+      "date": "2026-06-02",
+      "summary": "Compal said non-PC revenue rose to 35 percent in Q1 2026 and explicitly showcased compute, cooling and power as one rack-level system at Computex. It is still lower-conviction than Quanta or Wiwynn, but it is no longer ignorable.",
+      "relatedTickers": [
+        "2324.TW",
+        "3017.TW",
+        "2308.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "Medium"
+    },
+    {
+      "id": "news-oracle-context",
+      "title": "Recent context | Oracle reinforced the cloud monetization side of the AI trade",
+      "source": "Oracle investor relations and Reuters market follow-up",
+      "date": "2026-06-02",
+      "summary": "Oracle reported cloud revenue up 27 percent and IaaS up 52 percent, with booked infrastructure revenue pointing to durable AI-cloud demand. It matters because it supports the idea that capex is not just hardware for its own sake.",
+      "relatedTickers": [
+        "ORCL",
+        "NVDA",
+        "VRT",
+        "CEG",
+        "VST"
+      ],
+      "impact": "Positive",
+      "confidence": "Medium"
+    },
+    {
+      "id": "news-broadcom-context",
+      "title": "Recent context | Broadcom kept custom AI silicon and networking demand firm",
+      "source": "Broadcom results and Reuters follow-up",
+      "date": "2026-06-02",
+      "summary": "Broadcom said AI revenue rose 46 percent and guided another step up. That supports both the ASIC branch of the AI trade and Taiwan networking suppliers.",
+      "relatedTickers": [
+        "AVGO",
+        "MRVL",
+        "2345.TW",
+        "2454.TW",
+        "3443.TW",
+        "3661.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "High"
+    },
+    {
+      "id": "news-foxconn-context",
+      "title": "Recent context | Foxconn margins improved with AI server scale",
+      "source": "Foxconn investor relations, May 14 2026",
+      "date": "2026-06-02",
+      "summary": "Foxconn reported Q1 2026 net profit up 19 percent year over year, and said cloud/networking products now account for nearly half of revenue. That is an important Taiwan validation point because it shows AI scale can improve mix, not just revenue.",
+      "relatedTickers": [
+        "2317.TW",
+        "NVDA",
+        "2330.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "High"
+    },
+    {
+      "id": "news-tsmc-context",
+      "title": "Recent context | TSMC keeps posting strong AI-led growth but FX and tariffs are real risks",
+      "source": "TSMC investor relations, April 16 2026 and monthly revenue page",
+      "date": "2026-06-02",
+      "summary": "TSMC posted Q1 2026 profit up 58 percent year over year and April revenue up 17.5 percent year over year, while January to April revenue rose 29.9 percent. The demand backdrop is strong, but a strong Taiwan dollar and tariff uncertainty still matter for sentiment.",
+      "relatedTickers": [
+        "2330.TW",
+        "NVDA",
+        "AVGO",
+        "AAPL"
+      ],
+      "impact": "Positive",
+      "confidence": "High"
+    },
+    {
+      "id": "news-tw-export-orders-context",
+      "title": "Recent context | Taiwan export orders stayed strong on AI and HPC demand",
+      "source": "Reuters via TradingView, Taiwan trade coverage",
+      "date": "2026-06-02",
+      "summary": "Taiwan export orders and exports have remained stronger than expected, driven by AI and high-performance computing products. That keeps the macro backdrop supportive for Taiwan tech even if tariff uncertainty remains unresolved.",
+      "relatedTickers": [
+        "2330.TW",
+        "2317.TW",
+        "2382.TW",
+        "3231.TW",
+        "6669.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "Medium"
+    },
+    {
+      "id": "news-tw-gdp-context",
+      "title": "Recent context | Taiwan GDP and exports show AI demand is visible at the macro level",
+      "source": "Reuters via TradingView, Taiwan GDP update",
+      "date": "2026-06-02",
+      "summary": "Taiwan GDP grew far faster than expected, helped by AI demand and pull-forward ahead of tariff deadlines. That helps explain why Taiwan AI supply-chain names keep surprising to the upside on revenue.",
+      "relatedTickers": [
+        "2330.TW",
+        "2317.TW",
+        "2382.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "Medium"
+    },
+    {
+      "id": "news-twd-context",
+      "title": "Recent context | Taiwan dollar strength is becoming an earnings quality issue",
+      "source": "Reuters via TradingView, Taiwan central bank minutes and FX coverage",
+      "date": "2026-06-02",
+      "summary": "Taiwan central bank minutes kept rates at 2 percent and highlighted tariff uncertainty, while recent Taiwan dollar strength has reduced import-price pressure but creates translation risk for exporters. This is a real counterweight to otherwise strong top-line stories.",
+      "relatedTickers": [
+        "USDTWD",
+        "2330.TW",
+        "2317.TW",
+        "2382.TW",
+        "3231.TW"
+      ],
+      "impact": "Neutral",
+      "confidence": "High"
+    },
+    {
+      "id": "news-power-context",
+      "title": "Recent context | Power and grid bottlenecks remain the second-order AI constraint",
+      "source": "Reuters via TradingView, PJM and utility coverage",
+      "date": "2026-06-02",
+      "summary": "US grid and utility coverage keeps pointing to data-center power scarcity and higher capacity costs. That supports US utilities and power equipment names, while also supporting Taiwan power, cooling and efficiency suppliers as a read-through.",
+      "relatedTickers": [
+        "VST",
+        "CEG",
+        "GEV",
+        "ETN",
+        "2308.TW",
+        "3017.TW",
+        "3324.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "Medium"
+    },
+    {
+      "id": "news-cross-thesis",
+      "title": "Background thesis | The AI winner list keeps widening from chips to full racks, optics, power and cooling",
+      "source": "Cross-market synthesis from company filings and Reuters coverage",
+      "date": "2026-06-02",
+      "summary": "The strongest conclusion from the scan is not a single stock call. It is that AI demand is propagating from Nvidia and TSMC into ODM scale, optics, power delivery, cooling and memory. That is why Taiwan second-order suppliers still deserve attention tomorrow.",
+      "relatedTickers": [
+        "NVDA",
+        "AVGO",
+        "MU",
+        "2330.TW",
+        "2317.TW",
+        "2382.TW",
+        "3231.TW",
+        "6669.TW",
+        "2308.TW",
+        "2345.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "High"
+    },
+    {
+      "id": "news-panel-lowsignal",
+      "title": "Low signal | Taiwan panel and FOPLP stories were scanned but are not tonight's lead",
+      "source": "Broad Taiwan market scan",
+      "date": "2026-06-02",
+      "summary": "Innolux, AUO and HannStar still have narrative appeal, but tonight there is not enough fresh evidence to rank them above AI compute, ODM, networking, cooling or memory. Keep them in the radar, not in the core thesis.",
       "relatedTickers": [
         "3481.TW",
         "2409.TW",
         "6116.TW"
       ],
-      "impact": "Positive",
+      "impact": "Neutral",
       "confidence": "Medium"
     },
     {
-      "id": "news-tw-odm",
-      "title": "【台股新催化】AI server ODM 從廣達、緯穎、鴻海擴散到仁寶、英業達與神達",
-      "source": "Taiwan market scan / supply-chain synthesis",
+      "id": "news-nontech-lowsignal",
+      "title": "Low signal | Shipping, steel, financials and biotech were checked but lack fresh catalysts",
+      "source": "Broad Taiwan market scan",
       "date": "2026-06-02",
-      "summary": "台股 AI server 不能只追最明顯的廣達與緯穎。仁寶、英業達、神達若有 AI server 轉型、月營收或法說訊號，也要進公司研究候選清單，但毛利率和客戶集中度要分開評估。",
+      "summary": "Evergreen, Yang Ming, China Steel, major financials and selected biotech names were reviewed as part of the full-market scan. None had enough fresh price, earnings, policy or macro signal to replace AI-linked names tonight.",
       "relatedTickers": [
-        "2382.TW",
-        "6669.TW",
-        "2317.TW",
-        "2324.TW",
-        "2356.TW",
-        "3706.TW"
-      ],
-      "impact": "Positive",
-      "confidence": "High"
-    },
-    {
-      "id": "news-tw-cooling-power",
-      "title": "【台股近期脈絡】散熱、液冷、電源與電力基礎設施是 AI 建置速度的瓶頸",
-      "source": "Taiwan market scan / data-center infrastructure synthesis",
-      "date": "2026-06-02",
-      "summary": "奇鋐、雙鴻、健策、台達電、光寶科、康舒每天都應掃描。若只有題材沒有訂單或毛利佐證，放雷達；若有法說、月營收或新產能，升級成主報與公司研究。",
-      "relatedTickers": [
-        "3017.TW",
-        "3324.TW",
-        "3653.TW",
-        "2308.TW",
-        "2301.TW",
-        "6282.TW"
-      ],
-      "impact": "Positive",
-      "confidence": "High"
-    },
-    {
-      "id": "news-tw-pcb-optics",
-      "title": "【台股近期脈絡】PCB、CCL、載板與光通訊承接 AI cluster 擴建需求",
-      "source": "Taiwan market scan / networking synthesis",
-      "date": "2026-06-02",
-      "summary": "台光電、金像電、欣興、景碩、智邦、眾達、聯亞、波若威等是台股第二層到第三層重要名單。每日晨報會用成交量、報價、訂單能見度與美股網通 read-through 篩選。",
-      "relatedTickers": [
-        "2383.TW",
-        "2368.TW",
-        "3037.TW",
-        "3189.TW",
-        "2345.TW",
-        "4977.TW",
-        "3081.TW",
-        "3163.TW"
-      ],
-      "impact": "Positive",
-      "confidence": "Medium"
-    },
-    {
-      "id": "news-tw-broad-market",
-      "title": "【台股全市場掃描】金融、航運、原物料、生技與政策題材不再被 AI 名單排擠",
-      "source": "Taiwan broad-market scan",
-      "date": "2026-06-02",
-      "summary": "晨報會每天掃非科技族群，包括金融、航運、能源、原物料、生技、觀光與政策受惠股。若當天主流不在 AI，報告主題就要跟著市場轉，不把 AI 固定塞成主軸。",
-      "relatedTickers": [
-        "2881.TW",
         "2603.TW",
+        "2609.TW",
         "2002.TW",
+        "2881.TW",
+        "2882.TW",
         "6446.TW"
       ],
       "impact": "Neutral",
       "confidence": "Medium"
-    },
-    {
-      "id": "news-cross-nvda-taiwan",
-      "title": "【跨市場連動】NVIDIA / Broadcom / Dell 訊號要拆回台股供應鏈，而不是只看美股本身",
-      "source": "Cross-market linkage model",
-      "date": "2026-06-02",
-      "summary": "美股催化會映射到台股：AI accelerator 對應台積電與封裝，AI server 對應 ODM，AI networking 對應智邦與光通訊，power/cooling 對應台達電、奇鋐、雙鴻與健策。",
-      "relatedTickers": [
-        "NVDA",
-        "AVGO",
-        "DELL",
-        "2330.TW",
-        "2382.TW",
-        "6669.TW",
-        "2345.TW",
-        "3017.TW"
-      ],
-      "impact": "Positive",
-      "confidence": "High"
-    },
-    {
-      "id": "news-momentum-control",
-      "title": "【風控】熱門股若只有成交量和故事，應列為 momentum-only 而不是基本面推薦",
-      "source": "Daily risk model",
-      "date": "2026-06-02",
-      "summary": "彩晶、群創、低價記憶體、處置股或題材股若只有資金動能，會被放入全市場雷達，但不會自動升級為 Positive。晨報要清楚標註證據品質，避免把熱度誤判成基本面。",
-      "relatedTickers": [
-        "6116.TW",
-        "3481.TW",
-        "2344.TW",
-        "2408.TW"
-      ],
-      "impact": "Neutral",
-      "confidence": "High"
-    },
-    {
-      "id": "news-us-software-cloud",
-      "title": "【美股近期脈絡】雲端、軟體與 AI monetization 決定 AI capex 的耐久度",
-      "source": "US software/cloud scan",
-      "date": "2026-06-02",
-      "summary": "MSFT、GOOGL、AMZN、META、ORCL、SNOW、PLTR 等每天都應被掃描。AI 供應鏈若只看硬體，容易漏掉 capex 能否回收這個核心問題。",
-      "relatedTickers": [
-        "MSFT",
-        "GOOGL",
-        "AMZN",
-        "META",
-        "ORCL",
-        "SNOW",
-        "PLTR"
-      ],
-      "impact": "Neutral",
-      "confidence": "Medium"
-    },
-    {
-      "id": "news-tw-monthly-sales",
-      "title": "【台股資料節點】月營收、法說、處置與成交量是台股晨報必掃資料",
-      "source": "Taiwan data checklist",
-      "date": "2026-06-02",
-      "summary": "台股不能只用國際新聞推導。每天晨報要把月營收、法說、重大訊息、處置分盤、成交量與外資買賣超納入雷達，否則容易漏掉彩晶、群創、華邦電這類資金主流。",
-      "relatedTickers": [
-        "6116.TW",
-        "3481.TW",
-        "2324.TW",
-        "2344.TW"
-      ],
-      "impact": "Positive",
-      "confidence": "High"
     }
   ],
   "themes": [
     {
-      "id": "theme-us-ai-capex",
-      "name": "美股 AI capex 與估值驗證",
-      "whyItMatters": "AI 仍是美股主軸，但市場會逐步從「願意投資」轉向「投資能否回收」。",
+      "id": "theme-ai-platform",
+      "name": "AI platform leaders still control market direction",
+      "whyItMatters": "Nvidia, Broadcom, Oracle and Micron are still setting the tone for the US AI trade.",
       "relatedIndustries": [
-        "AI 半導體",
-        "雲端",
-        "AI server",
-        "電力散熱",
-        "企業軟體"
+        "Semiconductors",
+        "Cloud",
+        "Enterprise software",
+        "Memory"
       ],
       "relatedCompanies": [
         "NVDA",
-        "MSFT",
         "AVGO",
+        "ORCL",
         "MU",
-        "DELL",
-        "VRT"
+        "DELL"
       ],
-      "shortTermImpact": "財報與 capex 指引能繼續支撐風險偏好，但高估值標的波動會放大。",
-      "longTermImpact": "AI 基建若轉成可量化營收，供應鏈主線可延續；若 monetization 不清楚，估值會收斂。",
+      "shortTermImpact": "Strong updates keep the AI trade alive for tonight's US session.",
+      "longTermImpact": "If cloud monetization and memory pricing stay firm, the AI cycle can extend deeper into 2026.",
       "evidenceQuality": "High"
     },
     {
-      "id": "theme-tw-memory-panel",
-      "name": "台股記憶體與面板轉型題材",
-      "whyItMatters": "華邦電、南亞科、群創、彩晶代表台股資金從 AI server 擴散到低基期與轉型題材。",
+      "id": "theme-tw-odm",
+      "name": "Taiwan ODMs are moving from box builders to rack-scale AI integrators",
+      "whyItMatters": "Foxconn, Quanta, Wistron, Wiwynn and Compal are increasingly selling complete AI infrastructure rather than just low-margin assembly.",
+      "relatedIndustries": [
+        "AI servers",
+        "ODM",
+        "Rack integration",
+        "Cloud hardware"
+      ],
+      "relatedCompanies": [
+        "2317.TW",
+        "2382.TW",
+        "3231.TW",
+        "6669.TW",
+        "2324.TW"
+      ],
+      "shortTermImpact": "This is the strongest Taiwan next-day hypothesis from tonight's scan.",
+      "longTermImpact": "A sustained move into rack-scale systems can lift revenue durability and support better margins for selected names.",
+      "evidenceQuality": "High"
+    },
+    {
+      "id": "theme-memory",
+      "name": "HBM tightness keeps memory relevant across US and Taiwan",
+      "whyItMatters": "Micron's guidance and HBM demand keep the memory branch of the AI trade alive.",
       "relatedIndustries": [
         "DRAM",
+        "HBM",
         "Flash",
-        "面板",
-        "FOPLP",
-        "玻璃基板",
-        "低軌衛星"
+        "Storage controllers"
       ],
       "relatedCompanies": [
+        "MU",
         "2344.TW",
         "2408.TW",
-        "3481.TW",
-        "6116.TW",
-        "2409.TW"
+        "2337.TW",
+        "8299.TW"
       ],
-      "shortTermImpact": "題材與資金動能強，但每檔都要拆分基本面證據與純動能。",
-      "longTermImpact": "若報價、毛利、封裝轉型或新應用成真，低基期族群可能重估。",
-      "evidenceQuality": "Medium"
-    },
-    {
-      "id": "theme-tw-ai-infra",
-      "name": "台股 AI server、散熱、電源、PCB 與光通訊",
-      "whyItMatters": "AI cluster 建置的瓶頸正在往整機櫃、散熱、電力、PCB 與高速網路下沉。",
-      "relatedIndustries": [
-        "AI server ODM",
-        "液冷",
-        "電源",
-        "PCB",
-        "CCL",
-        "光通訊"
-      ],
-      "relatedCompanies": [
-        "2382.TW",
-        "6669.TW",
-        "2324.TW",
-        "3017.TW",
-        "2308.TW",
-        "2383.TW",
-        "2345.TW"
-      ],
-      "shortTermImpact": "美股 AI 訊號可帶動台股供應鏈輪動，台股月營收與法說決定誰能升級。",
-      "longTermImpact": "台灣供應鏈若從零組件走向子系統整合，估值層級會不同。",
+      "shortTermImpact": "Micron is a fresh US catalyst; Taiwan memory names are next-day read-through candidates.",
+      "longTermImpact": "If HBM stays supply constrained and conventional memory pricing remains firm, cyclical memory names can keep rerating.",
       "evidenceQuality": "High"
     },
     {
-      "id": "theme-full-market-radar",
-      "name": "全市場雷達與非 AI 題材",
-      "whyItMatters": "每天市場主流不一定在 AI，金融、航運、原物料、生技與政策題材也可能成為主報。",
+      "id": "theme-infra",
+      "name": "Power, cooling and networking are still the hidden AI bottlenecks",
+      "whyItMatters": "Every serious AI build-out still requires energy, thermal management and high-speed connectivity.",
       "relatedIndustries": [
-        "金融",
-        "航運",
-        "鋼鐵",
-        "生技",
-        "能源",
-        "政策題材"
+        "Power management",
+        "Cooling",
+        "Utilities",
+        "Networking"
       ],
       "relatedCompanies": [
-        "2881.TW",
-        "2603.TW",
-        "2002.TW",
-        "6446.TW"
+        "VRT",
+        "GEV",
+        "VST",
+        "CEG",
+        "2308.TW",
+        "3017.TW",
+        "3324.TW",
+        "2345.TW"
       ],
-      "shortTermImpact": "避免晨報只看固定 AI 名單，能更早抓到資金輪動。",
-      "longTermImpact": "建立市場全貌後，才知道哪些題材是真主流、哪些只是跟漲。",
+      "shortTermImpact": "Second-order winners should keep participating if US AI leadership holds tonight.",
+      "longTermImpact": "This remains one of the best ways to diversify away from pure GPU concentration.",
+      "evidenceQuality": "High"
+    },
+    {
+      "id": "theme-macro-fx",
+      "name": "Strong Taiwan macro, stronger TWD and tariff uncertainty create two-way risk",
+      "whyItMatters": "Top-line growth is strong, but FX and tariff risk can reshape exporter earnings quality quickly.",
+      "relatedIndustries": [
+        "Macro",
+        "Currency",
+        "Exporters",
+        "Semiconductors"
+      ],
+      "relatedCompanies": [
+        "2330.TW",
+        "2317.TW",
+        "2382.TW",
+        "3231.TW"
+      ],
+      "shortTermImpact": "Good macro keeps buyers engaged, but the TWD and tariffs limit clean upside.",
+      "longTermImpact": "Taiwan exporters need both demand and FX stability for sustained rerating.",
       "evidenceQuality": "Medium"
     }
   ],
@@ -339,278 +427,324 @@
       "id": "node-nvda",
       "companyName": "NVIDIA",
       "ticker": "NVDA",
-      "marketCountry": "美國",
+      "marketCountry": "US",
       "layer": 1,
-      "linkedThemeId": "theme-us-ai-capex",
-      "whyItMayBenefit": "AI accelerator、networking 與平台規格制定者，是美股 AI capex 的核心觀察點。",
+      "linkedThemeId": "theme-ai-platform",
+      "whyItMayBenefit": "Core AI accelerator platform with the strongest fresh operating proof.",
       "evidenceStrength": "High",
       "visibility": "Obvious",
-      "keyRisk": "估值、出口限制與客戶自研 ASIC。"
+      "keyRisk": "Valuation remains rate-sensitive and China restrictions still matter."
     },
     {
       "id": "node-avgo",
       "companyName": "Broadcom",
       "ticker": "AVGO",
-      "marketCountry": "美國",
+      "marketCountry": "US",
       "layer": 2,
-      "linkedThemeId": "theme-us-ai-capex",
-      "whyItMayBenefit": "ASIC 與 AI networking 是 NVIDIA 之外的第二條美股主線。",
+      "linkedThemeId": "theme-ai-platform",
+      "whyItMayBenefit": "Custom AI silicon and networking are broadening the AI compute stack beyond GPUs.",
       "evidenceStrength": "High",
       "visibility": "Obvious",
-      "keyRisk": "客戶集中與財報指引落差。"
+      "keyRisk": "ASIC demand can be lumpy and customer concentration stays high."
+    },
+    {
+      "id": "node-orcl",
+      "companyName": "Oracle",
+      "ticker": "ORCL",
+      "marketCountry": "US",
+      "layer": 2,
+      "linkedThemeId": "theme-ai-platform",
+      "whyItMayBenefit": "OCI demand is one of the cleaner signs that AI infrastructure is being monetized.",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "The stock is now carrying higher expectations after a sharp rerating."
+    },
+    {
+      "id": "node-dell",
+      "companyName": "Dell",
+      "ticker": "DELL",
+      "marketCountry": "US",
+      "layer": 2,
+      "linkedThemeId": "theme-ai-platform",
+      "whyItMayBenefit": "AI-server backlog remains strong and gives read-through to Taiwan ODM capacity.",
+      "evidenceStrength": "High",
+      "visibility": "Obvious",
+      "keyRisk": "Margins remain under pressure from cost and competition."
     },
     {
       "id": "node-mu",
       "companyName": "Micron",
       "ticker": "MU",
-      "marketCountry": "美國",
+      "marketCountry": "US",
       "layer": 2,
-      "linkedThemeId": "theme-us-ai-capex",
-      "whyItMayBenefit": "HBM、DRAM 與資料中心 SSD 連動 AI server 記憶體需求。",
+      "linkedThemeId": "theme-memory",
+      "whyItMayBenefit": "HBM and DRAM pricing confirm memory is part of the AI cycle, not a side story.",
       "evidenceStrength": "High",
       "visibility": "Obvious",
-      "keyRisk": "記憶體循環與供給擴張。"
+      "keyRisk": "Memory remains cyclical and pricing can reverse quickly."
+    },
+    {
+      "id": "node-vrt",
+      "companyName": "Vertiv",
+      "ticker": "VRT",
+      "marketCountry": "US",
+      "layer": 3,
+      "linkedThemeId": "theme-infra",
+      "whyItMayBenefit": "Data-center power and thermal bottlenecks make Vertiv a direct infrastructure beneficiary.",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "Infrastructure names can sell off hard if AI demand expectations soften."
     },
     {
       "id": "node-tsmc",
-      "companyName": "台積電",
+      "companyName": "TSMC",
       "ticker": "2330.TW",
-      "marketCountry": "台灣",
+      "marketCountry": "Taiwan",
       "layer": 1,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "先進製程與先進封裝承接全球 AI accelerator 需求。",
+      "linkedThemeId": "theme-macro-fx",
+      "whyItMayBenefit": "TSMC remains the core Taiwan read-through from any strong US AI session.",
       "evidenceStrength": "High",
       "visibility": "Obvious",
-      "keyRisk": "地緣政治、CoWoS 瓶頸與高 capex。"
+      "keyRisk": "FX, capex and geopolitical headlines can create sharp sentiment swings."
+    },
+    {
+      "id": "node-foxconn",
+      "companyName": "Foxconn",
+      "ticker": "2317.TW",
+      "marketCountry": "Taiwan",
+      "layer": 2,
+      "linkedThemeId": "theme-tw-odm",
+      "whyItMayBenefit": "AI server scale is now large enough to improve mix, not just volume.",
+      "evidenceStrength": "High",
+      "visibility": "Obvious",
+      "keyRisk": "Geopolitics, customer concentration and forex are still material."
     },
     {
       "id": "node-quanta",
-      "companyName": "廣達",
+      "companyName": "Quanta",
       "ticker": "2382.TW",
-      "marketCountry": "台灣",
+      "marketCountry": "Taiwan",
       "layer": 2,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "AI server 與整機櫃需求的台股核心 ODM。",
+      "linkedThemeId": "theme-tw-odm",
+      "whyItMayBenefit": "Quanta remains a leading rack-scale AI-server builder with strong demand visibility.",
       "evidenceStrength": "High",
       "visibility": "Obvious",
-      "keyRisk": "毛利率與客戶集中。"
+      "keyRisk": "Server scale is strong, but margin expansion is slower than revenue expansion."
+    },
+    {
+      "id": "node-wistron",
+      "companyName": "Wistron",
+      "ticker": "3231.TW",
+      "marketCountry": "Taiwan",
+      "layer": 2,
+      "linkedThemeId": "theme-tw-odm",
+      "whyItMayBenefit": "Wistron has fresh factory-AI and networking signal on top of AI-server scale.",
+      "evidenceStrength": "High",
+      "visibility": "Hidden",
+      "keyRisk": "Execution risk rises as it expands globally and deeper into networking."
+    },
+    {
+      "id": "node-wiwynn",
+      "companyName": "Wiwynn",
+      "ticker": "6669.TW",
+      "marketCountry": "Taiwan",
+      "layer": 2,
+      "linkedThemeId": "theme-tw-odm",
+      "whyItMayBenefit": "Wiwynn is one of the highest-purity rack-AI plays in Taiwan.",
+      "evidenceStrength": "High",
+      "visibility": "Obvious",
+      "keyRisk": "Premium expectations leave less room for execution misses."
     },
     {
       "id": "node-compal",
-      "companyName": "仁寶",
+      "companyName": "Compal",
       "ticker": "2324.TW",
-      "marketCountry": "台灣",
+      "marketCountry": "Taiwan",
       "layer": 3,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "低基期 AI server 轉型候選，需驗證營收占比與毛利改善。",
+      "linkedThemeId": "theme-tw-odm",
+      "whyItMayBenefit": "Compal is a lower-base AI-server beneficiary with improving business mix.",
       "evidenceStrength": "Medium",
       "visibility": "Hidden",
-      "keyRisk": "轉型速度與 PC 本業拖累。"
-    },
-    {
-      "id": "node-winbond",
-      "companyName": "華邦電",
-      "ticker": "2344.TW",
-      "marketCountry": "台灣",
-      "layer": 2,
-      "linkedThemeId": "theme-tw-memory-panel",
-      "whyItMayBenefit": "DRAM / Flash 報價與毛利改善帶動記憶體循環重估。",
-      "evidenceStrength": "High",
-      "visibility": "Obvious",
-      "keyRisk": "報價反轉與庫存週期。"
-    },
-    {
-      "id": "node-innolux",
-      "companyName": "群創",
-      "ticker": "3481.TW",
-      "marketCountry": "台灣",
-      "layer": 3,
-      "linkedThemeId": "theme-tw-memory-panel",
-      "whyItMayBenefit": "面板本業之外，市場關注 FOPLP、玻璃基板與低軌衛星題材。",
-      "evidenceStrength": "Medium",
-      "visibility": "Hidden",
-      "keyRisk": "題材落地速度與本業虧損。"
-    },
-    {
-      "id": "node-hannstar",
-      "companyName": "彩晶",
-      "ticker": "6116.TW",
-      "marketCountry": "台灣",
-      "layer": 4,
-      "linkedThemeId": "theme-tw-memory-panel",
-      "whyItMayBenefit": "面板與 SpaceX / 低軌衛星概念帶動資金動能。",
-      "evidenceStrength": "Low",
-      "visibility": "Hidden",
-      "keyRisk": "基本面證據不足與處置風險。"
+      "keyRisk": "It still needs to prove that AI can materially lift profitability."
     },
     {
       "id": "node-delta",
-      "companyName": "台達電",
+      "companyName": "Delta Electronics",
       "ticker": "2308.TW",
-      "marketCountry": "台灣",
+      "marketCountry": "Taiwan",
       "layer": 2,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "AI 資料中心電源、散熱、HVDC 與基建方案。",
+      "linkedThemeId": "theme-infra",
+      "whyItMayBenefit": "Power conversion and efficiency remain unavoidable for AI factories and data centers.",
       "evidenceStrength": "High",
       "visibility": "Obvious",
-      "keyRisk": "題材轉營收時間差。"
-    },
-    {
-      "id": "node-auras",
-      "companyName": "奇鋐",
-      "ticker": "3017.TW",
-      "marketCountry": "台灣",
-      "layer": 3,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "液冷與高階散熱對應 AI rack 功率密度提升。",
-      "evidenceStrength": "High",
-      "visibility": "Obvious",
-      "keyRisk": "認證與毛利率驗證。"
+      "keyRisk": "A weaker capex cycle would hit sentiment on second-order beneficiaries first."
     },
     {
       "id": "node-accton",
-      "companyName": "智邦",
+      "companyName": "Accton",
       "ticker": "2345.TW",
-      "marketCountry": "台灣",
-      "layer": 3,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "AI cluster 高速網路、switch 與光通訊需求受惠。",
-      "evidenceStrength": "Medium",
-      "visibility": "Hidden",
-      "keyRisk": "網通需求波動與客戶拉貨。"
-    },
-    {
-      "id": "node-pltr",
-      "companyName": "Palantir",
-      "ticker": "PLTR",
-      "marketCountry": "美國",
+      "marketCountry": "Taiwan",
       "layer": 2,
-      "linkedThemeId": "theme-us-ai-capex",
-      "whyItMayBenefit": "AI 應用層與企業/政府 workflow monetization 代表，用來驗證 AI 不只停在硬體 capex。",
+      "linkedThemeId": "theme-infra",
+      "whyItMayBenefit": "Networking and optical scale-up are increasingly important as clusters get larger.",
       "evidenceStrength": "High",
       "visibility": "Obvious",
-      "keyRisk": "估值過高與政府合約集中。"
+      "keyRisk": "Ordering can be bursty and tied to customer deployment timing."
+    },
+    {
+      "id": "node-winbond",
+      "companyName": "Winbond",
+      "ticker": "2344.TW",
+      "marketCountry": "Taiwan",
+      "layer": 3,
+      "linkedThemeId": "theme-memory",
+      "whyItMayBenefit": "The memory backdrop is firm enough to keep Winbond relevant tomorrow.",
+      "evidenceStrength": "Medium",
+      "visibility": "Hidden",
+      "keyRisk": "It is not a direct HBM leader, so read-through must be handled carefully."
+    },
+    {
+      "id": "node-nanya",
+      "companyName": "Nanya",
+      "ticker": "2408.TW",
+      "marketCountry": "Taiwan",
+      "layer": 3,
+      "linkedThemeId": "theme-memory",
+      "whyItMayBenefit": "Micron and broader DRAM strength improve the tone for Nanya.",
+      "evidenceStrength": "Medium",
+      "visibility": "Hidden",
+      "keyRisk": "Traditional memory cyclicality remains the dominant risk."
     },
     {
       "id": "node-panjit",
-      "companyName": "強茂",
+      "companyName": "Panjit",
       "ticker": "2481.TW",
-      "marketCountry": "台灣",
+      "marketCountry": "Taiwan",
       "layer": 3,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "AI server 電源效率、MOSFET、車用與機器人需求帶動功率元件升級。",
+      "linkedThemeId": "theme-infra",
+      "whyItMayBenefit": "Power semis and efficiency upgrades make Panjit a credible hidden AI beneficiary.",
       "evidenceStrength": "Medium",
       "visibility": "Hidden",
-      "keyRisk": "缺貨題材降溫與產品 mix 驗證。"
-    },
-    {
-      "id": "node-tsc",
-      "companyName": "台半",
-      "ticker": "5425.TW",
-      "marketCountry": "台灣",
-      "layer": 4,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "Super Junction / SiC MOSFET 若切入 AI server 與車用供應鏈，具題材擴散彈性。",
-      "evidenceStrength": "Medium",
-      "visibility": "Hidden",
-      "keyRisk": "訂單能見度與毛利改善仍需驗證。"
+      "keyRisk": "The stock needs clearer order and margin confirmation to move beyond theme status."
     }
   ],
   "beneficiaries": [
     {
-      "id": "benefit-us-ai",
-      "themeId": "theme-us-ai-capex",
+      "id": "benef-ai-platform",
+      "themeId": "theme-ai-platform",
       "directBeneficiaries": [
         "NVDA",
         "AVGO",
-        "MU",
-        "DELL"
+        "ORCL",
+        "MU"
       ],
       "indirectBeneficiaries": [
+        "DELL",
         "VRT",
-        "MSFT",
-        "ORCL"
+        "2330.TW"
       ],
       "hiddenBeneficiaries": [
-        "AI networking suppliers",
-        "power/cooling vendors"
+        "3231.TW",
+        "6669.TW"
       ],
       "companiesMayBeHurt": [
-        "估值過高但缺乏 AI revenue 的概念股"
+        "INTC",
+        "non-AI enterprise hardware"
       ],
-      "reasoning": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
+      "reasoning": "AI capex leadership still belongs to platform winners, but it is spreading into cloud and memory.",
       "evidenceQuality": "High",
-      "researchPriorityScore": 94
+      "researchPriorityScore": 95
     },
     {
-      "id": "benefit-tw-memory-panel",
-      "themeId": "theme-tw-memory-panel",
+      "id": "benef-tw-odm",
+      "themeId": "theme-tw-odm",
       "directBeneficiaries": [
-        "2344.TW",
-        "2408.TW",
-        "3481.TW"
-      ],
-      "indirectBeneficiaries": [
-        "6116.TW",
-        "2409.TW",
-        "8299.TW"
-      ],
-      "hiddenBeneficiaries": [
-        "FOPLP equipment",
-        "glass substrate ecosystem"
-      ],
-      "companiesMayBeHurt": [
-        "純靠題材但沒有財報改善的面板股"
-      ],
-      "reasoning": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
-      "evidenceQuality": "Medium",
-      "researchPriorityScore": 88
-    },
-    {
-      "id": "benefit-tw-infra",
-      "themeId": "theme-tw-ai-infra",
-      "directBeneficiaries": [
+        "2317.TW",
         "2382.TW",
-        "6669.TW",
-        "2308.TW",
-        "3017.TW"
+        "3231.TW",
+        "6669.TW"
       ],
       "indirectBeneficiaries": [
         "2324.TW",
-        "2345.TW",
-        "2383.TW"
+        "2308.TW",
+        "2345.TW"
       ],
       "hiddenBeneficiaries": [
-        "liquid cooling",
-        "HVDC",
-        "PCB/CCL",
-        "optics"
+        "2481.TW"
       ],
       "companiesMayBeHurt": [
-        "缺乏 AI 訂單且毛利被壓縮的傳統 ODM"
+        "traditional low-margin PC-only assemblers"
       ],
-      "reasoning": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
+      "reasoning": "Taiwan ODMs with rack-level capability are the cleanest next-day read-through from tonight's US setup.",
       "evidenceQuality": "High",
       "researchPriorityScore": 92
     },
     {
-      "id": "benefit-full-market",
-      "themeId": "theme-full-market-radar",
+      "id": "benef-memory",
+      "themeId": "theme-memory",
       "directBeneficiaries": [
-        "當日資金主流族群"
+        "MU"
       ],
       "indirectBeneficiaries": [
-        "金融、航運、原物料、生技候選"
+        "2344.TW",
+        "2408.TW",
+        "2337.TW",
+        "8299.TW"
       ],
       "hiddenBeneficiaries": [
-        "政策受惠與異常成交量標的"
+        "2481.TW"
       ],
       "companiesMayBeHurt": [
-        "被固定 AI 視角錯誤排除的主流題材"
+        "consumer memory buyers exposed to rising input costs"
       ],
-      "reasoning": "全市場雷達避免晨報只追固定 AI 名單。",
+      "reasoning": "Micron's update improves memory sentiment, but Taiwan names need careful differentiation because direct HBM exposure is uneven.",
+      "evidenceQuality": "High",
+      "researchPriorityScore": 88
+    },
+    {
+      "id": "benef-infra",
+      "themeId": "theme-infra",
+      "directBeneficiaries": [
+        "VRT",
+        "GEV",
+        "VST",
+        "CEG"
+      ],
+      "indirectBeneficiaries": [
+        "2308.TW",
+        "3017.TW",
+        "3324.TW",
+        "2345.TW"
+      ],
+      "hiddenBeneficiaries": [
+        "6282.TW",
+        "2481.TW"
+      ],
+      "companiesMayBeHurt": [
+        "companies relying on cheap abundant power assumptions"
+      ],
+      "reasoning": "Power, thermal and networking constraints keep producing second-order AI beneficiaries.",
+      "evidenceQuality": "High",
+      "researchPriorityScore": 86
+    },
+    {
+      "id": "benef-macrofx",
+      "themeId": "theme-macro-fx",
+      "directBeneficiaries": [
+        "domestic-demand-oriented Taiwan names"
+      ],
+      "indirectBeneficiaries": [
+        "selected importers"
+      ],
+      "hiddenBeneficiaries": [
+        "high-dividend defensives"
+      ],
+      "companiesMayBeHurt": [
+        "Taiwan exporters with poor FX hedging"
+      ],
+      "reasoning": "A stronger Taiwan dollar helps importers and inflation, but it complicates exporter earnings translation.",
       "evidenceQuality": "Medium",
-      "researchPriorityScore": 84
+      "researchPriorityScore": 68
     }
   ],
   "companyResearch": [
@@ -618,587 +752,601 @@
       "id": "company-nvda",
       "companyName": "NVIDIA",
       "ticker": "NVDA",
-      "marketCountry": "美國",
-      "overview": "AI platform 龍頭，晨報美股核心觀察名單。",
-      "businessModel": "銷售 GPU、networking、CPU、軟體與 AI factory 平台。",
+      "marketCountry": "US",
+      "overview": "Nvidia remains the central operating proof point for the AI build-out.",
+      "businessModel": "Sells AI accelerators, networking and software platforms to hyperscalers, enterprises and sovereign customers.",
       "revenueDrivers": [
-        "Data center GPU",
+        "GPU compute",
         "Networking",
-        "AI software",
-        "Hyperscaler capex"
+        "AI software"
       ],
-      "latestFinancialReportSummary": "追蹤新產品、財報、供應鏈與出口限制。",
-      "revenueGrowth": "AI data center 仍強，但市場要求更清楚的投資回收證據。",
-      "grossMargin": "高階平台毛利強，但競爭與產品轉換需追蹤。",
-      "eps": "受 data center 出貨與 ASP 支撐。",
-      "freeCashFlow": "現金流強，但估值容錯低。",
-      "valuationRisk": "市場已預支高成長。",
-      "technicalTrend": "趨勢強但擁擠。",
+      "latestFinancialReportSummary": "Q1 FY27 revenue rose 85 percent year over year to 81.6 billion dollars and data center revenue rose 92 percent to 75.2 billion.",
+      "revenueGrowth": "Very high",
+      "grossMargin": "Best-in-class",
+      "eps": "Very strong",
+      "freeCashFlow": "Very strong",
+      "valuationRisk": "High valuation means rates and sentiment matter.",
+      "technicalTrend": "Strong uptrend after fresh results.",
       "competitors": [
         "AMD",
-        "AVGO",
-        "Hyperscaler ASIC"
+        "custom ASIC programs",
+        "AVGO"
       ],
-      "bullCase": "平台規格持續主導 AI factory。",
-      "baseCase": "需求強但估值需靠財報消化。",
-      "bearCase": "出口限制或 capex 放緩。",
+      "bullCase": "If hyperscaler and sovereign demand keep compounding, Nvidia can stay at the center of the spend cycle.",
+      "baseCase": "Base case is continued growth with periodic valuation resets.",
+      "bearCase": "Any real capex slowdown or worse export curbs would hit expectations quickly.",
       "keyRisks": [
-        "估值",
-        "出口限制",
-        "ASIC 替代"
+        "China restrictions",
+        "valuation",
+        "customer vertical integration"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 hyperscaler capex 或 backlog 轉弱則下修。"
-    },
-    {
-      "id": "company-msft",
-      "companyName": "Microsoft",
-      "ticker": "MSFT",
-      "marketCountry": "美國",
-      "overview": "AI 軟體與 Azure capex 的核心觀察公司。",
-      "businessModel": "雲端、企業軟體、AI assistant、開發工具與平台服務。",
-      "revenueDrivers": [
-        "Azure",
-        "Copilot",
-        "AI infra",
-        "Enterprise software"
-      ],
-      "latestFinancialReportSummary": "追蹤 Azure 成長、AI monetization 與 capex 效率。",
-      "revenueGrowth": "AI 需求支撐雲端，但投資回報是市場焦點。",
-      "grossMargin": "雲端毛利與 AI 成本攤提需追蹤。",
-      "eps": "軟體訂閱支撐 EPS。",
-      "freeCashFlow": "現金流極強。",
-      "valuationRisk": "高品質但估值不低。",
-      "technicalTrend": "穩健偏多。",
-      "competitors": [
-        "GOOGL",
-        "AMZN",
-        "ORCL"
-      ],
-      "bullCase": "Copilot 與 Azure AI 形成長期 monetization。",
-      "baseCase": "AI 支出大但可被雲端成長吸收。",
-      "bearCase": "AI capex 壓縮毛利或增速放緩。",
-      "keyRisks": [
-        "capex ROI",
-        "雲端毛利",
-        "監管"
-      ],
-      "finalView": "Positive",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 Azure 或 AI monetization 明顯失速則下修。"
+      "whatWouldChangeView": "A clear demand slowdown, lower cloud capex intentions or deteriorating gross margin would weaken the view."
     },
     {
       "id": "company-avgo",
       "companyName": "Broadcom",
       "ticker": "AVGO",
-      "marketCountry": "美國",
-      "overview": "Custom ASIC 與 AI networking 主線。",
-      "businessModel": "提供 ASIC、switch、connectivity 與基礎軟體。",
+      "marketCountry": "US",
+      "overview": "Broadcom is the best public proxy for the custom-silicon branch of AI.",
+      "businessModel": "Designs custom AI ASICs, networking silicon and infrastructure software.",
       "revenueDrivers": [
-        "ASIC",
-        "AI networking",
-        "Ethernet fabric",
-        "Cloud customers"
+        "AI ASICs",
+        "Networking",
+        "Infrastructure software"
       ],
-      "latestFinancialReportSummary": "追蹤 AI revenue 指引與大客戶專案。",
-      "revenueGrowth": "AI networking 和 ASIC 提供高成長。",
-      "grossMargin": "產品 mix 佳但客戶集中。",
-      "eps": "高附加價值產品支撐 EPS。",
-      "freeCashFlow": "現金流穩健。",
-      "valuationRisk": "AI 題材升溫後估值也有壓力。",
-      "technicalTrend": "偏多但需財報確認。",
+      "latestFinancialReportSummary": "AI revenue rose 46 percent and management guided another step up in AI semiconductor revenue.",
+      "revenueGrowth": "High",
+      "grossMargin": "Strong",
+      "eps": "Strong",
+      "freeCashFlow": "Strong",
+      "valuationRisk": "The stock has rerated meaningfully and needs continued execution.",
+      "technicalTrend": "Recovered after demand worries eased.",
       "competitors": [
+        "NVDA",
         "MRVL",
-        "NVDA networking"
+        "INTC"
       ],
-      "bullCase": "ASIC 與網通雙線加速。",
-      "baseCase": "AI 強、其他業務提供底盤。",
-      "bearCase": "客戶專案延後。",
+      "bullCase": "More hyperscaler custom-chip wins would keep Broadcom on a second major AI curve.",
+      "baseCase": "Base case is sustained AI revenue growth plus software cash flow support.",
+      "bearCase": "A pause in ASIC projects or weaker software growth would reduce the premium.",
       "keyRisks": [
-        "客戶集中",
-        "估值",
-        "專案延遲"
+        "customer concentration",
+        "execution on custom programs"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 AI networking 指引轉弱則下修。"
+      "whatWouldChangeView": "Evidence that custom AI programs are slipping or that networking demand is stalling would change the view."
+    },
+    {
+      "id": "company-orcl",
+      "companyName": "Oracle",
+      "ticker": "ORCL",
+      "marketCountry": "US",
+      "overview": "Oracle has become a more important AI-cloud monetization name than the market treated it for years.",
+      "businessModel": "Provides cloud infrastructure, databases and enterprise applications.",
+      "revenueDrivers": [
+        "OCI infrastructure",
+        "Database workloads",
+        "Enterprise applications"
+      ],
+      "latestFinancialReportSummary": "Cloud revenue rose 27 percent and IaaS rose 52 percent, reinforcing the AI-cloud demand story.",
+      "revenueGrowth": "High",
+      "grossMargin": "Healthy",
+      "eps": "Strong",
+      "freeCashFlow": "Strong",
+      "valuationRisk": "The stock moved sharply and now embeds much higher expectations.",
+      "technicalTrend": "Breakout trend after guidance rerating.",
+      "competitors": [
+        "MSFT",
+        "AMZN",
+        "GOOGL"
+      ],
+      "bullCase": "If OCI keeps winning AI workloads, Oracle can remain a major AI monetization winner.",
+      "baseCase": "Base case is stronger cloud growth with more volatility than larger peers.",
+      "bearCase": "If infrastructure bookings slow, the multiple can compress fast.",
+      "keyRisks": [
+        "execution",
+        "capex intensity",
+        "competition"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "Slower OCI growth or weaker booked revenue conversion would weaken the thesis."
+    },
+    {
+      "id": "company-dell",
+      "companyName": "Dell",
+      "ticker": "DELL",
+      "marketCountry": "US",
+      "overview": "Dell is one of the cleanest public reads on enterprise and sovereign AI server deployment.",
+      "businessModel": "Sells servers, storage and PCs, with AI servers now a major growth engine.",
+      "revenueDrivers": [
+        "AI servers",
+        "Enterprise infrastructure",
+        "PCs"
+      ],
+      "latestFinancialReportSummary": "Dell lifted long-term growth targets and highlighted strong AI demand, but margins remain under pressure from cost and competition.",
+      "revenueGrowth": "High in AI servers, weaker elsewhere",
+      "grossMargin": "Compressed by mix and competition",
+      "eps": "Positive but uneven",
+      "freeCashFlow": "Healthy",
+      "valuationRisk": "The stock is cheaper than pure AI names but less clean.",
+      "technicalTrend": "Strong trend with volatility around margins.",
+      "competitors": [
+        "SMCI",
+        "HPE",
+        "2317.TW",
+        "2382.TW"
+      ],
+      "bullCase": "If AI-server backlog converts well, Dell can keep surprising on revenue.",
+      "baseCase": "Base case is strong revenue with only moderate margin upside.",
+      "bearCase": "If margins keep disappointing, the stock can lag despite solid top-line growth.",
+      "keyRisks": [
+        "margin pressure",
+        "competitive pricing",
+        "PC weakness"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Consider buying only if conditions are met",
+      "whatWouldChangeView": "Improving AI gross margin and backlog conversion would make the view more constructive."
     },
     {
       "id": "company-mu",
       "companyName": "Micron",
       "ticker": "MU",
-      "marketCountry": "美國",
-      "overview": "HBM / DRAM / SSD 週期受惠者。",
-      "businessModel": "銷售 DRAM、HBM、NAND 與資料中心 SSD。",
+      "marketCountry": "US",
+      "overview": "Micron is the cleanest US memory beneficiary from the AI infrastructure build-out.",
+      "businessModel": "Makes DRAM, NAND and HBM memory products for data center, mobile and industrial markets.",
       "revenueDrivers": [
         "HBM",
-        "Server DRAM",
-        "SSD",
-        "AI server"
+        "DRAM pricing",
+        "Data center SSDs"
       ],
-      "latestFinancialReportSummary": "追蹤 HBM 供需、報價與庫存。",
-      "revenueGrowth": "AI memory 受惠明確，但仍是循環股。",
-      "grossMargin": "報價上行時毛利彈性大。",
-      "eps": "ASP 與供需主導 EPS。",
-      "freeCashFlow": "景氣上行改善，capex 仍高。",
-      "valuationRisk": "高 beta 記憶體股。",
-      "technicalTrend": "偏多但波動大。",
+      "latestFinancialReportSummary": "Micron raised revenue and gross-margin expectations, citing HBM demand and better DRAM pricing.",
+      "revenueGrowth": "High",
+      "grossMargin": "Improving",
+      "eps": "Improving",
+      "freeCashFlow": "Improving",
+      "valuationRisk": "Memory names remain cyclical even during AI upcycles.",
+      "technicalTrend": "Fresh positive momentum after guidance raise.",
       "competitors": [
         "SK Hynix",
         "Samsung"
       ],
-      "bullCase": "HBM 供不應求延續。",
-      "baseCase": "AI 需求強但需週期框架管理。",
-      "bearCase": "供給擴張快於需求。",
+      "bullCase": "If HBM stays tight and DRAM pricing remains strong, earnings power can keep rising.",
+      "baseCase": "Base case is continued cyclical upturn supported by AI demand.",
+      "bearCase": "Any pricing rollover or supply catch-up would hit the stock hard.",
       "keyRisks": [
-        "循環",
-        "供給",
-        "庫存"
+        "cyclicality",
+        "supply response",
+        "trade policy"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若報價與 HBM 能見度轉弱則下修。"
-    },
-    {
-      "id": "company-pltr",
-      "companyName": "Palantir",
-      "ticker": "PLTR",
-      "marketCountry": "美國",
-      "overview": "AI 應用層與政府/企業資料平台代表。",
-      "businessModel": "提供 Gotham、Foundry、AIP 等資料整合、決策支援與 AI workflow 平台。",
-      "revenueDrivers": [
-        "AIP adoption",
-        "US government contracts",
-        "US commercial expansion",
-        "AI monetization"
-      ],
-      "latestFinancialReportSummary": "追蹤營收成長、RPO、政府合約、商業客戶擴張與 AIP 使用案例。",
-      "revenueGrowth": "AI 軟體開始從題材走向實際收入驗證，是硬體 capex 之外的重要對照。",
-      "grossMargin": "軟體毛利結構佳，但銷售投入與大型合約節奏需追蹤。",
-      "eps": "高成長可放大 EPS，但市場要求持續 beat。",
-      "freeCashFlow": "現金流品質佳，是優於多數 AI 概念軟體股的地方。",
-      "valuationRisk": "估值極敏感，任何成長降速都可能造成壓縮。",
-      "technicalTrend": "強勢但擁擠。",
-      "competitors": [
-        "SNOW",
-        "DDOG",
-        "MDB",
-        "C3.ai"
-      ],
-      "bullCase": "AIP 成為企業 AI workflow 標準層，政府與商業雙引擎延續。",
-      "baseCase": "基本面強，但估值容錯低，適合列入美股 AI 應用層雷達。",
-      "bearCase": "成長率放緩或政府合約政治風險升高。",
-      "keyRisks": [
-        "估值",
-        "政府合約集中",
-        "AI 軟體競爭"
-      ],
-      "finalView": "Positive",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若營收成長、RPO 或商業客戶擴張明顯降速則下修。"
-    },
-    {
-      "id": "company-dell",
-      "companyName": "Dell Technologies",
-      "ticker": "DELL",
-      "marketCountry": "美國",
-      "overview": "AI server 出貨與企業硬體 read-through。",
-      "businessModel": "銷售 server、storage、PC 與服務。",
-      "revenueDrivers": [
-        "AI server",
-        "Storage",
-        "Enterprise refresh"
-      ],
-      "latestFinancialReportSummary": "追蹤 AI server backlog、毛利與現金流。",
-      "revenueGrowth": "營收動能強，但毛利品質是關鍵。",
-      "grossMargin": "AI server 未必帶來同步毛利提升。",
-      "eps": "規模擴張支撐 EPS。",
-      "freeCashFlow": "大單可能增加營運資金壓力。",
-      "valuationRisk": "財報後追高風險。",
-      "technicalTrend": "事件驅動強。",
-      "competitors": [
-        "SMCI",
-        "HPE",
-        "Lenovo"
-      ],
-      "bullCase": "AI server 需求延續且毛利改善。",
-      "baseCase": "營收強、毛利普通。",
-      "bearCase": "客戶延遲或成本吃掉利潤。",
-      "keyRisks": [
-        "毛利",
-        "客戶集中",
-        "庫存"
-      ],
-      "finalView": "Neutral",
-      "suggestedAction": "Wait",
-      "whatWouldChangeView": "若毛利與現金流同步改善則轉正面。"
+      "whatWouldChangeView": "A weaker memory pricing outlook or soft HBM demand would change the view."
     },
     {
       "id": "company-vrt",
       "companyName": "Vertiv",
       "ticker": "VRT",
-      "marketCountry": "美國",
-      "overview": "資料中心 power / thermal 基建代表。",
-      "businessModel": "提供 UPS、配電、機櫃、液冷與服務。",
+      "marketCountry": "US",
+      "overview": "Vertiv is a direct way to express the cooling and power side of AI demand.",
+      "businessModel": "Supplies thermal management, power and infrastructure systems for data centers.",
       "revenueDrivers": [
-        "Liquid cooling",
-        "Power density",
-        "Data center buildout"
+        "Cooling",
+        "Power systems",
+        "Data center infrastructure"
       ],
-      "latestFinancialReportSummary": "追蹤 backlog、液冷滲透與估值。",
-      "revenueGrowth": "AI capex 往電力散熱下沉。",
-      "grossMargin": "方案化產品可支撐毛利。",
-      "eps": "高成長可放大 EPS。",
-      "freeCashFlow": "專案交付影響現金流。",
-      "valuationRisk": "估值已反映不少成長。",
-      "technicalTrend": "等待回檔與財報驗證。",
+      "latestFinancialReportSummary": "Recent market coverage continues to treat Vertiv as a direct AI-infrastructure beneficiary.",
+      "revenueGrowth": "High",
+      "grossMargin": "Solid",
+      "eps": "Good",
+      "freeCashFlow": "Good",
+      "valuationRisk": "Second-order AI names can derate quickly if the market questions demand.",
+      "technicalTrend": "Still constructive as AI infrastructure stays favored.",
       "competitors": [
         "ETN",
-        "Schneider"
+        "Schneider",
+        "private suppliers"
       ],
-      "bullCase": "液冷與電力升級成標配。",
-      "baseCase": "需求強但估值高。",
-      "bearCase": "資料中心建置延遲。",
+      "bullCase": "If AI factory build-outs stay intense, Vertiv can keep winning.",
+      "baseCase": "Base case is healthy growth with some sentiment volatility.",
+      "bearCase": "If data-center build timelines slip, multiples can compress.",
       "keyRisks": [
-        "估值",
-        "專案延遲",
-        "競爭"
+        "project timing",
+        "macro slowdown",
+        "AI capex revisions"
       ],
-      "finalView": "Neutral",
-      "suggestedAction": "Wait",
-      "whatWouldChangeView": "若估值修正且訂單品質改善則轉正面。"
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "Evidence of delayed deployments or weaker order intake would matter."
     },
     {
       "id": "company-tsmc",
-      "companyName": "台積電",
+      "companyName": "TSMC",
       "ticker": "2330.TW",
-      "marketCountry": "台灣",
-      "overview": "台股核心權值與 AI 製造樞紐。",
-      "businessModel": "提供先進製程、成熟製程與先進封裝。",
+      "marketCountry": "Taiwan",
+      "overview": "TSMC remains the most important Taiwan name for any US AI read-through.",
+      "businessModel": "Foundry leader making leading-edge logic and advanced packaging for global chip designers.",
       "revenueDrivers": [
-        "AI/HPC",
-        "3nm",
-        "CoWoS",
-        "Advanced packaging"
+        "Advanced nodes",
+        "Advanced packaging",
+        "HPC and AI wafers"
       ],
-      "latestFinancialReportSummary": "追蹤月營收、capex、CoWoS 與大客戶需求。",
-      "revenueGrowth": "AI/HPC 支撐成長。",
-      "grossMargin": "海外廠成本與折舊需追蹤。",
-      "eps": "先進製程稼動率支撐 EPS。",
-      "freeCashFlow": "高 capex 下仍需看回收。",
-      "valuationRisk": "核心資產溢價高。",
-      "technicalTrend": "長線強，短線受台股權值資金影響。",
+      "latestFinancialReportSummary": "Q1 2026 profit rose 58 percent year over year; April 2026 revenue rose 17.5 percent year over year and January to April revenue rose 29.9 percent.",
+      "revenueGrowth": "Very high",
+      "grossMargin": "Best-in-class",
+      "eps": "Very strong",
+      "freeCashFlow": "Very strong",
+      "valuationRisk": "High capex and a strong TWD can cap sentiment despite strong demand.",
+      "technicalTrend": "Primary leadership trend remains intact.",
       "competitors": [
-        "Samsung Foundry",
+        "Samsung",
         "Intel Foundry"
       ],
-      "bullCase": "AI/HPC 多年需求延續。",
-      "baseCase": "需求強但需消化 capex。",
-      "bearCase": "地緣或封裝瓶頸。",
+      "bullCase": "If AI wafer and packaging demand stays tight, TSMC remains structurally advantaged.",
+      "baseCase": "Base case is continued strong growth with periodic macro and geopolitical noise.",
+      "bearCase": "A tariff shock, major FX pressure or packaging bottleneck disappointment would hurt the stock.",
       "keyRisks": [
-        "地緣政治",
-        "CoWoS",
-        "capex"
+        "geopolitics",
+        "FX",
+        "capex intensity"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 AI demand 或封裝需求鬆動則下修。"
+      "whatWouldChangeView": "A clear slowdown in AI demand, weaker guidance or stronger FX damage would reduce conviction."
     },
     {
-      "id": "company-winbond",
-      "companyName": "華邦電",
-      "ticker": "2344.TW",
-      "marketCountry": "台灣",
-      "overview": "DRAM / Flash 報價與低基期重估代表。",
-      "businessModel": "銷售 specialty DRAM、NOR Flash、NAND 與利基記憶體。",
+      "id": "company-foxconn",
+      "companyName": "Foxconn",
+      "ticker": "2317.TW",
+      "marketCountry": "Taiwan",
+      "overview": "Foxconn is increasingly an AI infrastructure name, not just an iPhone assembler.",
+      "businessModel": "Builds electronics and servers for global customers, with cloud and networking now a major driver.",
       "revenueDrivers": [
-        "DRAM pricing",
-        "Flash pricing",
-        "Edge AI memory",
-        "CUBE"
+        "AI servers",
+        "Cloud/networking",
+        "Consumer electronics"
       ],
-      "latestFinancialReportSummary": "追蹤報價、毛利、庫存與 CUBE 進度。",
-      "revenueGrowth": "報價與毛利改善支撐基本面。",
-      "grossMargin": "上行期毛利彈性大。",
-      "eps": "循環上行可推 EPS。",
-      "freeCashFlow": "需看庫存與 capex。",
-      "valuationRisk": "記憶體股高波動。",
-      "technicalTrend": "強勢但需防循環反轉。",
+      "latestFinancialReportSummary": "Q1 2026 net profit rose 19 percent year over year and cloud/networking products approached half of revenue.",
+      "revenueGrowth": "High",
+      "grossMargin": "Improving",
+      "eps": "Solid",
+      "freeCashFlow": "Solid",
+      "valuationRisk": "The company still trades with a conglomerate discount relative to pure AI plays.",
+      "technicalTrend": "Trend improved as AI mix became more visible.",
       "competitors": [
-        "南亞科",
-        "旺宏",
-        "Micron"
+        "2382.TW",
+        "3231.TW",
+        "6669.TW"
       ],
-      "bullCase": "報價延續上行且 CUBE 題材落地。",
-      "baseCase": "受惠明確但仍是週期股。",
-      "bearCase": "報價轉弱或庫存回升。",
+      "bullCase": "If AI server scale keeps lifting mix, Foxconn can keep rerating.",
+      "baseCase": "Base case is strong revenue growth with moderate margin improvement.",
+      "bearCase": "Consumer weakness, FX or geopolitical issues can still dilute the AI story.",
       "keyRisks": [
-        "循環",
-        "庫存",
-        "題材過熱"
+        "customer concentration",
+        "FX",
+        "geopolitics"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 DRAM / Flash 報價轉弱則下修。"
+      "whatWouldChangeView": "A visible loss of AI server momentum or weaker margin conversion would weaken the case."
     },
     {
-      "id": "company-innolux",
-      "companyName": "群創",
-      "ticker": "3481.TW",
-      "marketCountry": "台灣",
-      "overview": "面板本業加 FOPLP / 玻璃基板轉型題材。",
-      "businessModel": "生產面板並推動先進封裝、玻璃基板與新應用。",
+      "id": "company-quanta",
+      "companyName": "Quanta",
+      "ticker": "2382.TW",
+      "marketCountry": "Taiwan",
+      "overview": "Quanta remains one of Taiwan's most important AI-server leaders.",
+      "businessModel": "Builds notebooks, cloud servers and AI racks through its enterprise and cloud operations.",
       "revenueDrivers": [
-        "Panel pricing",
-        "FOPLP",
-        "Glass substrate",
-        "SpaceX theme"
+        "AI servers",
+        "Cloud racks",
+        "Enterprise compute"
       ],
-      "latestFinancialReportSummary": "追蹤面板報價、本業虧損改善與 FOPLP 訂單。",
-      "revenueGrowth": "題材強，但需基本面驗證。",
-      "grossMargin": "本業毛利仍受面板循環影響。",
-      "eps": "轉盈速度是關鍵。",
-      "freeCashFlow": "資本支出與本業現金流需看。",
-      "valuationRisk": "題材容易先行。",
-      "technicalTrend": "動能強但證據品質中等。",
+      "latestFinancialReportSummary": "Public commentary around 2026 continues to point to very strong AI server growth and record revenue scale.",
+      "revenueGrowth": "Very high",
+      "grossMargin": "Moderate",
+      "eps": "Strong",
+      "freeCashFlow": "Strong",
+      "valuationRisk": "Revenue scale is exceptional, but ODM margins stay structurally lower than semis.",
+      "technicalTrend": "Leadership trend remains strong.",
       "competitors": [
-        "友達",
-        "彩晶"
+        "2317.TW",
+        "3231.TW",
+        "6669.TW"
       ],
-      "bullCase": "FOPLP / 玻璃基板成功商轉。",
-      "baseCase": "題材與低基期支撐估值。",
-      "bearCase": "本業虧損或題材落空。",
+      "bullCase": "If hyperscaler capex holds, Quanta should remain a front-line Taiwan winner.",
+      "baseCase": "Base case is continued revenue leadership with modest margin expansion.",
+      "bearCase": "If AI orders normalize faster than expected, the stock can de-rate on margin limits.",
       "keyRisks": [
-        "面板報價",
-        "題材落地",
-        "處置風險"
+        "margin ceiling",
+        "customer capex timing"
       ],
-      "finalView": "Neutral",
+      "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 FOPLP 收入與毛利能見度提高則轉正面。"
+      "whatWouldChangeView": "Clearer evidence of sustained margin uplift would strengthen the view further."
     },
     {
-      "id": "company-hannstar",
-      "companyName": "彩晶",
-      "ticker": "6116.TW",
-      "marketCountry": "台灣",
-      "overview": "面板低價題材與低軌衛星動能股。",
-      "businessModel": "中小尺寸面板與相關應用。",
+      "id": "company-wistron",
+      "companyName": "Wistron",
+      "ticker": "3231.TW",
+      "marketCountry": "Taiwan",
+      "overview": "Wistron has become one of the best fresh-signal Taiwan AI infrastructure names tonight.",
+      "businessModel": "Builds servers, PCs and related systems, increasingly tied to AI server and networking demand.",
       "revenueDrivers": [
-        "Panel pricing",
-        "SpaceX theme",
-        "Momentum"
+        "AI servers",
+        "Networking expansion",
+        "US and Vietnam capacity"
       ],
-      "latestFinancialReportSummary": "追蹤成交量、處置、面板報價與是否有實際訂單。",
-      "revenueGrowth": "短線熱度高，但基本面證據較薄。",
-      "grossMargin": "本業改善仍需確認。",
-      "eps": "EPS 可見度低於華邦電等基本面股。",
-      "freeCashFlow": "現金流需看本業循環。",
-      "valuationRisk": "追高風險高。",
-      "technicalTrend": "列雷達，不直接當核心推薦。",
+      "latestFinancialReportSummary": "Q1 2026 revenue reached NT$846.3 billion, and the company kept investing in networking and smart-factory AI.",
+      "revenueGrowth": "Very high",
+      "grossMargin": "Good",
+      "eps": "Good",
+      "freeCashFlow": "Good",
+      "valuationRisk": "The stock needs to prove that rapid expansion stays disciplined.",
+      "technicalTrend": "Strong fresh momentum after May and June updates.",
       "competitors": [
-        "群創",
-        "友達"
+        "2382.TW",
+        "2317.TW",
+        "6669.TW"
       ],
-      "bullCase": "若低軌衛星或面板訂單被證實，估值可重估。",
-      "baseCase": "目前偏資金行情。",
-      "bearCase": "題材降溫或處置壓力。",
+      "bullCase": "If networking and AI-system integration deepen, Wistron can keep climbing the value chain.",
+      "baseCase": "Base case is continued strong growth with execution risk rising alongside ambition.",
+      "bearCase": "A stumble in global expansion or demand timing would hurt confidence quickly.",
       "keyRisks": [
-        "證據不足",
-        "處置",
-        "波動"
+        "execution",
+        "capacity expansion",
+        "customer timing"
       ],
-      "finalView": "Neutral",
-      "suggestedAction": "Wait",
-      "whatWouldChangeView": "若有明確訂單或財報改善再升級。"
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "Better evidence of durable margin improvement would upgrade conviction."
+    },
+    {
+      "id": "company-wiwynn",
+      "companyName": "Wiwynn",
+      "ticker": "6669.TW",
+      "marketCountry": "Taiwan",
+      "overview": "Wiwynn remains one of the highest-quality pure AI rack names in Taiwan.",
+      "businessModel": "Designs and delivers cloud and AI data-center systems for hyperscale customers.",
+      "revenueDrivers": [
+        "AI racks",
+        "Liquid cooling",
+        "Optical interconnect"
+      ],
+      "latestFinancialReportSummary": "Q1 2026 revenue rose 62 percent year over year and April shipment/margin commentary remained constructive despite accounting changes.",
+      "revenueGrowth": "High",
+      "grossMargin": "Better than many ODM peers",
+      "eps": "Strong",
+      "freeCashFlow": "Strong",
+      "valuationRisk": "It already carries premium expectations for an ODM-style business.",
+      "technicalTrend": "Constructive trend with strong fundamental support.",
+      "competitors": [
+        "2382.TW",
+        "3231.TW",
+        "SMCI"
+      ],
+      "bullCase": "If rack-scale AI systems remain supply constrained, Wiwynn can stay near the top of the winner list.",
+      "baseCase": "Base case is strong growth with healthy but not semiconductor-like margins.",
+      "bearCase": "Any pause in hyperscaler rack deployments would be punished quickly.",
+      "keyRisks": [
+        "customer concentration",
+        "premium valuation"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "A sustained miss on shipment growth or margin quality would change the view."
     },
     {
       "id": "company-compal",
-      "companyName": "仁寶",
+      "companyName": "Compal",
       "ticker": "2324.TW",
-      "marketCountry": "台灣",
-      "overview": "PC ODM 轉 AI server 的低基期候選。",
-      "businessModel": "提供筆電、PC、server 與電子代工服務。",
+      "marketCountry": "Taiwan",
+      "overview": "Compal is still earlier in the AI rerating cycle than the bigger Taiwan ODM winners.",
+      "businessModel": "Makes PCs, wireless products and increasingly AI servers and supporting rack systems.",
       "revenueDrivers": [
-        "AI server",
-        "AI PC",
-        "ODM scale",
-        "Enterprise hardware"
+        "AI servers",
+        "Wireless/non-PC products",
+        "PCs"
       ],
-      "latestFinancialReportSummary": "追蹤 AI server 營收占比、毛利與月營收。",
-      "revenueGrowth": "轉型故事成立但仍需數字證明。",
-      "grossMargin": "ODM 毛利薄，產品 mix 是關鍵。",
-      "eps": "EPS 需要靠 AI server mix 改善。",
-      "freeCashFlow": "營運資金與庫存需管理。",
-      "valuationRisk": "市場會等待證據。",
-      "technicalTrend": "研究中。",
+      "latestFinancialReportSummary": "Q1 2026 revenue rose modestly, but non-PC mix improved to 35 percent and Computex showed a stronger full-rack AI message.",
+      "revenueGrowth": "Low to moderate",
+      "grossMargin": "Okay",
+      "eps": "Modest",
+      "freeCashFlow": "Okay",
+      "valuationRisk": "The market needs more proof that AI can materially move earnings, not just narrative.",
+      "technicalTrend": "Improving but still secondary to larger ODM leaders.",
       "competitors": [
-        "廣達",
-        "緯創",
-        "英業達"
+        "2382.TW",
+        "3231.TW",
+        "4938.TW"
       ],
-      "bullCase": "AI server 成為第三成長支柱。",
-      "baseCase": "低基期轉型但驗證期較長。",
-      "bearCase": "PC 本業拖累或 AI server 毛利不足。",
+      "bullCase": "If non-PC mix keeps rising and AI systems contribute materially, upside can broaden from a lower base.",
+      "baseCase": "Base case is gradual improvement without immediate breakout economics.",
+      "bearCase": "If AI remains too small relative to legacy businesses, enthusiasm fades.",
       "keyRisks": [
-        "毛利",
-        "轉型速度",
-        "客戶集中"
+        "execution",
+        "mix shift",
+        "legacy business drag"
       ],
       "finalView": "Neutral",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 AI server 營收占比與毛利同步改善則轉正面。"
-    },
-    {
-      "id": "company-panjit",
-      "companyName": "強茂",
-      "ticker": "2481.TW",
-      "marketCountry": "台灣",
-      "overview": "台灣功率半導體與 AI 電源效率受惠候選。",
-      "businessModel": "提供二極體、MOSFET、保護元件與功率解決方案，應用於 AI server、車用、IPC 與機器人。",
-      "revenueDrivers": [
-        "Power MOSFET",
-        "AI server power",
-        "Automotive electronics",
-        "Supply tightness"
-      ],
-      "latestFinancialReportSummary": "追蹤 MOSFET 營收占比、B/B 值、CSP 客戶、AI server 電源與車用訂單。",
-      "revenueGrowth": "AI server 電源架構升級與功率元件缺貨/轉單提供近期催化。",
-      "grossMargin": "產品升級有助毛利，但仍需看實際 mix。",
-      "eps": "若 MOSFET 與車用占比提升，EPS 彈性會優於傳統二極體週期。",
-      "freeCashFlow": "擴產與庫存週期需管理。",
-      "valuationRisk": "題材升溫後要防估值先跑。",
-      "technicalTrend": "偏多但需月營收驗證。",
-      "competitors": [
-        "台半",
-        "德微",
-        "大中",
-        "富鼎"
-      ],
-      "bullCase": "AI server、車用與機器人把功率元件從傳統零件拉到 AI 基建效率鏈。",
-      "baseCase": "受惠邏輯成立，列為台股功率元件優先研究。",
-      "bearCase": "缺貨緩解、轉單不持續或 MOSFET 毛利不如預期。",
-      "keyRisks": [
-        "缺貨循環",
-        "產品 mix",
-        "客戶認證"
-      ],
-      "finalView": "Positive",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若月營收與毛利無法驗證 AI/車用占比提升則下修。"
-    },
-    {
-      "id": "company-tsc",
-      "companyName": "台半",
-      "ticker": "5425.TW",
-      "marketCountry": "台灣",
-      "overview": "二極體與 MOSFET / SiC 升級候選。",
-      "businessModel": "提供整流二極體、保護元件、MOSFET、Super Junction 與 SiC 相關產品。",
-      "revenueDrivers": [
-        "Super Junction MOSFET",
-        "SiC MOSFET",
-        "Power supply customers",
-        "Automotive"
-      ],
-      "latestFinancialReportSummary": "追蹤漲價、交期、電源大廠採用、Rubin/AI server read-through 與月營收。",
-      "revenueGrowth": "功率元件供需偏緊與 AI server 電源升級使台半進入固定雷達。",
-      "grossMargin": "毛利改善需要產品組合升級，而不只是漲價。",
-      "eps": "EPS 彈性取決於高階 MOSFET / SiC 放量速度。",
-      "freeCashFlow": "庫存週期與擴產節奏需追蹤。",
-      "valuationRisk": "小型題材股波動較大。",
-      "technicalTrend": "研究中偏多。",
-      "competitors": [
-        "強茂",
-        "德微",
-        "朋程",
-        "大中"
-      ],
-      "bullCase": "若高階功率產品打入 AI server 與車用鏈，估值可重估。",
-      "baseCase": "催化存在，但證據品質低於強茂，需等訂單與毛利驗證。",
-      "bearCase": "漲價題材降溫或高階產品導入慢。",
-      "keyRisks": [
-        "訂單能見度",
-        "毛利驗證",
-        "題材波動"
-      ],
-      "finalView": "Neutral",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若高階產品營收占比與毛利改善明確則轉正面。"
+      "whatWouldChangeView": "A clearer jump in AI revenue contribution or margins would improve the rating."
     },
     {
       "id": "company-delta",
-      "companyName": "台達電",
+      "companyName": "Delta Electronics",
       "ticker": "2308.TW",
-      "marketCountry": "台灣",
-      "overview": "AI 電源、散熱與資料中心基建方案商。",
-      "businessModel": "提供電源、散熱、工業自動化、資料中心與能源方案。",
+      "marketCountry": "Taiwan",
+      "overview": "Delta is one of the clearest Taiwan second-order AI beneficiaries.",
+      "businessModel": "Provides power electronics, thermal management and industrial automation solutions.",
       "revenueDrivers": [
-        "AI data center power",
-        "Liquid cooling",
-        "HVDC",
-        "Microgrid"
+        "Power conversion",
+        "Data center efficiency",
+        "Industrial automation"
       ],
-      "latestFinancialReportSummary": "追蹤 AI 電源/散熱營收占比、毛利與新專案。",
-      "revenueGrowth": "AI 基建支出下沉支撐成長。",
-      "grossMargin": "方案化有助毛利。",
-      "eps": "EPS 穩健但催化傳導較慢。",
-      "freeCashFlow": "現金流相對穩。",
-      "valuationRisk": "題材轉營收需要時間。",
-      "technicalTrend": "長線正向。",
+      "latestFinancialReportSummary": "Recent AI infrastructure and grid bottleneck evidence keeps Delta strategically relevant even without a single same-day company headline.",
+      "revenueGrowth": "Steady",
+      "grossMargin": "Healthy",
+      "eps": "Stable",
+      "freeCashFlow": "Healthy",
+      "valuationRisk": "It is less explosive than ODM leaders but typically more defensible.",
+      "technicalTrend": "Constructive trend as infrastructure names remain in favor.",
       "competitors": [
-        "Vertiv",
-        "Eaton",
-        "光寶科"
+        "2301.TW",
+        "global power peers"
       ],
-      "bullCase": "電源與液冷成 AI 建設標配。",
-      "baseCase": "基本面穩但需更多拆分。",
-      "bearCase": "營收貢獻慢於股價期待。",
+      "bullCase": "If AI factories keep scaling, Delta remains one of the safest Taiwan ways to play the build-out.",
+      "baseCase": "Base case is reliable compounding rather than speculative upside.",
+      "bearCase": "A broad capex slowdown would still pressure sentiment.",
       "keyRisks": [
-        "接單透明度",
-        "競爭",
-        "資本支出"
+        "AI capex slowdown",
+        "industrial cyclicality"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 AI 基建貢獻不如預期則下修。"
+      "whatWouldChangeView": "A weaker data-center spending outlook would lower near-term upside."
     },
     {
       "id": "company-accton",
-      "companyName": "智邦",
+      "companyName": "Accton",
       "ticker": "2345.TW",
-      "marketCountry": "台灣",
-      "overview": "AI cluster 高速網路與交換器受惠股。",
-      "businessModel": "提供網通設備、switch 與雲端資料中心網路產品。",
+      "marketCountry": "Taiwan",
+      "overview": "Accton is one of the better Taiwan read-through names for AI networking scale.",
+      "businessModel": "Builds networking hardware and related systems for cloud and enterprise customers.",
       "revenueDrivers": [
-        "AI networking",
-        "Switch",
-        "Cloud data center",
-        "800G/1.6T"
+        "Switches",
+        "High-speed networking",
+        "Optical links"
       ],
-      "latestFinancialReportSummary": "追蹤雲端客戶拉貨、高速網通需求與毛利。",
-      "revenueGrowth": "AI cluster scale-out 支撐網通需求。",
-      "grossMargin": "高階產品 mix 可改善毛利。",
-      "eps": "EPS 受大客戶出貨節奏影響。",
-      "freeCashFlow": "專案交付影響現金流。",
-      "valuationRisk": "估值受美股網通 read-through 影響。",
-      "technicalTrend": "偏多但需看訂單。",
+      "latestFinancialReportSummary": "Broadcom and AI cluster commentary keep networking demand relevant, while Taiwan ODM and data-center updates support the theme.",
+      "revenueGrowth": "Strong enough",
+      "grossMargin": "Healthy",
+      "eps": "Solid",
+      "freeCashFlow": "Solid",
+      "valuationRisk": "Networking demand can still be bursty and customer-timing dependent.",
+      "technicalTrend": "Trend stays constructive while AI networking remains a bottleneck.",
       "competitors": [
-        "Broadcom",
         "Arista",
-        "眾達"
+        "other ODM and OEM networking vendors"
       ],
-      "bullCase": "AI networking 成長持續。",
-      "baseCase": "受惠成立但客戶拉貨節奏重要。",
-      "bearCase": "雲端資本支出放緩。",
+      "bullCase": "Larger AI clusters and more optical scale-up support continued upside.",
+      "baseCase": "Base case is healthy networking demand tied to AI build cycles.",
+      "bearCase": "A pause in cluster deployment would quickly hit networking names.",
       "keyRisks": [
-        "客戶集中",
-        "拉貨波動",
-        "競爭"
+        "customer timing",
+        "optics transition risk"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 AI networking 訂單轉弱則下修。"
+      "whatWouldChangeView": "More direct order commentary would improve confidence further."
+    },
+    {
+      "id": "company-winbond",
+      "companyName": "Winbond",
+      "ticker": "2344.TW",
+      "marketCountry": "Taiwan",
+      "overview": "Winbond stays relevant because memory conditions are improving, even if it is not a direct HBM leader.",
+      "businessModel": "Produces specialty DRAM, flash and memory solutions.",
+      "revenueDrivers": [
+        "Specialty DRAM",
+        "Flash",
+        "Memory cycle recovery"
+      ],
+      "latestFinancialReportSummary": "Micron and broader memory pricing commentary improve the operating backdrop, but the company still needs Taiwan-specific confirmation.",
+      "revenueGrowth": "Recovering",
+      "grossMargin": "Improving from low base",
+      "eps": "Recovering",
+      "freeCashFlow": "Improving",
+      "valuationRisk": "This remains more cyclical and less structurally advantaged than HBM leaders.",
+      "technicalTrend": "Memory sentiment is improving.",
+      "competitors": [
+        "2408.TW",
+        "2337.TW",
+        "MU"
+      ],
+      "bullCase": "If conventional memory pricing continues to improve, the stock can keep rerating from a low base.",
+      "baseCase": "Base case is cyclical improvement rather than a structural AI winner.",
+      "bearCase": "If memory pricing rolls over again, the thesis weakens quickly.",
+      "keyRisks": [
+        "cyclicality",
+        "limited direct HBM exposure"
+      ],
+      "finalView": "Neutral",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "Taiwan-specific revenue and margin proof would be needed for a more positive stance."
+    },
+    {
+      "id": "company-nanya",
+      "companyName": "Nanya",
+      "ticker": "2408.TW",
+      "marketCountry": "Taiwan",
+      "overview": "Nanya is a cleaner DRAM-cycle expression than some other Taiwan names, but still mainly cyclical.",
+      "businessModel": "Produces DRAM products and benefits when pricing improves.",
+      "revenueDrivers": [
+        "DRAM pricing",
+        "Inventory normalization",
+        "Enterprise demand"
+      ],
+      "latestFinancialReportSummary": "The global memory backdrop has improved on AI and tighter supply, but company-specific Taiwan confirmation is still needed.",
+      "revenueGrowth": "Recovering",
+      "grossMargin": "Cyclical",
+      "eps": "Recovering",
+      "freeCashFlow": "Mixed",
+      "valuationRisk": "This is still a classic cyclical memory trade.",
+      "technicalTrend": "Tone improving with the memory group.",
+      "competitors": [
+        "MU",
+        "Samsung",
+        "SK Hynix"
+      ],
+      "bullCase": "If DRAM pricing strength persists, earnings can improve materially from trough levels.",
+      "baseCase": "Base case is continued recovery, but not a clean AI leader narrative.",
+      "bearCase": "Any pricing reversal would hurt quickly.",
+      "keyRisks": [
+        "pricing risk",
+        "cyclical exposure"
+      ],
+      "finalView": "Neutral",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "A better pricing and margin outlook would lift the view."
+    },
+    {
+      "id": "company-panjit",
+      "companyName": "Panjit",
+      "ticker": "2481.TW",
+      "marketCountry": "Taiwan",
+      "overview": "Panjit is a useful hidden-beneficiary candidate in power semis and efficiency upgrades.",
+      "businessModel": "Provides discrete power semiconductors used across industrial, auto and power applications.",
+      "revenueDrivers": [
+        "MOSFETs",
+        "Power management",
+        "Auto and industrial power"
+      ],
+      "latestFinancialReportSummary": "The company benefits conceptually from AI power-efficiency demand, but tonight the evidence is more thematic than event-driven.",
+      "revenueGrowth": "Moderate",
+      "grossMargin": "Okay",
+      "eps": "Okay",
+      "freeCashFlow": "Okay",
+      "valuationRisk": "It needs harder order proof to justify aggressive positioning.",
+      "technicalTrend": "Tradable as a secondary AI-power concept, not a primary leader.",
+      "competitors": [
+        "5425.TW",
+        "6435.TW"
+      ],
+      "bullCase": "If AI power-shelf and efficiency demand tightens supply for power semis, Panjit can surprise.",
+      "baseCase": "Base case is selective participation when Taiwan power themes broaden.",
+      "bearCase": "Without order and margin confirmation, it can remain only a theme name.",
+      "keyRisks": [
+        "limited direct evidence",
+        "smaller-cap volatility"
+      ],
+      "finalView": "Neutral",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "Direct order, pricing or margin evidence would be needed to turn more positive."
     }
   ],
   "watchlist": [
@@ -1207,21 +1355,10 @@
       "ticker": "NVDA",
       "companyName": "NVIDIA",
       "currentView": "Positive",
-      "keyNews": "追蹤新產品、財報、供應鏈與出口限制。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "估值、出口限制、ASIC 替代",
-      "lastUpdatedTime": "2026-06-02 20:04",
-      "status": "Watching"
-    },
-    {
-      "id": "watch-msft",
-      "ticker": "MSFT",
-      "companyName": "Microsoft",
-      "currentView": "Positive",
-      "keyNews": "追蹤 Azure 成長、AI monetization 與 capex 效率。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "capex ROI、雲端毛利、監管",
-      "lastUpdatedTime": "2026-06-02 20:04",
+      "keyNews": "Q1 FY27 kept the AI capex cycle intact.",
+      "keyPriceLevels": "Watch post-earnings hold and whether semis broaden beyond Nvidia.",
+      "riskNotes": "Rates or export headlines can hit a crowded leader fast.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
       "status": "Watching"
     },
     {
@@ -1229,10 +1366,32 @@
       "ticker": "AVGO",
       "companyName": "Broadcom",
       "currentView": "Positive",
-      "keyNews": "追蹤 AI revenue 指引與大客戶專案。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "客戶集中、估值、專案延遲",
-      "lastUpdatedTime": "2026-06-02 20:04",
+      "keyNews": "AI semiconductor revenue guide stayed strong.",
+      "keyPriceLevels": "Watch whether ASIC and networking momentum keeps broadening.",
+      "riskNotes": "Any pause in hyperscaler custom-chip demand matters.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
+      "status": "Watching"
+    },
+    {
+      "id": "watch-orcl",
+      "ticker": "ORCL",
+      "companyName": "Oracle",
+      "currentView": "Positive",
+      "keyNews": "OCI demand remains a monetization proof point.",
+      "keyPriceLevels": "Watch whether cloud-AI strength supports utilities and infrastructure again.",
+      "riskNotes": "The stock already rerated hard.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
+      "status": "Watching"
+    },
+    {
+      "id": "watch-dell",
+      "ticker": "DELL",
+      "companyName": "Dell",
+      "currentView": "Positive",
+      "keyNews": "AI backlog is strong but margins are under pressure.",
+      "keyPriceLevels": "Watch whether the market rewards backlog or punishes gross margin.",
+      "riskNotes": "Margin misses can dominate the tape.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
       "status": "Watching"
     },
     {
@@ -1240,252 +1399,221 @@
       "ticker": "MU",
       "companyName": "Micron",
       "currentView": "Positive",
-      "keyNews": "追蹤 HBM 供需、報價與庫存。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "循環、供給、庫存",
-      "lastUpdatedTime": "2026-06-02 20:04",
+      "keyNews": "HBM and DRAM pricing improved guidance.",
+      "keyPriceLevels": "Watch if memory strength spills into Taiwan memory names tomorrow.",
+      "riskNotes": "Memory remains cyclical even in AI upswings.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
       "status": "Watching"
-    },
-    {
-      "id": "watch-pltr",
-      "ticker": "PLTR",
-      "companyName": "Palantir",
-      "currentView": "Positive",
-      "keyNews": "追蹤營收成長、RPO、政府合約、商業客戶擴張與 AIP 使用案例。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "估值、政府合約集中、AI 軟體競爭",
-      "lastUpdatedTime": "2026-06-02 20:04",
-      "status": "Watching"
-    },
-    {
-      "id": "watch-dell",
-      "ticker": "DELL",
-      "companyName": "Dell Technologies",
-      "currentView": "Neutral",
-      "keyNews": "追蹤 AI server backlog、毛利與現金流。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "毛利、客戶集中、庫存",
-      "lastUpdatedTime": "2026-06-02 20:04",
-      "status": "Researching"
-    },
-    {
-      "id": "watch-vrt",
-      "ticker": "VRT",
-      "companyName": "Vertiv",
-      "currentView": "Neutral",
-      "keyNews": "追蹤 backlog、液冷滲透與估值。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "估值、專案延遲、競爭",
-      "lastUpdatedTime": "2026-06-02 20:04",
-      "status": "Researching"
     },
     {
       "id": "watch-tsmc",
       "ticker": "2330.TW",
-      "companyName": "台積電",
+      "companyName": "TSMC",
       "currentView": "Positive",
-      "keyNews": "追蹤月營收、capex、CoWoS 與大客戶需求。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "地緣政治、CoWoS、capex",
-      "lastUpdatedTime": "2026-06-02 20:04",
+      "keyNews": "Still the primary Taiwan AI read-through name.",
+      "keyPriceLevels": "Tomorrow watch whether strength broadens from TSMC into packaging, ODMs and cooling.",
+      "riskNotes": "FX and tariff headlines can cap upside.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
       "status": "Watching"
     },
     {
-      "id": "watch-winbond",
-      "ticker": "2344.TW",
-      "companyName": "華邦電",
+      "id": "watch-foxconn",
+      "ticker": "2317.TW",
+      "companyName": "Foxconn",
       "currentView": "Positive",
-      "keyNews": "追蹤報價、毛利、庫存與 CUBE 進度。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "循環、庫存、題材過熱",
-      "lastUpdatedTime": "2026-06-02 20:04",
+      "keyNews": "Q1 showed AI-server mix improving.",
+      "keyPriceLevels": "Watch for follow-through in cloud/networking positioning.",
+      "riskNotes": "Conglomerate structure can dilute the AI narrative.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
       "status": "Watching"
     },
     {
-      "id": "watch-innolux",
-      "ticker": "3481.TW",
-      "companyName": "群創",
-      "currentView": "Neutral",
-      "keyNews": "追蹤面板報價、本業虧損改善與 FOPLP 訂單。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "面板報價、題材落地、處置風險",
-      "lastUpdatedTime": "2026-06-02 20:04",
-      "status": "Researching"
-    },
-    {
-      "id": "watch-hannstar",
-      "ticker": "6116.TW",
-      "companyName": "彩晶",
-      "currentView": "Neutral",
-      "keyNews": "追蹤成交量、處置、面板報價與是否有實際訂單。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "證據不足、處置、波動",
-      "lastUpdatedTime": "2026-06-02 20:04",
-      "status": "Researching"
-    },
-    {
-      "id": "watch-compal",
-      "ticker": "2324.TW",
-      "companyName": "仁寶",
-      "currentView": "Neutral",
-      "keyNews": "追蹤 AI server 營收占比、毛利與月營收。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "毛利、轉型速度、客戶集中",
-      "lastUpdatedTime": "2026-06-02 20:04",
-      "status": "Researching"
-    },
-    {
-      "id": "watch-panjit",
-      "ticker": "2481.TW",
-      "companyName": "強茂",
+      "id": "watch-quanta",
+      "ticker": "2382.TW",
+      "companyName": "Quanta",
       "currentView": "Positive",
-      "keyNews": "追蹤 MOSFET 營收占比、B/B 值、CSP 客戶、AI server 電源與車用訂單。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "缺貨循環、產品 mix、客戶認證",
-      "lastUpdatedTime": "2026-06-02 20:04",
+      "keyNews": "Still one of the cleanest Taiwan AI server leaders.",
+      "keyPriceLevels": "Watch if tomorrow's Taiwan flow favors Quanta over lower-base ODM names.",
+      "riskNotes": "ODM margin limitations remain real.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
       "status": "Watching"
     },
     {
-      "id": "watch-tsc",
-      "ticker": "5425.TW",
-      "companyName": "台半",
-      "currentView": "Neutral",
-      "keyNews": "追蹤漲價、交期、電源大廠採用、Rubin/AI server read-through 與月營收。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "訂單能見度、毛利驗證、題材波動",
-      "lastUpdatedTime": "2026-06-02 20:04",
-      "status": "Researching"
+      "id": "watch-wistron",
+      "ticker": "3231.TW",
+      "companyName": "Wistron",
+      "currentView": "Positive",
+      "keyNews": "Fresh Q1 and Nvidia-linked factory-AI news raise relevance tonight.",
+      "keyPriceLevels": "Watch if fresh news translates into stronger Taiwan relative performance.",
+      "riskNotes": "Execution risk rises with expansion speed.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
+      "status": "Watching"
     },
     {
-      "id": "watch-delta",
-      "ticker": "2308.TW",
-      "companyName": "台達電",
+      "id": "watch-wiwynn",
+      "ticker": "6669.TW",
+      "companyName": "Wiwynn",
       "currentView": "Positive",
-      "keyNews": "追蹤 AI 電源/散熱營收占比、毛利與新專案。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "接單透明度、競爭、資本支出",
-      "lastUpdatedTime": "2026-06-02 20:04",
+      "keyNews": "Pure-play AI rack exposure remains attractive.",
+      "keyPriceLevels": "Watch whether premium quality keeps winning if Taiwan money rotates into second-tier AI.",
+      "riskNotes": "Premium valuation leaves less room for misses.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
       "status": "Watching"
     },
     {
       "id": "watch-accton",
       "ticker": "2345.TW",
-      "companyName": "智邦",
+      "companyName": "Accton",
       "currentView": "Positive",
-      "keyNews": "追蹤雲端客戶拉貨、高速網通需求與毛利。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "客戶集中、拉貨波動、競爭",
-      "lastUpdatedTime": "2026-06-02 20:04",
+      "keyNews": "Networking remains a credible second-order winner.",
+      "keyPriceLevels": "Watch whether AI cluster and Broadcom read-through support optics/networking.",
+      "riskNotes": "Deployment timing can stay lumpy.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
       "status": "Watching"
+    },
+    {
+      "id": "watch-delta",
+      "ticker": "2308.TW",
+      "companyName": "Delta Electronics",
+      "currentView": "Positive",
+      "keyNews": "Power remains a cleaner hidden AI beneficiary.",
+      "keyPriceLevels": "Watch if cooling and power names get tomorrow's flow after major ODMs.",
+      "riskNotes": "Second-order names can lag if the market stays concentrated in leaders.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
+      "status": "Watching"
+    },
+    {
+      "id": "watch-winbond",
+      "ticker": "2344.TW",
+      "companyName": "Winbond",
+      "currentView": "Neutral",
+      "keyNews": "Memory tone improved but Taiwan-specific proof is still needed.",
+      "keyPriceLevels": "Watch whether Micron read-through brings local follow-through.",
+      "riskNotes": "Not a direct HBM winner.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
+      "status": "Researching"
+    },
+    {
+      "id": "watch-nanya",
+      "ticker": "2408.TW",
+      "companyName": "Nanya",
+      "currentView": "Neutral",
+      "keyNews": "DRAM backdrop improved, but still mainly cyclical.",
+      "keyPriceLevels": "Watch if Taiwan memory catches a bid on Micron strength.",
+      "riskNotes": "Pricing reversal risk stays high.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
+      "status": "Researching"
+    },
+    {
+      "id": "watch-innolux",
+      "ticker": "3481.TW",
+      "companyName": "Innolux",
+      "currentView": "Neutral",
+      "keyNews": "Scanned for panel and FOPLP narrative, but not enough fresh signal tonight.",
+      "keyPriceLevels": "Radar only unless Taiwan-local flow turns strong tomorrow.",
+      "riskNotes": "Could remain momentum-only.",
+      "lastUpdatedTime": "2026-06-02T20:16:16+08:00",
+      "status": "Waiting"
     }
   ],
   "ideaPipeline": [
     {
-      "id": "idea-nvda",
-      "newsId": "news-us-ai-capex",
-      "themeId": "theme-us-ai-capex",
-      "supplyChainNodeId": "node-nvda",
-      "companyResearchId": "company-nvda",
+      "id": "idea-nvda-tsmc",
+      "newsId": "news-nvda-fresh",
+      "themeId": "theme-ai-platform",
+      "supplyChainNodeId": "node-tsmc",
+      "companyResearchId": "company-tsmc",
       "finalView": "Positive",
-      "explanation": "美股 AI capex 先看 NVIDIA，再看它如何傳導到台股製造與基建鏈。"
+      "explanation": "Strong Nvidia results keep TSMC as the first Taiwan read-through name."
     },
     {
-      "id": "idea-avgo",
-      "newsId": "news-us-ai-capex",
-      "themeId": "theme-us-ai-capex",
-      "supplyChainNodeId": "node-avgo",
-      "companyResearchId": "company-avgo",
+      "id": "idea-dell-odm",
+      "newsId": "news-dell-fresh",
+      "themeId": "theme-tw-odm",
+      "supplyChainNodeId": "node-quanta",
+      "companyResearchId": "company-quanta",
       "finalView": "Positive",
-      "explanation": "Broadcom 是 ASIC 與 AI networking 的第二條美股主線。"
+      "explanation": "Dell backlog and guidance support Taiwan rack and server assembly names."
     },
     {
-      "id": "idea-winbond",
-      "newsId": "news-tw-memory",
-      "themeId": "theme-tw-memory-panel",
-      "supplyChainNodeId": "node-winbond",
-      "companyResearchId": "company-winbond",
+      "id": "idea-wistron-fresh",
+      "newsId": "news-wistron-fresh",
+      "themeId": "theme-tw-odm",
+      "supplyChainNodeId": "node-wistron",
+      "companyResearchId": "company-wistron",
       "finalView": "Positive",
-      "explanation": "華邦電有記憶體報價與毛利改善邏輯，比純題材股證據更硬。"
+      "explanation": "Fresh company-specific signal made Wistron one of the best Taiwan additions tonight."
     },
     {
-      "id": "idea-innolux",
-      "newsId": "news-tw-panel-foplp",
-      "themeId": "theme-tw-memory-panel",
-      "supplyChainNodeId": "node-innolux",
-      "companyResearchId": "company-innolux",
-      "finalView": "Neutral",
-      "explanation": "群創題材強，但需區分 FOPLP 轉型與面板本業改善。"
+      "id": "idea-wiwynn-rack",
+      "newsId": "news-wiwynn-fresh",
+      "themeId": "theme-tw-odm",
+      "supplyChainNodeId": "node-wiwynn",
+      "companyResearchId": "company-wiwynn",
+      "finalView": "Positive",
+      "explanation": "Wiwynn remains one of the cleanest ways to express rack-level AI demand."
     },
     {
-      "id": "idea-hannstar",
-      "newsId": "news-momentum-control",
-      "themeId": "theme-tw-memory-panel",
-      "supplyChainNodeId": "node-hannstar",
-      "companyResearchId": "company-hannstar",
-      "finalView": "Neutral",
-      "explanation": "彩晶進雷達，但目前更偏 momentum-only，需要訂單或財報證據升級。"
-    },
-    {
-      "id": "idea-compal",
-      "newsId": "news-tw-odm",
-      "themeId": "theme-tw-ai-infra",
+      "id": "idea-compal-upgrade",
+      "newsId": "news-compal-fresh",
+      "themeId": "theme-tw-odm",
       "supplyChainNodeId": "node-compal",
       "companyResearchId": "company-compal",
       "finalView": "Neutral",
-      "explanation": "仁寶是 AI server 轉型低基期候選，重點看月營收與毛利。"
+      "explanation": "Compal is improving, but still needs more earnings proof to move into the top tier."
     },
     {
-      "id": "idea-delta",
-      "newsId": "news-tw-cooling-power",
-      "themeId": "theme-tw-ai-infra",
-      "supplyChainNodeId": "node-delta",
-      "companyResearchId": "company-delta",
-      "finalView": "Positive",
-      "explanation": "台達電連到 AI data center 電源與散熱，是台股基建層核心。"
+      "id": "idea-memory-us-tw",
+      "newsId": "news-micron-fresh",
+      "themeId": "theme-memory",
+      "supplyChainNodeId": "node-winbond",
+      "companyResearchId": "company-winbond",
+      "finalView": "Neutral",
+      "explanation": "Micron is a fresh catalyst, but Taiwan memory names still need local confirmation."
     },
     {
-      "id": "idea-accton",
-      "newsId": "news-tw-pcb-optics",
-      "themeId": "theme-tw-ai-infra",
+      "id": "idea-accton-bcm",
+      "newsId": "news-broadcom-context",
+      "themeId": "theme-infra",
       "supplyChainNodeId": "node-accton",
       "companyResearchId": "company-accton",
       "finalView": "Positive",
-      "explanation": "智邦對應 AI networking 與高速交換器，是美股網通 read-through 的台股受惠者。"
+      "explanation": "Broadcom and cluster-growth commentary keep networking as a valid second-order winner."
     },
     {
-      "id": "idea-pltr",
-      "newsId": "news-us-software-cloud",
-      "themeId": "theme-us-ai-capex",
-      "supplyChainNodeId": "node-pltr",
-      "companyResearchId": "company-pltr",
+      "id": "idea-delta-power",
+      "newsId": "news-power-context",
+      "themeId": "theme-infra",
+      "supplyChainNodeId": "node-delta",
+      "companyResearchId": "company-delta",
       "finalView": "Positive",
-      "explanation": "PLTR 代表 AI 應用層 monetization，可檢查 AI 硬體投資是否轉成實際 workflow 收入。"
+      "explanation": "Power scarcity and grid costs keep Delta strategically relevant."
     },
     {
-      "id": "idea-panjit",
-      "newsId": "news-tw-cooling-power",
-      "themeId": "theme-tw-ai-infra",
-      "supplyChainNodeId": "node-panjit",
-      "companyResearchId": "company-panjit",
+      "id": "idea-foxconn-scale",
+      "newsId": "news-foxconn-context",
+      "themeId": "theme-tw-odm",
+      "supplyChainNodeId": "node-foxconn",
+      "companyResearchId": "company-foxconn",
       "finalView": "Positive",
-      "explanation": "強茂把 AI server 電源、MOSFET、車用與機器人串成台股功率元件主線。"
+      "explanation": "Foxconn is showing that AI scale can improve mix and margins, not just revenue."
     },
     {
-      "id": "idea-tsc",
-      "newsId": "news-tw-cooling-power",
-      "themeId": "theme-tw-ai-infra",
-      "supplyChainNodeId": "node-tsc",
-      "companyResearchId": "company-tsc",
+      "id": "idea-panel-radar",
+      "newsId": "news-panel-lowsignal",
+      "themeId": "theme-macro-fx",
+      "supplyChainNodeId": "node-compal",
+      "companyResearchId": "company-compal",
       "finalView": "Neutral",
-      "explanation": "台半進入功率元件固定雷達，但需要訂單、毛利與高階產品占比驗證。"
+      "explanation": "Panel names were intentionally left out of the main thesis because evidence quality is lower tonight."
     }
   ],
   "marketSections": {
     "us": {
       "region": "US",
-      "title": "美股今晚觀察",
-      "overview": "台北晚上版本先做美股全市場掃描：大盤、SOX、利率、美元、AI capex、軟體 monetization、資料中心基建、財報、指引、分析師調整與政策訊號，再由當晚證據決定哪些公司進入主報。",
-      "sentiment": "Bullish",
+      "title": "US Setup Tonight",
+      "overview": "The US scan favors AI leaders again, but with more nuance than a simple GPU chase. Nvidia, Micron and Dell provide fresh catalysts; Oracle and Broadcom provide strong recent context; rates and the utility/power debate remain the key valuation and breadth constraint.",
+      "sentiment": "Neutral",
       "keyIndexes": [
         "S&P 500",
         "Nasdaq",
@@ -1495,120 +1623,122 @@
         "WTI"
       ],
       "topThemes": [
-        "今晚美股盤前情緒",
-        "全市場新催化掃描",
-        "雲端 capex / monetization",
-        "利率美元與估值風險",
-        "明日台股 read-through"
+        "Fresh AI catalyst follow-through",
+        "Memory and custom silicon strength",
+        "Cloud monetization proof",
+        "Power bottlenecks vs valuation risk"
       ],
       "importantNewsIds": [
-        "news-us-ai-capex",
-        "news-us-rates-risk",
-        "news-us-software-cloud"
+        "news-nvda-fresh",
+        "news-micron-fresh",
+        "news-dell-fresh",
+        "news-oracle-context",
+        "news-broadcom-context",
+        "news-power-context"
       ],
       "stocksToWatch": [
         "NVDA",
-        "MSFT",
         "AVGO",
-        "MU",
-        "DELL",
-        "VRT",
-        "PLTR",
-        "GOOGL",
-        "AMZN",
         "ORCL",
-        "SNOW"
+        "DELL",
+        "MU",
+        "VRT",
+        "GEV",
+        "VST",
+        "CEG"
       ],
       "risks": [
-        "晚間版本是美股事件前設定，不應直接等同已發生結果。",
-        "若美股開盤後走勢反轉，隔日台股 read-through 需在早報重新驗證。"
+        "Higher yields can compress expensive AI leaders even if fundamentals remain strong.",
+        "If the market shifts from growth to macro defense, second-order AI names can underperform first.",
+        "A large part of tonight's setup is already known, so follow-through matters more than the headline itself."
       ]
     },
     "taiwan": {
       "region": "Taiwan",
-      "title": "明日台股預判",
-      "overview": "台北晚上版本不把台股當成當下可交易市場，而是整理美股今晚若發生特定催化，隔日可能影響的台股族群與驗證點。",
-      "sentiment": "Bullish",
+      "title": "Taiwan Next-Day Hypotheses",
+      "overview": "Taiwan is closed for the evening, so every conclusion here is a hypothesis for the next cash session. The strongest potential read-through is continued leadership from TSMC and AI-server ODMs, then broadening into Delta, Accton and selected memory names. Panel, shipping, steel, financials and biotech were scanned and remain lower-priority tonight.",
+      "sentiment": "Neutral",
       "keyIndexes": [
         "TAIEX",
         "TPEx",
-        "TWD",
-        "外資",
-        "成交量",
-        "處置股"
+        "USDTWD",
+        "Foreign flow",
+        "Turnover",
+        "Monthly sales"
       ],
       "topThemes": [
-        "美股今晚對台股的可能傳導",
-        "AI server / 半導體隔日觀察",
-        "記憶體與功率元件延伸",
-        "題材股隔日風險控管"
+        "ODM leadership",
+        "Foundry and advanced packaging support",
+        "Memory follow-through",
+        "Power and networking breadth"
       ],
       "importantNewsIds": [
-        "news-tw-memory",
-        "news-tw-panel-foplp",
-        "news-tw-odm",
-        "news-tw-cooling-power",
-        "news-tw-pcb-optics",
-        "news-tw-monthly-sales"
+        "news-wistron-fresh",
+        "news-wiwynn-fresh",
+        "news-compal-fresh",
+        "news-foxconn-context",
+        "news-tsmc-context",
+        "news-twd-context"
       ],
       "stocksToWatch": [
         "2330.TW",
-        "2344.TW",
-        "3481.TW",
-        "6116.TW",
-        "2324.TW",
+        "2317.TW",
         "2382.TW",
+        "3231.TW",
         "6669.TW",
+        "2324.TW",
         "2308.TW",
-        "3017.TW",
         "2345.TW",
-        "2481.TW",
-        "5425.TW"
+        "2344.TW",
+        "2408.TW",
+        "2481.TW"
       ],
       "risks": [
-        "隔日預判必須等美股收盤、台股開盤量價與本地新聞驗證。",
-        "晚上不應用台股預判取代隔天早上的台股作戰版。"
+        "Taiwan-dollar strength can limit exporter enthusiasm.",
+        "Tomorrow's opening flow could stay concentrated in the largest names and skip the hidden beneficiaries.",
+        "Panel and lower-quality concept names can attract speculative money, but evidence remains weaker than core AI infrastructure names."
       ]
     },
     "crossMarket": [
       {
         "id": "cross-nvda-tsmc",
-        "title": "NVIDIA AI 平台 -> 台積電 / ODM / 散熱",
-        "usCatalyst": "NVIDIA AI capex 與平台更新",
-        "taiwanReadThrough": "台積電、廣達、緯穎、鴻海、奇鋐、台達電受 read-through 影響。",
+        "title": "Nvidia results to Taiwan foundry and ODMs",
+        "usCatalyst": "Nvidia's latest growth confirms hyperscaler AI spending is still expanding.",
+        "taiwanReadThrough": "First read-through is TSMC, then Quanta, Foxconn, Wistron and Wiwynn as build partners.",
         "relatedUSTickers": [
           "NVDA"
         ],
         "relatedTaiwanTickers": [
           "2330.TW",
+          "2317.TW",
           "2382.TW",
-          "6669.TW",
-          "3017.TW",
-          "2308.TW"
+          "3231.TW",
+          "6669.TW"
         ],
         "evidenceStrength": "High"
       },
       {
-        "id": "cross-avgo-accton",
-        "title": "Broadcom AI networking -> 智邦 / 光通訊",
-        "usCatalyst": "Broadcom ASIC 與 AI networking",
-        "taiwanReadThrough": "智邦、眾達、聯亞、波若威等高速網通與光通訊鏈進入雷達。",
+        "id": "cross-broadcom-net",
+        "title": "Broadcom custom silicon to Taiwan networking and ASIC names",
+        "usCatalyst": "Broadcom keeps ASIC and AI-networking momentum intact.",
+        "taiwanReadThrough": "That supports Accton and keeps Taiwan ASIC/IP discussion alive for MediaTek, GUC and Alchip.",
         "relatedUSTickers": [
-          "AVGO"
+          "AVGO",
+          "MRVL"
         ],
         "relatedTaiwanTickers": [
           "2345.TW",
-          "4977.TW",
-          "3081.TW",
-          "3163.TW"
+          "2454.TW",
+          "3443.TW",
+          "3661.TW"
         ],
         "evidenceStrength": "Medium"
       },
       {
-        "id": "cross-mu-memory",
-        "title": "Micron / HBM -> 台股記憶體",
-        "usCatalyst": "HBM、DRAM 與資料中心 SSD 需求",
-        "taiwanReadThrough": "華邦電、南亞科、旺宏、群聯需從報價、毛利與庫存角度追蹤。",
+        "id": "cross-micron-memory",
+        "title": "Micron guidance to Taiwan memory radar",
+        "usCatalyst": "Micron's raised outlook keeps the memory branch of the AI trade constructive.",
+        "taiwanReadThrough": "Winbond, Nanya, Macronix and Phison become more relevant tomorrow, but evidence quality is still lower than for core AI compute names.",
         "relatedUSTickers": [
           "MU"
         ],
@@ -1618,125 +1748,240 @@
           "2337.TW",
           "8299.TW"
         ],
-        "evidenceStrength": "High"
+        "evidenceStrength": "Medium"
       },
       {
-        "id": "cross-dell-odm",
-        "title": "Dell AI server -> 台股 ODM",
-        "usCatalyst": "AI server backlog 與企業硬體需求",
-        "taiwanReadThrough": "廣達、緯穎、仁寶、英業達、神達要看營收占比與毛利。",
+        "id": "cross-oracle-power",
+        "title": "Oracle and cloud demand to power and cooling names",
+        "usCatalyst": "Cloud-AI demand strengthens the need for data-center power, cooling and grid investment.",
+        "taiwanReadThrough": "Taiwan power and cooling names like Delta, AVC and Shuang Hong stay credible second-order beneficiaries.",
+        "relatedUSTickers": [
+          "ORCL",
+          "VRT",
+          "GEV",
+          "VST",
+          "CEG"
+        ],
+        "relatedTaiwanTickers": [
+          "2308.TW",
+          "3017.TW",
+          "3324.TW",
+          "6282.TW"
+        ],
+        "evidenceStrength": "Medium"
+      },
+      {
+        "id": "cross-dell-compal",
+        "title": "Dell backlog to Taiwan lower-base ODM opportunities",
+        "usCatalyst": "Dell backlog and growth targets confirm demand for complete AI systems.",
+        "taiwanReadThrough": "That helps validate lower-base names such as Compal, but only if Taiwan investors believe margins can improve too.",
         "relatedUSTickers": [
           "DELL"
         ],
         "relatedTaiwanTickers": [
-          "2382.TW",
-          "6669.TW",
           "2324.TW",
-          "2356.TW",
-          "3706.TW"
+          "3231.TW"
         ],
-        "evidenceStrength": "High"
+        "evidenceStrength": "Medium"
       }
     ],
     "scanCoverage": [
       {
         "id": "scan-us-index",
         "market": "US",
-        "category": "美股大盤 / 利率 / 美元 / 油價",
+        "category": "US indexes, rates, dollar and oil",
         "status": "Recent context",
         "tickersChecked": [
           "SPY",
           "QQQ",
-          "SOXX"
+          "SOXX",
+          "US10Y",
+          "DXY",
+          "WTI"
         ],
-        "reason": "每天先確認市場風險偏好與估值壓力。",
+        "reason": "Checked the macro tape first because valuation sensitivity is still the main risk to expensive AI leaders.",
         "priority": "High"
       },
       {
-        "id": "scan-us-ai",
+        "id": "scan-us-ai-semiconductors",
         "market": "US",
-        "category": "美股 AI 半導體 / 雲端 / 硬體基建",
+        "category": "US AI semiconductors",
         "status": "Fresh catalyst",
         "tickersChecked": [
           "NVDA",
-          "MSFT",
           "AVGO",
-          "MU",
-          "DELL",
-          "VRT"
+          "AMD",
+          "ARM",
+          "MRVL"
         ],
-        "reason": "AI capex 是美股主軸，但要同步追 monetization。",
+        "reason": "Nvidia and Micron provided fresh signal, while Broadcom kept custom silicon demand strong.",
         "priority": "High"
       },
       {
-        "id": "scan-us-ai-software",
+        "id": "scan-us-memory",
         "market": "US",
-        "category": "美股 AI 應用層 / 軟體 monetization",
+        "category": "US memory and storage",
         "status": "Fresh catalyst",
         "tickersChecked": [
-          "PLTR",
-          "SNOW",
-          "DDOG",
-          "MDB",
-          "CRM",
-          "NOW",
-          "ORCL"
+          "MU",
+          "WDC",
+          "STX"
         ],
-        "reason": "用軟體收入與企業 adoption 驗證 AI capex 是否能回收。",
+        "reason": "Micron provided the freshest direct memory signal tonight.",
         "priority": "High"
       },
       {
-        "id": "scan-us-megacap",
+        "id": "scan-us-cloud",
         "market": "US",
-        "category": "美股 Magnificent 7 / hyperscaler",
+        "category": "US hyperscalers and cloud platforms",
         "status": "Recent context",
         "tickersChecked": [
           "MSFT",
-          "GOOGL",
           "AMZN",
+          "GOOGL",
           "META",
-          "AAPL",
-          "TSLA"
+          "ORCL"
         ],
-        "reason": "大客戶 capex、雲端毛利與自研 ASIC 會傳導到半導體與台股供應鏈。",
+        "reason": "Checked whether AI capex still has credible cloud monetization support.",
         "priority": "High"
       },
       {
-        "id": "scan-us-energy-power",
+        "id": "scan-us-software",
         "market": "US",
-        "category": "美股電力 / 公用事業 / 資料中心能源",
+        "category": "US enterprise AI software",
         "status": "Recent context",
         "tickersChecked": [
-          "ETN",
-          "GEV",
-          "CEG",
-          "NEE",
-          "VST",
-          "PWR"
+          "ORCL",
+          "PLTR",
+          "NOW",
+          "CRM",
+          "SNOW",
+          "DDOG",
+          "MDB"
         ],
-        "reason": "AI data center 的限制常在電力、變壓器、配電與能源供給。",
+        "reason": "Scanned the software layer to avoid treating AI capex as purely a hardware story.",
         "priority": "Medium"
       },
       {
-        "id": "scan-us-cyber-defense",
+        "id": "scan-us-servers",
         "market": "US",
-        "category": "美股資安 / 國防科技 / 政府 AI",
+        "category": "US server and infrastructure OEMs",
+        "status": "Fresh catalyst",
+        "tickersChecked": [
+          "DELL",
+          "HPE",
+          "SMCI",
+          "VRT"
+        ],
+        "reason": "Dell provided a fresh demand read-through, while infrastructure names remain tied to deployment pace.",
+        "priority": "High"
+      },
+      {
+        "id": "scan-us-power",
+        "market": "US",
+        "category": "US utilities, power and grid",
+        "status": "Recent context",
+        "tickersChecked": [
+          "VST",
+          "CEG",
+          "GEV",
+          "ETN",
+          "PWR",
+          "BE"
+        ],
+        "reason": "Power-demand bottlenecks remain a major second-order AI theme.",
+        "priority": "High"
+      },
+      {
+        "id": "scan-us-defense",
+        "market": "US",
+        "category": "US cyber, defense and government AI",
         "status": "Background thesis",
         "tickersChecked": [
+          "PLTR",
           "CRWD",
           "PANW",
-          "NET",
-          "PLTR",
-          "LMT",
-          "RTX"
+          "RTX",
+          "LMT"
         ],
-        "reason": "政府 AI、國防科技與資安預算是 AI 應用層的另一條線。",
+        "reason": "Scanned for breadth, but no stronger same-day catalyst than core AI infrastructure.",
         "priority": "Medium"
+      },
+      {
+        "id": "scan-tw-foundry",
+        "market": "Taiwan",
+        "category": "Taiwan foundry and advanced packaging",
+        "status": "Fresh catalyst",
+        "tickersChecked": [
+          "2330.TW",
+          "3711.TW",
+          "2454.TW"
+        ],
+        "reason": "TSMC remains the first Taiwan read-through from any strong US AI session.",
+        "priority": "High"
+      },
+      {
+        "id": "scan-tw-odm",
+        "market": "Taiwan",
+        "category": "Taiwan AI server ODMs",
+        "status": "Fresh catalyst",
+        "tickersChecked": [
+          "2317.TW",
+          "2382.TW",
+          "3231.TW",
+          "6669.TW",
+          "2324.TW",
+          "4938.TW"
+        ],
+        "reason": "This bucket had the strongest combined evidence from company updates and US read-through.",
+        "priority": "High"
+      },
+      {
+        "id": "scan-tw-cooling",
+        "market": "Taiwan",
+        "category": "Taiwan cooling and thermal names",
+        "status": "Recent context",
+        "tickersChecked": [
+          "3017.TW",
+          "3324.TW",
+          "3653.TW",
+          "6282.TW"
+        ],
+        "reason": "Scanned because power density remains central to AI deployments.",
+        "priority": "High"
+      },
+      {
+        "id": "scan-tw-power",
+        "market": "Taiwan",
+        "category": "Taiwan power management and electrical efficiency",
+        "status": "Recent context",
+        "tickersChecked": [
+          "2308.TW",
+          "2301.TW",
+          "2481.TW",
+          "5425.TW"
+        ],
+        "reason": "The AI factory theme keeps power and efficiency names relevant as hidden beneficiaries.",
+        "priority": "High"
+      },
+      {
+        "id": "scan-tw-networking",
+        "market": "Taiwan",
+        "category": "Taiwan networking and optics",
+        "status": "Recent context",
+        "tickersChecked": [
+          "2345.TW",
+          "4977.TW",
+          "3081.TW",
+          "3163.TW"
+        ],
+        "reason": "Broadcom and rack-scale AI commentary keep this group in the active radar.",
+        "priority": "High"
       },
       {
         "id": "scan-tw-memory",
         "market": "Taiwan",
-        "category": "台股記憶體 / 儲存",
+        "category": "Taiwan memory and storage",
         "status": "Fresh catalyst",
         "tickersChecked": [
           "2344.TW",
@@ -1744,207 +1989,93 @@
           "2337.TW",
           "8299.TW"
         ],
-        "reason": "記憶體報價與財報改善使此族群升級到主報候選。",
+        "reason": "Micron created the freshest cross-market memory signal.",
         "priority": "High"
       },
       {
-        "id": "scan-tw-panel",
+        "id": "scan-tw-asic",
         "market": "Taiwan",
-        "category": "面板 / FOPLP / SpaceX",
+        "category": "Taiwan IC design, ASIC and IP",
+        "status": "Recent context",
+        "tickersChecked": [
+          "2454.TW",
+          "3035.TW",
+          "3443.TW",
+          "3661.TW",
+          "4966.TW"
+        ],
+        "reason": "Checked for Broadcom and custom-silicon read-through into Taiwan design names.",
+        "priority": "Medium"
+      },
+      {
+        "id": "scan-tw-pcb",
+        "market": "Taiwan",
+        "category": "Taiwan PCB, CCL and substrates",
+        "status": "Background thesis",
+        "tickersChecked": [
+          "2383.TW",
+          "2368.TW",
+          "3037.TW",
+          "3189.TW"
+        ],
+        "reason": "Still structurally relevant, but not the strongest same-night signal bucket.",
+        "priority": "Medium"
+      },
+      {
+        "id": "scan-tw-panels",
+        "market": "Taiwan",
+        "category": "Taiwan panels, FOPLP and LEO concepts",
         "status": "Momentum only",
         "tickersChecked": [
           "3481.TW",
           "2409.TW",
           "6116.TW"
         ],
-        "reason": "題材熱度高，但需區分本業改善與純動能。",
+        "reason": "Scanned because these names can become hot quickly, but evidence quality is weaker tonight.",
         "priority": "High"
       },
       {
-        "id": "scan-tw-odm",
+        "id": "scan-tw-robotics",
         "market": "Taiwan",
-        "category": "AI server ODM",
-        "status": "Fresh catalyst",
-        "tickersChecked": [
-          "2382.TW",
-          "6669.TW",
-          "2317.TW",
-          "2324.TW",
-          "2356.TW",
-          "3706.TW"
-        ],
-        "reason": "從龍頭擴散到低基期轉型股，需看月營收與毛利。",
-        "priority": "High"
-      },
-      {
-        "id": "scan-tw-cooling",
-        "market": "Taiwan",
-        "category": "散熱 / 液冷 / 電源",
-        "status": "Recent context",
-        "tickersChecked": [
-          "3017.TW",
-          "3324.TW",
-          "3653.TW",
-          "2308.TW",
-          "2301.TW",
-          "6282.TW"
-        ],
-        "reason": "AI 建置瓶頸下沉，是台股二三層核心掃描區。",
-        "priority": "High"
-      },
-      {
-        "id": "scan-tw-power-components",
-        "market": "Taiwan",
-        "category": "功率元件 / MOSFET / SiC / 車用",
-        "status": "Fresh catalyst",
-        "tickersChecked": [
-          "2481.TW",
-          "5425.TW",
-          "3675.TW",
-          "6435.TW",
-          "6693.TW",
-          "8261.TW",
-          "5285.TW",
-          "6548.TW"
-        ],
-        "reason": "AI server 電源效率、車用與供給吃緊讓功率元件成為固定掃描分類。",
-        "priority": "High"
-      },
-      {
-        "id": "scan-tw-pcb-optics",
-        "market": "Taiwan",
-        "category": "PCB / CCL / 光通訊",
-        "status": "Recent context",
-        "tickersChecked": [
-          "2383.TW",
-          "2368.TW",
-          "3037.TW",
-          "3189.TW",
-          "2345.TW",
-          "4977.TW"
-        ],
-        "reason": "AI cluster 擴建會傳導到高速網路與材料。",
-        "priority": "Medium"
-      },
-      {
-        "id": "scan-tw-ic-design",
-        "market": "Taiwan",
-        "category": "IC 設計 / ASIC / IP / 車用 IC",
-        "status": "Recent context",
-        "tickersChecked": [
-          "2454.TW",
-          "3034.TW",
-          "3661.TW",
-          "3443.TW",
-          "5274.TW",
-          "4966.TW"
-        ],
-        "reason": "AI edge、ASIC、車用與高速傳輸會帶動 IC 設計輪動。",
-        "priority": "Medium"
-      },
-      {
-        "id": "scan-tw-passives",
-        "market": "Taiwan",
-        "category": "被動元件 / MLCC / 電感 / 石英元件",
+        "category": "Taiwan robotics and industrial automation",
         "status": "Background thesis",
         "tickersChecked": [
-          "2327.TW",
-          "2492.TW",
-          "3026.TW",
-          "6173.TW",
-          "3042.TW"
-        ],
-        "reason": "AI server、車用與電源升級會增加被動元件規格與用量。",
-        "priority": "Medium"
-      },
-      {
-        "id": "scan-tw-robotics-auto",
-        "market": "Taiwan",
-        "category": "機器人 / 自動化 / 車電",
-        "status": "Background thesis",
-        "tickersChecked": [
-          "2359.TW",
           "2049.TW",
           "1590.TW",
-          "2231.TW",
-          "1536.TW"
+          "1536.TW",
+          "2359.TW"
         ],
-        "reason": "AI 從資料中心擴散到機器人與智慧製造時，台股零組件可能輪動。",
-        "priority": "Medium"
+        "reason": "The long-term AI-to-industry theme is valid, but there is not enough fresh catalyst tonight.",
+        "priority": "Low"
       },
       {
-        "id": "scan-tw-aerospace-defense",
+        "id": "scan-tw-cyclicals",
         "market": "Taiwan",
-        "category": "航太 / 軍工 / 低軌衛星",
-        "status": "Momentum only",
-        "tickersChecked": [
-          "2634.TW",
-          "8033.TW",
-          "2314.TW",
-          "6285.TW",
-          "3491.TW"
-        ],
-        "reason": "政策、衛星與國防題材容易形成資金行情，但證據要分層。",
-        "priority": "Medium"
-      },
-      {
-        "id": "scan-tw-financials",
-        "market": "Taiwan",
-        "category": "金融 / 壽險 / 高股息",
-        "status": "Recent context",
-        "tickersChecked": [
-          "2881.TW",
-          "2882.TW",
-          "2884.TW",
-          "2885.TW",
-          "2886.TW"
-        ],
-        "reason": "利率、匯率、股債市與殖利率資金會影響台股非科技主流。",
-        "priority": "Medium"
-      },
-      {
-        "id": "scan-tw-cyclical",
-        "market": "Taiwan",
-        "category": "航運 / 鋼鐵 / 原物料 / 能源",
-        "status": "Background thesis",
+        "category": "Taiwan shipping, steel and petrochemicals",
+        "status": "No signal",
         "tickersChecked": [
           "2603.TW",
           "2609.TW",
           "2002.TW",
           "1301.TW",
-          "1303.TW",
           "6505.TW"
         ],
-        "reason": "若油價、運價或政策催化轉強，非科技循環股要升級主報。",
+        "reason": "Scanned intentionally so the report is not AI-only, but no fresh catalyst won tonight.",
         "priority": "Medium"
       },
       {
-        "id": "scan-tw-biotech-policy",
+        "id": "scan-tw-fin-biotech",
         "market": "Taiwan",
-        "category": "生技 / 醫材 / 政策受惠",
-        "status": "Background thesis",
-        "tickersChecked": [
-          "6446.TW",
-          "4743.TW",
-          "4162.TW",
-          "1598.TW",
-          "4128.TW"
-        ],
-        "reason": "新藥、醫材、政策補助與法說催化常和科技股不同步。",
-        "priority": "Medium"
-      },
-      {
-        "id": "scan-tw-non-tech",
-        "market": "Taiwan",
-        "category": "金融 / 航運 / 原物料 / 生技",
-        "status": "Background thesis",
+        "category": "Taiwan financials and biotech",
+        "status": "No signal",
         "tickersChecked": [
           "2881.TW",
-          "2603.TW",
-          "2002.TW",
-          "6446.TW"
+          "2882.TW",
+          "2886.TW",
+          "6446.TW",
+          "4743.TW"
         ],
-        "reason": "每天掃描但只有出現新催化或資金主流時升級主報。",
+        "reason": "Checked for policy, rates and rotation, but tonight they remain lower-priority than AI-linked groups.",
         "priority": "Medium"
       }
     ]
