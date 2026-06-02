@@ -27,12 +27,24 @@ export function CompanyResearchPage() {
 
       <div className="mb-4 grid gap-2 rounded-2xl border border-white/10 bg-white/[0.045] p-3 md:grid-cols-3">
         <SelectFilter label="市場" value={marketFilter} options={['All', 'US', 'Taiwan']} onChange={setMarketFilter} />
-        <SelectFilter label="階段" value={stageFilter} options={['All', 'Early', 'Confirming', 'Crowded', 'Late', 'Avoid/Wait']} onChange={setStageFilter} />
+        <SelectFilter
+          label="階段"
+          value={stageFilter}
+          options={[
+            { value: 'All', label: '全部' },
+            { value: 'Early', label: opportunityStageLabel.Early },
+            { value: 'Confirming', label: opportunityStageLabel.Confirming },
+            { value: 'Crowded', label: opportunityStageLabel.Crowded },
+            { value: 'Late', label: opportunityStageLabel.Late },
+            { value: 'Avoid/Wait', label: opportunityStageLabel['Avoid/Wait'] },
+          ]}
+          onChange={setStageFilter}
+        />
         <SelectFilter
           label="證據"
           value={evidenceFilter}
           options={[
-            { value: 'All', label: 'All' },
+            { value: 'All', label: '全部' },
             { value: 'A', label: evidenceGradeLabel.A },
             { value: 'B', label: evidenceGradeLabel.B },
             { value: 'C', label: evidenceGradeLabel.C },
