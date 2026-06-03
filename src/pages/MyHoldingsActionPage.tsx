@@ -1,3 +1,4 @@
+import { useState, type FormEvent } from 'react';
 import portfolio from '../../data/portfolio.json';
 import { Badge } from '../components/Badge';
 import { Card } from '../components/Card';
@@ -38,9 +39,38 @@ const actionLabels: Record<HoldingAction, string> = {
   'Needs Update': '需要今日分析',
 };
 
+const HOLDINGS_PASSWORD = '0866';
+const HOLDINGS_UNLOCK_KEY = 'holdings-page-unlocked';
+
 export function MyHoldingsActionPage() {
+  const [isUnlocked, setIsUnlocked] = useState(() => sessionStorage.getItem(HOLDINGS_UNLOCK_KEY) === 'true');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const holdings = portfolio.holdings as PortfolioHolding[];
   const rows = holdings.map((holding) => buildHoldingAction(holding));
+
+  if (!isUnlocked) {
+    return (
+      <HoldingsLock
+        error={error}
+        password={password}
+        onPasswordChange={(value) => {
+          setPassword(value.replace(/\D/g, '').slice(0, 4));
+          setError('');
+        }}
+        onSubmit={(event) => {
+          event.preventDefault();
+          if (password === HOLDINGS_PASSWORD) {
+            sessionStorage.setItem(HOLDINGS_UNLOCK_KEY, 'true');
+            setIsUnlocked(true);
+            setError('');
+            return;
+          }
+          setError('密碼錯誤，請輸入 4 位數密碼。');
+        }}
+      />
+    );
+  }
 
   return (
     <div>
@@ -102,6 +132,56 @@ export function MyHoldingsActionPage() {
           </Card>
         ))}
       </div>
+    </div>
+  );
+}
+
+function HoldingsLock({
+  error,
+  password,
+  onPasswordChange,
+  onSubmit,
+}: {
+  error: string;
+  password: string;
+  onPasswordChange: (value: string) => void;
+  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+}) {
+  return (
+    <div>
+      <SectionHeader
+        eyebrow="Private"
+        title="持股頁面已鎖定"
+        description="這一頁包含個人持股清單；請輸入 4 位數密碼後查看。"
+      />
+
+      <Card title="輸入密碼" eyebrow="Holdings Lock">
+        <form className="space-y-4" onSubmit={onSubmit}>
+          <label className="block text-sm text-slate-300">
+            4 位數密碼
+            <input
+              autoComplete="off"
+              className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-center text-2xl tracking-[0.5em] text-white outline-none transition focus:border-cyan-300/60"
+              inputMode="numeric"
+              maxLength={4}
+              pattern="\d{4}"
+              type="password"
+              value={password}
+              onChange={(event) => onPasswordChange(event.target.value)}
+            />
+          </label>
+          {error ? <p className="text-sm text-rose-200">{error}</p> : null}
+          <button
+            className="w-full rounded-2xl bg-cyan-300 px-4 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+            type="submit"
+          >
+            解鎖持股頁
+          </button>
+          <p className="text-xs leading-5 text-slate-500">
+            這是分享網頁時的基本隱藏，不是銀行等級安全。真正私密資料不要放在公開靜態網站。
+          </p>
+        </form>
+      </Card>
     </div>
   );
 }
