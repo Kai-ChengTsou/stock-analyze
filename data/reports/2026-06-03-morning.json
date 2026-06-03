@@ -1,6 +1,6 @@
 {
   "date": "2026-06-03",
-  "generatedAt": "2026-06-03T09:02:50+08:00",
+  "generatedAt": "2026-06-03T12:01:07+08:00",
   "reportMode": "morning",
   "reportTitle": "台股今日作戰版",
   "reportFocus": "台灣時間早上、台股開盤前的作戰版：用昨夜美股與同日盤前訊號，映射今日台股供應鏈與風控。",
@@ -2164,6 +2164,404 @@
       "invalidationConditions": "若散熱族群轉弱或公司營收無法跟進。"
     }
   ],
+  "tradingPlans": [
+    {
+      "id": "plan-c-accton",
+      "ticker": "2345.TW",
+      "companyName": "智邦",
+      "marketCountry": "台灣",
+      "actionToday": "Buy on Breakout",
+      "conviction": "Emerging",
+      "rationale": "MRVL / AVGO AI networking 題材直接映射台股智邦。",
+      "entryZone": "等放量突破近期壓力並站穩，不追無量開高。由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若 AI networking 訂單或美股 MRVL/AVGO 表現轉弱。",
+      "positionSizing": "試單 1-3%；突破確認後才考慮加碼。",
+      "riskReward": "至少要求潛在上行大於失效下行 2:1，否則降為 Watch。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "今日 fresh catalyst 讓智邦相對其他網通更重要。",
+        "若美股 networking 題材回落，智邦容易跟著震盪。"
+      ],
+      "avoidConditions": [
+        "若 AI networking 訂單或美股 MRVL/AVGO 表現轉弱。",
+        "客戶集中",
+        "產品切換"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若 AI networking 訂單或美股 MRVL/AVGO 表現轉弱。",
+      "linkedCatalysts": [
+        "AI networking",
+        "資料中心交換器與網通設備",
+        "今日 fresh catalyst 讓智邦相對其他網通更重要。"
+      ]
+    },
+    {
+      "id": "plan-c-quanta",
+      "ticker": "2382.TW",
+      "companyName": "廣達",
+      "marketCountry": "台灣",
+      "actionToday": "Buy on Pullback",
+      "conviction": "Crowded",
+      "rationale": "HPE 與美股 AI server 訊號直接指向台灣 ODM 龍頭。",
+      "entryZone": "等拉回到短線支撐或 VWAP 附近且量縮守穩。由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若 AI server 出貨放緩或毛利率低於預期。",
+      "positionSizing": "試單 1-2%；不追高成核心部位。",
+      "riskReward": "至少要求潛在上行大於失效下行 2:1，否則降為 Watch。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "企業端 AI server demand 若擴散，廣達仍是明顯受益者。",
+        "市場已高度認同，追價需等量價與月營收確認。"
+      ],
+      "avoidConditions": [
+        "若 AI server 出貨放緩或毛利率低於預期。",
+        "毛利率",
+        "客戶集中"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若 AI server 出貨放緩或毛利率低於預期。",
+      "linkedCatalysts": [
+        "AI server ODM",
+        "AI server、整機櫃與雲端伺服器 ODM",
+        "企業端 AI server demand 若擴散，廣達仍是明顯受益者。"
+      ]
+    },
+    {
+      "id": "plan-c-nyc",
+      "ticker": "2408.TW",
+      "companyName": "南亞科",
+      "marketCountry": "台灣",
+      "actionToday": "Buy on Pullback",
+      "conviction": "Emerging",
+      "rationale": "DRAM 報價與記憶體資金輪動使南亞科成為今日重要觀察。",
+      "entryZone": "等拉回到短線支撐或 VWAP 附近且量縮守穩。由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若 DRAM 價格漲勢放緩或同業指引轉弱。",
+      "positionSizing": "試單 1-3%；記憶體報價和量價同步確認才加碼。",
+      "riskReward": "至少要求潛在上行大於失效下行 2:1，否則降為 Watch。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "受益較直接但仍需注意產業循環反轉。",
+        "波段漲幅後需看量價與法人買盤。"
+      ],
+      "avoidConditions": [
+        "若 DRAM 價格漲勢放緩或同業指引轉弱。",
+        "DRAM 報價",
+        "庫存"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若 DRAM 價格漲勢放緩或同業指引轉弱。",
+      "linkedCatalysts": [
+        "DRAM",
+        "DRAM 製造與記憶體循環受益",
+        "受益較直接但仍需注意產業循環反轉。"
+      ]
+    },
+    {
+      "id": "plan-c-winbond",
+      "ticker": "2344.TW",
+      "companyName": "華邦電",
+      "marketCountry": "台灣",
+      "actionToday": "Buy on Pullback",
+      "conviction": "Emerging",
+      "rationale": "記憶體循環改善與低基期資金使華邦電進入今日主雷達。",
+      "entryZone": "等拉回到短線支撐或 VWAP 附近且量縮守穩。由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若記憶體報價轉弱或月營收未改善。",
+      "positionSizing": "試單 1-3%；若爆量長黑則取消。",
+      "riskReward": "至少要求潛在上行大於失效下行 2:1，否則降為 Watch。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "需用報價、月營收與毛利率驗證，不只靠 AI 題材。",
+        "低價記憶體容易過熱，避免追爆量。"
+      ],
+      "avoidConditions": [
+        "若記憶體報價轉弱或月營收未改善。",
+        "報價反轉",
+        "庫存"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若記憶體報價轉弱或月營收未改善。",
+      "linkedCatalysts": [
+        "Memory",
+        "DRAM、NOR Flash 與記憶體製造",
+        "需用報價、月營收與毛利率驗證，不只靠 AI 題材。"
+      ]
+    },
+    {
+      "id": "plan-c-tsmc",
+      "ticker": "2330.TW",
+      "companyName": "台積電",
+      "marketCountry": "台灣",
+      "actionToday": "Watch",
+      "conviction": "High Conviction",
+      "rationale": "台股早盤最直接承接美股 AI 半導體與 NVIDIA road map read-through。",
+      "entryZone": "今日不設定主動買點。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若美股半導體轉弱或外資大幅調節權值股。",
+      "positionSizing": "0%；等權值買盤和外資方向確認。",
+      "riskReward": "未達可承擔風險報酬，先不投入資金。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "美股 AI 主線與 Computex 脈絡支撐，但需看台股開盤量價。",
+        "高權值，若外資買盤不足，指數易開高震盪。"
+      ],
+      "avoidConditions": [
+        "若美股半導體轉弱或外資大幅調節權值股。",
+        "地緣政治",
+        "高 capex"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若美股半導體轉弱或外資大幅調節權值股。",
+      "linkedCatalysts": [
+        "Foundry / CoWoS",
+        "先進製程、CoWoS、AI accelerator 代工核心",
+        "美股 AI 主線與 Computex 脈絡支撐，但需看台股開盤量價。"
+      ]
+    },
+    {
+      "id": "plan-c-avc",
+      "ticker": "3017.TW",
+      "companyName": "奇鋐",
+      "marketCountry": "台灣",
+      "actionToday": "Buy on Pullback",
+      "conviction": "Crowded",
+      "rationale": "AI server 功耗提升讓散熱仍是台股核心供應鏈。",
+      "entryZone": "等拉回到短線支撐或 VWAP 附近且量縮守穩。由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若液冷導入速度或毛利率低於市場預期。",
+      "positionSizing": "試單 1-2%；散熱族群擁擠，嚴禁追開高。",
+      "riskReward": "至少要求潛在上行大於失效下行 2:1，否則降為 Watch。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "受益主題明確，但股價通常反映速度快。",
+        "散熱龍頭交易擁擠，追高需嚴控。"
+      ],
+      "avoidConditions": [
+        "若液冷導入速度或毛利率低於市場預期。",
+        "估值",
+        "競爭"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若液冷導入速度或毛利率低於市場預期。",
+      "linkedCatalysts": [
+        "Cooling / liquid cooling",
+        "伺服器散熱、液冷模組與熱管理",
+        "受益主題明確，但股價通常反映速度快。"
+      ]
+    },
+    {
+      "id": "plan-c-elite-material",
+      "ticker": "2383.TW",
+      "companyName": "台光電",
+      "marketCountry": "台灣",
+      "actionToday": "Buy on Breakout",
+      "conviction": "Emerging",
+      "rationale": "AI networking 與 server 擴建對高速板材需求持續。",
+      "entryZone": "等放量突破近期壓力並站穩，不追無量開高。由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若高速材料需求或月營收低於預期。",
+      "positionSizing": "試單 1-3%；需 CCL/PCB 族群同步放量。",
+      "riskReward": "至少要求潛在上行大於失效下行 2:1，否則降為 Watch。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "MRVL 題材可帶動 CCL/PCB 第二層 read-through。",
+        "市場認同度高，需看報價與產能利用率。"
+      ],
+      "avoidConditions": [
+        "若高速材料需求或月營收低於預期。",
+        "原料成本",
+        "客戶認證"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若高速材料需求或月營收低於預期。",
+      "linkedCatalysts": [
+        "CCL / high-speed material",
+        "高階銅箔基板與 AI server 高速材料",
+        "MRVL 題材可帶動 CCL/PCB 第二層 read-through。"
+      ]
+    },
+    {
+      "id": "plan-c-elaser",
+      "ticker": "4977.TW",
+      "companyName": "眾達-KY",
+      "marketCountry": "台灣",
+      "actionToday": "Watch",
+      "conviction": "Speculative",
+      "rationale": "MRVL 題材使光模組成為今日台股重要 read-through。",
+      "entryZone": "今日不設定主動買點。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若光通訊族群無法跟隨 MRVL 題材放量。",
+      "positionSizing": "0%；等光通訊族群量價延續。",
+      "riskReward": "未達可承擔風險報酬，先不投入資金。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "證據來自產業題材與量價，需避免過度外推。",
+        "中小型股波動高，需看成交量延續。"
+      ],
+      "avoidConditions": [
+        "若光通訊族群無法跟隨 MRVL 題材放量。",
+        "流動性",
+        "訂單能見度"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若光通訊族群無法跟隨 MRVL 題材放量。",
+      "linkedCatalysts": [
+        "Optical module",
+        "光收發模組與資料中心光通訊",
+        "證據來自產業題材與量價，需避免過度外推。"
+      ]
+    },
+    {
+      "id": "plan-c-mrvl",
+      "ticker": "MRVL",
+      "companyName": "Marvell Technology",
+      "marketCountry": "美國",
+      "actionToday": "Watch",
+      "conviction": "Crowded",
+      "rationale": "Jensen Huang 評論讓 MRVL 成為今日 fresh catalyst，台股光通訊與網通連動度高。",
+      "entryZone": "今日不設定主動買點。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若 MRVL 漲勢無法延續或 AI networking 訂單證據不足。",
+      "positionSizing": "0%；急漲後等回測或盤中承接。",
+      "riskReward": "未達可承擔風險報酬，先不投入資金。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "市場重新定價 AI networking 與 ASIC 第二主線。",
+        "急漲後需防回吐；若量價轉弱會拖累台股光通訊。"
+      ],
+      "avoidConditions": [
+        "若 MRVL 漲勢無法延續或 AI networking 訂單證據不足。",
+        "估值擴張過快",
+        "客戶集中"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若 MRVL 漲勢無法延續或 AI networking 訂單證據不足。",
+      "linkedCatalysts": [
+        "ASIC / optical interconnect",
+        "資料中心 custom silicon、DSP、光互連與網路晶片",
+        "市場重新定價 AI networking 與 ASIC 第二主線。"
+      ]
+    },
+    {
+      "id": "plan-c-nvda",
+      "ticker": "NVDA",
+      "companyName": "NVIDIA",
+      "marketCountry": "美國",
+      "actionToday": "Watch",
+      "conviction": "Crowded",
+      "rationale": "美股 AI 主線續強時仍是台股 read-through 的第一源頭。",
+      "entryZone": "今日不設定主動買點。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若 Blackwell 交付放慢、客戶 capex 下修或出口管制擴大。",
+      "positionSizing": "0%；作方向指標，不用晨報情緒追價。",
+      "riskReward": "未達可承擔風險報酬，先不投入資金。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "美股創高與 Computex 後 AI factory 敘事延續，但今日不是單一新財報催化。",
+        "高評價且擁擠，適合作為方向指標，不適合用台股早盤情緒追高。"
+      ],
+      "avoidConditions": [
+        "若 Blackwell 交付放慢、客戶 capex 下修或出口管制擴大。",
+        "出口管制",
+        "ASIC 替代"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若 Blackwell 交付放慢、客戶 capex 下修或出口管制擴大。",
+      "linkedCatalysts": [
+        "AI accelerator / networking",
+        "GPU、Blackwell / Rubin 平台與 AI networking 規格制定者",
+        "美股創高與 Computex 後 AI factory 敘事延續，但今日不是單一新財報催化。"
+      ]
+    },
+    {
+      "id": "plan-c-hannstar",
+      "ticker": "6116.TW",
+      "companyName": "彩晶",
+      "marketCountry": "台灣",
+      "actionToday": "Avoid",
+      "conviction": "Avoid",
+      "rationale": "近期有面板與低軌衛星題材熱度，但證據品質偏量價。",
+      "entryZone": "今日不設定主動買點。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若公司未釋出實質訂單且量價轉弱。",
+      "positionSizing": "0%；只列雷達，避免低證據題材追高。",
+      "riskReward": "未達可承擔風險報酬，先不投入資金。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "填入雷達以避免漏看資金主流，但標示 Avoid/Wait。",
+        "低價題材股容易受處置與隔日開高走低影響。"
+      ],
+      "avoidConditions": [
+        "若公司未釋出實質訂單且量價轉弱。",
+        "處置風險",
+        "題材真偽"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若公司未釋出實質訂單且量價轉弱。",
+      "linkedCatalysts": [
+        "Panel / momentum",
+        "中小尺寸面板與題材股",
+        "填入雷達以避免漏看資金主流，但標示 Avoid/Wait。"
+      ]
+    },
+    {
+      "id": "plan-c-innolux",
+      "ticker": "3481.TW",
+      "companyName": "群創",
+      "marketCountry": "台灣",
+      "actionToday": "Watch",
+      "conviction": "Speculative",
+      "rationale": "面板/FOPLP 題材仍有資金熱度，但應與 AI 基本面分開標示。",
+      "entryZone": "今日不設定主動買點。",
+      "supportLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "resistanceLevel": "由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。",
+      "invalidationLevel": "若 FOPLP 或玻璃基板缺乏正式驗證且股價爆量轉弱。",
+      "positionSizing": "0%；等 FOPLP/玻璃基板有正式驗證。",
+      "riskReward": "未達可承擔風險報酬，先不投入資金。",
+      "timeHorizon": "1-10 個交易日，若催化失效或量價反轉即重新評估。",
+      "confirmationSignals": [
+        "列為弱訊號與量價觀察，不升級成高信心基本面。",
+        "題材交易熱，若沒有正式訂單容易回落。"
+      ],
+      "avoidConditions": [
+        "若 FOPLP 或玻璃基板缺乏正式驗證且股價爆量轉弱。",
+        "面板報價",
+        "題材落空"
+      ],
+      "bullCase": "新催化延續，量價與基本面驗證同步出現。",
+      "baseCase": "列入今日研究與觀察，等待更多營收、毛利或訂單證據。",
+      "bearCase": "若 FOPLP 或玻璃基板缺乏正式驗證且股價爆量轉弱。",
+      "linkedCatalysts": [
+        "Panel / FOPLP",
+        "面板、先進封裝轉型與玻璃基板題材",
+        "列為弱訊號與量價觀察，不升級成高信心基本面。"
+      ]
+    }
+  ],
   "watchlist": [
     {
       "id": "watch-c-nvda",
@@ -2173,7 +2571,7 @@
       "keyNews": "美股創高與 Computex 後 AI factory 敘事延續，但今日不是單一新財報催化。",
       "keyPriceLevels": "高評價且擁擠，適合作為方向指標，不適合用台股早盤情緒追高。",
       "riskNotes": "出口管制、ASIC 替代、交付延遲、高估值",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Watching"
     },
     {
@@ -2184,7 +2582,7 @@
       "keyNews": "市場重新定價 AI networking 與 ASIC 第二主線。",
       "keyPriceLevels": "急漲後需防回吐；若量價轉弱會拖累台股光通訊。",
       "riskNotes": "估值擴張過快、客戶集中、光通訊需求不如預期",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Watching"
     },
     {
@@ -2195,7 +2593,7 @@
       "keyNews": "盤後財報強化 AI server 需求不只來自 hyperscaler 的論點。",
       "keyPriceLevels": "財報後若開高回落，表示市場仍質疑毛利與訂單品質。",
       "riskNotes": "毛利率壓力、企業 IT 預算波動、競爭激烈",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Watching"
     },
     {
@@ -2206,7 +2604,7 @@
       "keyNews": "近期仍是 NVIDIA 以外最重要的 AI 半導體平台股之一。",
       "keyPriceLevels": "估值已反映高成長，財報前後波動風險大。",
       "riskNotes": "客戶集中、VMware 整合、估值",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Watching"
     },
     {
@@ -2217,7 +2615,7 @@
       "keyNews": "HBM 與 DRAM 循環仍是近一週重要脈絡。",
       "keyPriceLevels": "記憶體股波動大，報價與庫存循環反轉會快速改變評價。",
       "riskNotes": "報價反轉、供給擴張、庫存回補結束",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Watching"
     },
     {
@@ -2228,7 +2626,7 @@
       "keyNews": "對硬體供應鏈是需求支撐，也是自由現金流壓力提醒。",
       "keyPriceLevels": "若 AI capex 被視為拖累 FCF，雲端與硬體鏈估值都會受壓。",
       "riskNotes": "AI 投資回收期、反壟斷、廣告景氣",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Waiting"
     },
     {
@@ -2239,7 +2637,7 @@
       "keyNews": "美股 AI 主線與 Computex 脈絡支撐，但需看台股開盤量價。",
       "keyPriceLevels": "高權值，若外資買盤不足，指數易開高震盪。",
       "riskNotes": "地緣政治、高 capex、匯率、CoWoS 瓶頸",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Watching"
     },
     {
@@ -2250,7 +2648,7 @@
       "keyNews": "企業端 AI server demand 若擴散，廣達仍是明顯受益者。",
       "keyPriceLevels": "市場已高度認同，追價需等量價與月營收確認。",
       "riskNotes": "毛利率、客戶集中、估值擁擠",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Watching"
     },
     {
@@ -2261,7 +2659,7 @@
       "keyNews": "與廣達同屬台股 AI server 高信心但高估值群。",
       "keyPriceLevels": "高本益比與高股價使波動放大。",
       "riskNotes": "客戶集中、供應瓶頸、估值",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Watching"
     },
     {
@@ -2272,7 +2670,7 @@
       "keyNews": "較廣達/緯穎更大盤與多元，但 AI server 毛利貢獻仍需驗證。",
       "keyPriceLevels": "若消費電子拖累或 AI server 毛利不清楚，股價彈性受限。",
       "riskNotes": "iPhone 循環、毛利率、資本支出",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Watching"
     },
     {
@@ -2283,7 +2681,7 @@
       "keyNews": "需要用月營收與毛利率證明 AI server 轉型，而非只跟題材。",
       "keyPriceLevels": "低基期有彈性，但基本面證據低於龍頭。",
       "riskNotes": "PC 本業、毛利率、轉型速度",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Researching"
     },
     {
@@ -2294,7 +2692,7 @@
       "keyNews": "列為 radar-only 到早期之間，需等待更明確訂單與獲利訊號。",
       "keyPriceLevels": "題材彈性高但證據品質不如一線 ODM。",
       "riskNotes": "訂單能見度、毛利率、流動性",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Researching"
     },
     {
@@ -2305,7 +2703,7 @@
       "keyNews": "仍需清楚區分 PC 本業與 AI server 新業務。",
       "keyPriceLevels": "較適合觀察，不應直接套用廣達估值。",
       "riskNotes": "PC 需求、AI server 占比低、毛利率",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Researching"
     },
     {
@@ -2316,7 +2714,7 @@
       "keyNews": "近期 power/cooling 是 AI 建置瓶頸主題，屬高品質但非低估值。",
       "keyPriceLevels": "估值不便宜，若資料中心訂單無新增會整理。",
       "riskNotes": "估值、匯率、產品組合",
-      "lastUpdatedTime": "2026-06-03T09:02:50+08:00",
+      "lastUpdatedTime": "2026-06-03T12:01:07+08:00",
       "status": "Watching"
     }
   ],
