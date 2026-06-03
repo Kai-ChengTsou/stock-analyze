@@ -4,18 +4,27 @@
       "ticker": "0050.TW",
       "companyName": "元大台灣50",
       "marketCountry": "Taiwan",
+      "quantity": null,
+      "averageCost": null,
+      "targetWeight": null,
       "notes": "核心 ETF 部位"
     },
     {
       "ticker": "6770.TW",
       "companyName": "力積電",
       "marketCountry": "Taiwan",
+      "quantity": null,
+      "averageCost": null,
+      "targetWeight": null,
       "notes": "目前持有部位"
     },
     {
       "ticker": "2308.TW",
       "companyName": "台達電",
       "marketCountry": "Taiwan",
+      "quantity": null,
+      "averageCost": null,
+      "targetWeight": null,
       "notes": "目前持有部位"
     }
   ]

@@ -4,17 +4,31 @@ import { Card } from '../components/Card';
 import { SectionHeader } from '../components/SectionHeader';
 import { TickerChip } from '../components/TickerChip';
 import { dailyReport } from '../data/report';
-import type { CompanyResearch, TradingPlan } from '../types/research';
+import type { CompanyResearch, Impact, TradingPlan } from '../types/research';
 import { finalViewLabel } from '../utils/format';
 
 interface PortfolioHolding {
   ticker: string;
   companyName: string;
   marketCountry: string;
+  quantity?: number | null;
+  averageCost?: number | null;
+  targetWeight?: string | null;
   notes?: string;
 }
 
 type HoldingAction = 'Keep' | 'Add Only If' | 'Trim' | 'Exit / Avoid' | 'Needs Update';
+
+interface EvidenceSummary {
+  relatedNews: string[];
+  supplySignals: string[];
+  beneficiarySignals: string[];
+  riskSignals: string[];
+  marketSignals: string[];
+  positiveCount: number;
+  negativeCount: number;
+  freshCount: number;
+}
 
 const actionLabels: Record<HoldingAction, string> = {
   Keep: '續抱',
@@ -66,6 +80,13 @@ export function MyHoldingsActionPage() {
               <Info label="部位建議" value={row.positionSizing} />
             </div>
 
+            <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.035] p-3">
+              <p className="text-sm font-semibold text-cyan-100">今日研究依據</p>
+              <EvidenceGroup label="新聞/催化" values={row.evidence.relatedNews} />
+              <EvidenceGroup label="供應鏈/受惠" values={[...row.evidence.supplySignals, ...row.evidence.beneficiarySignals]} />
+              <EvidenceGroup label="市場/風險" values={[...row.evidence.marketSignals, ...row.evidence.riskSignals]} />
+            </div>
+
             {row.company ? (
               <div className="mt-4 grid gap-3 md:grid-cols-3">
                 <Case title="Bull case" value={row.company.bullCase} tone="text-emerald-200" />
@@ -88,18 +109,20 @@ export function MyHoldingsActionPage() {
 function buildHoldingAction(holding: PortfolioHolding) {
   const tradingPlan = dailyReport.tradingPlans?.find((plan) => sameTicker(plan.ticker, holding.ticker));
   const company = dailyReport.companyResearch.find((item) => sameTicker(item.ticker, holding.ticker));
+  const evidence = collectEvidence(holding, company);
 
   if (tradingPlan) {
-    return fromTradingPlan(holding, tradingPlan, company);
+    return fromTradingPlan(holding, tradingPlan, company, evidence);
   }
 
   if (company) {
-    return fromCompanyResearch(holding, company);
+    return fromCompanyResearch(holding, company, evidence);
   }
 
   return {
     holding,
     company: undefined,
+    evidence,
     action: 'Needs Update' as HoldingAction,
     rationale: `${holding.companyName} 目前不在今日 companyResearch 或 tradingPlans 裡。下一次 automation 應強制針對持股清單補上今日價格區、支撐壓力與失效條件。`,
     actionDetail: '暫不新增部位，等 automation 補齊今日分析。',
@@ -108,15 +131,18 @@ function buildHoldingAction(holding: PortfolioHolding) {
     resistanceLevel: '需要今日 K 線/前高/套牢區更新。',
     invalidationLevel: '若 automation 無法取得資料，維持觀察。',
     positionSizing: '0%；等待今日分析。',
-    dataStatus: '未在今日報告找到對應研究。這不是賣出訊號，是資料不足訊號。',
+    dataStatus: evidence.relatedNews.length || evidence.marketSignals.length
+      ? '未在今日公司/交易計畫找到完整研究，但已列出可用的新聞、市場與風險線索。'
+      : '未在今日報告找到對應研究。這不是賣出訊號，是資料不足訊號。',
   };
 }
 
-function fromTradingPlan(holding: PortfolioHolding, plan: TradingPlan, company?: CompanyResearch) {
-  const action = mapPlanAction(plan.actionToday);
+function fromTradingPlan(holding: PortfolioHolding, plan: TradingPlan, company: CompanyResearch | undefined, evidence: EvidenceSummary) {
+  const action = refineAction(mapPlanAction(plan.actionToday), evidence);
   return {
     holding,
     company,
+    evidence,
     action,
     rationale: plan.rationale,
     actionDetail: `${plan.actionToday}：${plan.confirmationSignals.join('；')}`,
@@ -125,22 +151,24 @@ function fromTradingPlan(holding: PortfolioHolding, plan: TradingPlan, company?:
     resistanceLevel: plan.resistanceLevel,
     invalidationLevel: plan.invalidationLevel,
     positionSizing: plan.positionSizing,
-    dataStatus: '已讀取今日 tradingPlans，這是優先使用的持股行動資料。',
+    dataStatus: '已整合今日 tradingPlans、companyResearch、新聞、供應鏈、受惠/受害與市場風險。tradingPlans 只負責價格執行層。',
   };
 }
 
-function fromCompanyResearch(holding: PortfolioHolding, company: CompanyResearch) {
-  const action: HoldingAction = company.finalView === 'Negative' || company.suggestedAction === 'Avoid'
+function fromCompanyResearch(holding: PortfolioHolding, company: CompanyResearch, evidence: EvidenceSummary) {
+  const baseAction: HoldingAction = company.finalView === 'Negative' || company.suggestedAction === 'Avoid'
     ? 'Exit / Avoid'
     : company.opportunityStage === 'Crowded' || company.opportunityStage === 'Late'
       ? 'Trim'
       : company.suggestedAction === 'Watch'
         ? 'Add Only If'
         : 'Keep';
+  const action = refineAction(baseAction, evidence);
 
   return {
     holding,
     company,
+    evidence,
     action,
     rationale: company.whyItMattersToday ?? company.overview,
     actionDetail: `${finalViewLabel[company.finalView]}；${company.suggestedAction}`,
@@ -149,8 +177,58 @@ function fromCompanyResearch(holding: PortfolioHolding, company: CompanyResearch
     resistanceLevel: '今日 tradingPlans 未提供，需由 automation 補最新壓力。',
     invalidationLevel: company.invalidationConditions ?? company.whatWouldChangeView,
     positionSizing: action === 'Trim' ? '若已超出原定比重，可分批降回目標部位。' : '未提供成本與持股比重，先不建議擴大部位。',
-    dataStatus: '未找到專屬 tradingPlan，暫用 companyResearch 推導。下一次 automation 應補上精確價格區。',
+    dataStatus: '未找到專屬 tradingPlan，因此用 companyResearch、新聞、供應鏈、受惠/受害與風險綜合推導。下一次 automation 應補上精確價格區。',
   };
+}
+
+function collectEvidence(holding: PortfolioHolding, company?: CompanyResearch): EvidenceSummary {
+  const ticker = normalizeTicker(holding.ticker);
+  const relatedNewsItems = dailyReport.news.filter((item) =>
+    item.relatedTickers.some((relatedTicker) => sameTicker(relatedTicker, ticker)),
+  );
+  const supplyNodes = dailyReport.supplyChain.filter((node) => sameTicker(node.ticker, ticker));
+  const beneficiarySignals = dailyReport.beneficiaries.flatMap((beneficiary) => {
+    const details = beneficiary.details?.filter((detail) => sameTicker(detail.ticker, ticker)) ?? [];
+    const directMatch = beneficiary.directBeneficiaries.some((item) => sameTicker(item, ticker));
+    const indirectMatch = beneficiary.indirectBeneficiaries.some((item) => sameTicker(item, ticker));
+    const hiddenMatch = beneficiary.hiddenBeneficiaries.some((item) => sameTicker(item, ticker));
+    const hurtMatch = beneficiary.companiesMayBeHurt.some((item) => sameTicker(item, ticker));
+    const signals = details.map((detail) => `${detail.type}: ${detail.linkage}`);
+    if (directMatch) signals.push(`Direct beneficiary: ${beneficiary.reasoning}`);
+    if (indirectMatch) signals.push(`Indirect beneficiary: ${beneficiary.reasoning}`);
+    if (hiddenMatch) signals.push(`Hidden beneficiary: ${beneficiary.reasoning}`);
+    if (hurtMatch) signals.push(`Potential loser: ${beneficiary.reasoning}`);
+    return signals;
+  });
+  const marketSignals = [
+    ...(dailyReport.marketSections?.taiwan.stocksToWatch.some((item) => sameTicker(item, ticker)) ? [dailyReport.marketSections.taiwan.overview] : []),
+    ...(dailyReport.marketSections?.us.stocksToWatch.some((item) => sameTicker(item, ticker)) ? [dailyReport.marketSections.us.overview] : []),
+    ...(dailyReport.marketSections?.crossMarket
+      .filter((link) => [...link.relatedTaiwanTickers, ...link.relatedUSTickers].some((item) => sameTicker(item, ticker)))
+      .map((link) => `${link.title}: ${link.taiwanReadThrough}`) ?? []),
+  ];
+  const riskSignals = [
+    ...(company?.keyRisks ?? []),
+    ...(dailyReport.risks?.filter((risk) => mentionsTickerOrCompany(risk.description, holding, company)).map((risk) => risk.description) ?? []),
+  ];
+
+  return {
+    relatedNews: relatedNewsItems.map((item) => `${impactText(item.impact)} ${item.title}`).slice(0, 4),
+    supplySignals: supplyNodes.map((node) => `${node.companyName}: ${node.whyItMayBenefit}`).slice(0, 3),
+    beneficiarySignals: beneficiarySignals.slice(0, 4),
+    riskSignals: riskSignals.slice(0, 4),
+    marketSignals: marketSignals.slice(0, 3),
+    positiveCount: relatedNewsItems.filter((item) => item.impact === 'Positive').length,
+    negativeCount: relatedNewsItems.filter((item) => item.impact === 'Negative').length,
+    freshCount: relatedNewsItems.filter((item) => item.freshness === 'Fresh catalyst').length,
+  };
+}
+
+function refineAction(action: HoldingAction, evidence: EvidenceSummary): HoldingAction {
+  if (evidence.negativeCount > evidence.positiveCount && action === 'Add Only If') return 'Keep';
+  if (evidence.negativeCount > 0 && action === 'Keep') return 'Trim';
+  if (evidence.freshCount > 0 && evidence.positiveCount > evidence.negativeCount && action === 'Trim') return 'Keep';
+  return action;
 }
 
 function mapPlanAction(action: TradingPlan['actionToday']): HoldingAction {
@@ -170,6 +248,16 @@ function normalizeTicker(ticker: string) {
   return trimmed;
 }
 
+function mentionsTickerOrCompany(text: string, holding: PortfolioHolding, company?: CompanyResearch) {
+  return text.includes(holding.ticker) || text.includes(holding.companyName) || (company ? text.includes(company.companyName) : false);
+}
+
+function impactText(impact: Impact) {
+  if (impact === 'Positive') return '正面';
+  if (impact === 'Negative') return '負面';
+  return '中性';
+}
+
 function badgeTone(action: HoldingAction) {
   if (action === 'Keep' || action === 'Add Only If') return 'Positive';
   if (action === 'Trim') return 'Neutral';
@@ -181,6 +269,29 @@ function Info({ label, value }: { label: string; value: string }) {
     <div className="rounded-xl border border-white/10 bg-slate-950/40 p-3">
       <p className="text-xs text-slate-500">{label}</p>
       <p className="mt-1 text-sm leading-6 text-slate-200">{value}</p>
+    </div>
+  );
+}
+
+function EvidenceGroup({ label, values }: { label: string; values: string[] }) {
+  if (values.length === 0) {
+    return (
+      <div className="mt-3">
+        <p className="text-xs text-slate-500">{label}</p>
+        <p className="mt-1 text-sm text-slate-500">今日沒有直接訊號。</p>
+      </div>
+    );
+  }
+  return (
+    <div className="mt-3">
+      <p className="text-xs text-slate-500">{label}</p>
+      <div className="mt-2 space-y-2">
+        {values.map((value) => (
+          <p key={value} className="rounded-lg border border-white/10 bg-slate-950/35 px-3 py-2 text-sm leading-6 text-slate-300">
+            {value}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }
