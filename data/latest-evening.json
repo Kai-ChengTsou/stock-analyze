@@ -1,336 +1,388 @@
 {
   "date": "2026-06-03",
-  "generatedAt": "2026-06-03T01:00:42+08:00",
+  "generatedAt": "2026-06-03T20:07:19+08:00",
   "reportMode": "evening",
-  "reportTitle": "美股今晚觀察版",
-  "reportFocus": "晚上版本以美股今晚觀察為主：先掃全市場新聞、價格、財報、總經與產業鏈訊號，再挑出真正重要的公司與明日台股 read-through 預判。",
-  "marketOverview": "晚上版本以美股今晚觀察為主：先掃全市場新聞、價格、財報、總經與產業鏈訊號，再挑出真正重要的公司與明日台股 read-through 預判。 本版報告採全市場掃描框架：先分開掃美股與台股，再用跨市場連動推導供應鏈。保留 12 則重要訊號與 16 家公司研究，涵蓋美股 AI capex、AI 應用層、雲端與半導體，以及台股記憶體、面板/FOPLP、AI server ODM、散熱電源、功率元件、PCB、光通訊與非科技雷達。",
+  "reportTitle": "AI 投資研究儀表板：美股今晚觀察版",
+  "reportFocus": "台灣晚間，美股開盤前與財報前風控；同時建立隔日台股 read-through。",
+  "marketOverview": "本次掃描 56 個候選發展，選出 10 則高影響訊號、5 則 fresh catalysts、3 則近期脈絡，建立 26 家 companyResearch 與 12 筆 tradingPlans。資金流向 memory/HBM、ASIC/networking、資料中心 power/cooling 與台灣 AI 供應鏈，但龍頭高位階使「追價」不如「等確認」。",
   "marketSentiment": "Bullish",
   "topThemes": [
-    "美股今晚盤前/開盤設定",
-    "全市場新催化與資金流向",
-    "AI / 半導體 / 雲端 capex 驗證",
-    "明日台股 read-through 預判",
-    "利率美元與估值風險"
+    "HBM / DRAM 供給緊縮",
+    "ASIC / AI networking",
+    "資料中心電力與冷卻",
+    "Foundry / advanced packaging",
+    "Cloud capex ROI 驗證"
   ],
   "stocksToWatch": [
-    "NVDA",
-    "MSFT",
     "AVGO",
     "MU",
-    "PLTR",
-    "DELL",
-    "2330.TW",
-    "2344.TW",
-    "3481.TW",
-    "6116.TW",
-    "2324.TW",
+    "NVDA",
+    "MRVL",
+    "VRT",
+    "0050.TW",
     "2308.TW",
+    "6770.TW",
+    "2408.TW",
     "2345.TW",
-    "2481.TW",
-    "5425.TW"
+    "2383.TW"
   ],
-  "biggestRisk": "最大風險是把市場熱度誤判成基本面。美股要防 AI capex ROI 與高估值壓縮；台股要防處置股、低價題材股、面板與記憶體循環反轉，以及 AI server 轉型公司毛利沒有跟上營收。",
+  "biggestRisk": "最大風險是 AI 主線仍強但短線過度擁擠；若美股 AI leader 或台股供應鏈開高後跌破 VWAP / 前高，應把追價視為 bull trap。",
   "watchlistAlerts": [
-    "晚上主軸：美股還沒完整收盤，所以先掃全市場新聞、盤前價格、財報/數據事件、產業鏈訊號與隔日台股預判。",
-    "公司研究不是固定名單：只有當新聞、價格、財報、產業鏈或資金流讓公司今天變重要，才升級成主報。",
-    "AI 軟體、半導體、雲端、電力、能源、金融、消費與防禦股都要先掃；主題權重由當晚催化決定。",
-    "資料中心基建若成為主流，要把電力、散熱、能源、功率元件與台股供應鏈 read-through 分開標註。",
-    "隔日台股預判只列假設，不當成結論；隔天早報需用美股收盤、台股開盤量價與本地新聞重新驗證。"
+    "Fresh catalysts：TrendForce HBM 價格權、SK hynix 長期供給不足、AVGO 財報前 ASIC 驗證、持股強制檢查。",
+    "Recent context：Computex 後 NVIDIA road map、資料中心 power/cooling、出口管制。",
+    "Background thesis：AI agents 與 enterprise AI 軟體是 capex ROI 的需求端驗證。",
+    "Rejected / low signal：面板/FOPLP/低軌衛星題材未有正式訂單前只列投機雷達。"
   ],
-  "emotionalWarning": "每天先問：這是新催化、近期脈絡、背景論點，還是純動能？不要因為某檔很紅就直接當成基本面轉強，也不要因為它不是 AI 龍頭就漏掉市場主流。",
+  "emotionalWarning": "今天不要把「AI 很強」直接翻譯成「所有 AI 股都能買」。若股價高於短均太多、量能失衡或開高走低，持股以守支撐與分批調節優先。",
   "news": [
     {
-      "id": "news-us-ai-capex",
-      "title": "【美股新催化】AI capex 仍是美股科技股主軸，但市場開始要求投資回報證據",
-      "source": "Morning market scan / Reuters-style synthesis",
+      "id": "fresh-trendforce-hbm-pricing",
+      "title": "【新催化】TrendForce 指出 HBM 供給偏緊，2027 合約價具倍數上行空間",
+      "source": "TrendForce, 2026-06-02",
       "date": "2026-06-03",
-      "summary": "美股大型科技、AI 半導體與資料中心基礎設施仍是晨報第一層掃描重點。判斷不只看 NVIDIA 或單一 GPU 新聞，也要看 hyperscaler capex、雲端毛利、AI server backlog、電力與散熱瓶頸是否同時支撐。",
+      "summary": "HBM 仍是 AI training 與 inference 的核心瓶頸，AI ASIC 容量從 96/192GB 往 216/288GB 升級，使 HBM wafer input 持續排擠傳統 DRAM。資金會繼續尋找 HBM、先進封裝、測試、矽中介層與成熟 DRAM 補位受惠者。",
+      "relatedTickers": [
+        "MU",
+        "NVDA",
+        "AVGO",
+        "2330.TW",
+        "3711.TW",
+        "2408.TW",
+        "2344.TW",
+        "6770.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "High",
+      "freshness": "Fresh catalyst",
+      "evidenceGrade": "A",
+      "opportunityStage": "Confirming",
+      "catalystDriver": "Supply-chain",
+      "whyMarketCares": "這是官方產業研究機構的新資料，直接影響 AI memory capex 與台股記憶體供應鏈定價。",
+      "pricedIn": "MU 與台股記憶體短線已反映部分漲價預期，需用量價判斷是否過熱。",
+      "confirms": "DRAM 報價、月營收與 HBM 客戶長約同步上修。",
+      "invalidates": "報價漲幅放緩或記憶體股爆量長黑。"
+    },
+    {
+      "id": "fresh-sk-hynix-capacity",
+      "title": "【新催化】SK hynix 董事長稱 AI memory shortage 可能延續至 2030 並規劃五年內倍增 wafer capacity",
+      "source": "Tom’s Hardware / Computex comments, 2026-06-02",
+      "date": "2026-06-03",
+      "summary": "供給端即使擴產也需要多年，代表 HBM 與 server DRAM 價格權力仍在供應商手上；台灣成熟製程 DRAM、封測與先進封裝補位邏輯升溫。",
+      "relatedTickers": [
+        "MU",
+        "2408.TW",
+        "2344.TW",
+        "2337.TW",
+        "6770.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "High",
+      "freshness": "Fresh catalyst",
+      "evidenceGrade": "B",
+      "opportunityStage": "Confirming",
+      "catalystDriver": "Fundamental",
+      "whyMarketCares": "供給瓶頸把 AI 資本開支從 GPU 擴散到 memory 與成熟製程產能。",
+      "pricedIn": "記憶體題材已有擁擠化，拉回量縮比追高更健康。",
+      "confirms": "台股記憶體成交量擴大且守住前高。",
+      "invalidates": "報價轉跌或籌碼過熱後跌破 20 日線。"
+    },
+    {
+      "id": "fresh-avgo-earnings-watch",
+      "title": "【新催化】Broadcom 財報前，ASIC / networking / Google AI capex 成為今晚美股主線",
+      "source": "Yahoo Finance / market reports, 2026-06-03",
+      "date": "2026-06-03",
+      "summary": "AVGO 財報會驗證 custom silicon、AI networking 與 hyperscaler capex 的實際強度；台股 read-through 對創意、世芯、智邦、台光電、金像電與台積電重要。",
+      "relatedTickers": [
+        "AVGO",
+        "GOOGL",
+        "MRVL",
+        "2330.TW",
+        "3443.TW",
+        "3661.TW",
+        "2345.TW",
+        "2383.TW"
+      ],
+      "impact": "Positive",
+      "confidence": "Medium",
+      "freshness": "Fresh catalyst",
+      "evidenceGrade": "B",
+      "opportunityStage": "Confirming",
+      "catalystDriver": "Fundamental",
+      "whyMarketCares": "GPU 之外的 ASIC 是 AI capex 第二條主線。",
+      "pricedIn": "AVGO 與 ASIC 台股已不便宜，財報後若只符合預期可能利多出盡。",
+      "confirms": "AI revenue guide 上修且 networking demand 擴散。",
+      "invalidates": "財報未能支撐估值或毛利率壓力升高。"
+    },
+    {
+      "id": "fresh-ai-leaders-record-risk",
+      "title": "【新催化】美股 AI leader 位階仍高，但追價需檢查高檔震盪與 bull trap",
+      "source": "Yahoo Finance quote data, 2026-06-03",
+      "date": "2026-06-03",
+      "summary": "NVDA、AVGO、MU、MRVL 等仍吸引資金，但多檔已接近近期高檔；今晚若開高後跌破 VWAP 或前高失守，台股隔日容易出現開高走低。",
       "relatedTickers": [
         "NVDA",
-        "MSFT",
         "AVGO",
         "MU",
-        "DELL",
-        "VRT"
-      ],
-      "impact": "Positive",
-      "confidence": "High"
-    },
-    {
-      "id": "news-us-rates-risk",
-      "title": "【美股風險】利率、美元與油價仍會影響高估值 AI 交易",
-      "source": "Morning macro scan",
-      "date": "2026-06-03",
-      "summary": "美股晨報會每天先掃 S&P 500、Nasdaq、SOX、10 年期美債、美元與油價。若利率或美元走強，AI 高估值股即使基本面沒壞，也可能先被估值壓縮。",
-      "relatedTickers": [
-        "SPY",
+        "MRVL",
         "QQQ",
-        "SOXX",
-        "NVDA",
-        "AVGO"
+        "SOXX"
       ],
       "impact": "Neutral",
-      "confidence": "Medium"
+      "confidence": "Medium",
+      "freshness": "Fresh catalyst",
+      "evidenceGrade": "B",
+      "opportunityStage": "Crowded",
+      "catalystDriver": "Technical",
+      "whyMarketCares": "資金仍在 AI，但風險報酬已從「買題材」轉為「買確認」。",
+      "pricedIn": "龍頭股反映度高，二線供應鏈需避免跟著追高。",
+      "confirms": "突破前高且收盤守住，成交量高於均量。",
+      "invalidates": "開高走低、跌回前高下方或 SOXX 弱於 QQQ。"
     },
     {
-      "id": "news-tw-memory",
-      "title": "【台股新催化】記憶體報價與財報改善使華邦電、南亞科重新進入主流雷達",
-      "source": "Taiwan market scan / company filings synthesis",
+      "id": "fresh-taiwan-holdings-check",
+      "title": "【新催化】持股檢查：0050 偏核心配置，台達電受 AI power 支撐，力積電受 memory shortage 補位但波動高",
+      "source": "Yahoo Finance chart API / portfolio.json, 2026-06-03",
       "date": "2026-06-03",
-      "summary": "台股晨報會把 DRAM、NAND、NOR Flash、HBM、模組與控制 IC 分開看。華邦電、南亞科、旺宏、群聯等不應只被視為 AI 附屬題材，而是完整的記憶體循環與庫存週期。",
+      "summary": "本次強制檢查 0050、2308、6770。0050 看大盤與台積電權重，台達電看資料中心電源與 SST，力積電看成熟 DRAM/晶圓代工補位與成交量是否過熱。",
       "relatedTickers": [
-        "2344.TW",
-        "2408.TW",
-        "2337.TW",
-        "8299.TW",
-        "MU"
-      ],
-      "impact": "Positive",
-      "confidence": "High"
-    },
-    {
-      "id": "news-tw-panel-foplp",
-      "title": "【台股新催化】面板不只看報價，還要追 FOPLP、玻璃基板與低軌衛星題材",
-      "source": "Taiwan market scan / industry synthesis",
-      "date": "2026-06-03",
-      "summary": "群創、友達、彩晶的分析要拆成三層：傳統面板報價、本業虧損改善、以及 FOPLP / SpaceX / 低軌衛星等轉型題材。題材可以進雷達，但必須標清楚是基本面、近期脈絡還是純動能。",
-      "relatedTickers": [
-        "3481.TW",
-        "2409.TW",
-        "6116.TW"
-      ],
-      "impact": "Positive",
-      "confidence": "Medium"
-    },
-    {
-      "id": "news-tw-odm",
-      "title": "【台股新催化】AI server ODM 從廣達、緯穎、鴻海擴散到仁寶、英業達與神達",
-      "source": "Taiwan market scan / supply-chain synthesis",
-      "date": "2026-06-03",
-      "summary": "台股 AI server 不能只追最明顯的廣達與緯穎。仁寶、英業達、神達若有 AI server 轉型、月營收或法說訊號，也要進公司研究候選清單，但毛利率和客戶集中度要分開評估。",
-      "relatedTickers": [
-        "2382.TW",
-        "6669.TW",
-        "2317.TW",
-        "2324.TW",
-        "2356.TW",
-        "3706.TW"
-      ],
-      "impact": "Positive",
-      "confidence": "High"
-    },
-    {
-      "id": "news-tw-cooling-power",
-      "title": "【台股近期脈絡】散熱、液冷、電源與電力基礎設施是 AI 建置速度的瓶頸",
-      "source": "Taiwan market scan / data-center infrastructure synthesis",
-      "date": "2026-06-03",
-      "summary": "奇鋐、雙鴻、健策、台達電、光寶科、康舒每天都應掃描。若只有題材沒有訂單或毛利佐證，放雷達；若有法說、月營收或新產能，升級成主報與公司研究。",
-      "relatedTickers": [
-        "3017.TW",
-        "3324.TW",
-        "3653.TW",
+        "0050.TW",
         "2308.TW",
-        "2301.TW",
-        "6282.TW"
-      ],
-      "impact": "Positive",
-      "confidence": "High"
-    },
-    {
-      "id": "news-tw-pcb-optics",
-      "title": "【台股近期脈絡】PCB、CCL、載板與光通訊承接 AI cluster 擴建需求",
-      "source": "Taiwan market scan / networking synthesis",
-      "date": "2026-06-03",
-      "summary": "台光電、金像電、欣興、景碩、智邦、眾達、聯亞、波若威等是台股第二層到第三層重要名單。每日晨報會用成交量、報價、訂單能見度與美股網通 read-through 篩選。",
-      "relatedTickers": [
-        "2383.TW",
-        "2368.TW",
-        "3037.TW",
-        "3189.TW",
-        "2345.TW",
-        "4977.TW",
-        "3081.TW",
-        "3163.TW"
-      ],
-      "impact": "Positive",
-      "confidence": "Medium"
-    },
-    {
-      "id": "news-tw-broad-market",
-      "title": "【台股全市場掃描】金融、航運、原物料、生技與政策題材不再被 AI 名單排擠",
-      "source": "Taiwan broad-market scan",
-      "date": "2026-06-03",
-      "summary": "晨報會每天掃非科技族群，包括金融、航運、能源、原物料、生技、觀光與政策受惠股。若當天主流不在 AI，報告主題就要跟著市場轉，不把 AI 固定塞成主軸。",
-      "relatedTickers": [
-        "2881.TW",
-        "2603.TW",
-        "2002.TW",
-        "6446.TW"
+        "6770.TW"
       ],
       "impact": "Neutral",
-      "confidence": "Medium"
+      "confidence": "High",
+      "freshness": "Fresh catalyst",
+      "evidenceGrade": "B",
+      "opportunityStage": "Confirming",
+      "catalystDriver": "Mixed",
+      "whyMarketCares": "持股不是看成本，而是看今日價格結構、催化品質與供應鏈 read-through。",
+      "pricedIn": "台達電與力積電若近期急漲，應以回測支撐而非追高處理。",
+      "confirms": "持股守住 20 日線且相對台股強。",
+      "invalidates": "放量跌破 20 日線或題材主線轉弱。"
     },
     {
-      "id": "news-cross-nvda-taiwan",
-      "title": "【跨市場連動】NVIDIA / Broadcom / Dell 訊號要拆回台股供應鏈，而不是只看美股本身",
-      "source": "Cross-market linkage model",
+      "id": "recent-nvidia-computex",
+      "title": "【近期脈絡】Computex 後 NVIDIA AI factory / Rubin / Blackwell 敘事仍支撐台灣 AI 供應鏈",
+      "source": "Computex 2026 company events and media coverage",
       "date": "2026-06-03",
-      "summary": "美股催化會映射到台股：AI accelerator 對應台積電與封裝，AI server 對應 ODM，AI networking 對應智邦與光通訊，power/cooling 對應台達電、奇鋐、雙鴻與健策。",
+      "summary": "NVIDIA road map 是 3-7 日仍有效的背景脈絡，但不是今天才出現的新消息。它支撐台積電、鴻海、廣達、緯穎、台達電、散熱、PCB/CCL、光通訊與先進封裝。",
       "relatedTickers": [
         "NVDA",
-        "AVGO",
-        "DELL",
         "2330.TW",
+        "2317.TW",
         "2382.TW",
         "6669.TW",
-        "2345.TW",
+        "2308.TW",
         "3017.TW"
       ],
       "impact": "Positive",
-      "confidence": "High"
+      "confidence": "High",
+      "freshness": "Recent context",
+      "evidenceGrade": "B",
+      "opportunityStage": "Confirming",
+      "catalystDriver": "Supply-chain",
+      "whyMarketCares": "台股 AI 供應鏈中期訂單能見度仍取決於 NVIDIA 平台節奏。",
+      "pricedIn": "一線龍頭高度共識，應尋找回測與二線補位。",
+      "confirms": "月營收或法說確認 Blackwell/Rubin 導入。",
+      "invalidates": "交付延遲或客戶 capex 下修。"
     },
     {
-      "id": "news-momentum-control",
-      "title": "【風控】熱門股若只有成交量和故事，應列為 momentum-only 而不是基本面推薦",
-      "source": "Daily risk model",
+      "id": "recent-power-cooling",
+      "title": "【近期脈絡】資料中心電力、UPS、液冷與熱管理仍是 AI build-out 瓶頸",
+      "source": "Vertiv / Eaton / data-center infrastructure reports, last 3-7 days",
       "date": "2026-06-03",
-      "summary": "彩晶、群創、低價記憶體、處置股或題材股若只有資金動能，會被放入全市場雷達，但不會自動升級為 Positive。晨報要清楚標註證據品質，避免把熱度誤判成基本面。",
+      "summary": "AI rack 功耗提升讓電源、UPS、液冷、機櫃與能源管理持續受惠；台達電、光寶科、奇鋐、雙鴻、健策與 Vertiv / Eaton 仍是關鍵映射。",
       "relatedTickers": [
-        "6116.TW",
-        "3481.TW",
-        "2344.TW",
-        "2408.TW"
-      ],
-      "impact": "Neutral",
-      "confidence": "High"
-    },
-    {
-      "id": "news-us-software-cloud",
-      "title": "【美股近期脈絡】雲端、軟體與 AI monetization 決定 AI capex 的耐久度",
-      "source": "US software/cloud scan",
-      "date": "2026-06-03",
-      "summary": "MSFT、GOOGL、AMZN、META、ORCL、SNOW、PLTR 等每天都應被掃描。AI 供應鏈若只看硬體，容易漏掉 capex 能否回收這個核心問題。",
-      "relatedTickers": [
-        "MSFT",
-        "GOOGL",
-        "AMZN",
-        "META",
-        "ORCL",
-        "SNOW",
-        "PLTR"
-      ],
-      "impact": "Neutral",
-      "confidence": "Medium"
-    },
-    {
-      "id": "news-tw-monthly-sales",
-      "title": "【台股資料節點】月營收、法說、處置與成交量是台股晨報必掃資料",
-      "source": "Taiwan data checklist",
-      "date": "2026-06-03",
-      "summary": "台股不能只用國際新聞推導。每天晨報要把月營收、法說、重大訊息、處置分盤、成交量與外資買賣超納入雷達，否則容易漏掉彩晶、群創、華邦電這類資金主流。",
-      "relatedTickers": [
-        "6116.TW",
-        "3481.TW",
-        "2324.TW",
-        "2344.TW"
+        "VRT",
+        "ETN",
+        "2308.TW",
+        "2301.TW",
+        "3017.TW",
+        "3324.TW",
+        "3653.TW"
       ],
       "impact": "Positive",
-      "confidence": "High"
+      "confidence": "High",
+      "freshness": "Recent context",
+      "evidenceGrade": "B",
+      "opportunityStage": "Crowded",
+      "catalystDriver": "Supply-chain",
+      "whyMarketCares": "AI GPU 供應增加後，瓶頸往 power envelope 與 cooling 下沉。",
+      "pricedIn": "多數龍頭估值高，今日只接受拉回或突破確認。",
+      "confirms": "訂單、毛利率與產能利用率同步改善。",
+      "invalidates": "雲端 capex 延後或價格競爭壓縮毛利。"
+    },
+    {
+      "id": "recent-export-controls",
+      "title": "【近期脈絡】出口管制與地緣政治仍壓抑 GPU / ASIC 中國曝險估值",
+      "source": "US export control reporting, last 3-7 days",
+      "date": "2026-06-03",
+      "summary": "政策風險不構成今天單一買點，但必須放進風險權重。GPU、ASIC、foundry 與成熟製程若受區域需求重新配置影響，估值會快速變動。",
+      "relatedTickers": [
+        "NVDA",
+        "AMD",
+        "AVGO",
+        "2330.TW",
+        "3443.TW",
+        "6770.TW"
+      ],
+      "impact": "Neutral",
+      "confidence": "Medium",
+      "freshness": "Recent context",
+      "evidenceGrade": "B",
+      "opportunityStage": "Avoid/Wait",
+      "catalystDriver": "Policy",
+      "whyMarketCares": "政策會改變出貨地區、產品組合與客戶排程。",
+      "pricedIn": "市場暫時以 AI demand 抵消政策折價。",
+      "confirms": "限制明確且影響低於預期。",
+      "invalidates": "限制擴大到更多 accelerator 或 foundry 服務。"
+    },
+    {
+      "id": "background-ai-agents-software",
+      "title": "【背景論點】AI agents 與 enterprise AI 軟體仍是需求端驗證，但短線硬體催化較強",
+      "source": "Major cloud and software company commentary",
+      "date": "2026-06-03",
+      "summary": "企業 AI 軟體能否變現，決定 cloud capex ROI 是否被市場接受。短線資金仍偏硬體與供應鏈，但 PLTR、MSFT、NOW、SNOW 仍是需求端雷達。",
+      "relatedTickers": [
+        "MSFT",
+        "PLTR",
+        "NOW",
+        "SNOW",
+        "GOOGL",
+        "AMZN"
+      ],
+      "impact": "Neutral",
+      "confidence": "Medium",
+      "freshness": "Background thesis",
+      "evidenceGrade": "B",
+      "opportunityStage": "Early",
+      "catalystDriver": "Fundamental",
+      "whyMarketCares": "硬體 capex 最終要由軟體與雲端收入回收。",
+      "pricedIn": "軟體股分歧，缺乏同日交易催化。",
+      "confirms": "AI seat expansion 與 cloud margin 同步改善。",
+      "invalidates": "企業 AI 採用延後或價格戰。"
+    },
+    {
+      "id": "rejected-panel-foplp",
+      "title": "【低訊號剔除】面板 / FOPLP / 低軌衛星題材仍有資金，但今日證據不足以升級",
+      "source": "Taiwan market reports and price-volume scan",
+      "date": "2026-06-03",
+      "summary": "群創、彩晶、友達與玻璃基板題材仍在雷達，但缺少足夠正式訂單與財務驗證；若只有爆量與社群熱度，應列為投機而非高信心投資。",
+      "relatedTickers": [
+        "3481.TW",
+        "6116.TW",
+        "2409.TW",
+        "6438.TW"
+      ],
+      "impact": "Neutral",
+      "confidence": "Medium",
+      "freshness": "Momentum only",
+      "evidenceGrade": "D",
+      "opportunityStage": "Avoid/Wait",
+      "catalystDriver": "Sentiment",
+      "whyMarketCares": "短線資金輪動會拉抬低價股，但容易反轉。",
+      "pricedIn": "題材已有熱度，缺乏正式驗證。",
+      "confirms": "公司公告或月營收證實新業務。",
+      "invalidates": "爆量長黑或處置風險升高。"
     }
   ],
   "themes": [
     {
-      "id": "theme-us-ai-capex",
-      "name": "美股 AI capex 與估值驗證",
-      "whyItMatters": "AI 仍是美股主軸，但市場會逐步從「願意投資」轉向「投資能否回收」。",
+      "id": "theme-memory",
+      "name": "HBM / DRAM 供給緊縮",
+      "whyItMatters": "AI ASIC 與 GPU 擴張把資本流推向 memory、封裝、測試與成熟 DRAM 補位。",
       "relatedIndustries": [
-        "AI 半導體",
-        "雲端",
-        "AI server",
-        "電力散熱",
-        "企業軟體"
+        "HBM",
+        "DRAM",
+        "封測",
+        "成熟製程"
       ],
       "relatedCompanies": [
-        "NVDA",
-        "MSFT",
-        "AVGO",
         "MU",
-        "DELL",
-        "VRT"
+        "2408.TW",
+        "2344.TW",
+        "6770.TW"
       ],
-      "shortTermImpact": "財報與 capex 指引能繼續支撐風險偏好，但高估值標的波動會放大。",
-      "longTermImpact": "AI 基建若轉成可量化營收，供應鏈主線可延續；若 monetization 不清楚，估值會收斂。",
+      "shortTermImpact": "記憶體股相對強，但需防過熱。",
+      "longTermImpact": "供給不足延長，定價權改善。",
       "evidenceQuality": "High"
     },
     {
-      "id": "theme-tw-memory-panel",
-      "name": "台股記憶體與面板轉型題材",
-      "whyItMatters": "華邦電、南亞科、群創、彩晶代表台股資金從 AI server 擴散到低基期與轉型題材。",
+      "id": "theme-asic-networking",
+      "name": "ASIC / AI networking",
+      "whyItMatters": "AVGO 財報與 MRVL 題材將驗證 GPU 外的第二資本支出池。",
       "relatedIndustries": [
-        "DRAM",
-        "Flash",
-        "面板",
-        "FOPLP",
-        "玻璃基板",
-        "低軌衛星"
+        "ASIC",
+        "CPO",
+        "switch",
+        "PCB/CCL"
       ],
       "relatedCompanies": [
-        "2344.TW",
-        "2408.TW",
-        "3481.TW",
-        "6116.TW",
-        "2409.TW"
+        "AVGO",
+        "MRVL",
+        "2345.TW",
+        "2383.TW"
       ],
-      "shortTermImpact": "題材與資金動能強，但每檔都要拆分基本面證據與純動能。",
-      "longTermImpact": "若報價、毛利、封裝轉型或新應用成真，低基期族群可能重估。",
+      "shortTermImpact": "財報前後波動升高。",
+      "longTermImpact": "AI cluster bottleneck 往 interconnect 擴散。",
       "evidenceQuality": "Medium"
     },
     {
-      "id": "theme-tw-ai-infra",
-      "name": "台股 AI server、散熱、電源、PCB 與光通訊",
-      "whyItMatters": "AI cluster 建置的瓶頸正在往整機櫃、散熱、電力、PCB 與高速網路下沉。",
+      "id": "theme-power-cooling",
+      "name": "資料中心電力與冷卻",
+      "whyItMatters": "AI rack 功耗升高，資金流向 power、UPS、SST、液冷與機櫃。",
       "relatedIndustries": [
-        "AI server ODM",
-        "液冷",
-        "電源",
-        "PCB",
-        "CCL",
-        "光通訊"
+        "Power",
+        "Cooling",
+        "Grid"
       ],
       "relatedCompanies": [
-        "2382.TW",
-        "6669.TW",
-        "2324.TW",
-        "3017.TW",
+        "VRT",
+        "ETN",
         "2308.TW",
-        "2383.TW",
-        "2345.TW"
+        "3017.TW"
       ],
-      "shortTermImpact": "美股 AI 訊號可帶動台股供應鏈輪動，台股月營收與法說決定誰能升級。",
-      "longTermImpact": "台灣供應鏈若從零組件走向子系統整合，估值層級會不同。",
+      "shortTermImpact": "高估值須等拉回。",
+      "longTermImpact": "資料中心建置瓶頸支撐訂單。",
       "evidenceQuality": "High"
     },
     {
-      "id": "theme-full-market-radar",
-      "name": "全市場雷達與非 AI 題材",
-      "whyItMatters": "每天市場主流不一定在 AI，金融、航運、原物料、生技與政策題材也可能成為主報。",
+      "id": "theme-foundry-packaging",
+      "name": "Foundry / advanced packaging",
+      "whyItMatters": "HBM 與 ASIC 需求增加 CoWoS、測試、載板與高階製程價值。",
       "relatedIndustries": [
-        "金融",
-        "航運",
-        "鋼鐵",
-        "生技",
-        "能源",
-        "政策題材"
+        "Foundry",
+        "CoWoS",
+        "ABF",
+        "Testing"
       ],
       "relatedCompanies": [
-        "2881.TW",
-        "2603.TW",
-        "2002.TW",
-        "6446.TW"
+        "2330.TW",
+        "3711.TW",
+        "3037.TW",
+        "3189.TW"
       ],
-      "shortTermImpact": "避免晨報只看固定 AI 名單，能更早抓到資金輪動。",
-      "longTermImpact": "建立市場全貌後，才知道哪些題材是真主流、哪些只是跟漲。",
+      "shortTermImpact": "龍頭穩定但追價空間有限。",
+      "longTermImpact": "AI 晶片複雜度提高供應鏈價值。",
+      "evidenceQuality": "High"
+    },
+    {
+      "id": "theme-cloud-roi",
+      "name": "Cloud capex ROI 驗證",
+      "whyItMatters": "若 hyperscaler 開始被要求證明 AI 投資回收，高估值硬體鏈會先受壓。",
+      "relatedIndustries": [
+        "Cloud",
+        "AI software",
+        "Semiconductors"
+      ],
+      "relatedCompanies": [
+        "GOOGL",
+        "MSFT",
+        "AMZN",
+        "NVDA"
+      ],
+      "shortTermImpact": "開高走低風險上升。",
+      "longTermImpact": "資金會偏向有訂單與現金流驗證的公司。",
       "evidenceQuality": "Medium"
     }
   ],
@@ -339,1782 +391,2274 @@
       "id": "node-nvda",
       "companyName": "NVIDIA",
       "ticker": "NVDA",
-      "marketCountry": "美國",
+      "marketCountry": "US",
       "layer": 1,
-      "linkedThemeId": "theme-us-ai-capex",
-      "whyItMayBenefit": "AI accelerator、networking 與平台規格制定者，是美股 AI capex 的核心觀察點。",
-      "evidenceStrength": "High",
+      "linkedThemeId": "theme-memory",
+      "whyItMayBenefit": "AI accelerator、networking 與 software stack 核心供應商",
+      "evidenceStrength": "Medium",
       "visibility": "Obvious",
-      "keyRisk": "估值、出口限制與客戶自研 ASIC。"
+      "keyRisk": "估值高"
     },
     {
       "id": "node-avgo",
       "companyName": "Broadcom",
       "ticker": "AVGO",
-      "marketCountry": "美國",
+      "marketCountry": "US",
       "layer": 2,
-      "linkedThemeId": "theme-us-ai-capex",
-      "whyItMayBenefit": "ASIC 與 AI networking 是 NVIDIA 之外的第二條美股主線。",
-      "evidenceStrength": "High",
+      "linkedThemeId": "theme-asic-networking",
+      "whyItMayBenefit": "custom AI ASIC、switch silicon 與 enterprise software",
+      "evidenceStrength": "Medium",
       "visibility": "Obvious",
-      "keyRisk": "客戶集中與財報指引落差。"
+      "keyRisk": "財報波動"
+    },
+    {
+      "id": "node-mrvl",
+      "companyName": "Marvell Technology",
+      "ticker": "MRVL",
+      "marketCountry": "US",
+      "layer": 3,
+      "linkedThemeId": "theme-power-cooling",
+      "whyItMayBenefit": "DSP、custom silicon 與高速互連",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "題材過熱"
     },
     {
       "id": "node-mu",
       "companyName": "Micron",
       "ticker": "MU",
-      "marketCountry": "美國",
-      "layer": 2,
-      "linkedThemeId": "theme-us-ai-capex",
-      "whyItMayBenefit": "HBM、DRAM 與資料中心 SSD 連動 AI server 記憶體需求。",
-      "evidenceStrength": "High",
-      "visibility": "Obvious",
-      "keyRisk": "記憶體循環與供給擴張。"
-    },
-    {
-      "id": "node-tsmc",
-      "companyName": "台積電",
-      "ticker": "2330.TW",
-      "marketCountry": "台灣",
-      "layer": 1,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "先進製程與先進封裝承接全球 AI accelerator 需求。",
-      "evidenceStrength": "High",
-      "visibility": "Obvious",
-      "keyRisk": "地緣政治、CoWoS 瓶頸與高 capex。"
-    },
-    {
-      "id": "node-quanta",
-      "companyName": "廣達",
-      "ticker": "2382.TW",
-      "marketCountry": "台灣",
-      "layer": 2,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "AI server 與整機櫃需求的台股核心 ODM。",
-      "evidenceStrength": "High",
-      "visibility": "Obvious",
-      "keyRisk": "毛利率與客戶集中。"
-    },
-    {
-      "id": "node-compal",
-      "companyName": "仁寶",
-      "ticker": "2324.TW",
-      "marketCountry": "台灣",
-      "layer": 3,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "低基期 AI server 轉型候選，需驗證營收占比與毛利改善。",
-      "evidenceStrength": "Medium",
-      "visibility": "Hidden",
-      "keyRisk": "轉型速度與 PC 本業拖累。"
-    },
-    {
-      "id": "node-winbond",
-      "companyName": "華邦電",
-      "ticker": "2344.TW",
-      "marketCountry": "台灣",
-      "layer": 2,
-      "linkedThemeId": "theme-tw-memory-panel",
-      "whyItMayBenefit": "DRAM / Flash 報價與毛利改善帶動記憶體循環重估。",
-      "evidenceStrength": "High",
-      "visibility": "Obvious",
-      "keyRisk": "報價反轉與庫存週期。"
-    },
-    {
-      "id": "node-innolux",
-      "companyName": "群創",
-      "ticker": "3481.TW",
-      "marketCountry": "台灣",
-      "layer": 3,
-      "linkedThemeId": "theme-tw-memory-panel",
-      "whyItMayBenefit": "面板本業之外，市場關注 FOPLP、玻璃基板與低軌衛星題材。",
-      "evidenceStrength": "Medium",
-      "visibility": "Hidden",
-      "keyRisk": "題材落地速度與本業虧損。"
-    },
-    {
-      "id": "node-hannstar",
-      "companyName": "彩晶",
-      "ticker": "6116.TW",
-      "marketCountry": "台灣",
+      "marketCountry": "US",
       "layer": 4,
-      "linkedThemeId": "theme-tw-memory-panel",
-      "whyItMayBenefit": "面板與 SpaceX / 低軌衛星概念帶動資金動能。",
-      "evidenceStrength": "Low",
-      "visibility": "Hidden",
-      "keyRisk": "基本面證據不足與處置風險。"
-    },
-    {
-      "id": "node-delta",
-      "companyName": "台達電",
-      "ticker": "2308.TW",
-      "marketCountry": "台灣",
-      "layer": 2,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "AI 資料中心電源、散熱、HVDC 與基建方案。",
+      "linkedThemeId": "theme-foundry-packaging",
+      "whyItMayBenefit": "HBM、server DRAM 與 enterprise SSD",
       "evidenceStrength": "High",
       "visibility": "Obvious",
-      "keyRisk": "題材轉營收時間差。"
+      "keyRisk": "記憶體循環"
     },
     {
-      "id": "node-auras",
-      "companyName": "奇鋐",
-      "ticker": "3017.TW",
-      "marketCountry": "台灣",
-      "layer": 3,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "液冷與高階散熱對應 AI rack 功率密度提升。",
-      "evidenceStrength": "High",
-      "visibility": "Obvious",
-      "keyRisk": "認證與毛利率驗證。"
-    },
-    {
-      "id": "node-accton",
-      "companyName": "智邦",
-      "ticker": "2345.TW",
-      "marketCountry": "台灣",
-      "layer": 3,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "AI cluster 高速網路、switch 與光通訊需求受惠。",
+      "id": "node-vrt",
+      "companyName": "Vertiv",
+      "ticker": "VRT",
+      "marketCountry": "US",
+      "layer": 1,
+      "linkedThemeId": "theme-memory",
+      "whyItMayBenefit": "UPS、thermal management 與資料中心基礎設施",
       "evidenceStrength": "Medium",
-      "visibility": "Hidden",
-      "keyRisk": "網通需求波動與客戶拉貨。"
+      "visibility": "Obvious",
+      "keyRisk": "估值"
+    },
+    {
+      "id": "node-etn",
+      "companyName": "Eaton",
+      "ticker": "ETN",
+      "marketCountry": "US",
+      "layer": 2,
+      "linkedThemeId": "theme-asic-networking",
+      "whyItMayBenefit": "電力設備與資料中心配電",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "利率"
+    },
+    {
+      "id": "node-googl",
+      "companyName": "Alphabet",
+      "ticker": "GOOGL",
+      "marketCountry": "US",
+      "layer": 3,
+      "linkedThemeId": "theme-power-cooling",
+      "whyItMayBenefit": "hyperscaler、TPU 與 AI capex 需求端",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "capex ROI"
+    },
+    {
+      "id": "node-msft",
+      "companyName": "Microsoft",
+      "ticker": "MSFT",
+      "marketCountry": "US",
+      "layer": 4,
+      "linkedThemeId": "theme-foundry-packaging",
+      "whyItMayBenefit": "Azure、Copilot 與 enterprise AI monetization",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "AI 毛利"
     },
     {
       "id": "node-pltr",
       "companyName": "Palantir",
       "ticker": "PLTR",
-      "marketCountry": "美國",
+      "marketCountry": "US",
+      "layer": 1,
+      "linkedThemeId": "theme-memory",
+      "whyItMayBenefit": "AIP 與政府/企業資料工作流",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "估值極高"
+    },
+    {
+      "id": "node-0050-tw",
+      "companyName": "元大台灣50",
+      "ticker": "0050.TW",
+      "marketCountry": "Taiwan",
       "layer": 2,
-      "linkedThemeId": "theme-us-ai-capex",
-      "whyItMayBenefit": "AI 應用層與企業/政府 workflow monetization 代表，用來驗證 AI 不只停在硬體 capex。",
+      "linkedThemeId": "theme-asic-networking",
+      "whyItMayBenefit": "台灣大型權值股 beta，受台積電與電子權重帶動",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "大盤回檔"
+    },
+    {
+      "id": "node-2330-tw",
+      "companyName": "台積電",
+      "ticker": "2330.TW",
+      "marketCountry": "Taiwan",
+      "layer": 3,
+      "linkedThemeId": "theme-power-cooling",
+      "whyItMayBenefit": "AI GPU、ASIC 與先進封裝核心產能",
       "evidenceStrength": "High",
       "visibility": "Obvious",
-      "keyRisk": "估值過高與政府合約集中。"
+      "keyRisk": "估值"
     },
     {
-      "id": "node-panjit",
-      "companyName": "強茂",
-      "ticker": "2481.TW",
-      "marketCountry": "台灣",
-      "layer": 3,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "AI server 電源效率、MOSFET、車用與機器人需求帶動功率元件升級。",
-      "evidenceStrength": "Medium",
-      "visibility": "Hidden",
-      "keyRisk": "缺貨題材降溫與產品 mix 驗證。"
-    },
-    {
-      "id": "node-tsc",
-      "companyName": "台半",
-      "ticker": "5425.TW",
-      "marketCountry": "台灣",
+      "id": "node-2308-tw",
+      "companyName": "台達電",
+      "ticker": "2308.TW",
+      "marketCountry": "Taiwan",
       "layer": 4,
-      "linkedThemeId": "theme-tw-ai-infra",
-      "whyItMayBenefit": "Super Junction / SiC MOSFET 若切入 AI server 與車用供應鏈，具題材擴散彈性。",
+      "linkedThemeId": "theme-foundry-packaging",
+      "whyItMayBenefit": "資料中心電源、電力管理與固態變壓器",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "估值偏高"
+    },
+    {
+      "id": "node-6770-tw",
+      "companyName": "力積電",
+      "ticker": "6770.TW",
+      "marketCountry": "Taiwan",
+      "layer": 1,
+      "linkedThemeId": "theme-memory",
+      "whyItMayBenefit": "成熟製程晶圓代工與記憶體供給補位",
       "evidenceStrength": "Medium",
       "visibility": "Hidden",
-      "keyRisk": "訂單能見度與毛利改善仍需驗證。"
+      "keyRisk": "價格循環"
+    },
+    {
+      "id": "node-2408-tw",
+      "companyName": "南亞科",
+      "ticker": "2408.TW",
+      "marketCountry": "Taiwan",
+      "layer": 2,
+      "linkedThemeId": "theme-asic-networking",
+      "whyItMayBenefit": "台灣 DRAM 供應商，受傳統 DRAM 供給緊縮帶動",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "循環股波動"
+    },
+    {
+      "id": "node-2344-tw",
+      "companyName": "華邦電",
+      "ticker": "2344.TW",
+      "marketCountry": "Taiwan",
+      "layer": 3,
+      "linkedThemeId": "theme-power-cooling",
+      "whyItMayBenefit": "利基型記憶體與成熟製程供給缺口補位",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "題材擁擠"
+    },
+    {
+      "id": "node-2337-tw",
+      "companyName": "旺宏",
+      "ticker": "2337.TW",
+      "marketCountry": "Taiwan",
+      "layer": 4,
+      "linkedThemeId": "theme-foundry-packaging",
+      "whyItMayBenefit": "NOR flash 與儲存循環復甦受惠",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "爆量過熱"
+    },
+    {
+      "id": "node-3711-tw",
+      "companyName": "日月光投控",
+      "ticker": "3711.TW",
+      "marketCountry": "Taiwan",
+      "layer": 1,
+      "linkedThemeId": "theme-memory",
+      "whyItMayBenefit": "AI package、測試與 OSAT",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "封測價格壓力"
+    },
+    {
+      "id": "node-2382-tw",
+      "companyName": "廣達",
+      "ticker": "2382.TW",
+      "marketCountry": "Taiwan",
+      "layer": 2,
+      "linkedThemeId": "theme-asic-networking",
+      "whyItMayBenefit": "AI server 與 rack-level system 供應",
+      "evidenceStrength": "Medium",
+      "visibility": "Obvious",
+      "keyRisk": "毛利率"
     }
   ],
   "beneficiaries": [
     {
-      "id": "benefit-us-ai",
-      "themeId": "theme-us-ai-capex",
+      "id": "ben-memory",
+      "themeId": "theme-memory",
       "directBeneficiaries": [
-        "NVDA",
-        "AVGO",
         "MU",
-        "DELL"
+        "2408.TW",
+        "2344.TW"
       ],
       "indirectBeneficiaries": [
-        "VRT",
-        "MSFT",
-        "ORCL"
+        "2330.TW",
+        "3711.TW"
       ],
       "hiddenBeneficiaries": [
-        "AI networking suppliers",
-        "power/cooling vendors"
+        "6770.TW",
+        "2337.TW"
       ],
       "companiesMayBeHurt": [
-        "估值過高但缺乏 AI revenue 的概念股"
+        "低毛利 PC OEM",
+        "DRAM 採購成本曝險者"
       ],
       "radarOnly": [
-        "AI networking suppliers",
-        "power/cooling vendors"
+        "8299.TW",
+        "3260.TW"
       ],
-      "details": [
-        {
-          "companyName": "NVDA",
-          "ticker": "NVDA",
-          "type": "Direct",
-          "linkage": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
-          "evidenceGrade": "B",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "AVGO",
-          "ticker": "AVGO",
-          "type": "Direct",
-          "linkage": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
-          "evidenceGrade": "B",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "MU",
-          "ticker": "MU",
-          "type": "Direct",
-          "linkage": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
-          "evidenceGrade": "B",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "DELL",
-          "ticker": "DELL",
-          "type": "Direct",
-          "linkage": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
-          "evidenceGrade": "B",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "VRT",
-          "ticker": "VRT",
-          "type": "Indirect",
-          "linkage": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "MSFT",
-          "ticker": "MSFT",
-          "type": "Indirect",
-          "linkage": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "ORCL",
-          "ticker": "ORCL",
-          "type": "Indirect",
-          "linkage": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "AI networking suppliers",
-          "ticker": "AI networking suppliers",
-          "type": "Hidden",
-          "linkage": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "power/cooling vendors",
-          "ticker": "power/cooling vendors",
-          "type": "Hidden",
-          "linkage": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "估值過高但缺乏 AI revenue 的概念股",
-          "ticker": "估值過高但缺乏 AI revenue 的概念股",
-          "type": "Hurt",
-          "linkage": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Avoid/Wait"
-        }
-      ],
-      "reasoning": "美股 AI capex 仍是全球科技供應鏈源頭，但要用財報與 capex ROI 驗證。",
+      "reasoning": "HBM 排擠傳統 DRAM 供給，成熟 DRAM 與補位產能受惠，但下游客戶成本上升。",
       "evidenceQuality": "High",
-      "researchPriorityScore": 94
+      "researchPriorityScore": 95
     },
     {
-      "id": "benefit-tw-memory-panel",
-      "themeId": "theme-tw-memory-panel",
+      "id": "ben-asic-networking",
+      "themeId": "theme-asic-networking",
       "directBeneficiaries": [
-        "2344.TW",
-        "2408.TW",
-        "3481.TW"
+        "AVGO",
+        "MRVL",
+        "2345.TW"
       ],
       "indirectBeneficiaries": [
-        "6116.TW",
-        "2409.TW",
-        "8299.TW"
+        "2383.TW",
+        "2368.TW",
+        "2330.TW"
       ],
       "hiddenBeneficiaries": [
-        "FOPLP equipment",
-        "glass substrate ecosystem"
+        "3081.TW",
+        "3163.TW"
       ],
       "companiesMayBeHurt": [
-        "純靠題材但沒有財報改善的面板股"
+        "只靠 GPU 單一路徑且無 networking 曝險者"
       ],
       "radarOnly": [
-        "FOPLP equipment",
-        "glass substrate ecosystem"
+        "4977.TW"
       ],
-      "details": [
-        {
-          "companyName": "2344.TW",
-          "ticker": "2344.TW",
-          "type": "Direct",
-          "linkage": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "2408.TW",
-          "ticker": "2408.TW",
-          "type": "Direct",
-          "linkage": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "3481.TW",
-          "ticker": "3481.TW",
-          "type": "Direct",
-          "linkage": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "6116.TW",
-          "ticker": "6116.TW",
-          "type": "Indirect",
-          "linkage": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "2409.TW",
-          "ticker": "2409.TW",
-          "type": "Indirect",
-          "linkage": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "8299.TW",
-          "ticker": "8299.TW",
-          "type": "Indirect",
-          "linkage": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "FOPLP equipment",
-          "ticker": "FOPLP equipment",
-          "type": "Hidden",
-          "linkage": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "glass substrate ecosystem",
-          "ticker": "glass substrate ecosystem",
-          "type": "Hidden",
-          "linkage": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "純靠題材但沒有財報改善的面板股",
-          "ticker": "純靠題材但沒有財報改善的面板股",
-          "type": "Hurt",
-          "linkage": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Avoid/Wait"
-        }
-      ],
-      "reasoning": "記憶體與面板低基期題材都可進雷達，但基本面與純動能要分開。",
+      "reasoning": "ASIC 與 AI cluster 互連升級把價值從 GPU 擴散到 switch、DSP、PCB/CCL 與光通訊。",
       "evidenceQuality": "Medium",
       "researchPriorityScore": 88
     },
     {
-      "id": "benefit-tw-infra",
-      "themeId": "theme-tw-ai-infra",
+      "id": "ben-power-cooling",
+      "themeId": "theme-power-cooling",
       "directBeneficiaries": [
-        "2382.TW",
-        "6669.TW",
+        "VRT",
+        "ETN",
         "2308.TW",
         "3017.TW"
       ],
       "indirectBeneficiaries": [
-        "2324.TW",
-        "2345.TW",
-        "2383.TW"
+        "2301.TW",
+        "3324.TW",
+        "3653.TW"
       ],
       "hiddenBeneficiaries": [
-        "liquid cooling",
-        "HVDC",
-        "PCB/CCL",
-        "optics"
+        "2481.TW",
+        "6282.TW"
       ],
       "companiesMayBeHurt": [
-        "缺乏 AI 訂單且毛利被壓縮的傳統 ODM"
+        "高耗能但無定價權資料中心業者"
       ],
       "radarOnly": [
-        "liquid cooling",
-        "HVDC",
-        "PCB/CCL",
-        "optics"
+        "8261.TW"
       ],
-      "details": [
-        {
-          "companyName": "2382.TW",
-          "ticker": "2382.TW",
-          "type": "Direct",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "B",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "6669.TW",
-          "ticker": "6669.TW",
-          "type": "Direct",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "B",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "2308.TW",
-          "ticker": "2308.TW",
-          "type": "Direct",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "B",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "3017.TW",
-          "ticker": "3017.TW",
-          "type": "Direct",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "B",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "2324.TW",
-          "ticker": "2324.TW",
-          "type": "Indirect",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "2345.TW",
-          "ticker": "2345.TW",
-          "type": "Indirect",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "2383.TW",
-          "ticker": "2383.TW",
-          "type": "Indirect",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "liquid cooling",
-          "ticker": "liquid cooling",
-          "type": "Hidden",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "HVDC",
-          "ticker": "HVDC",
-          "type": "Hidden",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "PCB/CCL",
-          "ticker": "PCB/CCL",
-          "type": "Hidden",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "optics",
-          "ticker": "optics",
-          "type": "Hidden",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "缺乏 AI 訂單且毛利被壓縮的傳統 ODM",
-          "ticker": "缺乏 AI 訂單且毛利被壓縮的傳統 ODM",
-          "type": "Hurt",
-          "linkage": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Avoid/Wait"
-        }
-      ],
-      "reasoning": "AI 建置瓶頸往台股二三層供應鏈擴散，是每天晨報必掃區。",
+      "reasoning": "AI rack 功耗提高，資料中心瓶頸轉向電源、UPS、液冷與能源管理。",
       "evidenceQuality": "High",
-      "researchPriorityScore": 92
-    },
-    {
-      "id": "benefit-full-market",
-      "themeId": "theme-full-market-radar",
-      "directBeneficiaries": [
-        "當日資金主流族群"
-      ],
-      "indirectBeneficiaries": [
-        "金融、航運、原物料、生技候選"
-      ],
-      "hiddenBeneficiaries": [
-        "政策受惠與異常成交量標的"
-      ],
-      "companiesMayBeHurt": [
-        "被固定 AI 視角錯誤排除的主流題材"
-      ],
-      "radarOnly": [
-        "政策受惠與異常成交量標的"
-      ],
-      "details": [
-        {
-          "companyName": "當日資金主流族群",
-          "ticker": "當日資金主流族群",
-          "type": "Direct",
-          "linkage": "全市場雷達避免晨報只追固定 AI 名單。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Confirming"
-        },
-        {
-          "companyName": "金融、航運、原物料、生技候選",
-          "ticker": "金融、航運、原物料、生技候選",
-          "type": "Indirect",
-          "linkage": "全市場雷達避免晨報只追固定 AI 名單。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "政策受惠與異常成交量標的",
-          "ticker": "政策受惠與異常成交量標的",
-          "type": "Hidden",
-          "linkage": "全市場雷達避免晨報只追固定 AI 名單。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Early"
-        },
-        {
-          "companyName": "被固定 AI 視角錯誤排除的主流題材",
-          "ticker": "被固定 AI 視角錯誤排除的主流題材",
-          "type": "Hurt",
-          "linkage": "全市場雷達避免晨報只追固定 AI 名單。",
-          "evidenceGrade": "C",
-          "opportunityStage": "Avoid/Wait"
-        }
-      ],
-      "reasoning": "全市場雷達避免晨報只追固定 AI 名單。",
-      "evidenceQuality": "Medium",
-      "researchPriorityScore": 84
+      "researchPriorityScore": 90
     }
   ],
   "companyResearch": [
     {
-      "id": "company-nvda",
+      "id": "cr-nvda",
       "companyName": "NVIDIA",
       "ticker": "NVDA",
-      "marketCountry": "美國",
-      "sectorTheme": "Data center GPU",
-      "whyItMattersToday": "AI platform 龍頭，晨報美股核心觀察名單。",
-      "catalystSummary": "追蹤新產品、財報、供應鏈與出口限制。",
-      "priceVolumeBehavior": "趨勢強但擁擠。",
-      "supplyChainRole": "銷售 GPU、networking、CPU、軟體與 AI factory 平台。",
-      "opportunityStage": "Confirming",
+      "marketCountry": "US",
+      "sectorTheme": "GPU / AI platform",
+      "whyItMattersToday": "NVIDIA 位於 AI accelerator、networking 與 software stack 核心供應商，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "AI accelerator、networking 與 software stack 核心供應商",
+      "opportunityStage": "Crowded",
       "evidenceGrade": "B",
       "catalystDriver": "Mixed",
       "beneficiaryType": "Direct",
-      "overview": "AI platform 龍頭，晨報美股核心觀察名單。",
-      "businessModel": "銷售 GPU、networking、CPU、軟體與 AI factory 平台。",
+      "overview": "NVIDIA 是 GPU / AI platform 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "AI accelerator、networking 與 software stack 核心供應商；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
       "revenueDrivers": [
-        "Data center GPU",
-        "Networking",
-        "AI software",
-        "Hyperscaler capex"
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
       ],
-      "latestFinancialReportSummary": "追蹤新產品、財報、供應鏈與出口限制。",
-      "revenueGrowth": "AI data center 仍強，但市場要求更清楚的投資回收證據。",
-      "grossMargin": "高階平台毛利強，但競爭與產品轉換需追蹤。",
-      "eps": "受 data center 出貨與 ASP 支撐。",
-      "freeCashFlow": "現金流強，但估值容錯低。",
-      "valuationRisk": "市場已預支高成長。",
-      "technicalTrend": "趨勢強但擁擠。",
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
       "competitors": [
         "AMD",
         "AVGO",
-        "Hyperscaler ASIC"
+        "GOOGL TPU"
       ],
-      "bullCase": "平台規格持續主導 AI factory。",
-      "baseCase": "需求強但估值需靠財報消化。",
-      "bearCase": "出口限制或 capex 放緩。",
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
       "keyRisks": [
-        "估值",
-        "出口限制",
-        "ASIC 替代"
+        "估值高",
+        "出口管制",
+        "開高走低"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 hyperscaler capex 或 backlog 轉弱則下修。",
-      "upsideDriver": "平台規格持續主導 AI factory。",
-      "invalidationConditions": "出口限制或 capex 放緩。"
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
     },
     {
-      "id": "company-msft",
-      "companyName": "Microsoft",
-      "ticker": "MSFT",
-      "marketCountry": "美國",
-      "sectorTheme": "Azure",
-      "whyItMattersToday": "AI 軟體與 Azure capex 的核心觀察公司。",
-      "catalystSummary": "追蹤 Azure 成長、AI monetization 與 capex 效率。",
-      "priceVolumeBehavior": "穩健偏多。",
-      "supplyChainRole": "雲端、企業軟體、AI assistant、開發工具與平台服務。",
-      "opportunityStage": "Confirming",
-      "evidenceGrade": "B",
-      "catalystDriver": "Mixed",
-      "beneficiaryType": "Direct",
-      "overview": "AI 軟體與 Azure capex 的核心觀察公司。",
-      "businessModel": "雲端、企業軟體、AI assistant、開發工具與平台服務。",
-      "revenueDrivers": [
-        "Azure",
-        "Copilot",
-        "AI infra",
-        "Enterprise software"
-      ],
-      "latestFinancialReportSummary": "追蹤 Azure 成長、AI monetization 與 capex 效率。",
-      "revenueGrowth": "AI 需求支撐雲端，但投資回報是市場焦點。",
-      "grossMargin": "雲端毛利與 AI 成本攤提需追蹤。",
-      "eps": "軟體訂閱支撐 EPS。",
-      "freeCashFlow": "現金流極強。",
-      "valuationRisk": "高品質但估值不低。",
-      "technicalTrend": "穩健偏多。",
-      "competitors": [
-        "GOOGL",
-        "AMZN",
-        "ORCL"
-      ],
-      "bullCase": "Copilot 與 Azure AI 形成長期 monetization。",
-      "baseCase": "AI 支出大但可被雲端成長吸收。",
-      "bearCase": "AI capex 壓縮毛利或增速放緩。",
-      "keyRisks": [
-        "capex ROI",
-        "雲端毛利",
-        "監管"
-      ],
-      "finalView": "Positive",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 Azure 或 AI monetization 明顯失速則下修。",
-      "upsideDriver": "Copilot 與 Azure AI 形成長期 monetization。",
-      "invalidationConditions": "AI capex 壓縮毛利或增速放緩。"
-    },
-    {
-      "id": "company-avgo",
+      "id": "cr-avgo",
       "companyName": "Broadcom",
       "ticker": "AVGO",
-      "marketCountry": "美國",
-      "sectorTheme": "ASIC",
-      "whyItMattersToday": "Custom ASIC 與 AI networking 主線。",
-      "catalystSummary": "追蹤 AI revenue 指引與大客戶專案。",
-      "priceVolumeBehavior": "偏多但需財報確認。",
-      "supplyChainRole": "提供 ASIC、switch、connectivity 與基礎軟體。",
+      "marketCountry": "US",
+      "sectorTheme": "ASIC / networking",
+      "whyItMattersToday": "Broadcom 位於 custom AI ASIC、switch silicon 與 enterprise software，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "custom AI ASIC、switch silicon 與 enterprise software",
       "opportunityStage": "Confirming",
       "evidenceGrade": "B",
-      "catalystDriver": "Mixed",
+      "catalystDriver": "Fundamental",
       "beneficiaryType": "Direct",
-      "overview": "Custom ASIC 與 AI networking 主線。",
-      "businessModel": "提供 ASIC、switch、connectivity 與基礎軟體。",
+      "overview": "Broadcom 是 ASIC / networking 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "custom AI ASIC、switch silicon 與 enterprise software；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
       "revenueDrivers": [
-        "ASIC",
-        "AI networking",
-        "Ethernet fabric",
-        "Cloud customers"
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
       ],
-      "latestFinancialReportSummary": "追蹤 AI revenue 指引與大客戶專案。",
-      "revenueGrowth": "AI networking 和 ASIC 提供高成長。",
-      "grossMargin": "產品 mix 佳但客戶集中。",
-      "eps": "高附加價值產品支撐 EPS。",
-      "freeCashFlow": "現金流穩健。",
-      "valuationRisk": "AI 題材升溫後估值也有壓力。",
-      "technicalTrend": "偏多但需財報確認。",
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
       "competitors": [
         "MRVL",
-        "NVDA networking"
+        "NVDA",
+        "AMD"
       ],
-      "bullCase": "ASIC 與網通雙線加速。",
-      "baseCase": "AI 強、其他業務提供底盤。",
-      "bearCase": "客戶專案延後。",
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
       "keyRisks": [
-        "客戶集中",
-        "估值",
-        "專案延遲"
+        "財報波動",
+        "ASIC 客戶集中"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Consider buying only if conditions are met",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-mrvl",
+      "companyName": "Marvell Technology",
+      "ticker": "MRVL",
+      "marketCountry": "US",
+      "sectorTheme": "AI networking / optical",
+      "whyItMattersToday": "Marvell Technology 位於 DSP、custom silicon 與高速互連，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "DSP、custom silicon 與高速互連",
+      "opportunityStage": "Confirming",
+      "evidenceGrade": "B",
+      "catalystDriver": "Supply-chain",
+      "beneficiaryType": "Direct",
+      "overview": "Marvell Technology 是 AI networking / optical 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "DSP、custom silicon 與高速互連；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "AVGO",
+        "NVDA"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "題材過熱",
+        "財報落差"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 AI networking 指引轉弱則下修。",
-      "upsideDriver": "ASIC 與網通雙線加速。",
-      "invalidationConditions": "客戶專案延後。"
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
     },
     {
-      "id": "company-mu",
+      "id": "cr-mu",
       "companyName": "Micron",
       "ticker": "MU",
-      "marketCountry": "美國",
-      "sectorTheme": "HBM",
-      "whyItMattersToday": "HBM / DRAM / SSD 週期受惠者。",
-      "catalystSummary": "追蹤 HBM 供需、報價與庫存。",
-      "priceVolumeBehavior": "偏多但波動大。",
-      "supplyChainRole": "銷售 DRAM、HBM、NAND 與資料中心 SSD。",
+      "marketCountry": "US",
+      "sectorTheme": "HBM / DRAM",
+      "whyItMattersToday": "Micron 位於 HBM、server DRAM 與 enterprise SSD，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "HBM、server DRAM 與 enterprise SSD",
       "opportunityStage": "Confirming",
-      "evidenceGrade": "B",
-      "catalystDriver": "Mixed",
+      "evidenceGrade": "A",
+      "catalystDriver": "Fundamental",
       "beneficiaryType": "Direct",
-      "overview": "HBM / DRAM / SSD 週期受惠者。",
-      "businessModel": "銷售 DRAM、HBM、NAND 與資料中心 SSD。",
+      "overview": "Micron 是 HBM / DRAM 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "HBM、server DRAM 與 enterprise SSD；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
       "revenueDrivers": [
-        "HBM",
-        "Server DRAM",
-        "SSD",
-        "AI server"
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
       ],
-      "latestFinancialReportSummary": "追蹤 HBM 供需、報價與庫存。",
-      "revenueGrowth": "AI memory 受惠明確，但仍是循環股。",
-      "grossMargin": "報價上行時毛利彈性大。",
-      "eps": "ASP 與供需主導 EPS。",
-      "freeCashFlow": "景氣上行改善，capex 仍高。",
-      "valuationRisk": "高 beta 記憶體股。",
-      "technicalTrend": "偏多但波動大。",
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
       "competitors": [
-        "SK Hynix",
+        "SK hynix",
         "Samsung"
       ],
-      "bullCase": "HBM 供不應求延續。",
-      "baseCase": "AI 需求強但需週期框架管理。",
-      "bearCase": "供給擴張快於需求。",
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
       "keyRisks": [
-        "循環",
-        "供給",
-        "庫存"
+        "記憶體循環",
+        "資本支出"
       ],
       "finalView": "Positive",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若報價與 HBM 能見度轉弱則下修。",
-      "upsideDriver": "HBM 供不應求延續。",
-      "invalidationConditions": "供給擴張快於需求。"
+      "suggestedAction": "Consider buying only if conditions are met",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
     },
     {
-      "id": "company-pltr",
-      "companyName": "Palantir",
-      "ticker": "PLTR",
-      "marketCountry": "美國",
-      "sectorTheme": "AIP adoption",
-      "whyItMattersToday": "AI 應用層與政府/企業資料平台代表。",
-      "catalystSummary": "追蹤營收成長、RPO、政府合約、商業客戶擴張與 AIP 使用案例。",
-      "priceVolumeBehavior": "強勢但擁擠。",
-      "supplyChainRole": "提供 Gotham、Foundry、AIP 等資料整合、決策支援與 AI workflow 平台。",
-      "opportunityStage": "Confirming",
-      "evidenceGrade": "B",
-      "catalystDriver": "Mixed",
-      "beneficiaryType": "Direct",
-      "overview": "AI 應用層與政府/企業資料平台代表。",
-      "businessModel": "提供 Gotham、Foundry、AIP 等資料整合、決策支援與 AI workflow 平台。",
-      "revenueDrivers": [
-        "AIP adoption",
-        "US government contracts",
-        "US commercial expansion",
-        "AI monetization"
-      ],
-      "latestFinancialReportSummary": "追蹤營收成長、RPO、政府合約、商業客戶擴張與 AIP 使用案例。",
-      "revenueGrowth": "AI 軟體開始從題材走向實際收入驗證，是硬體 capex 之外的重要對照。",
-      "grossMargin": "軟體毛利結構佳，但銷售投入與大型合約節奏需追蹤。",
-      "eps": "高成長可放大 EPS，但市場要求持續 beat。",
-      "freeCashFlow": "現金流品質佳，是優於多數 AI 概念軟體股的地方。",
-      "valuationRisk": "估值極敏感，任何成長降速都可能造成壓縮。",
-      "technicalTrend": "強勢但擁擠。",
-      "competitors": [
-        "SNOW",
-        "DDOG",
-        "MDB",
-        "C3.ai"
-      ],
-      "bullCase": "AIP 成為企業 AI workflow 標準層，政府與商業雙引擎延續。",
-      "baseCase": "基本面強，但估值容錯低，適合列入美股 AI 應用層雷達。",
-      "bearCase": "成長率放緩或政府合約政治風險升高。",
-      "keyRisks": [
-        "估值",
-        "政府合約集中",
-        "AI 軟體競爭"
-      ],
-      "finalView": "Positive",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若營收成長、RPO 或商業客戶擴張明顯降速則下修。",
-      "upsideDriver": "AIP 成為企業 AI workflow 標準層，政府與商業雙引擎延續。",
-      "invalidationConditions": "成長率放緩或政府合約政治風險升高。"
-    },
-    {
-      "id": "company-dell",
-      "companyName": "Dell Technologies",
-      "ticker": "DELL",
-      "marketCountry": "美國",
-      "sectorTheme": "AI server",
-      "whyItMattersToday": "AI server 出貨與企業硬體 read-through。",
-      "catalystSummary": "追蹤 AI server backlog、毛利與現金流。",
-      "priceVolumeBehavior": "事件驅動強。",
-      "supplyChainRole": "銷售 server、storage、PC 與服務。",
-      "opportunityStage": "Avoid/Wait",
-      "evidenceGrade": "C",
-      "catalystDriver": "Mixed",
-      "beneficiaryType": "Radar only",
-      "overview": "AI server 出貨與企業硬體 read-through。",
-      "businessModel": "銷售 server、storage、PC 與服務。",
-      "revenueDrivers": [
-        "AI server",
-        "Storage",
-        "Enterprise refresh"
-      ],
-      "latestFinancialReportSummary": "追蹤 AI server backlog、毛利與現金流。",
-      "revenueGrowth": "營收動能強，但毛利品質是關鍵。",
-      "grossMargin": "AI server 未必帶來同步毛利提升。",
-      "eps": "規模擴張支撐 EPS。",
-      "freeCashFlow": "大單可能增加營運資金壓力。",
-      "valuationRisk": "財報後追高風險。",
-      "technicalTrend": "事件驅動強。",
-      "competitors": [
-        "SMCI",
-        "HPE",
-        "Lenovo"
-      ],
-      "bullCase": "AI server 需求延續且毛利改善。",
-      "baseCase": "營收強、毛利普通。",
-      "bearCase": "客戶延遲或成本吃掉利潤。",
-      "keyRisks": [
-        "毛利",
-        "客戶集中",
-        "庫存"
-      ],
-      "finalView": "Neutral",
-      "suggestedAction": "Wait",
-      "whatWouldChangeView": "若毛利與現金流同步改善則轉正面。",
-      "upsideDriver": "AI server 需求延續且毛利改善。",
-      "invalidationConditions": "客戶延遲或成本吃掉利潤。"
-    },
-    {
-      "id": "company-vrt",
+      "id": "cr-vrt",
       "companyName": "Vertiv",
       "ticker": "VRT",
-      "marketCountry": "美國",
-      "sectorTheme": "Liquid cooling",
-      "whyItMattersToday": "資料中心 power / thermal 基建代表。",
-      "catalystSummary": "追蹤 backlog、液冷滲透與估值。",
-      "priceVolumeBehavior": "等待回檔與財報驗證。",
-      "supplyChainRole": "提供 UPS、配電、機櫃、液冷與服務。",
-      "opportunityStage": "Avoid/Wait",
-      "evidenceGrade": "C",
+      "marketCountry": "US",
+      "sectorTheme": "Data center power / cooling",
+      "whyItMattersToday": "Vertiv 位於 UPS、thermal management 與資料中心基礎設施，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "UPS、thermal management 與資料中心基礎設施",
+      "opportunityStage": "Crowded",
+      "evidenceGrade": "B",
       "catalystDriver": "Supply-chain",
-      "beneficiaryType": "Radar only",
-      "overview": "資料中心 power / thermal 基建代表。",
-      "businessModel": "提供 UPS、配電、機櫃、液冷與服務。",
+      "beneficiaryType": "Direct",
+      "overview": "Vertiv 是 Data center power / cooling 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "UPS、thermal management 與資料中心基礎設施；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
       "revenueDrivers": [
-        "Liquid cooling",
-        "Power density",
-        "Data center buildout"
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
       ],
-      "latestFinancialReportSummary": "追蹤 backlog、液冷滲透與估值。",
-      "revenueGrowth": "AI capex 往電力散熱下沉。",
-      "grossMargin": "方案化產品可支撐毛利。",
-      "eps": "高成長可放大 EPS。",
-      "freeCashFlow": "專案交付影響現金流。",
-      "valuationRisk": "估值已反映不少成長。",
-      "technicalTrend": "等待回檔與財報驗證。",
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
       "competitors": [
         "ETN",
         "Schneider"
       ],
-      "bullCase": "液冷與電力升級成標配。",
-      "baseCase": "需求強但估值高。",
-      "bearCase": "資料中心建置延遲。",
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
       "keyRisks": [
         "估值",
-        "專案延遲",
-        "競爭"
+        "資料中心供給過剩疑慮"
       ],
-      "finalView": "Neutral",
-      "suggestedAction": "Wait",
-      "whatWouldChangeView": "若估值修正且訂單品質改善則轉正面。",
-      "upsideDriver": "液冷與電力升級成標配。",
-      "invalidationConditions": "資料中心建置延遲。"
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
     },
     {
-      "id": "company-tsmc",
-      "companyName": "台積電",
-      "ticker": "2330.TW",
-      "marketCountry": "台灣",
-      "sectorTheme": "AI/HPC",
-      "whyItMattersToday": "台股核心權值與 AI 製造樞紐。",
-      "catalystSummary": "追蹤月營收、capex、CoWoS 與大客戶需求。",
-      "priceVolumeBehavior": "長線強，短線受台股權值資金影響。",
-      "supplyChainRole": "提供先進製程、成熟製程與先進封裝。",
+      "id": "cr-etn",
+      "companyName": "Eaton",
+      "ticker": "ETN",
+      "marketCountry": "US",
+      "sectorTheme": "Grid / electrical equipment",
+      "whyItMattersToday": "Eaton 位於 電力設備與資料中心配電，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "電力設備與資料中心配電",
       "opportunityStage": "Confirming",
       "evidenceGrade": "B",
-      "catalystDriver": "Mixed",
-      "beneficiaryType": "Direct",
-      "overview": "台股核心權值與 AI 製造樞紐。",
-      "businessModel": "提供先進製程、成熟製程與先進封裝。",
+      "catalystDriver": "Fundamental",
+      "beneficiaryType": "Indirect",
+      "overview": "Eaton 是 Grid / electrical equipment 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "電力設備與資料中心配電；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
       "revenueDrivers": [
-        "AI/HPC",
-        "3nm",
-        "CoWoS",
-        "Advanced packaging"
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
       ],
-      "latestFinancialReportSummary": "追蹤月營收、capex、CoWoS 與大客戶需求。",
-      "revenueGrowth": "AI/HPC 支撐成長。",
-      "grossMargin": "海外廠成本與折舊需追蹤。",
-      "eps": "先進製程稼動率支撐 EPS。",
-      "freeCashFlow": "高 capex 下仍需看回收。",
-      "valuationRisk": "核心資產溢價高。",
-      "technicalTrend": "長線強，短線受台股權值資金影響。",
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
       "competitors": [
-        "Samsung Foundry",
-        "Intel Foundry"
+        "GEV",
+        "PWR"
       ],
-      "bullCase": "AI/HPC 多年需求延續。",
-      "baseCase": "需求強但需消化 capex。",
-      "bearCase": "地緣或封裝瓶頸。",
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
       "keyRisks": [
-        "地緣政治",
-        "CoWoS",
+        "利率",
+        "工業循環"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-googl",
+      "companyName": "Alphabet",
+      "ticker": "GOOGL",
+      "marketCountry": "US",
+      "sectorTheme": "Cloud / AI ROI",
+      "whyItMattersToday": "Alphabet 位於 hyperscaler、TPU 與 AI capex 需求端，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "hyperscaler、TPU 與 AI capex 需求端",
+      "opportunityStage": "Confirming",
+      "evidenceGrade": "B",
+      "catalystDriver": "Fundamental",
+      "beneficiaryType": "Direct",
+      "overview": "Alphabet 是 Cloud / AI ROI 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "hyperscaler、TPU 與 AI capex 需求端；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "MSFT",
+        "AMZN"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "capex ROI",
+        "監管"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-msft",
+      "companyName": "Microsoft",
+      "ticker": "MSFT",
+      "marketCountry": "US",
+      "sectorTheme": "Cloud / enterprise AI",
+      "whyItMattersToday": "Microsoft 位於 Azure、Copilot 與 enterprise AI monetization，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "Azure、Copilot 與 enterprise AI monetization",
+      "opportunityStage": "Confirming",
+      "evidenceGrade": "B",
+      "catalystDriver": "Fundamental",
+      "beneficiaryType": "Direct",
+      "overview": "Microsoft 是 Cloud / enterprise AI 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "Azure、Copilot 與 enterprise AI monetization；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "GOOGL",
+        "AMZN"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "AI 毛利",
         "capex"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 AI demand 或封裝需求鬆動則下修。",
-      "upsideDriver": "AI/HPC 多年需求延續。",
-      "invalidationConditions": "地緣或封裝瓶頸。"
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
     },
     {
-      "id": "company-winbond",
-      "companyName": "華邦電",
-      "ticker": "2344.TW",
-      "marketCountry": "台灣",
-      "sectorTheme": "DRAM pricing",
-      "whyItMattersToday": "DRAM / Flash 報價與低基期重估代表。",
-      "catalystSummary": "追蹤報價、毛利、庫存與 CUBE 進度。",
-      "priceVolumeBehavior": "強勢但需防循環反轉。",
-      "supplyChainRole": "銷售 specialty DRAM、NOR Flash、NAND 與利基記憶體。",
-      "opportunityStage": "Confirming",
+      "id": "cr-pltr",
+      "companyName": "Palantir",
+      "ticker": "PLTR",
+      "marketCountry": "US",
+      "sectorTheme": "AI agents / enterprise software",
+      "whyItMattersToday": "Palantir 位於 AIP 與政府/企業資料工作流，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "AIP 與政府/企業資料工作流",
+      "opportunityStage": "Crowded",
       "evidenceGrade": "B",
-      "catalystDriver": "Mixed",
-      "beneficiaryType": "Direct",
-      "overview": "DRAM / Flash 報價與低基期重估代表。",
-      "businessModel": "銷售 specialty DRAM、NOR Flash、NAND 與利基記憶體。",
+      "catalystDriver": "Fundamental",
+      "beneficiaryType": "Indirect",
+      "overview": "Palantir 是 AI agents / enterprise software 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "AIP 與政府/企業資料工作流；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
       "revenueDrivers": [
-        "DRAM pricing",
-        "Flash pricing",
-        "Edge AI memory",
-        "CUBE"
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
       ],
-      "latestFinancialReportSummary": "追蹤報價、毛利、庫存與 CUBE 進度。",
-      "revenueGrowth": "報價與毛利改善支撐基本面。",
-      "grossMargin": "上行期毛利彈性大。",
-      "eps": "循環上行可推 EPS。",
-      "freeCashFlow": "需看庫存與 capex。",
-      "valuationRisk": "記憶體股高波動。",
-      "technicalTrend": "強勢但需防循環反轉。",
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
       "competitors": [
-        "南亞科",
-        "旺宏",
-        "Micron"
+        "SNOW",
+        "MSFT"
       ],
-      "bullCase": "報價延續上行且 CUBE 題材落地。",
-      "baseCase": "受惠明確但仍是週期股。",
-      "bearCase": "報價轉弱或庫存回升。",
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
       "keyRisks": [
-        "循環",
-        "庫存",
-        "題材過熱"
+        "估值極高",
+        "成長放緩"
       ],
       "finalView": "Positive",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 DRAM / Flash 報價轉弱則下修。",
-      "upsideDriver": "報價延續上行且 CUBE 題材落地。",
-      "invalidationConditions": "報價轉弱或庫存回升。"
-    },
-    {
-      "id": "company-innolux",
-      "companyName": "群創",
-      "ticker": "3481.TW",
-      "marketCountry": "台灣",
-      "sectorTheme": "Panel pricing",
-      "whyItMattersToday": "面板本業加 FOPLP / 玻璃基板轉型題材。",
-      "catalystSummary": "追蹤面板報價、本業虧損改善與 FOPLP 訂單。",
-      "priceVolumeBehavior": "動能強但證據品質中等。",
-      "supplyChainRole": "生產面板並推動先進封裝、玻璃基板與新應用。",
-      "opportunityStage": "Early",
-      "evidenceGrade": "B",
-      "catalystDriver": "Mixed",
-      "beneficiaryType": "Indirect",
-      "overview": "面板本業加 FOPLP / 玻璃基板轉型題材。",
-      "businessModel": "生產面板並推動先進封裝、玻璃基板與新應用。",
-      "revenueDrivers": [
-        "Panel pricing",
-        "FOPLP",
-        "Glass substrate",
-        "SpaceX theme"
-      ],
-      "latestFinancialReportSummary": "追蹤面板報價、本業虧損改善與 FOPLP 訂單。",
-      "revenueGrowth": "題材強，但需基本面驗證。",
-      "grossMargin": "本業毛利仍受面板循環影響。",
-      "eps": "轉盈速度是關鍵。",
-      "freeCashFlow": "資本支出與本業現金流需看。",
-      "valuationRisk": "題材容易先行。",
-      "technicalTrend": "動能強但證據品質中等。",
-      "competitors": [
-        "友達",
-        "彩晶"
-      ],
-      "bullCase": "FOPLP / 玻璃基板成功商轉。",
-      "baseCase": "題材與低基期支撐估值。",
-      "bearCase": "本業虧損或題材落空。",
-      "keyRisks": [
-        "面板報價",
-        "題材落地",
-        "處置風險"
-      ],
-      "finalView": "Neutral",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 FOPLP 收入與毛利能見度提高則轉正面。",
-      "upsideDriver": "FOPLP / 玻璃基板成功商轉。",
-      "invalidationConditions": "本業虧損或題材落空。"
-    },
-    {
-      "id": "company-hannstar",
-      "companyName": "彩晶",
-      "ticker": "6116.TW",
-      "marketCountry": "台灣",
-      "sectorTheme": "Panel pricing",
-      "whyItMattersToday": "面板低價題材與低軌衛星動能股。",
-      "catalystSummary": "追蹤成交量、處置、面板報價與是否有實際訂單。",
-      "priceVolumeBehavior": "列雷達，不直接當核心推薦。",
-      "supplyChainRole": "中小尺寸面板與相關應用。",
-      "opportunityStage": "Avoid/Wait",
-      "evidenceGrade": "C",
-      "catalystDriver": "Mixed",
-      "beneficiaryType": "Radar only",
-      "overview": "面板低價題材與低軌衛星動能股。",
-      "businessModel": "中小尺寸面板與相關應用。",
-      "revenueDrivers": [
-        "Panel pricing",
-        "SpaceX theme",
-        "Momentum"
-      ],
-      "latestFinancialReportSummary": "追蹤成交量、處置、面板報價與是否有實際訂單。",
-      "revenueGrowth": "短線熱度高，但基本面證據較薄。",
-      "grossMargin": "本業改善仍需確認。",
-      "eps": "EPS 可見度低於華邦電等基本面股。",
-      "freeCashFlow": "現金流需看本業循環。",
-      "valuationRisk": "追高風險高。",
-      "technicalTrend": "列雷達，不直接當核心推薦。",
-      "competitors": [
-        "群創",
-        "友達"
-      ],
-      "bullCase": "若低軌衛星或面板訂單被證實，估值可重估。",
-      "baseCase": "目前偏資金行情。",
-      "bearCase": "題材降溫或處置壓力。",
-      "keyRisks": [
-        "證據不足",
-        "處置",
-        "波動"
-      ],
-      "finalView": "Neutral",
       "suggestedAction": "Wait",
-      "whatWouldChangeView": "若有明確訂單或財報改善再升級。",
-      "upsideDriver": "若低軌衛星或面板訂單被證實，估值可重估。",
-      "invalidationConditions": "題材降溫或處置壓力。"
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
     },
     {
-      "id": "company-compal",
-      "companyName": "仁寶",
-      "ticker": "2324.TW",
-      "marketCountry": "台灣",
-      "sectorTheme": "AI server",
-      "whyItMattersToday": "PC ODM 轉 AI server 的低基期候選。",
-      "catalystSummary": "追蹤 AI server 營收占比、毛利與月營收。",
-      "priceVolumeBehavior": "研究中。",
-      "supplyChainRole": "提供筆電、PC、server 與電子代工服務。",
-      "opportunityStage": "Early",
-      "evidenceGrade": "B",
-      "catalystDriver": "Mixed",
-      "beneficiaryType": "Indirect",
-      "overview": "PC ODM 轉 AI server 的低基期候選。",
-      "businessModel": "提供筆電、PC、server 與電子代工服務。",
-      "revenueDrivers": [
-        "AI server",
-        "AI PC",
-        "ODM scale",
-        "Enterprise hardware"
-      ],
-      "latestFinancialReportSummary": "追蹤 AI server 營收占比、毛利與月營收。",
-      "revenueGrowth": "轉型故事成立但仍需數字證明。",
-      "grossMargin": "ODM 毛利薄，產品 mix 是關鍵。",
-      "eps": "EPS 需要靠 AI server mix 改善。",
-      "freeCashFlow": "營運資金與庫存需管理。",
-      "valuationRisk": "市場會等待證據。",
-      "technicalTrend": "研究中。",
-      "competitors": [
-        "廣達",
-        "緯創",
-        "英業達"
-      ],
-      "bullCase": "AI server 成為第三成長支柱。",
-      "baseCase": "低基期轉型但驗證期較長。",
-      "bearCase": "PC 本業拖累或 AI server 毛利不足。",
-      "keyRisks": [
-        "毛利",
-        "轉型速度",
-        "客戶集中"
-      ],
-      "finalView": "Neutral",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 AI server 營收占比與毛利同步改善則轉正面。",
-      "upsideDriver": "AI server 成為第三成長支柱。",
-      "invalidationConditions": "PC 本業拖累或 AI server 毛利不足。"
-    },
-    {
-      "id": "company-panjit",
-      "companyName": "強茂",
-      "ticker": "2481.TW",
-      "marketCountry": "台灣",
-      "sectorTheme": "Power MOSFET",
-      "whyItMattersToday": "台灣功率半導體與 AI 電源效率受惠候選。",
-      "catalystSummary": "追蹤 MOSFET 營收占比、B/B 值、CSP 客戶、AI server 電源與車用訂單。",
-      "priceVolumeBehavior": "偏多但需月營收驗證。",
-      "supplyChainRole": "提供二極體、MOSFET、保護元件與功率解決方案，應用於 AI server、車用、IPC 與機器人。",
+      "id": "cr-0050-tw",
+      "companyName": "元大台灣50",
+      "ticker": "0050.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "台股核心 ETF",
+      "whyItMattersToday": "元大台灣50 位於 台灣大型權值股 beta，受台積電與電子權重帶動，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "台灣大型權值股 beta，受台積電與電子權重帶動",
       "opportunityStage": "Confirming",
       "evidenceGrade": "B",
-      "catalystDriver": "Supply-chain",
-      "beneficiaryType": "Direct",
-      "overview": "台灣功率半導體與 AI 電源效率受惠候選。",
-      "businessModel": "提供二極體、MOSFET、保護元件與功率解決方案，應用於 AI server、車用、IPC 與機器人。",
+      "catalystDriver": "Technical",
+      "beneficiaryType": "Indirect",
+      "overview": "元大台灣50 是 台股核心 ETF 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "台灣大型權值股 beta，受台積電與電子權重帶動；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
       "revenueDrivers": [
-        "Power MOSFET",
-        "AI server power",
-        "Automotive electronics",
-        "Supply tightness"
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
       ],
-      "latestFinancialReportSummary": "追蹤 MOSFET 營收占比、B/B 值、CSP 客戶、AI server 電源與車用訂單。",
-      "revenueGrowth": "AI server 電源架構升級與功率元件缺貨/轉單提供近期催化。",
-      "grossMargin": "產品升級有助毛利，但仍需看實際 mix。",
-      "eps": "若 MOSFET 與車用占比提升，EPS 彈性會優於傳統二極體週期。",
-      "freeCashFlow": "擴產與庫存週期需管理。",
-      "valuationRisk": "題材升溫後要防估值先跑。",
-      "technicalTrend": "偏多但需月營收驗證。",
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
       "competitors": [
-        "台半",
-        "德微",
-        "大中",
-        "富鼎"
+        "006208.TW",
+        "00922.TW"
       ],
-      "bullCase": "AI server、車用與機器人把功率元件從傳統零件拉到 AI 基建效率鏈。",
-      "baseCase": "受惠邏輯成立，列為台股功率元件優先研究。",
-      "bearCase": "缺貨緩解、轉單不持續或 MOSFET 毛利不如預期。",
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
       "keyRisks": [
-        "缺貨循環",
-        "產品 mix",
-        "客戶認證"
+        "大盤回檔",
+        "權值股集中"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若月營收與毛利無法驗證 AI/車用占比提升則下修。",
-      "upsideDriver": "AI server、車用與機器人把功率元件從傳統零件拉到 AI 基建效率鏈。",
-      "invalidationConditions": "缺貨緩解、轉單不持續或 MOSFET 毛利不如預期。"
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
     },
     {
-      "id": "company-tsc",
-      "companyName": "台半",
-      "ticker": "5425.TW",
-      "marketCountry": "台灣",
-      "sectorTheme": "Super Junction MOSFET",
-      "whyItMattersToday": "二極體與 MOSFET / SiC 升級候選。",
-      "catalystSummary": "追蹤漲價、交期、電源大廠採用、Rubin/AI server read-through 與月營收。",
-      "priceVolumeBehavior": "研究中偏多。",
-      "supplyChainRole": "提供整流二極體、保護元件、MOSFET、Super Junction 與 SiC 相關產品。",
-      "opportunityStage": "Early",
-      "evidenceGrade": "B",
+      "id": "cr-2330-tw",
+      "companyName": "台積電",
+      "ticker": "2330.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "Foundry / CoWoS",
+      "whyItMattersToday": "台積電 位於 AI GPU、ASIC 與先進封裝核心產能，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "AI GPU、ASIC 與先進封裝核心產能",
+      "opportunityStage": "Confirming",
+      "evidenceGrade": "A",
       "catalystDriver": "Supply-chain",
-      "beneficiaryType": "Indirect",
-      "overview": "二極體與 MOSFET / SiC 升級候選。",
-      "businessModel": "提供整流二極體、保護元件、MOSFET、Super Junction 與 SiC 相關產品。",
+      "beneficiaryType": "Direct",
+      "overview": "台積電 是 Foundry / CoWoS 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "AI GPU、ASIC 與先進封裝核心產能；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
       "revenueDrivers": [
-        "Super Junction MOSFET",
-        "SiC MOSFET",
-        "Power supply customers",
-        "Automotive"
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
       ],
-      "latestFinancialReportSummary": "追蹤漲價、交期、電源大廠採用、Rubin/AI server read-through 與月營收。",
-      "revenueGrowth": "功率元件供需偏緊與 AI server 電源升級使台半進入固定雷達。",
-      "grossMargin": "毛利改善需要產品組合升級，而不只是漲價。",
-      "eps": "EPS 彈性取決於高階 MOSFET / SiC 放量速度。",
-      "freeCashFlow": "庫存週期與擴產節奏需追蹤。",
-      "valuationRisk": "小型題材股波動較大。",
-      "technicalTrend": "研究中偏多。",
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
       "competitors": [
-        "強茂",
-        "德微",
-        "朋程",
-        "大中"
+        "Samsung Foundry",
+        "Intel Foundry"
       ],
-      "bullCase": "若高階功率產品打入 AI server 與車用鏈，估值可重估。",
-      "baseCase": "催化存在，但證據品質低於強茂，需等訂單與毛利驗證。",
-      "bearCase": "漲價題材降溫或高階產品導入慢。",
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
       "keyRisks": [
-        "訂單能見度",
-        "毛利驗證",
-        "題材波動"
+        "估值",
+        "地緣政治"
       ],
-      "finalView": "Neutral",
-      "suggestedAction": "Watch",
-      "whatWouldChangeView": "若高階產品營收占比與毛利改善明確則轉正面。",
-      "upsideDriver": "若高階功率產品打入 AI server 與車用鏈，估值可重估。",
-      "invalidationConditions": "漲價題材降溫或高階產品導入慢。"
+      "finalView": "Positive",
+      "suggestedAction": "Consider buying only if conditions are met",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
     },
     {
-      "id": "company-delta",
+      "id": "cr-2308-tw",
       "companyName": "台達電",
       "ticker": "2308.TW",
-      "marketCountry": "台灣",
-      "sectorTheme": "AI data center power",
-      "whyItMattersToday": "AI 電源、散熱與資料中心基建方案商。",
-      "catalystSummary": "追蹤 AI 電源/散熱營收占比、毛利與新專案。",
-      "priceVolumeBehavior": "長線正向。",
-      "supplyChainRole": "提供電源、散熱、工業自動化、資料中心與能源方案。",
-      "opportunityStage": "Confirming",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "Power / SST / cooling",
+      "whyItMattersToday": "台達電 位於 資料中心電源、電力管理與固態變壓器，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "資料中心電源、電力管理與固態變壓器",
+      "opportunityStage": "Crowded",
       "evidenceGrade": "B",
       "catalystDriver": "Supply-chain",
       "beneficiaryType": "Direct",
-      "overview": "AI 電源、散熱與資料中心基建方案商。",
-      "businessModel": "提供電源、散熱、工業自動化、資料中心與能源方案。",
+      "overview": "台達電 是 Power / SST / cooling 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "資料中心電源、電力管理與固態變壓器；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
       "revenueDrivers": [
-        "AI data center power",
-        "Liquid cooling",
-        "HVDC",
-        "Microgrid"
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
       ],
-      "latestFinancialReportSummary": "追蹤 AI 電源/散熱營收占比、毛利與新專案。",
-      "revenueGrowth": "AI 基建支出下沉支撐成長。",
-      "grossMargin": "方案化有助毛利。",
-      "eps": "EPS 穩健但催化傳導較慢。",
-      "freeCashFlow": "現金流相對穩。",
-      "valuationRisk": "題材轉營收需要時間。",
-      "technicalTrend": "長線正向。",
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
       "competitors": [
-        "Vertiv",
-        "Eaton",
-        "光寶科"
+        "光寶科",
+        "康舒",
+        "Vertiv"
       ],
-      "bullCase": "電源與液冷成 AI 建設標配。",
-      "baseCase": "基本面穩但需更多拆分。",
-      "bearCase": "營收貢獻慢於股價期待。",
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
       "keyRisks": [
-        "接單透明度",
-        "競爭",
+        "估值偏高",
+        "開高追價風險"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-6770-tw",
+      "companyName": "力積電",
+      "ticker": "6770.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "成熟製程 / DRAM 補位",
+      "whyItMattersToday": "力積電 位於 成熟製程晶圓代工與記憶體供給補位，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "成熟製程晶圓代工與記憶體供給補位",
+      "opportunityStage": "Early",
+      "evidenceGrade": "B",
+      "catalystDriver": "Supply-chain",
+      "beneficiaryType": "Hidden",
+      "overview": "力積電 是 成熟製程 / DRAM 補位 鏈中的較隱性受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "成熟製程晶圓代工與記憶體供給補位；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "南亞科",
+        "華邦電",
+        "聯電"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "價格循環",
+        "低價股波動",
+        "毛利率驗證不足"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-2408-tw",
+      "companyName": "南亞科",
+      "ticker": "2408.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "DRAM",
+      "whyItMattersToday": "南亞科 位於 台灣 DRAM 供應商，受傳統 DRAM 供給緊縮帶動，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "台灣 DRAM 供應商，受傳統 DRAM 供給緊縮帶動",
+      "opportunityStage": "Confirming",
+      "evidenceGrade": "B",
+      "catalystDriver": "Fundamental",
+      "beneficiaryType": "Direct",
+      "overview": "南亞科 是 DRAM 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "台灣 DRAM 供應商，受傳統 DRAM 供給緊縮帶動；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "華邦電",
+        "Micron"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "循環股波動",
+        "報價反轉"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Consider buying only if conditions are met",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-2344-tw",
+      "companyName": "華邦電",
+      "ticker": "2344.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "Specialty DRAM / NOR",
+      "whyItMattersToday": "華邦電 位於 利基型記憶體與成熟製程供給缺口補位，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "利基型記憶體與成熟製程供給缺口補位",
+      "opportunityStage": "Confirming",
+      "evidenceGrade": "B",
+      "catalystDriver": "Fundamental",
+      "beneficiaryType": "Indirect",
+      "overview": "華邦電 是 Specialty DRAM / NOR 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "利基型記憶體與成熟製程供給缺口補位；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "旺宏",
+        "南亞科"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "題材擁擠",
+        "毛利率需驗證"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-2337-tw",
+      "companyName": "旺宏",
+      "ticker": "2337.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "NOR / NAND",
+      "whyItMattersToday": "旺宏 位於 NOR flash 與儲存循環復甦受惠，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "NOR flash 與儲存循環復甦受惠",
+      "opportunityStage": "Crowded",
+      "evidenceGrade": "B",
+      "catalystDriver": "Technical",
+      "beneficiaryType": "Indirect",
+      "overview": "旺宏 是 NOR / NAND 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "NOR flash 與儲存循環復甦受惠；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "華邦電",
+        "群聯"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "爆量過熱",
+        "基本面落後股價"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-3711-tw",
+      "companyName": "日月光投控",
+      "ticker": "3711.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "Advanced packaging / testing",
+      "whyItMattersToday": "日月光投控 位於 AI package、測試與 OSAT，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "AI package、測試與 OSAT",
+      "opportunityStage": "Confirming",
+      "evidenceGrade": "B",
+      "catalystDriver": "Supply-chain",
+      "beneficiaryType": "Indirect",
+      "overview": "日月光投控 是 Advanced packaging / testing 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "AI package、測試與 OSAT；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "Amkor",
+        "京元電子"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "封測價格壓力",
         "資本支出"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 AI 基建貢獻不如預期則下修。",
-      "upsideDriver": "電源與液冷成 AI 建設標配。",
-      "invalidationConditions": "營收貢獻慢於股價期待。"
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
     },
     {
-      "id": "company-accton",
-      "companyName": "智邦",
-      "ticker": "2345.TW",
-      "marketCountry": "台灣",
-      "sectorTheme": "AI networking",
-      "whyItMattersToday": "AI cluster 高速網路與交換器受惠股。",
-      "catalystSummary": "追蹤雲端客戶拉貨、高速網通需求與毛利。",
-      "priceVolumeBehavior": "偏多但需看訂單。",
-      "supplyChainRole": "提供網通設備、switch 與雲端資料中心網路產品。",
-      "opportunityStage": "Confirming",
+      "id": "cr-2382-tw",
+      "companyName": "廣達",
+      "ticker": "2382.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "AI server ODM",
+      "whyItMattersToday": "廣達 位於 AI server 與 rack-level system 供應，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "AI server 與 rack-level system 供應",
+      "opportunityStage": "Crowded",
       "evidenceGrade": "B",
-      "catalystDriver": "Mixed",
+      "catalystDriver": "Supply-chain",
       "beneficiaryType": "Direct",
-      "overview": "AI cluster 高速網路與交換器受惠股。",
-      "businessModel": "提供網通設備、switch 與雲端資料中心網路產品。",
+      "overview": "廣達 是 AI server ODM 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "AI server 與 rack-level system 供應；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
       "revenueDrivers": [
-        "AI networking",
-        "Switch",
-        "Cloud data center",
-        "800G/1.6T"
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
       ],
-      "latestFinancialReportSummary": "追蹤雲端客戶拉貨、高速網通需求與毛利。",
-      "revenueGrowth": "AI cluster scale-out 支撐網通需求。",
-      "grossMargin": "高階產品 mix 可改善毛利。",
-      "eps": "EPS 受大客戶出貨節奏影響。",
-      "freeCashFlow": "專案交付影響現金流。",
-      "valuationRisk": "估值受美股網通 read-through 影響。",
-      "technicalTrend": "偏多但需看訂單。",
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
       "competitors": [
-        "Broadcom",
-        "Arista",
-        "眾達"
+        "緯穎",
+        "鴻海"
       ],
-      "bullCase": "AI networking 成長持續。",
-      "baseCase": "受惠成立但客戶拉貨節奏重要。",
-      "bearCase": "雲端資本支出放緩。",
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "毛利率",
+        "高基期"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-6669-tw",
+      "companyName": "緯穎",
+      "ticker": "6669.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "AI server ODM",
+      "whyItMattersToday": "緯穎 位於 hyperscale server 與 AI rack，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "hyperscale server 與 AI rack",
+      "opportunityStage": "Crowded",
+      "evidenceGrade": "B",
+      "catalystDriver": "Supply-chain",
+      "beneficiaryType": "Direct",
+      "overview": "緯穎 是 AI server ODM 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "hyperscale server 與 AI rack；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "廣達",
+        "鴻海"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
       "keyRisks": [
         "客戶集中",
-        "拉貨波動",
+        "估值"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-2317-tw",
+      "companyName": "鴻海",
+      "ticker": "2317.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "EMS / AI server",
+      "whyItMattersToday": "鴻海 位於 AI server EMS、機櫃與整機整合，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "AI server EMS、機櫃與整機整合",
+      "opportunityStage": "Confirming",
+      "evidenceGrade": "B",
+      "catalystDriver": "Fundamental",
+      "beneficiaryType": "Direct",
+      "overview": "鴻海 是 EMS / AI server 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "AI server EMS、機櫃與整機整合；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "廣達",
+        "緯創"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "iPhone 循環",
+        "毛利率"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-2345-tw",
+      "companyName": "智邦",
+      "ticker": "2345.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "AI networking",
+      "whyItMattersToday": "智邦 位於 資料中心交換器與白牌網通，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "資料中心交換器與白牌網通",
+      "opportunityStage": "Crowded",
+      "evidenceGrade": "B",
+      "catalystDriver": "Supply-chain",
+      "beneficiaryType": "Direct",
+      "overview": "智邦 是 AI networking 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "資料中心交換器與白牌網通；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "Arista",
+        "Accton peers"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "估值高",
+        "客戶集中"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-2383-tw",
+      "companyName": "台光電",
+      "ticker": "2383.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "CCL / high-speed material",
+      "whyItMattersToday": "台光電 位於 高速 CCL 與 AI server/networking 材料，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "高速 CCL 與 AI server/networking 材料",
+      "opportunityStage": "Confirming",
+      "evidenceGrade": "B",
+      "catalystDriver": "Supply-chain",
+      "beneficiaryType": "Indirect",
+      "overview": "台光電 是 CCL / high-speed material 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "高速 CCL 與 AI server/networking 材料；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "聯茂",
+        "Panasonic"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "材料報價",
+        "產能利用率"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-2368-tw",
+      "companyName": "金像電",
+      "ticker": "2368.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "PCB",
+      "whyItMattersToday": "金像電 位於 AI server 高層板與交換器 PCB，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "AI server 高層板與交換器 PCB",
+      "opportunityStage": "Confirming",
+      "evidenceGrade": "B",
+      "catalystDriver": "Supply-chain",
+      "beneficiaryType": "Indirect",
+      "overview": "金像電 是 PCB 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "AI server 高層板與交換器 PCB；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "健鼎",
+        "欣興"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "毛利率",
+        "匯率"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-3017-tw",
+      "companyName": "奇鋐",
+      "ticker": "3017.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "Cooling / liquid cooling",
+      "whyItMattersToday": "奇鋐 位於 AI server 散熱與液冷零組件，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "AI server 散熱與液冷零組件",
+      "opportunityStage": "Crowded",
+      "evidenceGrade": "B",
+      "catalystDriver": "Supply-chain",
+      "beneficiaryType": "Direct",
+      "overview": "奇鋐 是 Cooling / liquid cooling 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "AI server 散熱與液冷零組件；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "雙鴻",
+        "健策"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "估值高",
+        "追價風險"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-3324-tw",
+      "companyName": "雙鴻",
+      "ticker": "3324.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "Cooling",
+      "whyItMattersToday": "雙鴻 位於 散熱模組與液冷需求受惠，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "散熱模組與液冷需求受惠",
+      "opportunityStage": "Crowded",
+      "evidenceGrade": "B",
+      "catalystDriver": "Supply-chain",
+      "beneficiaryType": "Direct",
+      "overview": "雙鴻 是 Cooling 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "散熱模組與液冷需求受惠；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "奇鋐",
+        "健策"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "題材擁擠",
+        "毛利率"
+      ],
+      "finalView": "Positive",
+      "suggestedAction": "Watch",
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    },
+    {
+      "id": "cr-2301-tw",
+      "companyName": "光寶科",
+      "ticker": "2301.TW",
+      "marketCountry": "Taiwan",
+      "sectorTheme": "Power supply",
+      "whyItMattersToday": "光寶科 位於 電源供應器、資料中心 power component，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
+      "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "priceVolumeBehavior": "價格資料不足，今日不設定主動買點。",
+      "supplyChainRole": "電源供應器、資料中心 power component",
+      "opportunityStage": "Early",
+      "evidenceGrade": "B",
+      "catalystDriver": "Supply-chain",
+      "beneficiaryType": "Indirect",
+      "overview": "光寶科 是 Power supply 鏈中的重要受惠標的。今日重點不是盲目看多，而是確認催化是否已反映在價格與成交量。",
+      "businessModel": "電源供應器、資料中心 power component；收入受終端 AI capex、客戶拉貨、報價、產品組合與產能利用率影響。",
+      "revenueDrivers": [
+        "AI 資本支出",
+        "資料中心建置",
+        "記憶體與高階封裝需求",
+        "月營收與財報指引"
+      ],
+      "latestFinancialReportSummary": "本報告以最新可驗證市場資料與近期公開催化為主；財報細項需搭配公司公告與法說追蹤。",
+      "revenueGrowth": "若 AI server / HBM / power cooling 需求延續，營收動能偏正向；若 cloud capex ROI 被質疑，成長預期會降溫。",
+      "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
+      "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
+      "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "價格資料不足，今日不設定主動買點。",
+      "competitors": [
+        "台達電",
+        "康舒"
+      ],
+      "bullCase": "催化被財報、月營收或官方指引確認，股價放量突破並守住前高，供應鏈訂單能見度延長。",
+      "baseCase": "產業趨勢正向但短線已部分反映，適合等待回測支撐或突破確認，而不是追高。",
+      "bearCase": "AI capex ROI 被質疑、利率美元走強、報價回落或股價放量跌破 20 日線。",
+      "keyRisks": [
+        "產品組合",
         "競爭"
       ],
       "finalView": "Positive",
       "suggestedAction": "Watch",
-      "whatWouldChangeView": "若 AI networking 訂單轉弱則下修。",
-      "upsideDriver": "AI networking 成長持續。",
-      "invalidationConditions": "雲端資本支出放緩。"
+      "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
+      "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
+      "invalidationConditions": "放量跌破近 20 日低點或 20 日均線、財報指引不如預期、題材主線輪動退潮。"
+    }
+  ],
+  "tradingPlans": [
+    {
+      "id": "tp-nvda",
+      "ticker": "NVDA",
+      "companyName": "NVIDIA",
+      "marketCountry": "US",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "NVIDIA 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-avgo",
+      "ticker": "AVGO",
+      "companyName": "Broadcom",
+      "marketCountry": "US",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "Broadcom 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-mu",
+      "ticker": "MU",
+      "companyName": "Micron",
+      "marketCountry": "US",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "Micron 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-vrt",
+      "ticker": "VRT",
+      "companyName": "Vertiv",
+      "marketCountry": "US",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "Vertiv 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-0050-tw",
+      "ticker": "0050.TW",
+      "companyName": "元大台灣50",
+      "marketCountry": "Taiwan",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "元大台灣50 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-2330-tw",
+      "ticker": "2330.TW",
+      "companyName": "台積電",
+      "marketCountry": "Taiwan",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "台積電 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-2308-tw",
+      "ticker": "2308.TW",
+      "companyName": "台達電",
+      "marketCountry": "Taiwan",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "台達電 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-6770-tw",
+      "ticker": "6770.TW",
+      "companyName": "力積電",
+      "marketCountry": "Taiwan",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "力積電 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-2408-tw",
+      "ticker": "2408.TW",
+      "companyName": "南亞科",
+      "marketCountry": "Taiwan",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "南亞科 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-2345-tw",
+      "ticker": "2345.TW",
+      "companyName": "智邦",
+      "marketCountry": "Taiwan",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "智邦 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-2383-tw",
+      "ticker": "2383.TW",
+      "companyName": "台光電",
+      "marketCountry": "Taiwan",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "台光電 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
+    },
+    {
+      "id": "tp-3017-tw",
+      "ticker": "3017.TW",
+      "companyName": "奇鋐",
+      "marketCountry": "Taiwan",
+      "actionToday": "Watch",
+      "conviction": "Avoid",
+      "rationale": "奇鋐 價格資料不足，今日不設定主動買點。只能追蹤催化是否被公司公告、月營收或可驗證 K 線確認。",
+      "entryZone": "價格資料不足，今日不設定主動買點。",
+      "supportLevel": "價格資料不足，今日不設定主動買點。",
+      "resistanceLevel": "價格資料不足，今日不設定主動買點。",
+      "invalidationLevel": "價格資料不足；若後續補資料，先看 20 日線與近 20 日低點。",
+      "positionSizing": "0%",
+      "riskReward": "資料不足時風險報酬不可評估，等待。",
+      "timeHorizon": "1-5 個交易日觀察",
+      "confirmationSignals": [
+        "補齊最新 OHLCV",
+        "突破前高且成交量高於均量",
+        "回測支撐量縮"
+      ],
+      "avoidConditions": [
+        "資料仍不足",
+        "只靠題材追高"
+      ],
+      "bullCase": "資料補齊後放量突破。",
+      "baseCase": "等待。",
+      "bearCase": "無資料下追價造成不可控風險。",
+      "linkedCatalysts": [
+        "fresh-trendforce-hbm-pricing",
+        "fresh-sk-hynix-capacity",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk",
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling",
+        "recent-export-controls"
+      ]
     }
   ],
   "watchlist": [
     {
-      "id": "watch-nvda",
+      "id": "wl-nvda",
       "ticker": "NVDA",
       "companyName": "NVIDIA",
       "currentView": "Positive",
-      "keyNews": "追蹤新產品、財報、供應鏈與出口限制。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "估值、出口限制、ASIC 替代",
-      "lastUpdatedTime": "2026-06-03 01:00",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "估值高、出口管制、開高走低",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
       "status": "Watching"
     },
     {
-      "id": "watch-msft",
-      "ticker": "MSFT",
-      "companyName": "Microsoft",
-      "currentView": "Positive",
-      "keyNews": "追蹤 Azure 成長、AI monetization 與 capex 效率。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "capex ROI、雲端毛利、監管",
-      "lastUpdatedTime": "2026-06-03 01:00",
-      "status": "Watching"
-    },
-    {
-      "id": "watch-avgo",
+      "id": "wl-avgo",
       "ticker": "AVGO",
       "companyName": "Broadcom",
       "currentView": "Positive",
-      "keyNews": "追蹤 AI revenue 指引與大客戶專案。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "客戶集中、估值、專案延遲",
-      "lastUpdatedTime": "2026-06-03 01:00",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "財報波動、ASIC 客戶集中",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
       "status": "Watching"
     },
     {
-      "id": "watch-mu",
+      "id": "wl-mrvl",
+      "ticker": "MRVL",
+      "companyName": "Marvell Technology",
+      "currentView": "Positive",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "題材過熱、財報落差",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
+      "status": "Watching"
+    },
+    {
+      "id": "wl-mu",
       "ticker": "MU",
       "companyName": "Micron",
       "currentView": "Positive",
-      "keyNews": "追蹤 HBM 供需、報價與庫存。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "循環、供給、庫存",
-      "lastUpdatedTime": "2026-06-03 01:00",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "記憶體循環、資本支出",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
       "status": "Watching"
     },
     {
-      "id": "watch-pltr",
+      "id": "wl-vrt",
+      "ticker": "VRT",
+      "companyName": "Vertiv",
+      "currentView": "Positive",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "估值、資料中心供給過剩疑慮",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
+      "status": "Watching"
+    },
+    {
+      "id": "wl-etn",
+      "ticker": "ETN",
+      "companyName": "Eaton",
+      "currentView": "Positive",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "利率、工業循環",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
+      "status": "Watching"
+    },
+    {
+      "id": "wl-googl",
+      "ticker": "GOOGL",
+      "companyName": "Alphabet",
+      "currentView": "Positive",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "capex ROI、監管",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
+      "status": "Watching"
+    },
+    {
+      "id": "wl-msft",
+      "ticker": "MSFT",
+      "companyName": "Microsoft",
+      "currentView": "Positive",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "AI 毛利、capex",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
+      "status": "Watching"
+    },
+    {
+      "id": "wl-pltr",
       "ticker": "PLTR",
       "companyName": "Palantir",
       "currentView": "Positive",
-      "keyNews": "追蹤營收成長、RPO、政府合約、商業客戶擴張與 AIP 使用案例。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "估值、政府合約集中、AI 軟體競爭",
-      "lastUpdatedTime": "2026-06-03 01:00",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "估值極高、成長放緩",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
       "status": "Watching"
     },
     {
-      "id": "watch-dell",
-      "ticker": "DELL",
-      "companyName": "Dell Technologies",
-      "currentView": "Neutral",
-      "keyNews": "追蹤 AI server backlog、毛利與現金流。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "毛利、客戶集中、庫存",
-      "lastUpdatedTime": "2026-06-03 01:00",
-      "status": "Researching"
+      "id": "wl-0050-tw",
+      "ticker": "0050.TW",
+      "companyName": "元大台灣50",
+      "currentView": "Positive",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "大盤回檔、權值股集中",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
+      "status": "Watching"
     },
     {
-      "id": "watch-vrt",
-      "ticker": "VRT",
-      "companyName": "Vertiv",
-      "currentView": "Neutral",
-      "keyNews": "追蹤 backlog、液冷滲透與估值。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "估值、專案延遲、競爭",
-      "lastUpdatedTime": "2026-06-03 01:00",
-      "status": "Researching"
-    },
-    {
-      "id": "watch-tsmc",
+      "id": "wl-2330-tw",
       "ticker": "2330.TW",
       "companyName": "台積電",
       "currentView": "Positive",
-      "keyNews": "追蹤月營收、capex、CoWoS 與大客戶需求。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "地緣政治、CoWoS、capex",
-      "lastUpdatedTime": "2026-06-03 01:00",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "估值、地緣政治",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
       "status": "Watching"
     },
     {
-      "id": "watch-winbond",
-      "ticker": "2344.TW",
-      "companyName": "華邦電",
-      "currentView": "Positive",
-      "keyNews": "追蹤報價、毛利、庫存與 CUBE 進度。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "循環、庫存、題材過熱",
-      "lastUpdatedTime": "2026-06-03 01:00",
-      "status": "Watching"
-    },
-    {
-      "id": "watch-innolux",
-      "ticker": "3481.TW",
-      "companyName": "群創",
-      "currentView": "Neutral",
-      "keyNews": "追蹤面板報價、本業虧損改善與 FOPLP 訂單。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "面板報價、題材落地、處置風險",
-      "lastUpdatedTime": "2026-06-03 01:00",
-      "status": "Researching"
-    },
-    {
-      "id": "watch-hannstar",
-      "ticker": "6116.TW",
-      "companyName": "彩晶",
-      "currentView": "Neutral",
-      "keyNews": "追蹤成交量、處置、面板報價與是否有實際訂單。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "證據不足、處置、波動",
-      "lastUpdatedTime": "2026-06-03 01:00",
-      "status": "Researching"
-    },
-    {
-      "id": "watch-compal",
-      "ticker": "2324.TW",
-      "companyName": "仁寶",
-      "currentView": "Neutral",
-      "keyNews": "追蹤 AI server 營收占比、毛利與月營收。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "毛利、轉型速度、客戶集中",
-      "lastUpdatedTime": "2026-06-03 01:00",
-      "status": "Researching"
-    },
-    {
-      "id": "watch-panjit",
-      "ticker": "2481.TW",
-      "companyName": "強茂",
-      "currentView": "Positive",
-      "keyNews": "追蹤 MOSFET 營收占比、B/B 值、CSP 客戶、AI server 電源與車用訂單。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "缺貨循環、產品 mix、客戶認證",
-      "lastUpdatedTime": "2026-06-03 01:00",
-      "status": "Watching"
-    },
-    {
-      "id": "watch-tsc",
-      "ticker": "5425.TW",
-      "companyName": "台半",
-      "currentView": "Neutral",
-      "keyNews": "追蹤漲價、交期、電源大廠採用、Rubin/AI server read-through 與月營收。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "訂單能見度、毛利驗證、題材波動",
-      "lastUpdatedTime": "2026-06-03 01:00",
-      "status": "Researching"
-    },
-    {
-      "id": "watch-delta",
+      "id": "wl-2308-tw",
       "ticker": "2308.TW",
       "companyName": "台達電",
       "currentView": "Positive",
-      "keyNews": "追蹤 AI 電源/散熱營收占比、毛利與新專案。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "接單透明度、競爭、資本支出",
-      "lastUpdatedTime": "2026-06-03 01:00",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "估值偏高、開高追價風險",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
       "status": "Watching"
     },
     {
-      "id": "watch-accton",
-      "ticker": "2345.TW",
-      "companyName": "智邦",
+      "id": "wl-6770-tw",
+      "ticker": "6770.TW",
+      "companyName": "力積電",
       "currentView": "Positive",
-      "keyNews": "追蹤雲端客戶拉貨、高速網通需求與毛利。",
-      "keyPriceLevels": "晨報不使用即時買賣價；下一步看新催化、成交量、月營收、法說或財報是否驗證 thesis。",
-      "riskNotes": "客戶集中、拉貨波動、競爭",
-      "lastUpdatedTime": "2026-06-03 01:00",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "價格循環、低價股波動、毛利率驗證不足",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
+      "status": "Watching"
+    },
+    {
+      "id": "wl-2408-tw",
+      "ticker": "2408.TW",
+      "companyName": "南亞科",
+      "currentView": "Positive",
+      "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
+      "keyPriceLevels": "價格資料不足，今日不設定主動買點。",
+      "riskNotes": "循環股波動、報價反轉",
+      "lastUpdatedTime": "2026-06-03T20:07:19+08:00",
       "status": "Watching"
     }
   ],
   "ideaPipeline": [
     {
-      "id": "idea-nvda",
-      "newsId": "news-us-ai-capex",
-      "themeId": "theme-us-ai-capex",
-      "supplyChainNodeId": "node-nvda",
-      "companyResearchId": "company-nvda",
+      "id": "idea-hbm-psmc",
+      "newsId": "fresh-trendforce-hbm-pricing",
+      "themeId": "theme-memory",
+      "supplyChainNodeId": "node-6770-tw",
+      "companyResearchId": "cr-6770-tw",
       "finalView": "Positive",
-      "explanation": "美股 AI capex 先看 NVIDIA，再看它如何傳導到台股製造與基建鏈。"
+      "explanation": "HBM 排擠傳統 DRAM 供給，力積電作為成熟製程/記憶體補位屬隱性受惠，但需用量價與毛利率驗證。"
     },
     {
-      "id": "idea-avgo",
-      "newsId": "news-us-ai-capex",
-      "themeId": "theme-us-ai-capex",
-      "supplyChainNodeId": "node-avgo",
-      "companyResearchId": "company-avgo",
+      "id": "idea-avgo-tw-networking",
+      "newsId": "fresh-avgo-earnings-watch",
+      "themeId": "theme-asic-networking",
+      "supplyChainNodeId": "node-2345-tw",
+      "companyResearchId": "cr-2345-tw",
       "finalView": "Positive",
-      "explanation": "Broadcom 是 ASIC 與 AI networking 的第二條美股主線。"
+      "explanation": "AVGO 財報若確認 ASIC / networking，台股智邦、台光電、金像電為隔日 read-through。"
     },
     {
-      "id": "idea-winbond",
-      "newsId": "news-tw-memory",
-      "themeId": "theme-tw-memory-panel",
-      "supplyChainNodeId": "node-winbond",
-      "companyResearchId": "company-winbond",
+      "id": "idea-delta-power",
+      "newsId": "recent-power-cooling",
+      "themeId": "theme-power-cooling",
+      "supplyChainNodeId": "node-2308-tw",
+      "companyResearchId": "cr-2308-tw",
       "finalView": "Positive",
-      "explanation": "華邦電有記憶體報價與毛利改善邏輯，比純題材股證據更硬。"
-    },
-    {
-      "id": "idea-innolux",
-      "newsId": "news-tw-panel-foplp",
-      "themeId": "theme-tw-memory-panel",
-      "supplyChainNodeId": "node-innolux",
-      "companyResearchId": "company-innolux",
-      "finalView": "Neutral",
-      "explanation": "群創題材強，但需區分 FOPLP 轉型與面板本業改善。"
-    },
-    {
-      "id": "idea-hannstar",
-      "newsId": "news-momentum-control",
-      "themeId": "theme-tw-memory-panel",
-      "supplyChainNodeId": "node-hannstar",
-      "companyResearchId": "company-hannstar",
-      "finalView": "Neutral",
-      "explanation": "彩晶進雷達，但目前更偏 momentum-only，需要訂單或財報證據升級。"
-    },
-    {
-      "id": "idea-compal",
-      "newsId": "news-tw-odm",
-      "themeId": "theme-tw-ai-infra",
-      "supplyChainNodeId": "node-compal",
-      "companyResearchId": "company-compal",
-      "finalView": "Neutral",
-      "explanation": "仁寶是 AI server 轉型低基期候選，重點看月營收與毛利。"
-    },
-    {
-      "id": "idea-delta",
-      "newsId": "news-tw-cooling-power",
-      "themeId": "theme-tw-ai-infra",
-      "supplyChainNodeId": "node-delta",
-      "companyResearchId": "company-delta",
-      "finalView": "Positive",
-      "explanation": "台達電連到 AI data center 電源與散熱，是台股基建層核心。"
-    },
-    {
-      "id": "idea-accton",
-      "newsId": "news-tw-pcb-optics",
-      "themeId": "theme-tw-ai-infra",
-      "supplyChainNodeId": "node-accton",
-      "companyResearchId": "company-accton",
-      "finalView": "Positive",
-      "explanation": "智邦對應 AI networking 與高速交換器，是美股網通 read-through 的台股受惠者。"
-    },
-    {
-      "id": "idea-pltr",
-      "newsId": "news-us-software-cloud",
-      "themeId": "theme-us-ai-capex",
-      "supplyChainNodeId": "node-pltr",
-      "companyResearchId": "company-pltr",
-      "finalView": "Positive",
-      "explanation": "PLTR 代表 AI 應用層 monetization，可檢查 AI 硬體投資是否轉成實際 workflow 收入。"
-    },
-    {
-      "id": "idea-panjit",
-      "newsId": "news-tw-cooling-power",
-      "themeId": "theme-tw-ai-infra",
-      "supplyChainNodeId": "node-panjit",
-      "companyResearchId": "company-panjit",
-      "finalView": "Positive",
-      "explanation": "強茂把 AI server 電源、MOSFET、車用與機器人串成台股功率元件主線。"
-    },
-    {
-      "id": "idea-tsc",
-      "newsId": "news-tw-cooling-power",
-      "themeId": "theme-tw-ai-infra",
-      "supplyChainNodeId": "node-tsc",
-      "companyResearchId": "company-tsc",
-      "finalView": "Neutral",
-      "explanation": "台半進入功率元件固定雷達，但需要訂單、毛利與高階產品占比驗證。"
+      "explanation": "台達電位於 AI data center power 主線，但股價若過熱只能拉回加碼。"
     }
   ],
   "marketSections": {
     "us": {
       "region": "US",
-      "title": "美股今晚觀察",
-      "overview": "台北晚上版本先做美股全市場掃描：大盤、SOX、利率、美元、AI capex、軟體 monetization、資料中心基建、財報、指引、分析師調整與政策訊號，再由當晚證據決定哪些公司進入主報。",
+      "title": "US Market Overview",
+      "overview": "今晚美股焦點在 AVGO 財報、HBM/DRAM 價格權、AI leader 高檔量價與 cloud capex ROI。資金仍流向 AI infrastructure，但高位階股票不適合無條件追價。",
       "sentiment": "Bullish",
       "keyIndexes": [
-        "S&P 500",
-        "Nasdaq",
-        "SOX",
-        "US 10Y",
-        "DXY",
-        "WTI"
+        "SPY",
+        "QQQ",
+        "SOXX"
       ],
       "topThemes": [
-        "今晚美股盤前情緒",
-        "全市場新催化掃描",
-        "雲端 capex / monetization",
-        "利率美元與估值風險",
-        "明日台股 read-through"
+        "HBM / DRAM",
+        "ASIC / networking",
+        "Data center power"
       ],
       "importantNewsIds": [
-        "news-us-ai-capex",
-        "news-us-rates-risk",
-        "news-us-software-cloud"
+        "fresh-trendforce-hbm-pricing",
+        "fresh-avgo-earnings-watch",
+        "fresh-ai-leaders-record-risk"
       ],
       "stocksToWatch": [
         "NVDA",
-        "MSFT",
         "AVGO",
         "MU",
-        "DELL",
-        "VRT",
-        "PLTR",
-        "GOOGL",
-        "AMZN",
-        "ORCL",
-        "SNOW"
+        "MRVL",
+        "VRT"
       ],
       "risks": [
-        "晚間版本是美股事件前設定，不應直接等同已發生結果。",
-        "若美股開盤後走勢反轉，隔日台股 read-through 需在早報重新驗證。"
+        "開高走低",
+        "財報利多出盡",
+        "利率美元上行",
+        "AI capex ROI 質疑"
       ]
     },
     "taiwan": {
       "region": "Taiwan",
-      "title": "明日台股預判",
-      "overview": "台北晚上版本不把台股當成當下可交易市場，而是整理美股今晚若發生特定催化，隔日可能影響的台股族群與驗證點。",
+      "title": "Taiwan Market Overview",
+      "overview": "台股隔日 read-through 優先看記憶體、台積電/封測、AI networking、資料中心電源散熱與持股 0050/2308/6770。若美股 AI leader 今晚未能守住高檔，台股開高追價風險會升高。",
       "sentiment": "Bullish",
       "keyIndexes": [
         "TAIEX",
-        "TPEx",
-        "TWD",
-        "外資",
-        "成交量",
-        "處置股"
+        "0050.TW"
       ],
       "topThemes": [
-        "美股今晚對台股的可能傳導",
-        "AI server / 半導體隔日觀察",
-        "記憶體與功率元件延伸",
-        "題材股隔日風險控管"
+        "記憶體補位",
+        "台積電/CoWoS",
+        "電力散熱",
+        "AI networking"
       ],
       "importantNewsIds": [
-        "news-tw-memory",
-        "news-tw-panel-foplp",
-        "news-tw-odm",
-        "news-tw-cooling-power",
-        "news-tw-pcb-optics",
-        "news-tw-monthly-sales"
+        "fresh-taiwan-holdings-check",
+        "recent-nvidia-computex",
+        "recent-power-cooling"
       ],
       "stocksToWatch": [
-        "2330.TW",
-        "2344.TW",
-        "3481.TW",
-        "6116.TW",
-        "2324.TW",
-        "2382.TW",
-        "6669.TW",
+        "0050.TW",
         "2308.TW",
-        "3017.TW",
+        "6770.TW",
+        "2408.TW",
         "2345.TW",
-        "2481.TW",
-        "5425.TW"
+        "2383.TW"
       ],
       "risks": [
-        "隔日預判必須等美股收盤、台股開盤量價與本地新聞驗證。",
-        "晚上不應用台股預判取代隔天早上的台股作戰版。"
+        "題材股過熱",
+        "外資轉賣",
+        "開高量縮",
+        "台幣急貶"
       ]
     },
     "crossMarket": [
       {
-        "id": "cross-nvda-tsmc",
-        "title": "NVIDIA AI 平台 -> 台積電 / ODM / 散熱",
-        "usCatalyst": "NVIDIA AI capex 與平台更新",
-        "taiwanReadThrough": "台積電、廣達、緯穎、鴻海、奇鋐、台達電受 read-through 影響。",
+        "id": "cross-hbm",
+        "title": "TrendForce HBM -> 台股記憶體/封測",
+        "usCatalyst": "HBM 供給緊張與價格權提升。",
+        "taiwanReadThrough": "南亞科、華邦電、力積電、日月光、台積電受關注；下游 PC/手機成本端可能受壓。",
         "relatedUSTickers": [
-          "NVDA"
+          "MU",
+          "NVDA",
+          "AVGO"
         ],
         "relatedTaiwanTickers": [
-          "2330.TW",
-          "2382.TW",
-          "6669.TW",
-          "3017.TW",
-          "2308.TW"
+          "2408.TW",
+          "2344.TW",
+          "6770.TW",
+          "3711.TW",
+          "2330.TW"
         ],
         "evidenceStrength": "High"
       },
       {
-        "id": "cross-avgo-accton",
-        "title": "Broadcom AI networking -> 智邦 / 光通訊",
-        "usCatalyst": "Broadcom ASIC 與 AI networking",
-        "taiwanReadThrough": "智邦、眾達、聯亞、波若威等高速網通與光通訊鏈進入雷達。",
+        "id": "cross-avgo",
+        "title": "AVGO 財報 -> ASIC / networking",
+        "usCatalyst": "Broadcom 財報驗證 custom silicon 與 AI networking。",
+        "taiwanReadThrough": "台積電、創意、世芯、智邦、台光電、金像電是隔日映射。",
         "relatedUSTickers": [
-          "AVGO"
+          "AVGO",
+          "MRVL",
+          "GOOGL"
         ],
         "relatedTaiwanTickers": [
+          "2330.TW",
+          "3443.TW",
+          "3661.TW",
           "2345.TW",
-          "4977.TW",
-          "3081.TW",
-          "3163.TW"
+          "2383.TW"
         ],
         "evidenceStrength": "Medium"
       },
       {
-        "id": "cross-mu-memory",
-        "title": "Micron / HBM -> 台股記憶體",
-        "usCatalyst": "HBM、DRAM 與資料中心 SSD 需求",
-        "taiwanReadThrough": "華邦電、南亞科、旺宏、群聯需從報價、毛利與庫存角度追蹤。",
+        "id": "cross-power",
+        "title": "AI data center power -> 台達電/散熱",
+        "usCatalyst": "Vertiv、Eaton 與資料中心電力需求維持高景氣。",
+        "taiwanReadThrough": "台達電、光寶科、奇鋐、雙鴻、健策受惠，但估值擁擠須等拉回。",
         "relatedUSTickers": [
-          "MU"
+          "VRT",
+          "ETN"
         ],
         "relatedTaiwanTickers": [
-          "2344.TW",
-          "2408.TW",
-          "2337.TW",
-          "8299.TW"
-        ],
-        "evidenceStrength": "High"
-      },
-      {
-        "id": "cross-dell-odm",
-        "title": "Dell AI server -> 台股 ODM",
-        "usCatalyst": "AI server backlog 與企業硬體需求",
-        "taiwanReadThrough": "廣達、緯穎、仁寶、英業達、神達要看營收占比與毛利。",
-        "relatedUSTickers": [
-          "DELL"
-        ],
-        "relatedTaiwanTickers": [
-          "2382.TW",
-          "6669.TW",
-          "2324.TW",
-          "2356.TW",
-          "3706.TW"
+          "2308.TW",
+          "2301.TW",
+          "3017.TW",
+          "3324.TW"
         ],
         "evidenceStrength": "High"
       }
@@ -2123,790 +2667,407 @@
       {
         "id": "scan-us-index",
         "market": "US",
-        "category": "美股大盤 / 利率 / 美元 / 油價",
-        "status": "Recent context",
+        "category": "US indexes / AI leaders",
+        "status": "Fresh catalyst",
         "tickersChecked": [
           "SPY",
           "QQQ",
-          "SOXX"
-        ],
-        "tickersSelected": [
-          "SPY",
-          "QQQ",
-          "SOXX"
-        ],
-        "tickersRejected": [],
-        "reason": "每天先確認市場風險偏好與估值壓力。",
-        "priority": "High",
-        "candidateCount": 3,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-us-ai",
-        "market": "US",
-        "category": "美股 AI 半導體 / 雲端 / 硬體基建",
-        "status": "Fresh catalyst",
-        "tickersChecked": [
+          "SOXX",
           "NVDA",
-          "MSFT",
           "AVGO",
-          "MU",
-          "DELL",
-          "VRT"
+          "MRVL",
+          "MU"
         ],
         "tickersSelected": [
           "NVDA",
-          "MSFT",
           "AVGO",
-          "MU",
-          "DELL"
+          "MU"
         ],
-        "tickersRejected": [
-          {
-            "ticker": "VRT",
-            "companyName": "VRT",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "AI capex 是美股主軸，但要同步追 monetization。",
+        "reason": "美股 AI leader 仍吸金，但今晚重點是財報與高檔量價確認。",
         "priority": "High",
-        "candidateCount": 6,
         "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
+        ],
+        "candidateCount": 7
       },
       {
-        "id": "scan-us-ai-software",
+        "id": "scan-us-cloud",
         "market": "US",
-        "category": "美股 AI 應用層 / 軟體 monetization",
-        "status": "Fresh catalyst",
-        "tickersChecked": [
-          "PLTR",
-          "SNOW",
-          "DDOG",
-          "MDB",
-          "CRM",
-          "NOW",
-          "ORCL"
-        ],
-        "tickersSelected": [
-          "PLTR",
-          "SNOW",
-          "DDOG",
-          "MDB",
-          "CRM"
-        ],
-        "tickersRejected": [
-          {
-            "ticker": "NOW",
-            "companyName": "NOW",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          },
-          {
-            "ticker": "ORCL",
-            "companyName": "ORCL",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "用軟體收入與企業 adoption 驗證 AI capex 是否能回收。",
-        "priority": "High",
-        "candidateCount": 7,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-us-megacap",
-        "market": "US",
-        "category": "美股 Magnificent 7 / hyperscaler",
-        "status": "Recent context",
-        "tickersChecked": [
-          "MSFT",
-          "GOOGL",
-          "AMZN",
-          "META",
-          "AAPL",
-          "TSLA"
-        ],
-        "tickersSelected": [
-          "MSFT",
-          "GOOGL",
-          "AMZN",
-          "META",
-          "AAPL"
-        ],
-        "tickersRejected": [
-          {
-            "ticker": "TSLA",
-            "companyName": "TSLA",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "大客戶 capex、雲端毛利與自研 ASIC 會傳導到半導體與台股供應鏈。",
-        "priority": "High",
-        "candidateCount": 6,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-us-energy-power",
-        "market": "US",
-        "category": "美股電力 / 公用事業 / 資料中心能源",
-        "status": "Recent context",
-        "tickersChecked": [
-          "ETN",
-          "GEV",
-          "CEG",
-          "NEE",
-          "VST",
-          "PWR"
-        ],
-        "tickersSelected": [
-          "ETN",
-          "GEV",
-          "CEG",
-          "NEE",
-          "VST"
-        ],
-        "tickersRejected": [
-          {
-            "ticker": "PWR",
-            "companyName": "PWR",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "AI data center 的限制常在電力、變壓器、配電與能源供給。",
-        "priority": "Medium",
-        "candidateCount": 6,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-us-cyber-defense",
-        "market": "US",
-        "category": "美股資安 / 國防科技 / 政府 AI",
+        "category": "Cloud capex / software ROI",
         "status": "Background thesis",
         "tickersChecked": [
-          "CRWD",
-          "PANW",
-          "NET",
+          "GOOGL",
+          "MSFT",
+          "AMZN",
           "PLTR",
-          "LMT",
-          "RTX"
+          "SNOW",
+          "NOW"
         ],
         "tickersSelected": [
-          "CRWD",
-          "PANW",
-          "NET",
-          "PLTR",
-          "LMT"
+          "GOOGL",
+          "MSFT",
+          "PLTR"
         ],
-        "tickersRejected": [
-          {
-            "ticker": "RTX",
-            "companyName": "RTX",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "政府 AI、國防科技與資安預算是 AI 應用層的另一條線。",
+        "reason": "軟體需求端決定 AI capex 可持續性，但今日硬體催化更強。",
         "priority": "Medium",
-        "candidateCount": 6,
         "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
+        ],
+        "candidateCount": 6
+      },
+      {
+        "id": "scan-us-power",
+        "market": "US",
+        "category": "Data center power / grid",
+        "status": "Recent context",
+        "tickersChecked": [
+          "VRT",
+          "ETN",
+          "PWR",
+          "GEV",
+          "CEG"
+        ],
+        "tickersSelected": [
+          "VRT",
+          "ETN"
+        ],
+        "reason": "電力與冷卻仍是 AI build-out 瓶頸。",
+        "priority": "High",
+        "sourcesChecked": [
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
+        ],
+        "candidateCount": 5
+      },
+      {
+        "id": "scan-tw-holdings",
+        "market": "Taiwan",
+        "category": "Personal holdings",
+        "status": "Fresh catalyst",
+        "tickersChecked": [
+          "0050.TW",
+          "6770.TW",
+          "2308.TW"
+        ],
+        "tickersSelected": [
+          "0050.TW",
+          "6770.TW",
+          "2308.TW"
+        ],
+        "reason": "持股強制檢查：0050、台達電、力積電均納入研究與交易計畫。",
+        "priority": "High",
+        "sourcesChecked": [
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
+        ],
+        "candidateCount": 3
       },
       {
         "id": "scan-tw-memory",
         "market": "Taiwan",
-        "category": "台股記憶體 / 儲存",
+        "category": "Memory / mature process",
         "status": "Fresh catalyst",
         "tickersChecked": [
-          "2344.TW",
           "2408.TW",
+          "2344.TW",
           "2337.TW",
+          "6770.TW",
           "8299.TW"
         ],
         "tickersSelected": [
-          "2344.TW",
           "2408.TW",
-          "2337.TW",
-          "8299.TW"
+          "2344.TW",
+          "6770.TW"
         ],
-        "tickersRejected": [],
-        "reason": "記憶體報價與財報改善使此族群升級到主報候選。",
+        "reason": "TrendForce 與 SK hynix 新訊號使記憶體成為今日最強基本面催化。",
         "priority": "High",
-        "candidateCount": 4,
         "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-tw-panel",
-        "market": "Taiwan",
-        "category": "面板 / FOPLP / SpaceX",
-        "status": "Momentum only",
-        "tickersChecked": [
-          "3481.TW",
-          "2409.TW",
-          "6116.TW"
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
         ],
-        "tickersSelected": [
-          "3481.TW",
-          "2409.TW",
-          "6116.TW"
-        ],
-        "tickersRejected": [],
-        "reason": "題材熱度高，但需區分本業改善與純動能。",
-        "priority": "High",
-        "candidateCount": 3,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
+        "candidateCount": 5
       },
       {
         "id": "scan-tw-odm",
         "market": "Taiwan",
-        "category": "AI server ODM",
-        "status": "Fresh catalyst",
+        "category": "AI server ODM / EMS",
+        "status": "Recent context",
         "tickersChecked": [
           "2382.TW",
           "6669.TW",
           "2317.TW",
-          "2324.TW",
           "2356.TW",
-          "3706.TW"
+          "2324.TW"
         ],
         "tickersSelected": [
           "2382.TW",
           "6669.TW",
-          "2317.TW",
-          "2324.TW",
-          "2356.TW"
+          "2317.TW"
         ],
-        "tickersRejected": [
-          {
-            "ticker": "3706.TW",
-            "companyName": "3706.TW",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "從龍頭擴散到低基期轉型股，需看月營收與毛利。",
-        "priority": "High",
-        "candidateCount": 6,
+        "reason": "NVIDIA / enterprise AI server 背景支撐，但龍頭擁擠。",
+        "priority": "Medium",
         "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
+        ],
+        "candidateCount": 5
       },
       {
-        "id": "scan-tw-cooling",
+        "id": "scan-tw-networking",
         "market": "Taiwan",
-        "category": "散熱 / 液冷 / 電源",
-        "status": "Recent context",
-        "tickersChecked": [
-          "3017.TW",
-          "3324.TW",
-          "3653.TW",
-          "2308.TW",
-          "2301.TW",
-          "6282.TW"
-        ],
-        "tickersSelected": [
-          "3017.TW",
-          "3324.TW",
-          "3653.TW",
-          "2308.TW",
-          "2301.TW"
-        ],
-        "tickersRejected": [
-          {
-            "ticker": "6282.TW",
-            "companyName": "6282.TW",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "AI 建置瓶頸下沉，是台股二三層核心掃描區。",
-        "priority": "High",
-        "candidateCount": 6,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-tw-power-components",
-        "market": "Taiwan",
-        "category": "功率元件 / MOSFET / SiC / 車用",
+        "category": "Networking / optical / CPO",
         "status": "Fresh catalyst",
         "tickersChecked": [
-          "2481.TW",
-          "5425.TW",
-          "3675.TW",
-          "6435.TW",
-          "6693.TW",
-          "8261.TW",
-          "5285.TW",
-          "6548.TW"
-        ],
-        "tickersSelected": [
-          "2481.TW",
-          "5425.TW",
-          "3675.TW",
-          "6435.TW",
-          "6693.TW"
-        ],
-        "tickersRejected": [
-          {
-            "ticker": "8261.TW",
-            "companyName": "8261.TW",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          },
-          {
-            "ticker": "5285.TW",
-            "companyName": "5285.TW",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          },
-          {
-            "ticker": "6548.TW",
-            "companyName": "6548.TW",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "AI server 電源效率、車用與供給吃緊讓功率元件成為固定掃描分類。",
-        "priority": "High",
-        "candidateCount": 8,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-tw-pcb-optics",
-        "market": "Taiwan",
-        "category": "PCB / CCL / 光通訊",
-        "status": "Recent context",
-        "tickersChecked": [
-          "2383.TW",
-          "2368.TW",
-          "3037.TW",
-          "3189.TW",
           "2345.TW",
-          "4977.TW"
+          "4977.TW",
+          "3081.TW",
+          "3163.TW"
         ],
         "tickersSelected": [
-          "2383.TW",
-          "2368.TW",
-          "3037.TW",
-          "3189.TW",
           "2345.TW"
         ],
-        "tickersRejected": [
-          {
-            "ticker": "4977.TW",
-            "companyName": "4977.TW",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "AI cluster 擴建會傳導到高速網路與材料。",
-        "priority": "Medium",
-        "candidateCount": 6,
+        "reason": "AVGO/MRVL 主線若延續，台股網通與光通訊受惠。",
+        "priority": "High",
         "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
+        ],
+        "candidateCount": 4
       },
       {
-        "id": "scan-tw-ic-design",
+        "id": "scan-tw-pcb-ccl",
         "market": "Taiwan",
-        "category": "IC 設計 / ASIC / IP / 車用 IC",
+        "category": "PCB / CCL / substrate",
         "status": "Recent context",
         "tickersChecked": [
-          "2454.TW",
-          "3034.TW",
-          "3661.TW",
-          "3443.TW",
-          "5274.TW",
-          "4966.TW"
+          "2383.TW",
+          "2368.TW",
+          "3037.TW",
+          "3189.TW"
         ],
         "tickersSelected": [
-          "2454.TW",
-          "3034.TW",
-          "3661.TW",
-          "3443.TW",
-          "5274.TW"
+          "2383.TW",
+          "2368.TW"
         ],
-        "tickersRejected": [
-          {
-            "ticker": "4966.TW",
-            "companyName": "4966.TW",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "AI edge、ASIC、車用與高速傳輸會帶動 IC 設計輪動。",
+        "reason": "AI networking 需要高速材料與高層板。",
         "priority": "Medium",
-        "candidateCount": 6,
         "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
+        ],
+        "candidateCount": 4
       },
       {
-        "id": "scan-tw-passives",
+        "id": "scan-tw-cooling-power",
         "market": "Taiwan",
-        "category": "被動元件 / MLCC / 電感 / 石英元件",
+        "category": "Cooling / power",
+        "status": "Recent context",
+        "tickersChecked": [
+          "2308.TW",
+          "3017.TW",
+          "3324.TW",
+          "2301.TW"
+        ],
+        "tickersSelected": [
+          "2308.TW",
+          "3017.TW"
+        ],
+        "reason": "資料中心功耗提高，台達電與散熱鏈仍是核心。",
+        "priority": "High",
+        "sourcesChecked": [
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
+        ],
+        "candidateCount": 4
+      },
+      {
+        "id": "scan-policy-macro",
+        "market": "CrossMarket",
+        "category": "Rates / USD / export controls",
+        "status": "Recent context",
+        "tickersChecked": [
+          "US10Y",
+          "DXY",
+          "USD/TWD",
+          "WTI",
+          "NVDA",
+          "2330.TW"
+        ],
+        "tickersSelected": [
+          "US10Y",
+          "DXY"
+        ],
+        "reason": "利率美元與出口管制是追高 AI 交易的風控條件。",
+        "priority": "High",
+        "sourcesChecked": [
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
+        ],
+        "candidateCount": 6
+      },
+      {
+        "id": "scan-edge-ai",
+        "market": "CrossMarket",
+        "category": "Edge AI / AI PC / smartphone",
         "status": "Background thesis",
         "tickersChecked": [
-          "2327.TW",
-          "2492.TW",
-          "3026.TW",
-          "6173.TW",
-          "3042.TW"
+          "AAPL",
+          "QCOM",
+          "2454.TW",
+          "2357.TW"
         ],
         "tickersSelected": [
-          "2327.TW",
-          "2492.TW",
-          "3026.TW",
-          "6173.TW",
-          "3042.TW"
+          "QCOM",
+          "2454.TW"
         ],
-        "tickersRejected": [],
-        "reason": "AI server、車用與電源升級會增加被動元件規格與用量。",
-        "priority": "Medium",
-        "candidateCount": 5,
+        "reason": "邊緣 AI 有長線潛力，但今日新催化低於 memory 與 networking。",
+        "priority": "Low",
         "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
+        ],
+        "candidateCount": 4
       },
       {
-        "id": "scan-tw-robotics-auto",
+        "id": "scan-low-signal",
         "market": "Taiwan",
-        "category": "機器人 / 自動化 / 車電",
-        "status": "Background thesis",
-        "tickersChecked": [
-          "2359.TW",
-          "2049.TW",
-          "1590.TW",
-          "2231.TW",
-          "1536.TW"
-        ],
-        "tickersSelected": [
-          "2359.TW",
-          "2049.TW",
-          "1590.TW",
-          "2231.TW",
-          "1536.TW"
-        ],
-        "tickersRejected": [],
-        "reason": "AI 從資料中心擴散到機器人與智慧製造時，台股零組件可能輪動。",
-        "priority": "Medium",
-        "candidateCount": 5,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-tw-aerospace-defense",
-        "market": "Taiwan",
-        "category": "航太 / 軍工 / 低軌衛星",
+        "category": "Panel / FOPLP / satellite themes",
         "status": "Momentum only",
         "tickersChecked": [
-          "2634.TW",
-          "8033.TW",
-          "2314.TW",
-          "6285.TW",
-          "3491.TW"
+          "3481.TW",
+          "6116.TW",
+          "2409.TW",
+          "6438.TW"
         ],
-        "tickersSelected": [
-          "2634.TW",
-          "8033.TW",
-          "2314.TW",
-          "6285.TW",
-          "3491.TW"
-        ],
-        "tickersRejected": [],
-        "reason": "政策、衛星與國防題材容易形成資金行情，但證據要分層。",
+        "tickersSelected": [],
+        "reason": "有題材與量價，但正式訂單與財務驗證不足，列入剔除/雷達。",
         "priority": "Medium",
-        "candidateCount": 5,
         "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-tw-financials",
-        "market": "Taiwan",
-        "category": "金融 / 壽險 / 高股息",
-        "status": "Recent context",
-        "tickersChecked": [
-          "2881.TW",
-          "2882.TW",
-          "2884.TW",
-          "2885.TW",
-          "2886.TW"
+          "Yahoo Finance chart API",
+          "TrendForce",
+          "市場新聞掃描"
         ],
-        "tickersSelected": [
-          "2881.TW",
-          "2882.TW",
-          "2884.TW",
-          "2885.TW",
-          "2886.TW"
-        ],
-        "tickersRejected": [],
-        "reason": "利率、匯率、股債市與殖利率資金會影響台股非科技主流。",
-        "priority": "Medium",
-        "candidateCount": 5,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-tw-cyclical",
-        "market": "Taiwan",
-        "category": "航運 / 鋼鐵 / 原物料 / 能源",
-        "status": "Background thesis",
-        "tickersChecked": [
-          "2603.TW",
-          "2609.TW",
-          "2002.TW",
-          "1301.TW",
-          "1303.TW",
-          "6505.TW"
-        ],
-        "tickersSelected": [
-          "2603.TW",
-          "2609.TW",
-          "2002.TW",
-          "1301.TW",
-          "1303.TW"
-        ],
-        "tickersRejected": [
-          {
-            "ticker": "6505.TW",
-            "companyName": "6505.TW",
-            "reason": "已掃描但本次證據或優先級低於主報公司；保留在雷達等待新催化。",
-            "evidenceGrade": "C",
-            "opportunityStage": "Avoid/Wait"
-          }
-        ],
-        "reason": "若油價、運價或政策催化轉強，非科技循環股要升級主報。",
-        "priority": "Medium",
-        "candidateCount": 6,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-tw-biotech-policy",
-        "market": "Taiwan",
-        "category": "生技 / 醫材 / 政策受惠",
-        "status": "Background thesis",
-        "tickersChecked": [
-          "6446.TW",
-          "4743.TW",
-          "4162.TW",
-          "1598.TW",
-          "4128.TW"
-        ],
-        "tickersSelected": [
-          "6446.TW",
-          "4743.TW",
-          "4162.TW",
-          "1598.TW",
-          "4128.TW"
-        ],
-        "tickersRejected": [],
-        "reason": "新藥、醫材、政策補助與法說催化常和科技股不同步。",
-        "priority": "Medium",
-        "candidateCount": 5,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
-      },
-      {
-        "id": "scan-tw-non-tech",
-        "market": "Taiwan",
-        "category": "金融 / 航運 / 原物料 / 生技",
-        "status": "Background thesis",
-        "tickersChecked": [
-          "2881.TW",
-          "2603.TW",
-          "2002.TW",
-          "6446.TW"
-        ],
-        "tickersSelected": [
-          "2881.TW",
-          "2603.TW",
-          "2002.TW",
-          "6446.TW"
-        ],
-        "tickersRejected": [],
-        "reason": "每天掃描但只有出現新催化或資金主流時升級主報。",
-        "priority": "Medium",
-        "candidateCount": 4,
-        "sourcesChecked": [
-          "新聞/公告",
-          "量價/族群輪動",
-          "跨市場 read-through"
-        ]
+        "candidateCount": 4
       }
     ]
   },
   "suggestedActions": [
-    "晚間先追蹤美股盤前/開盤反應，隔日台股只列假設，不當成結論。",
-    "優先追蹤有新催化、證據品質高、且量價沒有過度擁擠的公司。",
-    "低訊號或純題材標的留在雷達，不升級成公司研究主結論。",
-    "若利率、美元或高估值 AI 股同步轉弱，降低追價動作並等待確認。"
+    "持股 0050：核心配置可續抱，但若跌破 20 日線且台積電/電子權值轉弱，停止加碼；價格資料不足時不設定主動買點。",
+    "持股 2308：台達電受 AI power/SST 長線支撐，若短線過熱只接受 10/20 日線附近量縮回測；接近近期高點且量能失衡可分批調節。",
+    "持股 6770：力積電屬記憶體供給缺口的隱性受惠，波動高；只在回測支撐守住且記憶體族群同步強時加碼。",
+    "今晚美股先看 AVGO 財報後 ASIC / networking 是否擴散，再決定隔日台股智邦、台光電、金像電與台積電是否可升級。",
+    "記憶體股若爆量急漲不追；等拉回守 10/20 日線或報價/月營收再確認。"
   ],
   "risks": [
     {
-      "id": "risk-macro-rates",
-      "category": "macro / rates / USD",
-      "description": "利率、美元或油價上行會壓縮高估值 AI 交易，尤其影響美股軟體與半導體估值。",
+      "id": "risk-overheat",
+      "category": "Overextension",
+      "description": "AI leader 與台股記憶體/散熱若高於短均太多，追價容易遇到開高走低。",
       "severity": "High",
-      "whatWouldInvalidate": "若利率回落且 AI 財報/指引持續上修，估值壓力可下降。"
+      "whatWouldInvalidate": "突破前高後收盤守住且量能健康。"
     },
     {
-      "id": "risk-crowded-ai",
-      "category": "crowded trade",
-      "description": "AI server、記憶體、面板與功率元件若只有資金熱度，容易先漲後等基本面驗證。",
-      "severity": "Medium",
-      "whatWouldInvalidate": "若月營收、毛利、訂單與法說同步驗證，擁擠風險可被基本面吸收。"
+      "id": "risk-rates-usd",
+      "category": "Macro",
+      "description": "美債殖利率、美元與 USD/TWD 上行會壓縮高估值 AI 交易。",
+      "severity": "High",
+      "whatWouldInvalidate": "利率美元回落且外資回補台股電子。"
     },
     {
-      "id": "risk-taiwan-small-cap",
-      "category": "Taiwan liquidity / small-cap",
-      "description": "台股中小型題材股需注意處置、流動性、隔日開高走低與資訊落差。",
+      "id": "risk-capex-roi",
+      "category": "Cloud capex ROI",
+      "description": "若 hyperscaler 被市場要求證明 AI 投資回收，硬體供應鏈估值會先調整。",
       "severity": "Medium",
-      "whatWouldInvalidate": "若成交量健康、法人買盤延續且沒有處置壓力，短線風險下降。"
+      "whatWouldInvalidate": "雲端收入、AI 軟體變現與自由現金流同步改善。"
+    },
+    {
+      "id": "risk-policy",
+      "category": "Export controls",
+      "description": "出口管制可能改變 GPU / ASIC / foundry 出貨組合。",
+      "severity": "Medium",
+      "whatWouldInvalidate": "政策明確且限制低於市場預期。"
     }
   ],
   "rejectedCandidates": [
     {
-      "ticker": "2409.TW",
-      "companyName": "友達",
-      "reason": "面板題材仍在雷達，但本次證據強度低於群創與彩晶；等待報價、FOPLP 或財報驗證。",
+      "ticker": "3481.TW",
+      "companyName": "群創",
+      "reason": "面板/FOPLP 題材有資金，但正式訂單與財務驗證不足，今日不升級為主要交易計畫。",
+      "evidenceGrade": "D",
+      "opportunityStage": "Avoid/Wait"
+    },
+    {
+      "ticker": "6116.TW",
+      "companyName": "彩晶",
+      "reason": "低價題材股波動高，若只有量價沒有公告，只能列投機雷達。",
+      "evidenceGrade": "D",
+      "opportunityStage": "Avoid/Wait"
+    },
+    {
+      "ticker": "2454.TW",
+      "companyName": "聯發科",
+      "reason": "Edge AI / smartphone AI 是背景主題，今日催化強度低於 HBM、ASIC、power/cooling。",
       "evidenceGrade": "C",
       "opportunityStage": "Avoid/Wait"
     },
     {
       "ticker": "2603.TW",
       "companyName": "長榮",
-      "reason": "航運已納入全市場掃描，但若缺乏運價、油價或法人流向新催化，暫不升級主報。",
-      "evidenceGrade": "D",
-      "opportunityStage": "Avoid/Wait"
-    },
-    {
-      "ticker": "2881.TW",
-      "companyName": "富邦金",
-      "reason": "金融股需看利率、匯率與資金輪動；本次不是主流新催化。",
+      "reason": "航運有掃描，但缺乏同日高信號催化，未納入 AI 主報告。",
       "evidenceGrade": "D",
       "opportunityStage": "Avoid/Wait"
     }
   ],
   "scanSummary": {
-    "candidateItemsScanned": 60,
+    "candidateItemsScanned": 56,
     "categoriesScanned": [
-      "美股大盤 / 利率 / 美元 / 油價",
-      "美股 AI 半導體 / 雲端 / 硬體基建",
-      "美股 AI 應用層 / 軟體 monetization",
-      "美股 Magnificent 7 / hyperscaler",
-      "美股電力 / 公用事業 / 資料中心能源",
-      "美股資安 / 國防科技 / 政府 AI",
-      "台股記憶體 / 儲存",
-      "面板 / FOPLP / SpaceX",
-      "AI server ODM",
-      "散熱 / 液冷 / 電源",
-      "功率元件 / MOSFET / SiC / 車用",
-      "PCB / CCL / 光通訊",
-      "IC 設計 / ASIC / IP / 車用 IC",
-      "被動元件 / MLCC / 電感 / 石英元件",
-      "機器人 / 自動化 / 車電",
-      "航太 / 軍工 / 低軌衛星",
-      "金融 / 壽險 / 高股息",
-      "航運 / 鋼鐵 / 原物料 / 能源",
-      "生技 / 醫材 / 政策受惠",
-      "金融 / 航運 / 原物料 / 生技"
+      "US indexes / AI leaders",
+      "Cloud capex / software ROI",
+      "Data center power / grid",
+      "Personal holdings",
+      "Memory / mature process",
+      "AI server ODM / EMS",
+      "Networking / optical / CPO",
+      "PCB / CCL / substrate",
+      "Cooling / power",
+      "Rates / USD / export controls",
+      "Edge AI / AI PC / smartphone",
+      "Panel / FOPLP / satellite themes"
     ],
     "majorSourcesChecked": [
-      "公司公告/法說",
-      "財經媒體",
-      "市場量價與族群輪動",
-      "跨市場 read-through"
+      "TrendForce 2026-06-02 HBM pricing",
+      "Tom’s Hardware / SK hynix Computex comments",
+      "Yahoo Finance quote/chart API",
+      "Broadcom 財報前市場報導",
+      "台股供應鏈與持股清單"
     ],
     "sectorsExcluded": [
-      "缺乏新催化的航運",
-      "缺乏政策或財報驗證的生技",
-      "沒有量價確認的原物料"
+      "缺乏同日催化的航運",
+      "缺乏正式訂單的面板題材",
+      "非 AI 主線且無量價確認的金融",
+      "低信號生技題材"
     ],
     "lowSignalItemsExcluded": [
-      "只有社群熱度但缺乏來源的題材",
-      "只有單日量增但沒有延續性的標的"
+      "只有社群熱度的 FOPLP",
+      "未經公告驗證的低軌衛星概念",
+      "無月營收支撐的低價題材股"
     ],
     "staleItemsExcluded": [
-      "超過一週且沒有新驗證的舊法說重點",
-      "已被市場充分反映且沒有新數據的舊題材"
+      "超過一週且未被新報價或財報驗證的 Computex 泛題材",
+      "沒有新指引的舊法說摘要"
     ]
   }
 }
