@@ -13,7 +13,8 @@ export function CompanyResearchPage() {
 
   const filteredCompanies = useMemo(
     () => dailyReport.companyResearch.filter((company) => {
-      const marketMatch = marketFilter === 'All' || company.marketCountry === marketFilter;
+      const normalizedMarket = normalizeMarket(company.marketCountry);
+      const marketMatch = marketFilter === 'All' || normalizedMarket === marketFilter;
       const stageMatch = stageFilter === 'All' || company.opportunityStage === stageFilter;
       const evidenceMatch = evidenceFilter === 'All' || company.evidenceGrade === evidenceFilter;
       return marketMatch && stageMatch && evidenceMatch;
@@ -26,7 +27,16 @@ export function CompanyResearchPage() {
       <SectionHeader title="公司研究" description="每家公司都呈現催化、量價、供應鏈角色、證據品質、機會階段、風險與行動建議。" />
 
       <div className="mb-4 grid gap-2 rounded-2xl border border-white/10 bg-white/[0.045] p-3 md:grid-cols-3">
-        <SelectFilter label="市場" value={marketFilter} options={['All', 'US', 'Taiwan']} onChange={setMarketFilter} />
+        <SelectFilter
+          label="市場"
+          value={marketFilter}
+          options={[
+            { value: 'All', label: '全部' },
+            { value: 'US', label: '美股' },
+            { value: 'Taiwan', label: '台股' },
+          ]}
+          onChange={setMarketFilter}
+        />
         <SelectFilter
           label="階段"
           value={stageFilter}
@@ -62,7 +72,7 @@ export function CompanyResearchPage() {
           <Card
             key={company.id}
             title={`${company.companyName} · ${company.ticker}`}
-            eyebrow={company.marketCountry}
+            eyebrow={marketLabel(company.marketCountry)}
             right={<Badge tone={company.finalView}>{finalViewLabel[company.finalView]}</Badge>}
           >
             <div className="mb-4 flex flex-wrap gap-2">
@@ -152,6 +162,20 @@ function SelectFilter({
 
 function MetaPill({ label, value = label }: { label: string; value?: string }) {
   return <span className={`rounded-full border px-2.5 py-1 text-xs ${toneClass(value)}`}>{label}</span>;
+}
+
+function normalizeMarket(marketCountry: string) {
+  const normalized = marketCountry.trim().toLowerCase();
+  if (['us', 'usa', 'u.s.', 'u.s.a.', 'united states', 'america', '美國', '美国'].includes(normalized)) return 'US';
+  if (['taiwan', 'tw', '台灣', '台湾'].includes(normalized)) return 'Taiwan';
+  return marketCountry;
+}
+
+function marketLabel(marketCountry: string) {
+  const normalized = normalizeMarket(marketCountry);
+  if (normalized === 'US') return '美股';
+  if (normalized === 'Taiwan') return '台股';
+  return marketCountry;
 }
 
 function Info({ label, value }: { label: string; value: string }) {
