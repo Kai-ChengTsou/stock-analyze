@@ -10,6 +10,7 @@ import { MarketRadarPage } from './pages/MarketRadarPage';
 import { NewsPage } from './pages/NewsPage';
 import { SupplyChainPage } from './pages/SupplyChainPage';
 import { ThemesPage } from './pages/ThemesPage';
+import { TradingPlanPage } from './pages/TradingPlanPage';
 import { WatchlistPage } from './pages/WatchlistPage';
 import { TaiwanMarketPage, USMarketPage } from './components/MarketSectionView';
 
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/supply-chain" element={<SupplyChainPage />} />
         <Route path="/beneficiaries" element={<BeneficiariesPage />} />
         <Route path="/company-research" element={<CompanyResearchPage />} />
+        <Route path="/trading-plan" element={<TradingPlanPage />} />
         <Route path="/watchlist" element={<WatchlistPage />} />
         <Route path="/idea-pipeline" element={<IdeaPipelinePage />} />
         <Route path="/action-plan" element={<ActionPlanPage />} />

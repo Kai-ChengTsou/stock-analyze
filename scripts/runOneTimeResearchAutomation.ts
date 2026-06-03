@@ -15,6 +15,7 @@ import type {
   ScanCoverageItem,
   SupplyChainNode,
   Theme,
+  TradingPlan,
   WatchlistItem,
 } from '../src/types/research';
 
@@ -502,6 +503,69 @@ const beneficiaries: Beneficiary[] = [
   beneficiary('ben-rotation', 'theme-taiwan-rotation', ['3481.TW'], ['6438.TW', '3483.TW'], ['6116.TW'], ['追高題材股'], '資金輪動能提供交易機會，但低證據題材必須放在雷達或等待區。', 'Low', 55),
 ];
 
+function tradingPlan(
+  company: CompanyResearch,
+  actionToday: TradingPlan['actionToday'],
+  conviction: TradingPlan['conviction'],
+  positionSizing: string,
+): TradingPlan {
+  const priceVerification = '由 automation 以最新報價、前高/前低、均線與成交量更新；若無法驗證即不追價。';
+  return {
+    id: `plan-${company.id}`,
+    ticker: company.ticker,
+    companyName: company.companyName,
+    marketCountry: company.marketCountry,
+    actionToday,
+    conviction,
+    rationale: company.whyItMattersToday ?? company.overview,
+    entryZone: actionToday === 'Buy on Pullback'
+      ? `等拉回到短線支撐或 VWAP 附近且量縮守穩。${priceVerification}`
+      : actionToday === 'Buy on Breakout'
+        ? `等放量突破近期壓力並站穩，不追無量開高。${priceVerification}`
+        : actionToday === 'Buy Now'
+          ? `僅限開盤後量價確認的小部位試單。${priceVerification}`
+          : '今日不設定主動買點。',
+    supportLevel: priceVerification,
+    resistanceLevel: priceVerification,
+    invalidationLevel: company.invalidationConditions ?? company.whatWouldChangeView,
+    positionSizing,
+    riskReward: actionToday === 'Watch' || actionToday === 'Avoid'
+      ? '未達可承擔風險報酬，先不投入資金。'
+      : '至少要求潛在上行大於失效下行 2:1，否則降為 Watch。',
+    timeHorizon: '1-10 個交易日，若催化失效或量價反轉即重新評估。',
+    confirmationSignals: [
+      company.catalystSummary ?? company.overview,
+      company.priceVolumeBehavior ?? company.technicalTrend,
+    ],
+    avoidConditions: [company.whatWouldChangeView, ...company.keyRisks.slice(0, 2)],
+    bullCase: company.bullCase,
+    baseCase: company.baseCase,
+    bearCase: company.bearCase,
+    linkedCatalysts: company.revenueDrivers.slice(0, 3),
+  };
+}
+
+const byTicker = (ticker: string) => {
+  const company = companyResearch.find((item) => item.ticker === ticker);
+  if (!company) throw new Error(`Missing company research for trading plan: ${ticker}`);
+  return company;
+};
+
+const tradingPlans: TradingPlan[] = [
+  tradingPlan(byTicker('2345.TW'), 'Buy on Breakout', 'Emerging', '試單 1-3%；突破確認後才考慮加碼。'),
+  tradingPlan(byTicker('2382.TW'), 'Buy on Pullback', 'Crowded', '試單 1-2%；不追高成核心部位。'),
+  tradingPlan(byTicker('2408.TW'), 'Buy on Pullback', 'Emerging', '試單 1-3%；記憶體報價和量價同步確認才加碼。'),
+  tradingPlan(byTicker('2344.TW'), 'Buy on Pullback', 'Emerging', '試單 1-3%；若爆量長黑則取消。'),
+  tradingPlan(byTicker('2330.TW'), 'Watch', 'High Conviction', '0%；等權值買盤和外資方向確認。'),
+  tradingPlan(byTicker('3017.TW'), 'Buy on Pullback', 'Crowded', '試單 1-2%；散熱族群擁擠，嚴禁追開高。'),
+  tradingPlan(byTicker('2383.TW'), 'Buy on Breakout', 'Emerging', '試單 1-3%；需 CCL/PCB 族群同步放量。'),
+  tradingPlan(byTicker('4977.TW'), 'Watch', 'Speculative', '0%；等光通訊族群量價延續。'),
+  tradingPlan(byTicker('MRVL'), 'Watch', 'Crowded', '0%；急漲後等回測或盤中承接。'),
+  tradingPlan(byTicker('NVDA'), 'Watch', 'Crowded', '0%；作方向指標，不用晨報情緒追價。'),
+  tradingPlan(byTicker('6116.TW'), 'Avoid', 'Avoid', '0%；只列雷達，避免低證據題材追高。'),
+  tradingPlan(byTicker('3481.TW'), 'Watch', 'Speculative', '0%；等 FOPLP/玻璃基板有正式驗證。'),
+];
+
 const watchlist: WatchlistItem[] = companyResearch.slice(0, 14).map((item) => ({
   id: `watch-${item.id}`,
   ticker: item.ticker,
@@ -628,6 +692,7 @@ const report: DailyDashboard = {
   supplyChain,
   beneficiaries,
   companyResearch,
+  tradingPlans,
   watchlist,
   ideaPipeline,
   marketSections,
@@ -674,6 +739,17 @@ function assertReportQuality(dashboard: DailyDashboard) {
     if (missing.length > 0) throw new Error(`${item.ticker} missing ${missing.join(', ')}`);
     if (!allowedStages.includes(item.opportunityStage as OpportunityStage)) throw new Error(`${item.ticker} invalid opportunityStage`);
     if (item.companyName === '尚未建立公司名稱') throw new Error(`${item.ticker} has unresolved company name`);
+  }
+  if (dashboard.tradingPlans?.length) {
+    const allowedActions: TradingPlan['actionToday'][] = ['Buy Now', 'Buy on Pullback', 'Buy on Breakout', 'Watch', 'Avoid', 'Take Profit'];
+    for (const plan of dashboard.tradingPlans) {
+      const missing = ['companyName', 'ticker', 'marketCountry', 'actionToday', 'conviction', 'entryZone', 'supportLevel', 'resistanceLevel', 'invalidationLevel', 'positionSizing', 'riskReward'].filter((key) => {
+        const value = plan[key as keyof TradingPlan];
+        return value === undefined || value === null || (Array.isArray(value) && value.length === 0) || value === '';
+      });
+      if (missing.length > 0) throw new Error(`${plan.ticker} tradingPlan missing ${missing.join(', ')}`);
+      if (!allowedActions.includes(plan.actionToday)) throw new Error(`${plan.ticker} invalid trading plan action`);
+    }
   }
   if (dashboard.news.filter((item) => item.freshness === 'Fresh catalyst').length === 0) throw new Error('fresh catalysts must not be empty');
   if (dashboard.news.filter((item) => item.freshness === 'Recent context').length === 0) throw new Error('recent important news must not be empty');

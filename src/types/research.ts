@@ -16,6 +16,8 @@ export type EvidenceGrade = 'A' | 'B' | 'C' | 'D';
 export type OpportunityStage = 'Early' | 'Confirming' | 'Crowded' | 'Late' | 'Avoid/Wait';
 export type CatalystDriver = 'Fundamental' | 'Technical' | 'Macro' | 'Policy' | 'Sentiment' | 'Supply-chain' | 'Mixed';
 export type BeneficiaryType = 'Direct' | 'Indirect' | 'Hidden' | 'Hurt' | 'Radar only';
+export type TradingPlanAction = 'Buy Now' | 'Buy on Pullback' | 'Buy on Breakout' | 'Watch' | 'Avoid' | 'Take Profit';
+export type TradingPlanConviction = 'High Conviction' | 'Emerging' | 'Speculative' | 'Crowded' | 'Avoid';
 
 export interface NewsItem {
   id: string;
@@ -118,6 +120,29 @@ export interface CompanyResearch {
   whatWouldChangeView: string;
   upsideDriver?: string;
   invalidationConditions?: string;
+}
+
+export interface TradingPlan {
+  id: string;
+  ticker: string;
+  companyName: string;
+  marketCountry: string;
+  actionToday: TradingPlanAction;
+  conviction: TradingPlanConviction;
+  rationale: string;
+  entryZone: string;
+  supportLevel: string;
+  resistanceLevel: string;
+  invalidationLevel: string;
+  positionSizing: string;
+  riskReward: string;
+  timeHorizon: string;
+  confirmationSignals: string[];
+  avoidConditions: string[];
+  bullCase: string;
+  baseCase: string;
+  bearCase: string;
+  linkedCatalysts: string[];
 }
 
 export interface WatchlistItem {
@@ -236,4 +261,5 @@ export interface DailyDashboard {
   risks?: RiskItem[];
   rejectedCandidates?: ScannedTicker[];
   scanSummary?: ScanSummary;
+  tradingPlans?: TradingPlan[];
 }
