@@ -7,6 +7,7 @@ import { CrossMarketPage } from './pages/CrossMarketPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { IdeaPipelinePage } from './pages/IdeaPipelinePage';
 import { MarketRadarPage } from './pages/MarketRadarPage';
+import { MyHoldingsActionPage } from './pages/MyHoldingsActionPage';
 import { NewsPage } from './pages/NewsPage';
 import { SupplyChainPage } from './pages/SupplyChainPage';
 import { ThemesPage } from './pages/ThemesPage';
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/beneficiaries" element={<BeneficiariesPage />} />
         <Route path="/company-research" element={<CompanyResearchPage />} />
         <Route path="/trading-plan" element={<TradingPlanPage />} />
+        <Route path="/my-holdings" element={<MyHoldingsActionPage />} />
         <Route path="/watchlist" element={<WatchlistPage />} />
         <Route path="/idea-pipeline" element={<IdeaPipelinePage />} />
         <Route path="/action-plan" element={<ActionPlanPage />} />

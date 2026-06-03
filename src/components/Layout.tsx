@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Bell, Blocks, BriefcaseBusiness, ClipboardCheck, Factory, Globe2, Home, Link2, MoreHorizontal, Newspaper, Radar, Route, Search, Target, TrendingUp } from 'lucide-react';
+import { Bell, Blocks, BriefcaseBusiness, ClipboardCheck, Factory, Globe2, Home, Link2, MoreHorizontal, Newspaper, Radar, Route, Search, Target, TrendingUp, WalletCards } from 'lucide-react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { dailyReport } from '../data/report';
 
@@ -15,6 +15,7 @@ const navItems = [
   { to: '/beneficiaries', label: '受惠', icon: Target },
   { to: '/company-research', label: '公司', icon: Search },
   { to: '/trading-plan', label: '交易', icon: TrendingUp },
+  { to: '/my-holdings', label: '持股', icon: WalletCards },
   { to: '/action-plan', label: '行動', icon: ClipboardCheck },
   { to: '/watchlist', label: '清單', icon: Bell },
   { to: '/idea-pipeline', label: '脈絡', icon: Route },
