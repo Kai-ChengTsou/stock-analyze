@@ -26,6 +26,12 @@ export function CompanyResearchPage() {
     <div>
       <SectionHeader title="公司研究" description="每家公司都呈現催化、量價、供應鏈角色、證據品質、機會階段、風險與行動建議。" />
 
+      <div className="mb-4 grid gap-3 md:grid-cols-3">
+        <CountCard label="深入研究公司" value={`${dailyReport.companyResearch.length}`} detail="companyResearch 實際筆數" />
+        <CountCard label="目前顯示" value={`${filteredCompanies.length}`} detail="套用市場/階段/證據篩選後" />
+        <CountCard label="雷達掃描公司" value={`${countScannedTickers()}`} detail="scanCoverage 內的去重 ticker 數" />
+      </div>
+
       <div className="mb-4 grid gap-2 rounded-2xl border border-white/10 bg-white/[0.045] p-3 md:grid-cols-3">
         <SelectFilter
           label="市場"
@@ -162,6 +168,21 @@ function SelectFilter({
 
 function MetaPill({ label, value = label }: { label: string; value?: string }) {
   return <span className={`rounded-full border px-2.5 py-1 text-xs ${toneClass(value)}`}>{label}</span>;
+}
+
+function CountCard({ label, value, detail }: { label: string; value: string; detail: string }) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+      <p className="text-xs text-slate-400">{label}</p>
+      <p className="mt-2 text-2xl font-semibold text-white">{value}</p>
+      <p className="mt-1 text-xs text-slate-400">{detail}</p>
+    </div>
+  );
+}
+
+function countScannedTickers() {
+  const tickers = dailyReport.marketSections?.scanCoverage.flatMap((item) => item.tickersChecked) ?? [];
+  return new Set(tickers).size;
 }
 
 function normalizeMarket(marketCountry: string) {

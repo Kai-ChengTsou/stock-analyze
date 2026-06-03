@@ -643,8 +643,8 @@ function coverage(
 }
 
 function assertReportQuality(dashboard: DailyDashboard) {
-  if (dashboard.companyResearch.length < 10) {
-    throw new Error(`Expected at least 10 companyResearch entries, got ${dashboard.companyResearch.length}`);
+  if (dashboard.companyResearch.length < 15) {
+    throw new Error(`Expected at least 15 companyResearch entries, got ${dashboard.companyResearch.length}`);
   }
 
   if (!dashboard.marketSections) {
