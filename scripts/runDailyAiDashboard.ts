@@ -1,6 +1,8 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { execFile } from 'node:child_process';
 import https from 'node:https';
 import path from 'node:path';
+import { promisify } from 'node:util';
 import type {
   Beneficiary,
   BeneficiaryType,
@@ -40,6 +42,7 @@ type Quote = {
   fiftyTwoWeekLow?: number;
   currency?: string;
   reason?: string;
+  asOfDate?: string;
 };
 
 type CompanySeed = {
@@ -57,9 +60,42 @@ type CompanySeed = {
   competitors: string[];
 };
 
+let quoteOverrides: Record<string, Quote> | undefined;
+
+async function getQuoteOverrides() {
+  if (quoteOverrides) return quoteOverrides;
+  try {
+    const raw = await readFile(path.join(dataDir, 'quote-overrides.json'), 'utf8');
+    const parsed = JSON.parse(raw.replace(/^\uFEFF/, '')) as Record<string, Quote>;
+    quoteOverrides = Object.fromEntries(
+      Object.entries(parsed).filter(([, quote]) => quote.ok && quote.asOfDate === runTime.date)
+    );
+  } catch {
+    quoteOverrides = {};
+  }
+  return quoteOverrides;
+}
+
+async function loadBatchQuoteOverrides(tickers: string[]) {
+  const existingOverrides = await getQuoteOverrides();
+  if (Object.values(existingOverrides).some((quote) => quote.ok)) return;
+
+  try {
+    const script = path.join(root, 'scripts', 'fetchQuoteOverrides.ps1');
+    const { stdout } = await execFileAsync('powershell.exe', ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', script, '-Tickers', tickers.join(',')], {
+      maxBuffer: 16 * 1024 * 1024,
+    });
+    quoteOverrides = JSON.parse(stdout) as Record<string, Quote>;
+  } catch (error) {
+    console.error(`Batch quote fetch failed: ${error instanceof Error ? error.message : 'quote batch failed'}`);
+    quoteOverrides = {};
+  }
+}
+
 const root = process.cwd();
 const dataDir = path.join(root, 'data');
 const reportsDir = path.join(dataDir, 'reports');
+const execFileAsync = promisify(execFile);
 const modeArg = process.argv.find((arg) => arg.startsWith('--mode='));
 const reportMode = (modeArg?.split('=')[1] ?? process.env.REPORT_MODE ?? 'morning') as ReportMode;
 
@@ -106,33 +142,49 @@ function sleep(ms: number) {
 }
 
 async function fetchJson(url: string) {
-  return new Promise<any>((resolve, reject) => {
-    const request = https.get(url, { headers: { 'user-agent': 'Mozilla/5.0' } }, (response) => {
-      let body = '';
-      response.setEncoding('utf8');
-      response.on('data', (chunk) => {
-        body += chunk;
+  try {
+    return await new Promise<any>((resolve, reject) => {
+      const request = https.get(url, { headers: { 'user-agent': 'Mozilla/5.0' } }, (response) => {
+        let body = '';
+        response.setEncoding('utf8');
+        response.on('data', (chunk) => {
+          body += chunk;
+        });
+        response.on('end', () => {
+          if (!response.statusCode || response.statusCode < 200 || response.statusCode >= 300) {
+            reject(new Error(`HTTP ${response.statusCode ?? 'unknown'}`));
+            return;
+          }
+          try {
+            resolve(JSON.parse(body));
+          } catch (error) {
+            reject(error);
+          }
+        });
       });
-      response.on('end', () => {
-        if (!response.statusCode || response.statusCode < 200 || response.statusCode >= 300) {
-          reject(new Error(`HTTP ${response.statusCode ?? 'unknown'}`));
-          return;
-        }
-        try {
-          resolve(JSON.parse(body));
-        } catch (error) {
-          reject(error);
-        }
+      request.on('error', reject);
+      request.setTimeout(15000, () => {
+        request.destroy(new Error('request timeout'));
       });
     });
-    request.on('error', reject);
-    request.setTimeout(15000, () => {
-      request.destroy(new Error('request timeout'));
+  } catch {
+    const command = [
+      '$ProgressPreference = "SilentlyContinue";',
+      '[Console]::OutputEncoding = [Text.UTF8Encoding]::UTF8;',
+      `$response = Invoke-WebRequest -UseBasicParsing -TimeoutSec 20 -Uri '${url.replace(/'/g, "''")}';`,
+      '$response.Content',
+    ].join(' ');
+    const { stdout } = await execFileAsync('powershell.exe', ['-NoProfile', '-Command', command], {
+      maxBuffer: 8 * 1024 * 1024,
     });
-  });
+    return JSON.parse(stdout);
+  }
 }
 
 async function fetchQuote(ticker: string): Promise<Quote> {
+  const overrides = await getQuoteOverrides();
+  if (overrides[ticker]?.ok) return overrides[ticker];
+
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=3mo&interval=1d&includePrePost=true`;
   try {
     const data = await fetchJson(url);
@@ -240,19 +292,19 @@ const newsItems: NewsItem[] = [
   },
   {
     id: 'fresh-ai-leaders-record-risk',
-    title: '【新催化】美股 AI leader 位階仍高，但追價需檢查高檔震盪與 bull trap',
-    source: 'Yahoo Finance quote data, 2026-06-03',
+    title: '【新催化】台股 6/4 重挫與美股 AI leader 高檔震盪並存，追價需檢查 bull trap',
+    source: 'Yahoo Finance quote data / 經濟日報台股收盤 / Reuters TSMC comments, 2026-06-04',
     date: runTime.date,
-    summary: 'NVDA、AVGO、MU、MRVL 等仍吸引資金，但多檔已接近近期高檔；今晚若開高後跌破 VWAP 或前高失守，台股隔日容易出現開高走低。',
-    relatedTickers: ['NVDA', 'AVGO', 'MU', 'MRVL', 'QQQ', 'SOXX'],
-    impact: 'Neutral',
-    confidence: 'Medium',
+    summary: '台股 6/4 受科技股回檔拖累，終場重挫 781 點至 45,677 點，台積電收 2,385 元；同日 TSMC 管理層對 AI 需求與先進製程/封裝供給仍維持強勢語氣，代表基本面長線仍強，但短線資金已開始檢查高檔估值與獲利了結風險。NVDA、AVGO、MU、MRVL 等仍吸引資金，但多檔接近近期高檔；今晚若開高後跌破 VWAP 或前高失守，台股隔日容易出現開高走低。',
+    relatedTickers: ['NVDA', 'AVGO', 'MU', 'MRVL', 'QQQ', 'SOXX', '2330.TW', '0050.TW'],
+    impact: 'Negative',
+    confidence: 'High',
     freshness: 'Fresh catalyst',
     evidenceGrade: 'B',
     opportunityStage: 'Crowded',
     catalystDriver: 'Technical',
     whyMarketCares: '資金仍在 AI，但風險報酬已從「買題材」轉為「買確認」。',
-    pricedIn: '龍頭股反映度高，二線供應鏈需避免跟著追高。',
+    pricedIn: '台股權值與 AI 供應鏈已有獲利了結，龍頭股反映度高，二線供應鏈需避免跟著追高。',
     confirms: '突破前高且收盤守住，成交量高於均量。',
     invalidates: '開高走低、跌回前高下方或 SOXX 弱於 QQQ。',
   },
@@ -510,6 +562,7 @@ function coverage(id: string, market: ScanCoverageItem['market'], category: stri
 async function main() {
   const holdingTickers = await getPortfolioTickers();
   const tickers = Array.from(new Set([...seeds.map((seed) => seed.ticker), 'SPY', 'QQQ', 'SOXX', ...holdingTickers]));
+  await loadBatchQuoteOverrides(tickers);
   const quoteEntries: Array<readonly [string, Quote]> = [];
   for (const ticker of tickers) {
     quoteEntries.push([ticker, await fetchQuote(ticker)] as const);
