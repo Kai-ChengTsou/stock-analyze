@@ -1,4 +1,5 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import https from 'node:https';
 import path from 'node:path';
 import type {
   Beneficiary,
@@ -100,12 +101,41 @@ function avg(items: number[]) {
   return items.length ? items.reduce((sum, value) => sum + value, 0) / items.length : undefined;
 }
 
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function fetchJson(url: string) {
+  return new Promise<any>((resolve, reject) => {
+    const request = https.get(url, { headers: { 'user-agent': 'Mozilla/5.0' } }, (response) => {
+      let body = '';
+      response.setEncoding('utf8');
+      response.on('data', (chunk) => {
+        body += chunk;
+      });
+      response.on('end', () => {
+        if (!response.statusCode || response.statusCode < 200 || response.statusCode >= 300) {
+          reject(new Error(`HTTP ${response.statusCode ?? 'unknown'}`));
+          return;
+        }
+        try {
+          resolve(JSON.parse(body));
+        } catch (error) {
+          reject(error);
+        }
+      });
+    });
+    request.on('error', reject);
+    request.setTimeout(15000, () => {
+      request.destroy(new Error('request timeout'));
+    });
+  });
+}
+
 async function fetchQuote(ticker: string): Promise<Quote> {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=3mo&interval=1d&includePrePost=true`;
   try {
-    const response = await fetch(url);
-    if (!response.ok) return { ticker, ok: false, reason: `HTTP ${response.status}` };
-    const data = await response.json();
+    const data = await fetchJson(url);
     const result = data.chart?.result?.[0];
     const meta = result?.meta;
     const quote = result?.indicators?.quote?.[0];
@@ -120,7 +150,7 @@ async function fetchQuote(ticker: string): Promise<Quote> {
       ok: true,
       latest,
       close: closes[closes.length - 1],
-      previousClose: meta.chartPreviousClose ?? closes[closes.length - 2],
+      previousClose: meta.regularMarketPreviousClose ?? closes[closes.length - 2],
       dayHigh: meta.regularMarketDayHigh,
       dayLow: meta.regularMarketDayLow,
       volume: meta.regularMarketVolume ?? volumes[volumes.length - 1],
@@ -192,10 +222,10 @@ const newsItems: NewsItem[] = [
   },
   {
     id: 'fresh-avgo-earnings-watch',
-    title: '【新催化】Broadcom 財報前，ASIC / networking / Google AI capex 成為今晚美股主線',
-    source: 'Yahoo Finance / market reports, 2026-06-03',
+    title: '【新催化】Broadcom FY26 Q2 已公布：AI 半導體營收強勁，但盤後賣壓提醒高檔交易擁擠',
+    source: 'Broadcom official Q2 FY26 release / PRNewswire / after-hours market reaction, 2026-06-03',
     date: runTime.date,
-    summary: 'AVGO 財報會驗證 custom silicon、AI networking 與 hyperscaler capex 的實際強度；台股 read-through 對創意、世芯、智邦、台光電、金像電與台積電重要。',
+    summary: 'Broadcom 公布 Q2 營收、營業利益與自由現金流創高，AI semiconductor revenue 年增 143%，並指引 Q3 AI semiconductor revenue 年增逾 200%；但盤後股價下跌，代表市場已把「好消息」高度預期化。台股 read-through 仍指向創意、世芯、智邦、台光電、金像電與台積電，但今日不能把 ASIC 利多直接翻成追價買點。',
     relatedTickers: ['AVGO', 'GOOGL', 'MRVL', '2330.TW', '3443.TW', '3661.TW', '2345.TW', '2383.TW'],
     impact: 'Positive',
     confidence: 'Medium',
@@ -204,9 +234,9 @@ const newsItems: NewsItem[] = [
     opportunityStage: 'Confirming',
     catalystDriver: 'Fundamental',
     whyMarketCares: 'GPU 之外的 ASIC 是 AI capex 第二條主線。',
-    pricedIn: 'AVGO 與 ASIC 台股已不便宜，財報後若只符合預期可能利多出盡。',
-    confirms: 'AI revenue guide 上修且 networking demand 擴散。',
-    invalidates: '財報未能支撐估值或毛利率壓力升高。',
+    pricedIn: 'AVGO 與 ASIC 台股已不便宜，盤後賣壓顯示短線利多出盡風險升高。',
+    confirms: 'AI revenue guide 上修後，股價收復盤後跌幅並帶動 networking / CCL / ASIC 供應鏈同步放量。',
+    invalidates: '財報利多無法帶動股價站回短均或台股相關供應鏈開高走低。',
   },
   {
     id: 'fresh-ai-leaders-record-risk',
@@ -291,7 +321,7 @@ const newsItems: NewsItem[] = [
     confidence: 'Medium',
     freshness: 'Recent context',
     evidenceGrade: 'B',
-    opportunityStage: 'Avoid/Wait',
+    opportunityStage: 'Late',
     catalystDriver: 'Policy',
     whyMarketCares: '政策會改變出貨地區、產品組合與客戶排程。',
     pricedIn: '市場暫時以 AI demand 抵消政策折價。',
@@ -327,7 +357,7 @@ const newsItems: NewsItem[] = [
     confidence: 'Medium',
     freshness: 'Momentum only',
     evidenceGrade: 'D',
-    opportunityStage: 'Avoid/Wait',
+    opportunityStage: 'Late',
     catalystDriver: 'Sentiment',
     whyMarketCares: '短線資金輪動會拉抬低價股，但容易反轉。',
     pricedIn: '題材已有熱度，缺乏正式驗證。',
@@ -480,7 +510,11 @@ function coverage(id: string, market: ScanCoverageItem['market'], category: stri
 async function main() {
   const holdingTickers = await getPortfolioTickers();
   const tickers = Array.from(new Set([...seeds.map((seed) => seed.ticker), 'SPY', 'QQQ', 'SOXX', ...holdingTickers]));
-  const quoteEntries = await Promise.all(tickers.map(async (ticker) => [ticker, await fetchQuote(ticker)] as const));
+  const quoteEntries: Array<readonly [string, Quote]> = [];
+  for (const ticker of tickers) {
+    quoteEntries.push([ticker, await fetchQuote(ticker)] as const);
+    await sleep(75);
+  }
   const quotes = new Map(quoteEntries);
   const research = seeds.map((seed) => companyResearch(seed, quotes.get(seed.ticker) ?? { ticker: seed.ticker, ok: false }));
   const catalystIds = newsItems.slice(0, 8).map((item) => item.id);
@@ -604,10 +638,10 @@ async function main() {
       { id: 'risk-policy', category: 'Export controls', description: '出口管制可能改變 GPU / ASIC / foundry 出貨組合。', severity: 'Medium', whatWouldInvalidate: '政策明確且限制低於市場預期。' },
     ],
     rejectedCandidates: [
-      { ticker: '3481.TW', companyName: '群創', reason: '面板/FOPLP 題材有資金，但正式訂單與財務驗證不足，今日不升級為主要交易計畫。', evidenceGrade: 'D', opportunityStage: 'Avoid/Wait' },
-      { ticker: '6116.TW', companyName: '彩晶', reason: '低價題材股波動高，若只有量價沒有公告，只能列投機雷達。', evidenceGrade: 'D', opportunityStage: 'Avoid/Wait' },
-      { ticker: '2454.TW', companyName: '聯發科', reason: 'Edge AI / smartphone AI 是背景主題，今日催化強度低於 HBM、ASIC、power/cooling。', evidenceGrade: 'C', opportunityStage: 'Avoid/Wait' },
-      { ticker: '2603.TW', companyName: '長榮', reason: '航運有掃描，但缺乏同日高信號催化，未納入 AI 主報告。', evidenceGrade: 'D', opportunityStage: 'Avoid/Wait' },
+      { ticker: '3481.TW', companyName: '群創', reason: '面板/FOPLP 題材有資金，但正式訂單與財務驗證不足，今日不升級為主要交易計畫。', evidenceGrade: 'D', opportunityStage: 'Late' },
+      { ticker: '6116.TW', companyName: '彩晶', reason: '低價題材股波動高，若只有量價沒有公告，只能列投機雷達。', evidenceGrade: 'D', opportunityStage: 'Late' },
+      { ticker: '2454.TW', companyName: '聯發科', reason: 'Edge AI / smartphone AI 是背景主題，今日催化強度低於 HBM、ASIC、power/cooling。', evidenceGrade: 'C', opportunityStage: 'Late' },
+      { ticker: '2603.TW', companyName: '長榮', reason: '航運有掃描，但缺乏同日高信號催化，未納入 AI 主報告。', evidenceGrade: 'D', opportunityStage: 'Late' },
     ],
     scanSummary: {
       candidateItemsScanned: 56,
@@ -638,7 +672,7 @@ async function main() {
 function validate(report: DailyDashboard, holdings: string[]) {
   if (report.companyResearch.length < 25 || report.companyResearch.length > 30) throw new Error(`companyResearch count invalid: ${report.companyResearch.length}`);
   if (!report.tradingPlans || report.tradingPlans.length < 8 || report.tradingPlans.length > 15) throw new Error(`tradingPlans count invalid: ${report.tradingPlans?.length ?? 0}`);
-  const stages: OpportunityStage[] = ['Early', 'Confirming', 'Crowded', 'Late', 'Avoid/Wait'];
+  const stages: OpportunityStage[] = ['Early', 'Confirming', 'Crowded', 'Late'];
   for (const item of report.companyResearch) {
     if (!item.companyName || !item.ticker || !item.marketCountry || !item.businessModel || !item.overview || !item.catalystSummary || !item.evidenceGrade || !item.opportunityStage || !item.beneficiaryType || !item.suggestedAction || !item.keyRisks.length || !item.whatWouldChangeView || !item.valuationRisk || !item.priceVolumeBehavior || !item.technicalTrend || !item.supplyChainRole || !item.whyItMattersToday || !item.upsideDriver || !item.invalidationConditions || !item.bullCase || !item.baseCase || !item.bearCase) {
       throw new Error(`${item.ticker} missing required companyResearch fields`);
@@ -659,7 +693,7 @@ function validate(report: DailyDashboard, holdings: string[]) {
   if (!report.news.some((item) => item.freshness === 'Fresh catalyst')) throw new Error('fresh catalysts empty');
   if (!report.news.some((item) => item.freshness === 'Recent context')) throw new Error('recent context empty');
   const json = JSON.stringify(report);
-  if (json.includes('Avoid-Wait') || json.includes('尚未建立公司名稱')) throw new Error('invalid literal found');
+  if (json.includes('Avoid-Wait') || json.includes('Avoid/Wait') || json.includes('尚未建立公司名稱')) throw new Error('invalid literal found');
 }
 
 main().catch((error) => {
