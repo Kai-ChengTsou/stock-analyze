@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-03",
-  "generatedAt": "2026-07-03T07:54:11+08:00",
+  "date": "2026-07-04",
+  "generatedAt": "2026-07-04T07:54:40+08:00",
   "reportMode": "morning",
   "reportTitle": "AI 投資研究儀表板：台股今日作戰版",
   "reportFocus": "台股開盤前，以隔夜美股與同日盤前訊號建立交易計畫。",
@@ -39,7 +39,7 @@
       "id": "fresh-trendforce-hbm-pricing",
       "title": "【新催化】TrendForce 指出 HBM 供給偏緊，2027 合約價具倍數上行空間",
       "source": "TrendForce, 2026-06-02",
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "summary": "HBM 仍是 AI training 與 inference 的核心瓶頸，AI ASIC 容量從 96/192GB 往 216/288GB 升級，使 HBM wafer input 持續排擠傳統 DRAM。資金會繼續尋找 HBM、先進封裝、測試、矽中介層與成熟 DRAM 補位受惠者。",
       "relatedTickers": [
         "MU",
@@ -66,7 +66,7 @@
       "id": "fresh-sk-hynix-capacity",
       "title": "【新催化】SK hynix 董事長稱 AI memory shortage 可能延續至 2030 並規劃五年內倍增 wafer capacity",
       "source": "Tom’s Hardware / Computex comments, 2026-06-02",
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "summary": "供給端即使擴產也需要多年，代表 HBM 與 server DRAM 價格權力仍在供應商手上；台灣成熟製程 DRAM、封測與先進封裝補位邏輯升溫。",
       "relatedTickers": [
         "MU",
@@ -90,7 +90,7 @@
       "id": "fresh-avgo-earnings-watch",
       "title": "【新催化】Broadcom FY26 Q2 已公布：AI 半導體營收強勁，但盤後賣壓提醒高檔交易擁擠",
       "source": "Broadcom official Q2 FY26 release / PRNewswire / after-hours market reaction, 2026-06-03",
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "summary": "Broadcom 公布 Q2 營收、營業利益與自由現金流創高，AI semiconductor revenue 年增 143%，並指引 Q3 AI semiconductor revenue 年增逾 200%；但盤後股價下跌，代表市場已把「好消息」高度預期化。台股 read-through 仍指向創意、世芯、智邦、台光電、金像電與台積電，但今日不能把 ASIC 利多直接翻成追價買點。",
       "relatedTickers": [
         "AVGO",
@@ -117,7 +117,7 @@
       "id": "fresh-ai-leaders-record-risk",
       "title": "【新催化】台股 6/4 重挫與美股 AI leader 高檔震盪並存，追價需檢查 bull trap",
       "source": "Yahoo Finance quote data / 經濟日報台股收盤 / Reuters TSMC comments, 2026-06-04",
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "summary": "台股 6/4 受科技股回檔拖累，終場重挫 781 點至 45,677 點，台積電收 2,385 元；同日 TSMC 管理層對 AI 需求與先進製程/封裝供給仍維持強勢語氣，代表基本面長線仍強，但短線資金已開始檢查高檔估值與獲利了結風險。NVDA、AVGO、MU、MRVL 等仍吸引資金，但多檔接近近期高檔；今晚若開高後跌破 VWAP 或前高失守，台股隔日容易出現開高走低。",
       "relatedTickers": [
         "NVDA",
@@ -144,7 +144,7 @@
       "id": "fresh-taiwan-holdings-check",
       "title": "【新催化】持股檢查：0050 偏核心配置，台達電受 AI power 支撐，力積電受 memory shortage 補位但波動高",
       "source": "Yahoo Finance chart API / portfolio.json, 2026-06-03",
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "summary": "本次強制檢查 0050、2308、6770。0050 看大盤與台積電權重，台達電看資料中心電源與 SST，力積電看成熟 DRAM/晶圓代工補位與成交量是否過熱。",
       "relatedTickers": [
         "0050.TW",
@@ -166,7 +166,7 @@
       "id": "recent-nvidia-computex",
       "title": "【近期脈絡】Computex 後 NVIDIA AI factory / Rubin / Blackwell 敘事仍支撐台灣 AI 供應鏈",
       "source": "Computex 2026 company events and media coverage",
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "summary": "NVIDIA road map 是 3-7 日仍有效的背景脈絡，但不是今天才出現的新消息。它支撐台積電、鴻海、廣達、緯穎、台達電、散熱、PCB/CCL、光通訊與先進封裝。",
       "relatedTickers": [
         "NVDA",
@@ -192,7 +192,7 @@
       "id": "recent-power-cooling",
       "title": "【近期脈絡】資料中心電力、UPS、液冷與熱管理仍是 AI build-out 瓶頸",
       "source": "Vertiv / Eaton / data-center infrastructure reports, last 3-7 days",
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "summary": "AI rack 功耗提升讓電源、UPS、液冷、機櫃與能源管理持續受惠；台達電、光寶科、奇鋐、雙鴻、健策與 Vertiv / Eaton 仍是關鍵映射。",
       "relatedTickers": [
         "VRT",
@@ -218,7 +218,7 @@
       "id": "recent-export-controls",
       "title": "【近期脈絡】出口管制與地緣政治仍壓抑 GPU / ASIC 中國曝險估值",
       "source": "US export control reporting, last 3-7 days",
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "summary": "政策風險不構成今天單一買點，但必須放進風險權重。GPU、ASIC、foundry 與成熟製程若受區域需求重新配置影響，估值會快速變動。",
       "relatedTickers": [
         "NVDA",
@@ -243,7 +243,7 @@
       "id": "background-ai-agents-software",
       "title": "【背景論點】AI agents 與 enterprise AI 軟體仍是需求端驗證，但短線硬體催化較強",
       "source": "Major cloud and software company commentary",
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "summary": "企業 AI 軟體能否變現，決定 cloud capex ROI 是否被市場接受。短線資金仍偏硬體與供應鏈，但 PLTR、MSFT、NOW、SNOW 仍是需求端雷達。",
       "relatedTickers": [
         "MSFT",
@@ -268,7 +268,7 @@
       "id": "rejected-panel-foplp",
       "title": "【低訊號剔除】面板 / FOPLP / 低軌衛星題材仍有資金，但今日證據不足以升級",
       "source": "Taiwan market reports and price-volume scan",
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "summary": "群創、彩晶、友達與玻璃基板題材仍在雷達，但缺少足夠正式訂單與財務驗證；若只有爆量與社群熱度，應列為投機而非高信心投資。",
       "relatedTickers": [
         "3481.TW",
@@ -1117,7 +1117,7 @@
       "sectorTheme": "台股核心 ETF",
       "whyItMattersToday": "元大台灣50 位於 台灣大型權值股 beta，受台積電與電子權重帶動，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 108.80 TWD，日變動 +0.93%；5/10/20/60 日均線約 106.45 TWD / 107.39 TWD / 105.47 TWD / 96.58 TWD。近 20 日高低約 112.30 TWD / 0.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
+      "priceVolumeBehavior": "最新 108.35 TWD，日變動 -1.22%；5/10/20/60 日均線約 106.77 TWD / 107.67 TWD / 105.53 TWD / 97.14 TWD。近 20 日高低約 112.30 TWD / 0.00 TWD，量能約為 20 日均量 0.7 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
       "supplyChainRole": "台灣大型權值股 beta，受台積電與電子權重帶動",
       "opportunityStage": "Confirming",
       "evidenceGrade": "B",
@@ -1137,7 +1137,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 108.80 TWD，日變動 +0.93%；5/10/20/60 日均線約 106.45 TWD / 107.39 TWD / 105.47 TWD / 96.58 TWD。近 20 日高低約 112.30 TWD / 0.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
+      "technicalTrend": "最新 108.35 TWD，日變動 -1.22%；5/10/20/60 日均線約 106.77 TWD / 107.67 TWD / 105.53 TWD / 97.14 TWD。近 20 日高低約 112.30 TWD / 0.00 TWD，量能約為 20 日均量 0.7 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
       "competitors": [
         "006208.TW",
         "00922.TW"
@@ -1163,7 +1163,7 @@
       "sectorTheme": "Foundry / CoWoS",
       "whyItMattersToday": "台積電 位於 AI GPU、ASIC 與先進封裝核心產能，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 2465 TWD，日變動 -1.60%；5/10/20/60 日均線約 2418 TWD / 2428 TWD / 2380 TWD / 2256 TWD。近 20 日高低約 2535 TWD / 2210 TWD，量能約為 20 日均量 0.8 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
+      "priceVolumeBehavior": "最新 2445 TWD，日變動 -0.81%；5/10/20/60 日均線約 2439 TWD / 2432 TWD / 2383 TWD / 2264 TWD。近 20 日高低約 2535 TWD / 2210 TWD，量能約為 20 日均量 0.8 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
       "supplyChainRole": "AI GPU、ASIC 與先進封裝核心產能",
       "opportunityStage": "Confirming",
       "evidenceGrade": "A",
@@ -1183,7 +1183,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 2465 TWD，日變動 -1.60%；5/10/20/60 日均線約 2418 TWD / 2428 TWD / 2380 TWD / 2256 TWD。近 20 日高低約 2535 TWD / 2210 TWD，量能約為 20 日均量 0.8 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
+      "technicalTrend": "最新 2445 TWD，日變動 -0.81%；5/10/20/60 日均線約 2439 TWD / 2432 TWD / 2383 TWD / 2264 TWD。近 20 日高低約 2535 TWD / 2210 TWD，量能約為 20 日均量 0.8 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
       "competitors": [
         "Samsung Foundry",
         "Intel Foundry"
@@ -1209,7 +1209,7 @@
       "sectorTheme": "Power / SST / cooling",
       "whyItMattersToday": "台達電 位於 資料中心電源、電力管理與固態變壓器，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 1970 TWD，日變動 -1.01%；5/10/20/60 日均線約 1925 TWD / 1999 TWD / 2128 TWD / 2102 TWD。近 20 日高低約 2465 TWD / 1790 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 2075 TWD，日變動 +5.33%；5/10/20/60 日均線約 1978 TWD / 1991 TWD / 2110 TWD / 2109 TWD。近 20 日高低約 2435 TWD / 1790 TWD，量能約為 20 日均量 1.2 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "資料中心電源、電力管理與固態變壓器",
       "opportunityStage": "Crowded",
       "evidenceGrade": "B",
@@ -1229,7 +1229,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 1970 TWD，日變動 -1.01%；5/10/20/60 日均線約 1925 TWD / 1999 TWD / 2128 TWD / 2102 TWD。近 20 日高低約 2465 TWD / 1790 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 2075 TWD，日變動 +5.33%；5/10/20/60 日均線約 1978 TWD / 1991 TWD / 2110 TWD / 2109 TWD。近 20 日高低約 2435 TWD / 1790 TWD，量能約為 20 日均量 1.2 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "光寶科",
         "康舒",
@@ -1256,7 +1256,7 @@
       "sectorTheme": "成熟製程 / DRAM 補位",
       "whyItMattersToday": "力積電 位於 成熟製程晶圓代工與記憶體供給補位，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 74.70 TWD，日變動 +0.54%；5/10/20/60 日均線約 77.18 TWD / 78.92 TWD / 74.71 TWD / 65.94 TWD。近 20 日高低約 89.30 TWD / 62.10 TWD，量能約為 20 日均量 0.8 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 73.40 TWD，日變動 -1.74%；5/10/20/60 日均線約 76.20 TWD / 78.84 TWD / 74.33 TWD / 66.21 TWD。近 20 日高低約 89.30 TWD / 62.10 TWD，量能約為 20 日均量 0.5 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "成熟製程晶圓代工與記憶體供給補位",
       "opportunityStage": "Early",
       "evidenceGrade": "B",
@@ -1276,7 +1276,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 74.70 TWD，日變動 +0.54%；5/10/20/60 日均線約 77.18 TWD / 78.92 TWD / 74.71 TWD / 65.94 TWD。近 20 日高低約 89.30 TWD / 62.10 TWD，量能約為 20 日均量 0.8 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 73.40 TWD，日變動 -1.74%；5/10/20/60 日均線約 76.20 TWD / 78.84 TWD / 74.33 TWD / 66.21 TWD。近 20 日高低約 89.30 TWD / 62.10 TWD，量能約為 20 日均量 0.5 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "南亞科",
         "華邦電",
@@ -1304,7 +1304,7 @@
       "sectorTheme": "DRAM",
       "whyItMattersToday": "南亞科 位於 台灣 DRAM 供應商，受傳統 DRAM 供給緊縮帶動，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 407.00 TWD，日變動 -3.33%；5/10/20/60 日均線約 436.50 TWD / 452.20 TWD / 414.20 TWD / 319.28 TWD。近 20 日高低約 505.00 TWD / 324.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 409.50 TWD，日變動 +0.61%；5/10/20/60 日均線約 428.60 TWD / 447.20 TWD / 414.93 TWD / 322.39 TWD。近 20 日高低約 505.00 TWD / 324.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "台灣 DRAM 供應商，受傳統 DRAM 供給緊縮帶動",
       "opportunityStage": "Confirming",
       "evidenceGrade": "B",
@@ -1324,7 +1324,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 407.00 TWD，日變動 -3.33%；5/10/20/60 日均線約 436.50 TWD / 452.20 TWD / 414.20 TWD / 319.28 TWD。近 20 日高低約 505.00 TWD / 324.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 409.50 TWD，日變動 +0.61%；5/10/20/60 日均線約 428.60 TWD / 447.20 TWD / 414.93 TWD / 322.39 TWD。近 20 日高低約 505.00 TWD / 324.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "華邦電",
         "Micron"
@@ -1350,7 +1350,7 @@
       "sectorTheme": "Specialty DRAM / NOR",
       "whyItMattersToday": "華邦電 位於 利基型記憶體與成熟製程供給缺口補位，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 183.50 TWD，日變動 -3.42%；5/10/20/60 日均線約 198.10 TWD / 206.70 TWD / 189.07 TWD / 138.99 TWD。近 20 日高低約 233.50 TWD / 146.00 TWD，量能約為 20 日均量 0.7 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 184.50 TWD，日變動 +0.54%；5/10/20/60 日均線約 193.70 TWD / 203.30 TWD / 189.32 TWD / 140.47 TWD。近 20 日高低約 233.50 TWD / 146.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "利基型記憶體與成熟製程供給缺口補位",
       "opportunityStage": "Confirming",
       "evidenceGrade": "B",
@@ -1370,7 +1370,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 183.50 TWD，日變動 -3.42%；5/10/20/60 日均線約 198.10 TWD / 206.70 TWD / 189.07 TWD / 138.99 TWD。近 20 日高低約 233.50 TWD / 146.00 TWD，量能約為 20 日均量 0.7 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 184.50 TWD，日變動 +0.54%；5/10/20/60 日均線約 193.70 TWD / 203.30 TWD / 189.32 TWD / 140.47 TWD。近 20 日高低約 233.50 TWD / 146.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "旺宏",
         "南亞科"
@@ -1396,7 +1396,7 @@
       "sectorTheme": "NOR / NAND",
       "whyItMattersToday": "旺宏 位於 NOR flash 與儲存循環復甦受惠，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 145.50 TWD，日變動 +1.39%；5/10/20/60 日均線約 153.10 TWD / 162.55 TWD / 156.47 TWD / 153.43 TWD。近 20 日高低約 192.00 TWD / 132.50 TWD，量能約為 20 日均量 0.8 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 142.50 TWD，日變動 -2.06%；5/10/20/60 日均線約 149.10 TWD / 159.90 TWD / 155.78 TWD / 153.30 TWD。近 20 日高低約 192.00 TWD / 132.50 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "NOR flash 與儲存循環復甦受惠",
       "opportunityStage": "Crowded",
       "evidenceGrade": "B",
@@ -1416,7 +1416,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 145.50 TWD，日變動 +1.39%；5/10/20/60 日均線約 153.10 TWD / 162.55 TWD / 156.47 TWD / 153.43 TWD。近 20 日高低約 192.00 TWD / 132.50 TWD，量能約為 20 日均量 0.8 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 142.50 TWD，日變動 -2.06%；5/10/20/60 日均線約 149.10 TWD / 159.90 TWD / 155.78 TWD / 153.30 TWD。近 20 日高低約 192.00 TWD / 132.50 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "華邦電",
         "群聯"
@@ -1442,7 +1442,7 @@
       "sectorTheme": "Advanced packaging / testing",
       "whyItMattersToday": "日月光投控 位於 AI package、測試與 OSAT，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 727.00 TWD，日變動 +3.41%；5/10/20/60 日均線約 673.80 TWD / 661.20 TWD / 617.05 TWD / 546.87 TWD。近 20 日高低約 729.00 TWD / 520.00 TWD，量能約為 20 日均量 1.0 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
+      "priceVolumeBehavior": "最新 682.00 TWD，日變動 -6.19%；5/10/20/60 日均線約 683.80 TWD / 668.10 TWD / 621.50 TWD / 551.85 TWD。近 20 日高低約 729.00 TWD / 520.00 TWD，量能約為 20 日均量 1.5 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "AI package、測試與 OSAT",
       "opportunityStage": "Confirming",
       "evidenceGrade": "B",
@@ -1461,8 +1461,8 @@
       "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
-      "valuationRisk": "價格高於短均較多或接近近期壓力，估值與追價風險偏高。",
-      "technicalTrend": "最新 727.00 TWD，日變動 +3.41%；5/10/20/60 日均線約 673.80 TWD / 661.20 TWD / 617.05 TWD / 546.87 TWD。近 20 日高低約 729.00 TWD / 520.00 TWD，量能約為 20 日均量 1.0 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
+      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
+      "technicalTrend": "最新 682.00 TWD，日變動 -6.19%；5/10/20/60 日均線約 683.80 TWD / 668.10 TWD / 621.50 TWD / 551.85 TWD。近 20 日高低約 729.00 TWD / 520.00 TWD，量能約為 20 日均量 1.5 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "Amkor",
         "京元電子"
@@ -1474,7 +1474,7 @@
         "封測價格壓力",
         "資本支出"
       ],
-      "finalView": "Neutral",
+      "finalView": "Positive",
       "suggestedAction": "Watch",
       "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
       "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
@@ -1488,7 +1488,7 @@
       "sectorTheme": "AI server ODM",
       "whyItMattersToday": "廣達 位於 AI server 與 rack-level system 供應，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 369.00 TWD，日變動 -0.81%；5/10/20/60 日均線約 367.60 TWD / 370.50 TWD / 374.00 TWD / 342.75 TWD。近 20 日高低約 412.00 TWD / 357.00 TWD，量能約為 20 日均量 0.3 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 377.00 TWD，日變動 +2.17%；5/10/20/60 日均線約 370.60 TWD / 370.60 TWD / 372.65 TWD / 343.91 TWD。近 20 日高低約 395.50 TWD / 357.00 TWD，量能約為 20 日均量 0.5 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "AI server 與 rack-level system 供應",
       "opportunityStage": "Crowded",
       "evidenceGrade": "B",
@@ -1508,7 +1508,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 369.00 TWD，日變動 -0.81%；5/10/20/60 日均線約 367.60 TWD / 370.50 TWD / 374.00 TWD / 342.75 TWD。近 20 日高低約 412.00 TWD / 357.00 TWD，量能約為 20 日均量 0.3 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 377.00 TWD，日變動 +2.17%；5/10/20/60 日均線約 370.60 TWD / 370.60 TWD / 372.65 TWD / 343.91 TWD。近 20 日高低約 395.50 TWD / 357.00 TWD，量能約為 20 日均量 0.5 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "緯穎",
         "鴻海"
@@ -1534,7 +1534,7 @@
       "sectorTheme": "AI server ODM",
       "whyItMattersToday": "緯穎 位於 hyperscale server 與 AI rack，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 5200 TWD，日變動 +3.28%；5/10/20/60 日均線約 4746 TWD / 4754 TWD / 4951 TWD / 4828 TWD。近 20 日高低約 5740 TWD / 4250 TWD，量能約為 20 日均量 1.7 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 5265 TWD，日變動 +1.25%；5/10/20/60 日均線約 4943 TWD / 4768 TWD / 4936 TWD / 4857 TWD。近 20 日高低約 5740 TWD / 4250 TWD，量能約為 20 日均量 0.9 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "hyperscale server 與 AI rack",
       "opportunityStage": "Crowded",
       "evidenceGrade": "B",
@@ -1554,7 +1554,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 5200 TWD，日變動 +3.28%；5/10/20/60 日均線約 4746 TWD / 4754 TWD / 4951 TWD / 4828 TWD。近 20 日高低約 5740 TWD / 4250 TWD，量能約為 20 日均量 1.7 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 5265 TWD，日變動 +1.25%；5/10/20/60 日均線約 4943 TWD / 4768 TWD / 4936 TWD / 4857 TWD。近 20 日高低約 5740 TWD / 4250 TWD，量能約為 20 日均量 0.9 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "廣達",
         "鴻海"
@@ -1580,7 +1580,7 @@
       "sectorTheme": "EMS / AI server",
       "whyItMattersToday": "鴻海 位於 AI server EMS、機櫃與整機整合，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 239.00 TWD，日變動 -3.63%；5/10/20/60 日均線約 246.60 TWD / 254.30 TWD / 262.90 TWD / 246.86 TWD。近 20 日高低約 309.00 TWD / 238.00 TWD，量能約為 20 日均量 1.0 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 240.50 TWD，日變動 +0.63%；5/10/20/60 日均線約 245.00 TWD / 251.50 TWD / 260.27 TWD / 247.51 TWD。近 20 日高低約 292.50 TWD / 236.00 TWD，量能約為 20 日均量 0.8 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "AI server EMS、機櫃與整機整合",
       "opportunityStage": "Confirming",
       "evidenceGrade": "B",
@@ -1600,7 +1600,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 239.00 TWD，日變動 -3.63%；5/10/20/60 日均線約 246.60 TWD / 254.30 TWD / 262.90 TWD / 246.86 TWD。近 20 日高低約 309.00 TWD / 238.00 TWD，量能約為 20 日均量 1.0 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 240.50 TWD，日變動 +0.63%；5/10/20/60 日均線約 245.00 TWD / 251.50 TWD / 260.27 TWD / 247.51 TWD。近 20 日高低約 292.50 TWD / 236.00 TWD，量能約為 20 日均量 0.8 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "廣達",
         "緯創"
@@ -1626,7 +1626,7 @@
       "sectorTheme": "AI networking",
       "whyItMattersToday": "智邦 位於 資料中心交換器與白牌網通，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 2750 TWD，日變動 +3.38%；5/10/20/60 日均線約 2525 TWD / 2485 TWD / 2458 TWD / 2354 TWD。近 20 日高低約 2780 TWD / 2170 TWD，量能約為 20 日均量 1.3 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
+      "priceVolumeBehavior": "最新 2735 TWD，日變動 -0.55%；5/10/20/60 日均線約 2596 TWD / 2515 TWD / 2469 TWD / 2371 TWD。近 20 日高低約 2800 TWD / 2170 TWD，量能約為 20 日均量 0.9 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
       "supplyChainRole": "資料中心交換器與白牌網通",
       "opportunityStage": "Crowded",
       "evidenceGrade": "B",
@@ -1646,7 +1646,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 2750 TWD，日變動 +3.38%；5/10/20/60 日均線約 2525 TWD / 2485 TWD / 2458 TWD / 2354 TWD。近 20 日高低約 2780 TWD / 2170 TWD，量能約為 20 日均量 1.3 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
+      "technicalTrend": "最新 2735 TWD，日變動 -0.55%；5/10/20/60 日均線約 2596 TWD / 2515 TWD / 2469 TWD / 2371 TWD。近 20 日高低約 2800 TWD / 2170 TWD，量能約為 20 日均量 0.9 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
       "competitors": [
         "Arista",
         "Accton peers"
@@ -1672,7 +1672,7 @@
       "sectorTheme": "CCL / high-speed material",
       "whyItMattersToday": "台光電 位於 高速 CCL 與 AI server/networking 材料，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 5655 TWD，日變動 +2.17%；5/10/20/60 日均線約 5457 TWD / 5561 TWD / 5269 TWD / 4744 TWD。近 20 日高低約 6045 TWD / 4530 TWD，量能約為 20 日均量 0.5 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 6080 TWD，日變動 +7.52%；5/10/20/60 日均線約 5622 TWD / 5609 TWD / 5331 TWD / 4793 TWD。近 20 日高低約 6080 TWD / 4530 TWD，量能約為 20 日均量 1.6 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
       "supplyChainRole": "高速 CCL 與 AI server/networking 材料",
       "opportunityStage": "Confirming",
       "evidenceGrade": "B",
@@ -1691,8 +1691,8 @@
       "grossMargin": "毛利率取決於高階產品占比、報價能力、良率與匯率；低價題材股需特別驗證毛利改善。",
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
-      "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 5655 TWD，日變動 +2.17%；5/10/20/60 日均線約 5457 TWD / 5561 TWD / 5269 TWD / 4744 TWD。近 20 日高低約 6045 TWD / 4530 TWD，量能約為 20 日均量 0.5 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
+      "valuationRisk": "價格高於短均較多或接近近期壓力，估值與追價風險偏高。",
+      "technicalTrend": "最新 6080 TWD，日變動 +7.52%；5/10/20/60 日均線約 5622 TWD / 5609 TWD / 5331 TWD / 4793 TWD。近 20 日高低約 6080 TWD / 4530 TWD，量能約為 20 日均量 1.6 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
       "competitors": [
         "聯茂",
         "Panasonic"
@@ -1704,7 +1704,7 @@
         "材料報價",
         "產能利用率"
       ],
-      "finalView": "Positive",
+      "finalView": "Neutral",
       "suggestedAction": "Watch",
       "whatWouldChangeView": "若出現官方上修、月營收超預期、突破前高且量能健康，評等可上調；若跌破 20 日線或催化被證偽，轉為等待或避開。",
       "upsideDriver": "上行驅動來自 AI capex 擴散、供給緊縮、報價上升、訂單可見度與相對強勢。",
@@ -1718,7 +1718,7 @@
       "sectorTheme": "PCB",
       "whyItMattersToday": "金像電 位於 AI server 高層板與交換器 PCB，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 1235 TWD，日變動 +1.23%；5/10/20/60 日均線約 1200 TWD / 1251 TWD / 1308 TWD / 1303 TWD。近 20 日高低約 1580 TWD / 1145 TWD，量能約為 20 日均量 0.9 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 1305 TWD，日變動 +5.67%；5/10/20/60 日均線約 1223 TWD / 1246 TWD / 1305 TWD / 1308 TWD。近 20 日高低約 1580 TWD / 1145 TWD，量能約為 20 日均量 1.0 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "AI server 高層板與交換器 PCB",
       "opportunityStage": "Confirming",
       "evidenceGrade": "B",
@@ -1738,7 +1738,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 1235 TWD，日變動 +1.23%；5/10/20/60 日均線約 1200 TWD / 1251 TWD / 1308 TWD / 1303 TWD。近 20 日高低約 1580 TWD / 1145 TWD，量能約為 20 日均量 0.9 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 1305 TWD，日變動 +5.67%；5/10/20/60 日均線約 1223 TWD / 1246 TWD / 1305 TWD / 1308 TWD。近 20 日高低約 1580 TWD / 1145 TWD，量能約為 20 日均量 1.0 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "健鼎",
         "欣興"
@@ -1764,7 +1764,7 @@
       "sectorTheme": "Cooling / liquid cooling",
       "whyItMattersToday": "奇鋐 位於 AI server 散熱與液冷零組件，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 2740 TWD，日變動 +4.58%；5/10/20/60 日均線約 2488 TWD / 2472 TWD / 2470 TWD / 2530 TWD。近 20 日高低約 2820 TWD / 2220 TWD，量能約為 20 日均量 1.3 倍，技術狀態為短線轉強。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 2760 TWD，日變動 +0.73%；5/10/20/60 日均線約 2589 TWD / 2508 TWD / 2472 TWD / 2538 TWD。近 20 日高低約 2780 TWD / 2220 TWD，量能約為 20 日均量 1.2 倍，技術狀態為短線轉強。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "AI server 散熱與液冷零組件",
       "opportunityStage": "Crowded",
       "evidenceGrade": "B",
@@ -1784,7 +1784,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 2740 TWD，日變動 +4.58%；5/10/20/60 日均線約 2488 TWD / 2472 TWD / 2470 TWD / 2530 TWD。近 20 日高低約 2820 TWD / 2220 TWD，量能約為 20 日均量 1.3 倍，技術狀態為短線轉強。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 2760 TWD，日變動 +0.73%；5/10/20/60 日均線約 2589 TWD / 2508 TWD / 2472 TWD / 2538 TWD。近 20 日高低約 2780 TWD / 2220 TWD，量能約為 20 日均量 1.2 倍，技術狀態為短線轉強。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "雙鴻",
         "健策"
@@ -1856,7 +1856,7 @@
       "sectorTheme": "Power supply",
       "whyItMattersToday": "光寶科 位於 電源供應器、資料中心 power component，對今日 AI 資金流、供應鏈 read-through 或持股風控有直接意義。",
       "catalystSummary": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "priceVolumeBehavior": "最新 221.50 TWD，日變動 +0.91%；5/10/20/60 日均線約 215.20 TWD / 217.30 TWD / 217.90 TWD / 201.48 TWD。近 20 日高低約 258.50 TWD / 201.00 TWD，量能約為 20 日均量 0.5 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
+      "priceVolumeBehavior": "最新 219.00 TWD，日變動 -1.13%；5/10/20/60 日均線約 218.70 TWD / 218.15 TWD / 216.43 TWD / 202.53 TWD。近 20 日高低約 249.00 TWD / 201.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
       "supplyChainRole": "電源供應器、資料中心 power component",
       "opportunityStage": "Early",
       "evidenceGrade": "B",
@@ -1876,7 +1876,7 @@
       "eps": "EPS 需用最新財報確認，本日不以未驗證 EPS 作為買點。",
       "freeCashFlow": "重資本支出公司需檢查現金流；輕資產軟體與設計公司需檢查 AI monetization。",
       "valuationRisk": "估值風險仍存在，但目前更需要看價格是否守住均線與前高。",
-      "technicalTrend": "最新 221.50 TWD，日變動 +0.91%；5/10/20/60 日均線約 215.20 TWD / 217.30 TWD / 217.90 TWD / 201.48 TWD。近 20 日高低約 258.50 TWD / 201.00 TWD，量能約為 20 日均量 0.5 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
+      "technicalTrend": "最新 219.00 TWD，日變動 -1.13%；5/10/20/60 日均線約 218.70 TWD / 218.15 TWD / 216.43 TWD / 202.53 TWD。近 20 日高低約 249.00 TWD / 201.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。",
       "competitors": [
         "台達電",
         "康舒"
@@ -2103,15 +2103,15 @@
       "ticker": "2330.TW",
       "companyName": "台積電",
       "marketCountry": "Taiwan",
-      "actionToday": "Buy on Pullback",
-      "conviction": "Crowded",
-      "rationale": "台積電 最新 2465 TWD，日變動 -1.60%；最新 2465 TWD，日變動 -1.60%；5/10/20/60 日均線約 2418 TWD / 2428 TWD / 2380 TWD / 2256 TWD。近 20 日高低約 2535 TWD / 2210 TWD，量能約為 20 日均量 0.8 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。 今日較適合等回測而非追高。",
-      "entryZone": "較健康買區是回測 2428 TWD-2380 TWD 且量縮守穩；若開高後跌破 VWAP 或前高，視為 bull trap。",
-      "supportLevel": "第一支撐看 20 日線附近 2380 TWD，第二支撐看近 20 日低點 2210 TWD。",
+      "actionToday": "Watch",
+      "conviction": "Emerging",
+      "rationale": "台積電 最新 2445 TWD，日變動 -0.81%；最新 2445 TWD，日變動 -0.81%；5/10/20/60 日均線約 2439 TWD / 2432 TWD / 2383 TWD / 2264 TWD。近 20 日高低約 2535 TWD / 2210 TWD，量能約為 20 日均量 0.8 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。 今日較適合觀察突破確認。",
+      "entryZone": "可接受條件是守住 2383 TWD 上方，或放量突破 2535 TWD 後回測不破。",
+      "supportLevel": "第一支撐看 20 日線附近 2383 TWD，第二支撐看近 20 日低點 2210 TWD。",
       "resistanceLevel": "近壓看近 20 日高點 2535 TWD；若接近 52 週高 2535 TWD 且量能失衡，可分批調節。",
       "invalidationLevel": "跌破 2210 TWD 且放量，或催化被財報/月營收證偽。",
-      "positionSizing": "1-2% 試單上限，僅限拉回確認",
-      "riskReward": "短線上檔可能仍有動能，但追高風險報酬不佳；拉回守支撐才有較好風險報酬。",
+      "positionSizing": "0%",
+      "riskReward": "若突破且守住前高，報酬來自趨勢延伸；若跌破 20 日線，風險需快速收斂。",
       "timeHorizon": "1-20 個交易日",
       "confirmationSignals": [
         "突破前高且成交量高於 20 日均量",
@@ -2146,10 +2146,10 @@
       "marketCountry": "Taiwan",
       "actionToday": "Watch",
       "conviction": "Crowded",
-      "rationale": "台達電 最新 1970 TWD，日變動 -1.01%；最新 1970 TWD，日變動 -1.01%；5/10/20/60 日均線約 1925 TWD / 1999 TWD / 2128 TWD / 2102 TWD。近 20 日高低約 2465 TWD / 1790 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。 今日較適合觀察突破確認。",
-      "entryZone": "可接受條件是守住 2128 TWD 上方，或放量突破 2465 TWD 後回測不破。",
-      "supportLevel": "第一支撐看 20 日線附近 2128 TWD，第二支撐看近 20 日低點 1790 TWD。",
-      "resistanceLevel": "近壓看近 20 日高點 2465 TWD；若接近 52 週高 2585 TWD 且量能失衡，可分批調節。",
+      "rationale": "台達電 最新 2075 TWD，日變動 +5.33%；最新 2075 TWD，日變動 +5.33%；5/10/20/60 日均線約 1978 TWD / 1991 TWD / 2110 TWD / 2109 TWD。近 20 日高低約 2435 TWD / 1790 TWD，量能約為 20 日均量 1.2 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。 今日較適合觀察突破確認。",
+      "entryZone": "可接受條件是守住 2110 TWD 上方，或放量突破 2435 TWD 後回測不破。",
+      "supportLevel": "第一支撐看 20 日線附近 2110 TWD，第二支撐看近 20 日低點 1790 TWD。",
+      "resistanceLevel": "近壓看近 20 日高點 2435 TWD；若接近 52 週高 2585 TWD 且量能失衡，可分批調節。",
       "invalidationLevel": "跌破 1790 TWD 且放量，或催化被財報/月營收證偽。",
       "positionSizing": "0%",
       "riskReward": "若突破且守住前高，報酬來自趨勢延伸；若跌破 20 日線，風險需快速收斂。",
@@ -2187,9 +2187,9 @@
       "marketCountry": "Taiwan",
       "actionToday": "Watch",
       "conviction": "Emerging",
-      "rationale": "力積電 最新 74.70 TWD，日變動 +0.54%；最新 74.70 TWD，日變動 +0.54%；5/10/20/60 日均線約 77.18 TWD / 78.92 TWD / 74.71 TWD / 65.94 TWD。近 20 日高低約 89.30 TWD / 62.10 TWD，量能約為 20 日均量 0.8 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。 今日較適合觀察突破確認。",
-      "entryZone": "可接受條件是守住 74.71 TWD 上方，或放量突破 89.30 TWD 後回測不破。",
-      "supportLevel": "第一支撐看 20 日線附近 74.71 TWD，第二支撐看近 20 日低點 62.10 TWD。",
+      "rationale": "力積電 最新 73.40 TWD，日變動 -1.74%；最新 73.40 TWD，日變動 -1.74%；5/10/20/60 日均線約 76.20 TWD / 78.84 TWD / 74.33 TWD / 66.21 TWD。近 20 日高低約 89.30 TWD / 62.10 TWD，量能約為 20 日均量 0.5 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。 今日較適合觀察突破確認。",
+      "entryZone": "可接受條件是守住 74.33 TWD 上方，或放量突破 89.30 TWD 後回測不破。",
+      "supportLevel": "第一支撐看 20 日線附近 74.33 TWD，第二支撐看近 20 日低點 62.10 TWD。",
       "resistanceLevel": "近壓看近 20 日高點 89.30 TWD；若接近 52 週高 94.50 TWD 且量能失衡，可分批調節。",
       "invalidationLevel": "跌破 62.10 TWD 且放量，或催化被財報/月營收證偽。",
       "positionSizing": "0%",
@@ -2228,9 +2228,9 @@
       "marketCountry": "Taiwan",
       "actionToday": "Watch",
       "conviction": "Emerging",
-      "rationale": "南亞科 最新 407.00 TWD，日變動 -3.33%；最新 407.00 TWD，日變動 -3.33%；5/10/20/60 日均線約 436.50 TWD / 452.20 TWD / 414.20 TWD / 319.28 TWD。近 20 日高低約 505.00 TWD / 324.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。 今日較適合觀察突破確認。",
-      "entryZone": "可接受條件是守住 414.20 TWD 上方，或放量突破 505.00 TWD 後回測不破。",
-      "supportLevel": "第一支撐看 20 日線附近 414.20 TWD，第二支撐看近 20 日低點 324.00 TWD。",
+      "rationale": "南亞科 最新 409.50 TWD，日變動 +0.61%；最新 409.50 TWD，日變動 +0.61%；5/10/20/60 日均線約 428.60 TWD / 447.20 TWD / 414.93 TWD / 322.39 TWD。近 20 日高低約 505.00 TWD / 324.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。 今日較適合觀察突破確認。",
+      "entryZone": "可接受條件是守住 414.93 TWD 上方，或放量突破 505.00 TWD 後回測不破。",
+      "supportLevel": "第一支撐看 20 日線附近 414.93 TWD，第二支撐看近 20 日低點 324.00 TWD。",
       "resistanceLevel": "近壓看近 20 日高點 505.00 TWD；若接近 52 週高 505.00 TWD 且量能失衡，可分批調節。",
       "invalidationLevel": "跌破 324.00 TWD 且放量，或催化被財報/月營收證偽。",
       "positionSizing": "0%",
@@ -2269,10 +2269,10 @@
       "marketCountry": "Taiwan",
       "actionToday": "Buy on Pullback",
       "conviction": "Crowded",
-      "rationale": "智邦 最新 2750 TWD，日變動 +3.38%；最新 2750 TWD，日變動 +3.38%；5/10/20/60 日均線約 2525 TWD / 2485 TWD / 2458 TWD / 2354 TWD。近 20 日高低約 2780 TWD / 2170 TWD，量能約為 20 日均量 1.3 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。 今日較適合等回測而非追高。",
-      "entryZone": "較健康買區是回測 2485 TWD-2458 TWD 且量縮守穩；若開高後跌破 VWAP 或前高，視為 bull trap。",
-      "supportLevel": "第一支撐看 20 日線附近 2458 TWD，第二支撐看近 20 日低點 2170 TWD。",
-      "resistanceLevel": "近壓看近 20 日高點 2780 TWD；若接近 52 週高 2780 TWD 且量能失衡，可分批調節。",
+      "rationale": "智邦 最新 2735 TWD，日變動 -0.55%；最新 2735 TWD，日變動 -0.55%；5/10/20/60 日均線約 2596 TWD / 2515 TWD / 2469 TWD / 2371 TWD。近 20 日高低約 2800 TWD / 2170 TWD，量能約為 20 日均量 0.9 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。 今日較適合等回測而非追高。",
+      "entryZone": "較健康買區是回測 2515 TWD-2469 TWD 且量縮守穩；若開高後跌破 VWAP 或前高，視為 bull trap。",
+      "supportLevel": "第一支撐看 20 日線附近 2469 TWD，第二支撐看近 20 日低點 2170 TWD。",
+      "resistanceLevel": "近壓看近 20 日高點 2800 TWD；若接近 52 週高 2800 TWD 且量能失衡，可分批調節。",
       "invalidationLevel": "跌破 2170 TWD 且放量，或催化被財報/月營收證偽。",
       "positionSizing": "1-2% 試單上限，僅限拉回確認",
       "riskReward": "短線上檔可能仍有動能，但追高風險報酬不佳；拉回守支撐才有較好風險報酬。",
@@ -2308,15 +2308,15 @@
       "ticker": "2383.TW",
       "companyName": "台光電",
       "marketCountry": "Taiwan",
-      "actionToday": "Watch",
-      "conviction": "Emerging",
-      "rationale": "台光電 最新 5655 TWD，日變動 +2.17%；最新 5655 TWD，日變動 +2.17%；5/10/20/60 日均線約 5457 TWD / 5561 TWD / 5269 TWD / 4744 TWD。近 20 日高低約 6045 TWD / 4530 TWD，量能約為 20 日均量 0.5 倍，技術狀態為多頭排列。未見極端過熱，仍需等突破或回測確認。 今日較適合觀察突破確認。",
-      "entryZone": "可接受條件是守住 5269 TWD 上方，或放量突破 6045 TWD 後回測不破。",
-      "supportLevel": "第一支撐看 20 日線附近 5269 TWD，第二支撐看近 20 日低點 4530 TWD。",
-      "resistanceLevel": "近壓看近 20 日高點 6045 TWD；若接近 52 週高 6045 TWD 且量能失衡，可分批調節。",
+      "actionToday": "Buy on Pullback",
+      "conviction": "Crowded",
+      "rationale": "台光電 最新 6080 TWD，日變動 +7.52%；最新 6080 TWD，日變動 +7.52%；5/10/20/60 日均線約 5622 TWD / 5609 TWD / 5331 TWD / 4793 TWD。近 20 日高低約 6080 TWD / 4530 TWD，量能約為 20 日均量 1.6 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。 今日較適合等回測而非追高。",
+      "entryZone": "較健康買區是回測 5609 TWD-5331 TWD 且量縮守穩；若開高後跌破 VWAP 或前高，視為 bull trap。",
+      "supportLevel": "第一支撐看 20 日線附近 5331 TWD，第二支撐看近 20 日低點 4530 TWD。",
+      "resistanceLevel": "近壓看近 20 日高點 6080 TWD；若接近 52 週高 6080 TWD 且量能失衡，可分批調節。",
       "invalidationLevel": "跌破 4530 TWD 且放量，或催化被財報/月營收證偽。",
-      "positionSizing": "0%",
-      "riskReward": "若突破且守住前高，報酬來自趨勢延伸；若跌破 20 日線，風險需快速收斂。",
+      "positionSizing": "1-2% 試單上限，僅限拉回確認",
+      "riskReward": "短線上檔可能仍有動能，但追高風險報酬不佳；拉回守支撐才有較好風險報酬。",
       "timeHorizon": "1-20 個交易日",
       "confirmationSignals": [
         "突破前高且成交量高於 20 日均量",
@@ -2351,10 +2351,10 @@
       "marketCountry": "Taiwan",
       "actionToday": "Buy on Pullback",
       "conviction": "Crowded",
-      "rationale": "奇鋐 最新 2740 TWD，日變動 +4.58%；最新 2740 TWD，日變動 +4.58%；5/10/20/60 日均線約 2488 TWD / 2472 TWD / 2470 TWD / 2530 TWD。近 20 日高低約 2820 TWD / 2220 TWD，量能約為 20 日均量 1.3 倍，技術狀態為短線轉強。未見極端過熱，仍需等突破或回測確認。 今日較適合等回測而非追高。",
-      "entryZone": "較健康買區是回測 2472 TWD-2470 TWD 且量縮守穩；若開高後跌破 VWAP 或前高，視為 bull trap。",
-      "supportLevel": "第一支撐看 20 日線附近 2470 TWD，第二支撐看近 20 日低點 2220 TWD。",
-      "resistanceLevel": "近壓看近 20 日高點 2820 TWD；若接近 52 週高 3010 TWD 且量能失衡，可分批調節。",
+      "rationale": "奇鋐 最新 2760 TWD，日變動 +0.73%；最新 2760 TWD，日變動 +0.73%；5/10/20/60 日均線約 2589 TWD / 2508 TWD / 2472 TWD / 2538 TWD。近 20 日高低約 2780 TWD / 2220 TWD，量能約為 20 日均量 1.2 倍，技術狀態為短線轉強。未見極端過熱，仍需等突破或回測確認。 今日較適合等回測而非追高。",
+      "entryZone": "較健康買區是回測 2508 TWD-2472 TWD 且量縮守穩；若開高後跌破 VWAP 或前高，視為 bull trap。",
+      "supportLevel": "第一支撐看 20 日線附近 2472 TWD，第二支撐看近 20 日低點 2220 TWD。",
+      "resistanceLevel": "近壓看近 20 日高點 2780 TWD；若接近 52 週高 3010 TWD 且量能失衡，可分批調節。",
       "invalidationLevel": "跌破 2220 TWD 且放量，或催化被財報/月營收證偽。",
       "positionSizing": "1-2% 試單上限，僅限拉回確認",
       "riskReward": "短線上檔可能仍有動能，但追高風險報酬不佳；拉回守支撐才有較好風險報酬。",
@@ -2395,7 +2395,7 @@
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
       "keyPriceLevels": "最新 194.83 USD，日變動 -1.39%；5/10/20/60 日均線約 196.00 USD / 199.41 USD / 203.48 USD / 207.18 USD。近 20 日高低約 221.60 USD / 189.80 USD，量能約為 20 日均量 0.8 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "估值高、出口管制、開高走低",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2406,7 +2406,7 @@
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
       "keyPriceLevels": "最新 360.45 USD，日變動 -2.41%；5/10/20/60 日均線約 369.00 USD / 378.96 USD / 384.32 USD / 405.21 USD。近 20 日高低約 426.48 USD / 356.43 USD，量能約為 20 日均量 0.7 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "財報波動、ASIC 客戶集中",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2417,7 +2417,7 @@
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
       "keyPriceLevels": "最新 245.29 USD，日變動 -9.84%；5/10/20/60 日均線約 271.95 USD / 281.52 USD / 282.05 USD / 208.60 USD。近 20 日高低約 329.88 USD / 237.20 USD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "題材過熱、財報落差",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2428,7 +2428,7 @@
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
       "keyPriceLevels": "最新 975.56 USD，日變動 -5.49%；5/10/20/60 日均線約 1087.95 USD / 1109.90 USD / 1043.27 USD / 783.53 USD。近 20 日高低約 1255.00 USD / 854.35 USD，量能約為 20 日均量 1.0 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "記憶體循環、資本支出",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2439,7 +2439,7 @@
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
       "keyPriceLevels": "最新 300.53 USD，日變動 -3.50%；5/10/20/60 日均線約 311.54 USD / 320.90 USD / 311.72 USD / 320.56 USD。近 20 日高低約 358.54 USD / 275.18 USD，量能約為 20 日均量 0.8 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "估值、資料中心供給過剩疑慮",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2450,7 +2450,7 @@
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
       "keyPriceLevels": "最新 398.52 USD，日變動 -3.34%；5/10/20/60 日均線約 409.58 USD / 413.52 USD / 406.97 USD / 405.90 USD。近 20 日高低約 436.74 USD / 375.04 USD，量能約為 20 日均量 1.0 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "利率、工業循環",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2461,7 +2461,7 @@
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
       "keyPriceLevels": "最新 359.91 USD，日變動 -0.36%；5/10/20/60 日均線約 353.91 USD / 352.24 USD / 358.54 USD / 364.01 USD。近 20 日高低約 376.00 USD / 330.20 USD，量能約為 20 日均量 0.7 倍，技術狀態為短線轉強。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "capex ROI、監管",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2472,7 +2472,7 @@
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
       "keyPriceLevels": "最新 390.49 USD，日變動 +1.62%；5/10/20/60 日均線約 377.87 USD / 372.83 USD / 386.96 USD / 406.20 USD。近 20 日高低約 436.15 USD / 349.20 USD，量能約為 20 日均量 0.8 倍，技術狀態為短線轉強。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "AI 毛利、capex",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2483,7 +2483,7 @@
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
       "keyPriceLevels": "最新 129.30 USD，日變動 +2.84%；5/10/20/60 日均線約 120.07 USD / 118.58 USD / 125.97 USD / 135.33 USD。近 20 日高低約 146.37 USD / 106.37 USD，量能約為 20 日均量 1.4 倍，技術狀態為短線轉強。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "估值極高、成長放緩",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2492,9 +2492,9 @@
       "companyName": "元大台灣50",
       "currentView": "Positive",
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "keyPriceLevels": "最新 108.80 TWD，日變動 +0.93%；5/10/20/60 日均線約 106.45 TWD / 107.39 TWD / 105.47 TWD / 96.58 TWD。近 20 日高低約 112.30 TWD / 0.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
+      "keyPriceLevels": "最新 108.35 TWD，日變動 -1.22%；5/10/20/60 日均線約 106.77 TWD / 107.67 TWD / 105.53 TWD / 97.14 TWD。近 20 日高低約 112.30 TWD / 0.00 TWD，量能約為 20 日均量 0.7 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
       "riskNotes": "大盤回檔、權值股集中",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2503,9 +2503,9 @@
       "companyName": "台積電",
       "currentView": "Positive",
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "keyPriceLevels": "最新 2465 TWD，日變動 -1.60%；5/10/20/60 日均線約 2418 TWD / 2428 TWD / 2380 TWD / 2256 TWD。近 20 日高低約 2535 TWD / 2210 TWD，量能約為 20 日均量 0.8 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
+      "keyPriceLevels": "最新 2445 TWD，日變動 -0.81%；5/10/20/60 日均線約 2439 TWD / 2432 TWD / 2383 TWD / 2264 TWD。近 20 日高低約 2535 TWD / 2210 TWD，量能約為 20 日均量 0.8 倍，技術狀態為多頭排列。短線有過熱或接近壓力風險，不適合無條件追價。",
       "riskNotes": "估值、地緣政治",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2514,9 +2514,9 @@
       "companyName": "台達電",
       "currentView": "Positive",
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "keyPriceLevels": "最新 1970 TWD，日變動 -1.01%；5/10/20/60 日均線約 1925 TWD / 1999 TWD / 2128 TWD / 2102 TWD。近 20 日高低約 2465 TWD / 1790 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "keyPriceLevels": "最新 2075 TWD，日變動 +5.33%；5/10/20/60 日均線約 1978 TWD / 1991 TWD / 2110 TWD / 2109 TWD。近 20 日高低約 2435 TWD / 1790 TWD，量能約為 20 日均量 1.2 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "估值偏高、開高追價風險",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2525,9 +2525,9 @@
       "companyName": "力積電",
       "currentView": "Positive",
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "keyPriceLevels": "最新 74.70 TWD，日變動 +0.54%；5/10/20/60 日均線約 77.18 TWD / 78.92 TWD / 74.71 TWD / 65.94 TWD。近 20 日高低約 89.30 TWD / 62.10 TWD，量能約為 20 日均量 0.8 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "keyPriceLevels": "最新 73.40 TWD，日變動 -1.74%；5/10/20/60 日均線約 76.20 TWD / 78.84 TWD / 74.33 TWD / 66.21 TWD。近 20 日高低約 89.30 TWD / 62.10 TWD，量能約為 20 日均量 0.5 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "價格循環、低價股波動、毛利率驗證不足",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     },
     {
@@ -2536,9 +2536,9 @@
       "companyName": "南亞科",
       "currentView": "Positive",
       "keyNews": "主要催化來自 TrendForce HBM 價格權、SK hynix 供給瓶頸、AVGO 財報前 ASIC 驗證、NVIDIA Computex 後 AI factory 脈絡與資料中心 power/cooling 需求。",
-      "keyPriceLevels": "最新 407.00 TWD，日變動 -3.33%；5/10/20/60 日均線約 436.50 TWD / 452.20 TWD / 414.20 TWD / 319.28 TWD。近 20 日高低約 505.00 TWD / 324.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
+      "keyPriceLevels": "最新 409.50 TWD，日變動 +0.61%；5/10/20/60 日均線約 428.60 TWD / 447.20 TWD / 414.93 TWD / 322.39 TWD。近 20 日高低約 505.00 TWD / 324.00 TWD，量能約為 20 日均量 0.6 倍，技術狀態為整理或回落。未見極端過熱，仍需等突破或回測確認。",
       "riskNotes": "循環股波動、報價反轉",
-      "lastUpdatedTime": "2026-07-03T07:54:11+08:00",
+      "lastUpdatedTime": "2026-07-04T07:54:40+08:00",
       "status": "Watching"
     }
   ],
